@@ -1,0 +1,11 @@
+--- gps-1.004/src/dbdefs.cpp.orig	2005-02-05 16:36:25.000000000 +0100
++++ gps-1.004/src/dbdefs.cpp	2006-11-21 21:03:29.000000000 +0100
+@@ -111,7 +111,7 @@
+ 					","TRIPLETS_IPDEF(64)","TRIPLETS_IPDEF(32)","TRIPLETS_IPDEF(16)","TRIPLETS_IPDEF(8)
+ 					")",
+ 			"CREATE INDEX sender_recipient_index ON "TABLE_TRIPLETS
+-				"("ATTR_SENDER"(15),"ATTR_RECIPIENT"(15)"
++				"("ATTR_SENDER","ATTR_RECIPIENT
+ 		}
+ };
+ 

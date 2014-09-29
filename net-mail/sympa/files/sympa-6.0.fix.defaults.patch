@@ -1,0 +1,11 @@
+--- src/lib/confdef.pm.orig	2009-07-27 19:58:23.043761210 +0200
++++ src/lib/confdef.pm	2009-07-27 20:05:05.871259383 +0200
+@@ -133,7 +133,7 @@
+     },
+     {
+         name    => 'queuebounce',
+-        default => Sympa::Constants::SPOOLDIR . '/bounce',
++        default => Sympa::Constants::SPOOLDIR . '/qbounce',
+         query   => 'Bounce incoming spool',
+         file    => 'sympa.conf',
+     },

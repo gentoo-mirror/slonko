@@ -1,0 +1,63 @@
+--- Makefile.am.orig	2007-09-19 20:12:15.520640736 +0200
++++ Makefile.am	2007-09-19 20:12:49.344926922 +0200
+@@ -134,7 +134,7 @@
+ 
+ SH	=	@SH@
+ CC	=	@CC@
+-CFLAGS	=	-g
++CFLAGS	=	@CFLAGS@
+ 
+ # Aix4.2 (and some others unix), use gnu make !
+ #MAKE	=	@MAKE@
+@@ -164,7 +163,7 @@
+ LOG_SOCKET_TYPE	=	unix
+ #endif
+ 
+-all:	warning checkperl checkcpan sources wrapper soap_wrapper man locale
++all:	sources wrapper soap_wrapper man locale
+ 
+ rpm: build_rh_rpm build_mdk_rpm
+ 
+@@ -259,7 +258,7 @@
+ 	$(MAKE) PERL='${PERL}' clean) || exit 1; \
+ 	done;
+ 
+-install: importantchanges installdir installsrc installwws installwebtt2 installmailtt2 installlocale installman installscript installsample installconfig installdoc installsoap nextstep
++install: installdir installsrc installwws installwebtt2 installmailtt2 installlocale installman installscript installsample installconfig installdoc installsoap nextstep
+ 
+ nextstep: 
+ 	@echo ""
+@@ -339,7 +339,7 @@
+ installwws:
+ 	@(cd wwsympa && echo "making in wwsympa..." && \
+ 	$(MAKE) SH='${SH}' CC='${CC}' CFLAGS='${CFLAGS}' PERL='${PERL}' \
+-	DIR='${DIR}' BINDIR='${BINDIR}' SBINDIR='${SBINDIR}' LIBDIR='${LIBDIR}' \
++	DIR='${DIR}' BINDIR='${BINDIR}' SBINDIR='${SBINDIR}' LIBDIR='${LIBDIR}' SPOOLDIR='${SPOOLDIR}' \
+ 	USER='${USER}' GROUP='${GROUP}' SUDO='${SUDO}' enable_secure='${enable_secure}' \
+ 	CGIDIR='${CGIDIR}' WWSBINDIR='${WWSBINDIR}' MAILERPROGDIR='${MAILERPROGDIR}' \
+ 	PIDDIR='${PIDDIR}' CONFIG='${CONFIG}' WWSCONFIG='${WWSCONFIG}' ETCBINDIR='${ETCBINDIR}' \
+@@ -406,7 +406,7 @@
+ 
+ installdir:
+ 	@echo "Creating required directories"
+-	@for dir in $(DIR) $(EXPL_DIR) $(CONFDIR) $(SAMPLEDIR) $(ETCDIR) $(BINDIR) $(LOCALEDIR) $(DOCDIR) $(DIR)/static_content $(DIR)/static_content/icons ; do \
++	@for dir in $(DIR) $(EXPL_DIR) $(CONFDIR) $(SAMPLEDIR) $(ETCDIR) $(BINDIR) $(LOCALEDIR) $(DOCDIR) $(SPOOLDIR)/static_content $(SPOOLDIR)/static_content/icons ; do \
+ 		if [ ! -d $(DESTDIR)$$dir ] ; then \
+ 			echo "Creating $(DESTDIR)$$dir"; \
+ 			mkdir -p $(DESTDIR)$$dir; \
+@@ -473,14 +472,7 @@
+ 	INITCONF='1'; \
+ 	fi \
+ 	fi \
+-	done; \
+-	if [ "$$INITCONF" ] ; then \
+-	echo "###############################################"; \
+-	echo "It seems to be your first installation of Sympa"; \
+-	echo "The following wizard will help you create your $(CONFDIR)/sympa.conf and $(CONFDIR)/wwsympa.conf :"; \
+-	DESTDIR=$(DESTDIR); export DESTDIR; \
+-	$(PERL) -I $(DESTDIR)$(LIBDIR) $(DESTDIR)$(SBINDIR)/sympa_wizard.pl; \
+-	fi
++	done;
+ 
+ build_rh_rpm: clean
+ 	@echo "Building RedHat RPM in $(RPMTOPDIR) ..."

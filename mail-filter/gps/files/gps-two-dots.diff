@@ -1,0 +1,11 @@
+--- gps-1.004/src/db.cpp.orig	2005-03-02 22:12:17.000000000 +0100
++++ gps-1.004/src/db.cpp	2006-11-21 19:52:18.000000000 +0100
+@@ -413,7 +413,7 @@
+ 	if(host.size() == 0) // not resolved
+ 		return string(host);
+ 	string::size_type pos = host.find('.');
+-	if(pos == string::npos) // no dot in name
++	if(pos == host.rfind('.')) // less than two dots in name
+ 		return string(host);
+ 	if(WEAKRVHOSTDBG)	cout << host.substr(pos) << " pos:" << pos << endl;
+ 	if(WEAKRVHOSTDBG)	cout << host.substr(pos+1,string::npos) << endl;
