@@ -53,6 +53,7 @@ RDEPEND="
 	>=dev-perl/MIME-EncWords-1.010
 	>=dev-perl/MIME-Lite-HTML-1.23
 	>=dev-perl/MIME-tools-5.423
+	dev-perl/Net-DNS
 	>=dev-perl/Net-Netmask-1.901.500
 	dev-perl/Template-Toolkit
 	>=dev-perl/Term-ProgressBar-2.09
