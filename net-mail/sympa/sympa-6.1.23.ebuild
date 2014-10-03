@@ -108,6 +108,8 @@ src_unpack() {
 		-e 's|^\(\s*bouncedir=\).*|\1/var/spool/sympa/bounce|' \
 		-e 's|^\(\s*arcdir=\).*|\1/var/spool/sympa/arc|' \
 		configure.ac
+	# Do not create runtime directories
+	sed -i -e 's| $(piddir) | |' Makefile.am
 	eautoreconf
 }
 
@@ -157,10 +159,6 @@ src_install() {
 
 	# Startup script
 	newinitd "${FILESDIR}/${PN}-${SYMPA_VERSION}.initd" "${PN}"
-
-	# Create pidfile dir
-	keepdir /var/run/sympa
-	fowners ${SYMPA_USER}:${SYMPA_GROUP} /var/run/sympa
 
 	# Set proper fastcgi flag
 	if use fastcgi; then

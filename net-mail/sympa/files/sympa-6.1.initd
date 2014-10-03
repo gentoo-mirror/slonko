@@ -4,6 +4,7 @@ sympaconf="/etc/sympa/sympa.conf"
 wwsympaconf="/etc/sympa/wwsympa.conf"
 data_structure="/etc/sympa/data_structure.version"
 sympadir="/usr"
+rundir="/var/run/sympa"
 
 depend() {
 	use logger mysql postgres ldap
@@ -12,14 +13,14 @@ depend() {
 
 sympa_start() {
 	ebegin "Starting Sympa module $1.pl: "
-	start-stop-daemon --start --quiet --pidfile /var/run/sympa/$1.pid --exec ${sympadir}/sbin/$1.pl
+	start-stop-daemon --start --quiet --pidfile "${rundir}"/$1.pid --exec ${sympadir}/sbin/$1.pl
 	eend $?
 }
 
 sympa_stop() {
-	if [ -f "/var/run/sympa/$1.pid" ]; then
+	if [ -f "${rundir}"/$1.pid ]; then
 		ebegin "Stopping Sympa module $1.pl: "
-		start-stop-daemon --stop --retry 30 --quiet --pidfile /var/run/sympa/$1.pid
+		start-stop-daemon --stop --retry 30 --quiet --pidfile "${rundir}"/$1.pid
 		eend $?
 	fi
 }
