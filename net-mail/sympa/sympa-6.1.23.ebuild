@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=5
 
 inherit eutils user depend.apache multilib autotools versionator
 
@@ -43,6 +43,7 @@ RDEPEND="
 	>=virtual/perl-Time-HiRes-1.29
 	virtual/perl-libnet
 	>=dev-perl/Archive-Zip-1.05
+	dev-perl/Data-Password
 	>=dev-perl/DBI-1.48
 	>=dev-perl/File-Copy-Recursive-0.36
 	dev-perl/HTML-Format
