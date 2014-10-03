@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="5"
+
 inherit perl-module
 
 DESCRIPTION="Perl module implementing CipherSaber encryption."
@@ -16,4 +18,5 @@ SRC_TEST="do"
 
 DEPEND="virtual/perl-Scalar-List-Utils
 		>=virtual/perl-Module-Build-0.28
-		dev-lang/perl"
+		>=virtual/perl-Test-Simple-0.60
+		dev-perl/Test-Warn"
