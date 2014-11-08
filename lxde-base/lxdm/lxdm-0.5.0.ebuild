@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 
-IUSE="consolekit debug gtk3 nls pam"
+IUSE="consolekit debug gtk3 nls pam selinux"
 
 RDEPEND="consolekit? ( sys-auth/consolekit )
 	x11-libs/libxcb
@@ -34,6 +34,9 @@ src_prepare() {
 
 	sed -i -e '/pam_console.so/d' pam/lxdm
 
+	if ! use selinux; then
+		sed -i -e '/pam_selinux.so/d' pam/lxdm
+	fi
 	# Allow user to apply any additional patches without modifing ebuild
     epatch_user
 
