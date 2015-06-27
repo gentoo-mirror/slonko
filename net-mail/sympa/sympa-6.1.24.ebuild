@@ -35,7 +35,7 @@ REQUIRED_USE="|| ( mysql postgres sqlite )"
 RDEPEND="
 	${DEPEND_APACHE}
 	>=dev-lang/perl-5.8
-	>=virtual/perl-CGI-3.35
+	>=dev-perl/CGI-3.35
 	>=virtual/perl-DB_File-1.75
 	>=virtual/perl-Digest-MD5-2.00
 	virtual/perl-Encode

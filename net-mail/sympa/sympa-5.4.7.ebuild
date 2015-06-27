@@ -34,7 +34,7 @@ IUSE="mysql postgres sqlite sqlite3 apache2 clamav fastcgi ldap nfs soap ssl"
 RDEPEND="
 	>=dev-lang/perl-5.8
 	${DEPEND_APACHE}
-	>=virtual/perl-CGI-3.35
+	>=dev-perl/CGI-3.35
 	>=virtual/perl-DB_File-1.75
 	>=virtual/perl-Digest-MD5-2.00
 	>=virtual/perl-File-Spec-0.8
