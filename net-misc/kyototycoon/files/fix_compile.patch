@@ -1,0 +1,10 @@
+--- ktdbext.h.ori	2014-05-26 21:10:00.451501226 +0200
++++ ktdbext.h	2014-05-26 21:10:45.871137688 +0200
+@@ -21,6 +21,7 @@
+ #include <ktulog.h>
+ #include <ktshlib.h>
+ #include <kttimeddb.h>
++#include <unistd.h>
+ 
+ namespace kyototycoon {                  // common namespace
+ 

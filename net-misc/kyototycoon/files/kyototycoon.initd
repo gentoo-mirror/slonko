@@ -1,0 +1,38 @@
+#!/sbin/runscript
+
+extra_commands="configtest"
+extra_started_commands="reload"
+
+depend() {
+	need net
+}
+
+start() {
+	configtest || return 1
+	ebegin "Starting kyoto tycoon"
+	start-stop-daemon --start --user ${KT_USER}:${KT_GROUP} --exec /usr/bin/ktserver -- \
+		-dmn -pid ${KT_PID} -log ${KT_LOG} ${KT_OPTS} ${KT_DB}
+	eend $? "Failed to start kyoto tycoon"
+}
+
+stop() {
+	configtest || return 1
+	ebegin "Stopping kyoto tycoon"
+	start-stop-daemon --stop --pidfile ${KT_PID}
+	eend $? "Failed to stop kyoto tycoon"
+	rm -f ${KT_PID}
+}
+
+reload() {
+	configtest || return 1
+	ebegin "Gracefully restarting kyoto tycoon"
+	kill -HUP `cat ${KT_PID}` &>/dev/null
+	eend $? "Failed to reload kyoto tycoon"
+}
+
+configtest() {
+	if [ -z "${KT_DB}" ] || [ -z "${KT_PORT}" ] ; then
+		eerror "Please check your configuration"
+		eend $?
+	fi
+}

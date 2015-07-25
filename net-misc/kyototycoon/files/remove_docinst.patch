@@ -1,0 +1,11 @@
+--- Makefile.in	2011-07-20 14:33:43.000000000 +0200
++++ Makefile.in.neo	2011-08-14 23:33:39.309619898 +0200
+@@ -123,8 +123,6 @@
+ 	cp -Rf $(COMMANDFILES) $(DESTDIR)$(BINDIR)
+ 	mkdir -p $(DESTDIR)$(MAN1DIR)
+ 	cd man && cp -Rf $(MAN1FILES) $(DESTDIR)$(MAN1DIR)
+-	mkdir -p $(DESTDIR)$(DOCDIR)
+-	cp -Rf $(DOCUMENTFILES) $(DESTDIR)$(DOCDIR)
+ 	mkdir -p $(DESTDIR)$(PCDIR)
+ 	cp -Rf $(PCFILES) $(DESTDIR)$(PCDIR)
+ 	@printf '\n'
