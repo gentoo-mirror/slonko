@@ -1,0 +1,15 @@
+--- compizconfig/libcompizconfig/config/CMakeLists.txt.old	2015-02-03 12:09:12.000000000 +0100
++++ compizconfig/libcompizconfig/config/CMakeLists.txt	2015-06-14 13:12:15.009100624 +0200
+@@ -4,10 +4,10 @@
+ configure_file (${CMAKE_CURRENT_SOURCE_DIR}/config_test
+ 		${CMAKE_CURRENT_BINARY_DIR}/compiz-1/compizconfig/config)
+ 
+-compiz_opt_install_file (${CMAKE_CURRENT_SOURCE_DIR}/${_config_file} ${COMPIZ_SYSCONFDIR}/compizconfig/${_config_file})
++compiz_opt_install_file (${CMAKE_CURRENT_SOURCE_DIR}/${_config_file} \"$ENV{DESTDIR}${COMPIZ_SYSCONFDIR}/compizconfig/${_config_file}\")
+ 
+ add_custom_target (
+     config_install
+     ${CMAKE_COMMAND} -E make_directory ${CMAKE_ROOT}/Modules &&
+-    ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/config/${_config_file} ${COMPIZ_SYSCONFDIR}/compizconfig/${_config_file}
++    ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/config/${_config_file} \"$ENV{DESTDIR}${COMPIZ_SYSCONFDIR}/compizconfig/${_config_file}\"
+     )
