@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils user depend.apache multilib autotools versionator
+inherit eutils user multilib autotools versionator
 
 SYMPA_VERSION="$(get_version_component_range 1-2)"
 SYMPA_RELEASE="$(get_version_component_range 3-)"
@@ -23,17 +23,16 @@ else
 fi
 
 DESCRIPTION="A feature-rich open source mailing list software"
-HOMEPAGE="http://www.sympa.org/features.html"
+HOMEPAGE="http://www.sympa.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
-IUSE="apache2 clamav -compat dkim fastcgi ldap mysql nfs nls postgres soap sqlite ssl"
+IUSE="clamav -compat dkim fastcgi ldap mysql nfs nls postgres soap sqlite ssl"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 # See http://www.sympa.org/manual/installing-sympa#required_cpan_modules
 RDEPEND="
-	${DEPEND_APACHE}
 	>=dev-lang/perl-5.8
 	>=dev-perl/CGI-3.35
 	>=virtual/perl-DB_File-1.75
@@ -139,12 +138,12 @@ src_configure() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS} -Wl,-z,now" || die "emake failed."
+	emake CFLAGS="${CFLAGS} -Wl,-z,now"
 }
 
 src_install() {
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	# Do not overwrite data_structure.version
 	rm -f "${D}/etc/sympa/data_structure.version"
@@ -212,16 +211,11 @@ src_install() {
 	keepdir /var/lib/sympa
 	keepdir /var/lib/sympa/lists
 
-	newdoc "${FILESDIR}/${PN}-apache.conf" apache.conf || \
-		die "newdoc failed"
-	newdoc "${FILESDIR}/${PN}-apache_soap.conf" apache_soap.conf || \
-		die "newdoc failed"
-	newdoc "${FILESDIR}/${PN}-lighttpd.conf" lighttpd.conf ||\
-		die "newdoc failed"
-	newdoc "${FILESDIR}/${PN}-lighttpd_soap.conf" lighttpd_soap.conf ||\
-		die "newdoc failed"
-	newdoc "${FILESDIR}/${PN}-nginx.conf" nginx.conf ||\
-		die "newdoc failed"
+	newdoc "${FILESDIR}/${PN}-apache.conf" apache.conf
+	newdoc "${FILESDIR}/${PN}-apache_soap.conf" apache_soap.conf
+	newdoc "${FILESDIR}/${PN}-lighttpd.conf" lighttpd.conf
+	newdoc "${FILESDIR}/${PN}-lighttpd_soap.conf" lighttpd_soap.conf
+	newdoc "${FILESDIR}/${PN}-nginx.conf" nginx.conf
 }
 
 pkg_postinst() {
