@@ -1,1 +1,0 @@
-compiz-0.9.12.1.ebuild

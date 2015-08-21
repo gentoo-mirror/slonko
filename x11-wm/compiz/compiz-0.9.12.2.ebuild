@@ -14,7 +14,7 @@ else
 	SRC_URI="http://launchpad.net/${PN}/${BRANCH}/${PV}/+download/${P}.tar.bz2"
 fi
 
-KEYWORDS=""
+KEYWORDS="~amd64"
 DESCRIPTION="OpenGL window and compositing manager"
 HOMEPAGE="http://www.compiz.org/"
 
