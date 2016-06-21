@@ -34,7 +34,7 @@ REQUIRED_USE="|| ( mysql postgres sqlite )"
 # See http://www.sympa.org/manual/installing-sympa#required_cpan_modules
 RDEPEND="
 	>=dev-lang/perl-5.8
-	>=dev-perl/CGI-3.35
+	>=dev-perl/CGI-3.51
 	>=virtual/perl-DB_File-1.75
 	>=virtual/perl-Digest-MD5-2.00
 	virtual/perl-Encode
@@ -49,11 +49,12 @@ RDEPEND="
 	>=dev-perl/HTML-StripScripts-Parser-1.03
 	dev-perl/HTML-Tree
 	dev-perl/IO-stringy
-	>=dev-perl/MIME-Charset-1.006.2
-	>=dev-perl/MIME-EncWords-1.010
+	>=dev-perl/MailTools-1.70
+	>=dev-perl/MIME-Charset-1.010
+	>=dev-perl/MIME-EncWords-1.014
 	>=dev-perl/MIME-Lite-HTML-1.23
 	>=dev-perl/MIME-tools-5.423
-	dev-perl/Net-DNS
+	>=dev-perl/Net-DNS-0.65
 	>=dev-perl/Net-Netmask-1.901.500
 	dev-perl/Template-Toolkit
 	>=dev-perl/Term-ProgressBar-2.09
@@ -62,10 +63,10 @@ RDEPEND="
 	dev-perl/XML-LibXML
 	dev-perl/libintl-perl
 	dev-perl/libwww-perl
-	>=net-mail/mhonarc-2.6.0
+	>=net-mail/mhonarc-2.6.18
 	clamav? ( app-antivirus/clamav )
 	compat? ( >=dev-perl/Crypt-CipherSaber-0.50 )
-	dkim? ( >=dev-perl/Mail-DKIM-0.36 )
+	dkim? ( >=dev-perl/Mail-DKIM-0.39 )
 	fastcgi? ( >=dev-perl/FCGI-0.67 )
 	ldap? ( >=dev-perl/perl-ldap-0.27 )
 	mysql? ( >=dev-perl/DBD-mysql-4.008 )
