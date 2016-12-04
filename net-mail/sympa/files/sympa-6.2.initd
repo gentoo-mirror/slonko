@@ -1,7 +1,6 @@
 #!/sbin/openrc-run
 
 sympaconf="/etc/sympa/sympa.conf"
-wwsympaconf="/etc/sympa/wwsympa.conf"
 data_structure="/etc/sympa/data_structure.version"
 sympadir="/usr"
 rundir="/var/run/sympa"
@@ -34,10 +33,6 @@ start() {
 	if [ ! -f "${sympaconf}" ]; then
 		eerror "Missing Sympa config (${sympaconf})"
 		return 2
-	fi
-	if [ ! -f "${wwsympaconf}" ]; then
-		eerror "Missing WWSympa config (${wwsympaconf})"
-		return 3
 	fi
 	echo "Starting Sympa subsystems: "
 	sympa_start sympa_msg
