@@ -17,7 +17,7 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="virtual/perl-Scalar-List-Utils
-		>=virtual/perl-Module-Build-0.28
+		>=dev-perl/Module-Build-0.28
 		>=virtual/perl-Test-Simple-0.60
 		dev-perl/Test-Warn
 		dev-lang/perl"
