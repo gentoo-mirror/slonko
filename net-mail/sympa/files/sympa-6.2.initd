@@ -1,0 +1,57 @@
+#!/sbin/openrc-run
+
+sympaconf="/etc/sympa/sympa.conf"
+wwsympaconf="/etc/sympa/wwsympa.conf"
+data_structure="/etc/sympa/data_structure.version"
+sympadir="/usr"
+rundir="/var/run/sympa"
+
+depend() {
+	use logger mysql postgres ldap
+	before apache apache2 lighttpd
+}
+
+sympa_start() {
+	ebegin "Starting Sympa module $1.pl: "
+	start-stop-daemon --start --quiet --pidfile "${rundir}"/$1.pid --exec ${sympadir}/sbin/$1.pl
+	eend $?
+}
+
+sympa_stop() {
+	if [ -f "${rundir}"/$1.pid ]; then
+		ebegin "Stopping Sympa module $1.pl: "
+		start-stop-daemon --stop --retry 30 --quiet --pidfile "${rundir}"/$1.pid
+		eend $?
+	fi
+}
+
+start() {
+	if [ ! -f "${data_structure}" ]; then
+		eerror "Please run 'sympa.pl --upgrade' first"
+		return 1
+	fi
+	# Check config files
+	if [ ! -f "${sympaconf}" ]; then
+		eerror "Missing Sympa config (${sympaconf})"
+		return 2
+	fi
+	if [ ! -f "${wwsympaconf}" ]; then
+		eerror "Missing WWSympa config (${wwsympaconf})"
+		return 3
+	fi
+	echo "Starting Sympa subsystems: "
+	sympa_start sympa_msg
+	sympa_start bulk
+	sympa_start archived
+	sympa_start bounced
+	sympa_start task_manager
+}
+
+stop(){
+	echo "Stopping Sympa subsystems: "
+	sympa_stop task_manager
+	sympa_stop bounced
+	sympa_stop archived
+	sympa_stop bulk
+	sympa_stop sympa_msg
+}
