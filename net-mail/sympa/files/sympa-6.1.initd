@@ -1,4 +1,4 @@
-#!/sbin/runscript
+#!/sbin/openrc-run
 
 sympaconf="/etc/sympa/sympa.conf"
 wwsympaconf="/etc/sympa/wwsympa.conf"

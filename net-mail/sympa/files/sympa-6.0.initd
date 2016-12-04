@@ -1,4 +1,4 @@
-#!/sbin/runscript
+#!/sbin/openrc-run
 
 opts="depend start stop"
 sympaconf="/etc/sympa/sympa.conf"

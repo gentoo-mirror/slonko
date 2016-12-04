@@ -67,7 +67,7 @@ RDEPEND="
 	clamav? ( app-antivirus/clamav )
 	compat? ( >=dev-perl/Crypt-CipherSaber-0.50 )
 	dkim? ( >=dev-perl/Mail-DKIM-0.39 )
-	fastcgi? ( >=dev-perl/FCGI-0.67 )
+	fastcgi? ( dev-perl/CGI-Fast )
 	ldap? ( >=dev-perl/perl-ldap-0.27 )
 	mysql? ( >=dev-perl/DBD-mysql-4.008 )
 	nfs? ( dev-perl/File-NFSLock )
@@ -110,6 +110,8 @@ src_unpack() {
 		configure.ac
 	# Do not create runtime directories
 	sed -i -e 's| $(piddir) | |' Makefile.am
+	# Perl 5.22 compatible regex
+	epatch ${FILESDIR}/${PN}-${SYMPA_VERSION}.perl-5.22.patch
 	eautoreconf
 }
 
