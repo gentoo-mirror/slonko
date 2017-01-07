@@ -52,7 +52,7 @@ RDEPEND="
 	>=dev-perl/File-Copy-Recursive-0.36
 	dev-perl/File-NFSLock
 	dev-perl/HTML-Format
-	>=dev-perl/HTML-StripScripts-Parser-1.03
+	>=dev-perl/HTML-StripScripts-Parser-1.30
 	dev-perl/HTML-Tree
 	dev-perl/IO-stringy
 	>=dev-perl/MailTools-1.70
