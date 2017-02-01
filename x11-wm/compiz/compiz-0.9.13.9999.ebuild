@@ -141,12 +141,12 @@ src_configure() {
 
 pkg_preinst() {
     use gnome && gnome2_gconf_savelist
-	gnome2_icon_savelist
+    gnome2_icon_savelist
 }
 
 pkg_postinst() {
     use gnome && gnome2_gconf_install
-	gnome2_icon_cache_update
+    gnome2_icon_cache_update
     if use dbus; then
         ewarn "The dbus plugin is known to crash compiz in this version. Disable"
         ewarn "it if you experience crashes when plugins are enabled/disabled."
@@ -155,5 +155,5 @@ pkg_postinst() {
 
 pkg_prerm() {
     use gnome && gnome2_gconf_uninstall
-	gnome2_icon_cache_update
+    gnome2_icon_cache_update
 }
