@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit webapp eutils depend.php confutils
+inherit webapp eutils confutils
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator"
 HOMEPAGE="http://galleryproject.org/"
