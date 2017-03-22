@@ -1,8 +1,9 @@
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=4
+EAPI=6
+PYTHON_COMPAT=( python2_7 )
 
-inherit cmake-utils eutils gnome2-utils toolchain-funcs python versionator
+inherit cmake-utils eutils gnome2-utils python-single-r1 toolchain-funcs versionator
 
 BRANCH="$(get_version_component_range 1-3)"
 MINOR="$(get_version_component_range 4)"
@@ -109,32 +110,31 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/access_violation.patch
+	eapply_user
 }
 
 pkg_setup() {
-    python_set_active_version 2
+    python-single-r1_pkg_setup
 }
 
 src_configure() {
-	use debug && CMAKE_BUILD_TYPE=Debug
+    use debug && CMAKE_BUILD_TYPE=Debug
     local mycmakeargs=(
-        "$(cmake-utils_use_use gles GLES)"
-        "$(cmake-utils_use_use gnome GCONF)"
-        "$(cmake-utils_use_use gnome GNOME)"
-        "$(cmake-utils_use_use gnome GNOME_KEYBINDINGS)"
-        "$(cmake-utils_use_use gnome GSETTINGS)"
-        "$(cmake-utils_use_use gtk GTK)"
-        "$(cmake-utils_use_use kde KDE4)"
-        "$(cmake-utils_use test COMPIZ_BUILD_TESTING)"
-		"-DCMAKE_BUILD_TYPE=Release"
+        "-DUSE_GLES=$(usex gles)"
+        "-DUSE_GNOME=$(usex gnome)"
+        "-DUSE_METACITY=$(usex gnome)"
+        "-DUSE_GTK=$(usex gtk)"
+        "-DUSE_KDE4=$(usex kde)"
+        "-DCOMPIZ_BUILD_TESTING=$(usex test)"
+        "-DCMAKE_BUILD_TYPE=Release"
         "-DCMAKE_INSTALL_PREFIX=/usr"
         "-DCOMPIZ_DEFAULT_PLUGINS=composite,opengl,decor,resize,place,move,ccp"
         "-DCOMPIZ_DISABLE_SCHEMAS_INSTALL=On"
         "-DCOMPIZ_PACKAGING_ENABLED=On"
-		"-DCOMPIZ_BUILD_WITH_RPATH=Off"
-		"-DCOMPIZ_BUILD_TESTING=Off"
-		"-DCOMPIZ_WERROR=Off"
-		"-Wno-dev"
+        "-DCOMPIZ_BUILD_WITH_RPATH=Off"
+        "-DCOMPIZ_BUILD_TESTING=Off"
+        "-DCOMPIZ_WERROR=Off"
+        "-Wno-dev"
     )
     cmake-utils_src_configure
 }
