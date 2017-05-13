@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit base multilib pax-utils versionator toolchain-funcs flag-o-matic check-reqs git-r3
 
-MY_PV="2.1.0-beta2"
+MY_PV="2.1.0-beta3"
 
 DESCRIPTION="Just-In-Time Compiler for the Lua programming language"
 HOMEPAGE="http://luajit.org/"
