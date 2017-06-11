@@ -35,6 +35,11 @@ pkg_setup() {
 	confutils_require_any mysql postgres sqlite
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/0001-Fixing-PHP-7-issues.patch"
+	epatch "${FILESDIR}/0002-Adding-more-static-s-to-get-rid-of-PHP-7-warnings.patch"
+}
+
 src_install() {
 	webapp_src_preinst
 

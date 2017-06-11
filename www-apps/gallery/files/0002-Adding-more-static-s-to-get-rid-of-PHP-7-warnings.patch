@@ -1,0 +1,179 @@
+From 046cf868770c79156d9dd8af070ac894a0eca0e6 Mon Sep 17 00:00:00 2001
+From: Greg Stoll <greg@gregstoll.com>
+Date: Sun, 2 Apr 2017 16:07:20 -0500
+Subject: [PATCH 2/2] Adding more "static"s to get rid of PHP 7 warnings
+
+---
+ modules/core/classes/GalleryCoreApi.class            |  8 ++++----
+ modules/core/classes/GalleryUtilities.class          | 20 ++++++++++----------
+ .../classes/helpers/GalleryPluginHelper_simple.class |  6 +++---
+ 3 files changed, 17 insertions(+), 17 deletions(-)
+
+diff --git a/modules/core/classes/GalleryCoreApi.class b/modules/core/classes/GalleryCoreApi.class
+index 27d5b20..f2d6e83 100644
+--- a/modules/core/classes/GalleryCoreApi.class
++++ b/modules/core/classes/GalleryCoreApi.class
+@@ -265,7 +265,7 @@ class GalleryCoreApi {
+      * @return array GalleryStatus a status code
+      *               object the plugin
+      */
+-    function loadPlugin($pluginType, $pluginId, $ignoreVersionMismatch=false,
++    static function loadPlugin($pluginType, $pluginId, $ignoreVersionMismatch=false,
+ 			$errorOnVersionMismatch=false) {
+ 	GalleryCoreApi::requireOnce(
+ 	    'modules/core/classes/helpers/GalleryPluginHelper_simple.class');
+@@ -2857,7 +2857,7 @@ class GalleryCoreApi {
+      * @param string $errorMessage
+      * @return GalleryStatus an error status
+      */
+-    function error($errorCode, $fileName='ignored', $lineNumber='ignored', $errorMessage=null) {
++    static function error($errorCode, $fileName='ignored', $lineNumber='ignored', $errorMessage=null) {
+ 	GalleryCoreApi::requireOnce('modules/core/classes/GalleryStatus.class');
+ 	$status = new GalleryStatus(GALLERY_ERROR | $errorCode, $errorMessage);
+ 	$status->setStackTrace(debug_backtrace());
+@@ -2901,7 +2901,7 @@ class GalleryCoreApi {
+      * @return array GalleryStatus a status code
+      *               array the results
+      */
+-    function getMapEntry($mapName, $select, $match=array(), $optional=array()) {
++    static function getMapEntry($mapName, $select, $match=array(), $optional=array()) {
+ 	global $gallery;
+ 
+ 	if (empty($mapName) || empty($select) || !is_array($match) || !is_array($optional)) {
+@@ -3268,7 +3268,7 @@ class GalleryCoreApi {
+      * @return string local path to the Gallery code base.  If the optional parameter has not been
+      *                supplied the return value will have the trailing slash appended.
+      */
+-    function getCodeBasePath($relativePath=null) {
++    static function getCodeBasePath($relativePath=null) {
+         static $codeBaseDirectory;
+         if (!isset($codeBaseDirectory)) {
+ 	    $codeBaseDirectory = dirname(dirname(dirname(dirname(__FILE__)))) . DIRECTORY_SEPARATOR;
+diff --git a/modules/core/classes/GalleryUtilities.class b/modules/core/classes/GalleryUtilities.class
+index eeae67d..486a160 100644
+--- a/modules/core/classes/GalleryUtilities.class
++++ b/modules/core/classes/GalleryUtilities.class
+@@ -392,7 +392,7 @@ class GalleryUtilities {
+      * @param string $key form variable name
+      * @return string prefixed form variable name
+      */
+-    function prefixFormVariable($key) {
++    static function prefixFormVariable($key) {
+ 	return GALLERY_FORM_VARIABLE_PREFIX . $key;
+     }
+ 
+@@ -525,7 +525,7 @@ class GalleryUtilities {
+      * @param string $className
+      * @return boolean
+      */
+-    function isA($instance, $className) {
++    static function isA($instance, $className) {
+ 	return is_a($instance, $className);
+     }
+ 
+@@ -554,7 +554,7 @@ class GalleryUtilities {
+      * @return array int the number of entities in the string
+      *               string the output string
+      */
+-    function entitySubstr($string, $start, $length=null, $countEntitiesAsOne=true) {
++    static function entitySubstr($string, $start, $length=null, $countEntitiesAsOne=true) {
+ 	$stringLength = strlen($string);
+ 	if ($stringLength < $start) {
+ 	    return array(0, false);
+@@ -618,7 +618,7 @@ class GalleryUtilities {
+      * @param string $source encoded using UTF-8
+      * @return string of unicode entities
+      */
+-    function utf8ToUnicodeEntities($source) {
++    static function utf8ToUnicodeEntities($source) {
+ 	/*
+ 	 * Array used to figure what number to decrement from character order value according to
+ 	 * number of characters used to map unicode to ASCII by UTF-8
+@@ -831,7 +831,7 @@ class GalleryUtilities {
+      * @deprecated
+      * @todo Remove at the next major version bump of core API
+      */
+-    function htmlEntityDecode($string) {
++    static function htmlEntityDecode($string) {
+ 	return empty($string) ? $string : html_entity_decode($string, ENT_COMPAT);
+     }
+ 
+@@ -841,7 +841,7 @@ class GalleryUtilities {
+      * @param string $markupType (optional) markup type, defaults from core markup parameter
+      * @return string resulting text
+      */
+-    function markup($text, $markupType=null) {
++    static function markup($text, $markupType=null) {
+ 	GalleryCoreApi::requireOnce('lib/smarty_plugins/modifier.markup.php');
+ 	return smarty_modifier_markup($text, $markupType);
+     }
+@@ -1141,7 +1141,7 @@ class GalleryUtilities {
+      * @return array GalleryStatus a status code
+      *               string pseudoFileName a filename
+      */
+-    function getPseudoFileName($entity) {
++    static function getPseudoFileName($entity) {
+ 	/*
+ 	 * If our GalleryEntity is a GalleryFileSystemEntity, then we've got a path component so
+ 	 * we're cool.  If it's a derivative, then get the pseudo filename of its parent and use
+@@ -1314,7 +1314,7 @@ class GalleryUtilities {
+      * @param array $provided (major, minor)
+      * @return boolean true if compatible
+      */
+-    function isCompatibleWithApi($required, $provided) {
++    static function isCompatibleWithApi($required, $provided) {
+ 	if (!is_array($required) || !is_array($provided)) {
+ 	    return false;
+ 	}
+@@ -1475,7 +1475,7 @@ class GalleryUtilities {
+      * @param boolean $force force the reevaluation of the HTTP header string Cookie
+      * @param boolean $unset unset static variable for testability
+      */
+-    function fixCookieVars($force=false, $unset=false) {
++    static function fixCookieVars($force=false, $unset=false) {
+ 	static $fixed;
+ 	if (!isset($fixed) || $force) {
+ 	    $fixed = true;
+@@ -1568,7 +1568,7 @@ class GalleryUtilities {
+      * @param array $fixedCookies (string already registered cookie name, ...)
+      * @access private
+      */
+-    function _registerCookieAttr($attr, &$fixedCookies) {
++    static function _registerCookieAttr($attr, &$fixedCookies) {
+ 	global $gallery;
+ 	/* Split NAME [=VALUE], value is optional for all attributes but the cookie name */
+ 	if (($pos = strpos($attr, '=')) !== false) {
+diff --git a/modules/core/classes/helpers/GalleryPluginHelper_simple.class b/modules/core/classes/helpers/GalleryPluginHelper_simple.class
+index f6654c6..e873921 100644
+--- a/modules/core/classes/helpers/GalleryPluginHelper_simple.class
++++ b/modules/core/classes/helpers/GalleryPluginHelper_simple.class
+@@ -32,7 +32,7 @@ class GalleryPluginHelper_simple {
+      * @see GalleryCoreApi::loadPlugin
+      * @param int $depth of recursion (don't set this; it's used internally)
+      */
+-    function loadPlugin($pluginType, $pluginId, $ignoreVersionMismatch=false,
++    static function loadPlugin($pluginType, $pluginId, $ignoreVersionMismatch=false,
+ 			$errorOnVersionMismatch=false, $depth=0) {
+ 	global $gallery;
+ 
+@@ -205,7 +205,7 @@ class GalleryPluginHelper_simple {
+     /**
+      * @see GalleryCoreApi::getPluginParameter
+      */
+-    function getParameter($pluginType, $pluginId, $parameterName, $itemId=0,
++    static function getParameter($pluginType, $pluginId, $parameterName, $itemId=0,
+ 			  $ignoreDiskCache=false) {
+ 	global $gallery;
+ 
+@@ -259,7 +259,7 @@ class GalleryPluginHelper_simple {
+      *               array (itemId/zero => array(parameterName => parameterValue), ..)
+      * @access protected
+      */
+-    function _fetchAllParameters($pluginType, $pluginId, $itemId, $ignoreDiskCache=false) {
++    static function _fetchAllParameters($pluginType, $pluginId, $itemId, $ignoreDiskCache=false) {
+ 	global $gallery;
+ 	if (empty($pluginType) || empty($pluginId)) {
+ 	    return array(GalleryCoreApi::error(ERROR_BAD_PARAMETER, __FILE__, __LINE__,
+-- 
+2.13.1
+
