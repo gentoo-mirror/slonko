@@ -29,7 +29,6 @@ REQUIRED_USE="
     || ( gd imagemagick netpbm )
     || ( mysql postgres sqlite )
 "
-HTML_DOCS=( README.html )
 S=${WORKDIR}/${PN}2
 
 need_httpd_cgi
@@ -47,6 +46,7 @@ src_prepare() {
 src_install() {
 	webapp_src_preinst
 
+	HTML_DOCS="README.html" einstalldocs
 	rm README.html LICENSE
 	sed -i -e "/^LICENSE\>/d" -e "/^README\.html\>/d" MANIFEST
 
