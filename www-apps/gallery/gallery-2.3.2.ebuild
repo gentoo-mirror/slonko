@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.2.ebuild,v 1.8 2015/07/05 22:06:42 blueness Exp $
 
-EAPI="5"
+EAPI="6"
 
-inherit webapp eutils confutils
+inherit webapp eutils
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator"
 HOMEPAGE="http://galleryproject.org/"
@@ -25,14 +25,17 @@ RDEPEND="raw? ( media-gfx/dcraw )
 	dev-lang/php[session,postgres?,gd?]
 	virtual/httpd-php"
 
+REQUIRED_USE="
+    || ( gd imagemagick netpbm )
+    || ( mysql postgres sqlite )
+"
+HTML_DOCS=( README.html )
 S=${WORKDIR}/${PN}2
 
 need_httpd_cgi
 
 pkg_setup() {
 	webapp_pkg_setup
-	confutils_require_any gd imagemagick netpbm
-	confutils_require_any mysql postgres sqlite
 }
 
 src_prepare() {
@@ -43,7 +46,6 @@ src_prepare() {
 src_install() {
 	webapp_src_preinst
 
-	dohtml README.html
 	rm README.html LICENSE
 	sed -i -e "/^LICENSE\>/d" -e "/^README\.html\>/d" MANIFEST
 
