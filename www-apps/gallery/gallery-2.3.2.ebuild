@@ -41,6 +41,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/0001-Fixing-PHP-7-issues.patch"
 	epatch "${FILESDIR}/0002-Adding-more-static-s-to-get-rid-of-PHP-7-warnings.patch"
+	eapply_user
 }
 
 src_install() {
