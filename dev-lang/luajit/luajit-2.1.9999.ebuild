@@ -11,7 +11,7 @@ MY_PV="2.1.0-beta3"
 DESCRIPTION="Just-In-Time Compiler for the Lua programming language"
 HOMEPAGE="http://luajit.org/"
 SRC_URI=""
-EGIT_REPO_URI="http://luajit.org/git/luajit-2.0.git"
+EGIT_REPO_URI="https://luajit.org/git/luajit-2.0.git"
 EGIT_BRANCH="v2.1"
 
 LICENSE="MIT"
