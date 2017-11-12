@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 
-IUSE="consolekit debug gnome-keyring gtk3 nls pam selinux"
+IUSE="consolekit debug gnome-keyring gtk3 nls pam selinux systemd"
 
 RDEPEND="consolekit? ( sys-auth/consolekit )
 	x11-libs/libxcb
@@ -39,6 +39,9 @@ src_prepare() {
 	fi
 	if ! use gnome-keyring; then
 		sed -i -e '/pam_gnome_keyring.so/d' pam/lxdm
+	fi
+	if use systemd; then
+		echo -e "[cmd]\nreboot = systemctl reboot\nshutdown = systemctl poweroff" >> data/lxdm.conf.in
 	fi
 	# Allow user to apply any additional patches without modifing ebuild
     epatch_user
