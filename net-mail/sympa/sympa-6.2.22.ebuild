@@ -120,8 +120,6 @@ src_unpack() {
 		configure.ac
 	# Do not create runtime directories
 	sed -i -e 's| $(piddir) | |' Makefile.am
-	# Fix SQLite upgrade
-	epatch ${FILESDIR}/${PN}-${SYMPA_VERSION}.sqlite.upgrade.patch
 	eautoreconf
 }
 
