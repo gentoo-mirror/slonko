@@ -51,7 +51,6 @@ RDEPEND="
 	>=dev-perl/DBI-1.48
 	>=dev-perl/File-Copy-Recursive-0.36
 	dev-perl/File-NFSLock
-	dev-perl/HTML-Format
 	>=dev-perl/HTML-StripScripts-Parser-1.30
 	dev-perl/HTML-Tree
 	dev-perl/IO-stringy
