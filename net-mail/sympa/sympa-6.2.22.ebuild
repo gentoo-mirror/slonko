@@ -165,7 +165,7 @@ src_install() {
 	fperms g+s /usr/libexec/sympa/{bouncequeue,familyqueue,queue}
 
 	# Docs
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README etc_README
+	dodoc AUTHORS.md CONTRIBUTING.md INSTALL.md NEWS.md README.md COPYING etc_README
 
 	# Startup script
 	newinitd "${FILESDIR}/${PN}-${SYMPA_VERSION}.initd" "${PN}"
