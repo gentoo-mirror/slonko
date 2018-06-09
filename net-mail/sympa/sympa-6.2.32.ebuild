@@ -207,17 +207,17 @@ src_install() {
 	# Queue dirs
 	keepdir /var/spool/sympa
 	local SYMPA_DIRS="arc auth automatic bounce bulk digest moderation msg \
-		outgoing qbounce static_content static_content/css static_content/pictures \
-		task tmp topic"
+		outgoing qbounce static_content static_content/css \
+		static_content/pictures task tmp topic viewmail"
 	local DIR
 	for DIR in ${SYMPA_DIRS}; do
 		keepdir /var/spool/sympa/${DIR}
 		fowners ${SYMPA_USER}:${SYMPA_GROUP} /var/spool/sympa/${DIR}
 		case "${DIR}" in
-			"static_content*" )
+			static_content*)
 				fperms 755 /var/spool/sympa/${DIR}
 			;;
-			* )
+			*)
 				fperms 750 /var/spool/sympa/${DIR}
 			;;
 		esac
