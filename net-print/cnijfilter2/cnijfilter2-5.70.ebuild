@@ -27,7 +27,7 @@ PATCHES=( "${FILESDIR}"/${PN}-5.20-gentoo.patch )
 
 src_prepare() {
 	default
-	DIRS="cmdtocanonij2 cnijbe2 lgmon3 rastertocanonij tocanonij tocnpwg"
+	DIRS="cmdtocanonij2 cmdtocanonij3 cnijbe2 lgmon3 rastertocanonij tocanonij tocnpwg"
 	LIBDIR=com/libs_bin$(usex amd64 64 32)
 	for d in ${DIRS}; do
 		mv "${d}"/configure.{in,ac} || die
