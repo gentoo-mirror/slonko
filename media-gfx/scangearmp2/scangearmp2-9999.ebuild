@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="7"
 
 inherit eutils flag-o-matic autotools multilib
 
@@ -40,6 +40,7 @@ pkg_setup() {
 
 src_prepare() {
 	cd ${PN}
+	eapply_user
 	eautoreconf
 }
 
