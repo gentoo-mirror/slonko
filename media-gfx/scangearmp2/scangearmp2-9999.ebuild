@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="7"
+EAPI=7
 
-inherit eutils flag-o-matic autotools multilib
+inherit eutils flag-o-matic autotools multilib desktop
 
 DESCRIPTION="Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series)."
 HOMEPAGE="http://support-au.canon.com.au/contents/AU/EN/0100303302.html"
@@ -27,17 +27,6 @@ IUSE="+sane usb"
 DEPEND=">=dev-libs/libusb-1.0.0
 	>=x11-libs/gtk+-2.16.0"
 
-pkg_setup() {
-	if [ -z "$LINGUAS" ]; then    # -z tests to see if the argument is empty
-		ewarn "You didn't specify 'LINGUAS' in your make.conf. Assuming" 
-		ewarn "English localisation, i.e. 'LINGUAS=\"en\"'." 
-		LINGUAS="en" 
-	fi
-
-	_libdir="/usr/$(get_libdir)"
-	_udevdir="/lib/udev/rules.d"
-}
-
 src_prepare() {
 	cd ${PN}
 	eapply_user
@@ -45,7 +34,7 @@ src_prepare() {
 }
 
 src_configure() {
-	cd scangearmp2
+	cd ${PN}
 
 	if use x86; then
 		LDFLAGS="-L$(pwd)/../com/libs_bin32"
@@ -58,15 +47,19 @@ src_configure() {
 }
 
 src_compile() {
-	cd ${PN}
-	make
+	pushd ${PN}
+	make || die "Couldn't build ${PN}"
+	popd
 }
 
 src_install() {
-	cd ${PN}
-	make DESTDIR=${D} install || die "Couldn't make install scangearmp2"
+	pushd ${PN}
+	make DESTDIR=${D} install || die "Couldn't make install ${PN}"
+	popd
+	domenu "${FILESDIR}"/${PN}.desktop
 
-	cd ..
+	_libdir="/usr/$(get_libdir)"
+	_udevdir="/lib/udev/rules.d"
 
 	dodir ${_libdir}
 	if use x86; then
@@ -101,9 +94,4 @@ pkg_postinst() {
 			einfo "Please, reload usb rules manually."
 		fi
 	fi
-
-	einfo ""
-	einfo "If you experience any problems, please visit:"
-	einfo " http://forums.gentoo.org/viewtopic-p-3217721.html"
-	einfo ""
 }

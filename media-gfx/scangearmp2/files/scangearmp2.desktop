@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=ScanGear MP
+GenericName=ScanGear MP
+Comment=Cannon's scanner software
+Exec=scangearmp2
+TryExec=scangearmp2
+Icon=scanner
+Terminal=false
+Type=Application
+Categories=Graphics;2DGraphics;RasterGraphics;Scanning;GTK;
+StartupNotify=true
