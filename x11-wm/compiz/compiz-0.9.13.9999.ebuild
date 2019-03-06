@@ -110,6 +110,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	cmake-utils_src_prepare
 	sed -i -e 's/CYTHON_BIN cython3/CYTHON_BIN cython/' compizconfig/compizconfig-python/CMakeLists.txt
 	epatch "${FILESDIR}"/access_violation.patch
 	eapply_user
