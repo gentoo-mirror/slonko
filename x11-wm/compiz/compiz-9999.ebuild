@@ -103,6 +103,7 @@ src_prepare() {
 	cmake-utils_src_prepare
 	sed -i -e 's/CYTHON_BIN cython3/CYTHON_BIN cython/' compizconfig/compizconfig-python/CMakeLists.txt
 	epatch "${FILESDIR}"/access_violation.patch
+	epatch "${FILESDIR}"/fix_pkgconfig_libdir.patch
 	eapply_user
 }
 
@@ -118,8 +119,6 @@ src_configure() {
 		"-DUSE_METACITY=$(usex gnome)"
 		"-DUSE_GTK=$(usex gtk)"
 		"-DCOMPIZ_BUILD_TESTING=$(usex test)"
-		"-DCMAKE_BUILD_TYPE=Release"
-		"-DCMAKE_INSTALL_PREFIX=/usr"
 		"-DCOMPIZ_DEFAULT_PLUGINS=composite,opengl,decor,resize,place,move,ccp"
 		"-DCOMPIZ_DISABLE_SCHEMAS_INSTALL=On"
 		"-DCOMPIZ_PACKAGING_ENABLED=On"
