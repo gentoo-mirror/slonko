@@ -118,6 +118,7 @@ src_configure() {
 		"-DUSE_GNOME=$(usex gnome)"
 		"-DUSE_METACITY=$(usex gnome)"
 		"-DUSE_GTK=$(usex gtk)"
+		"-DCMAKE_BUILD_TYPE=Release"
 		"-DCOMPIZ_BUILD_TESTING=$(usex test)"
 		"-DCOMPIZ_DEFAULT_PLUGINS=composite,opengl,decor,resize,place,move,ccp"
 		"-DCOMPIZ_DISABLE_SCHEMAS_INSTALL=On"
