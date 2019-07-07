@@ -74,7 +74,7 @@ pkg_setup() {
 
 src_compile() {
 	local -a args=(
-		TARGET=linux2628
+		TARGET=linux-glibc
 		USE_GETADDRINFO=1
 		USE_TFO=1
 	)
