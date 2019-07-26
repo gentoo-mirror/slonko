@@ -101,7 +101,10 @@ pkg_pretend() {
 
 src_prepare() {
 	cmake-utils_src_prepare
-	sed -i -e 's/CYTHON_BIN cython3/CYTHON_BIN cython/' compizconfig/compizconfig-python/CMakeLists.txt
+	sed -i \
+		-e 's|CYTHON_BIN cython3|CYTHON_BIN cython|' \
+		-e "s|/lib/python|/$(get_libdir)/python|" \
+		compizconfig/compizconfig-python/CMakeLists.txt
 	epatch "${FILESDIR}"/access_violation.patch
 	epatch "${FILESDIR}"/fix_pkgconfig_libdir.patch
 	eapply_user
@@ -114,19 +117,19 @@ pkg_setup() {
 src_configure() {
 	use debug && CMAKE_BUILD_TYPE=Debug
 	local mycmakeargs=(
-		"-DUSE_GLES=$(usex gles)"
-		"-DUSE_GNOME=$(usex gnome)"
-		"-DUSE_METACITY=$(usex gnome)"
-		"-DUSE_GTK=$(usex gtk)"
-		"-DCMAKE_BUILD_TYPE=Release"
-		"-DCOMPIZ_BUILD_TESTING=$(usex test)"
-		"-DCOMPIZ_DEFAULT_PLUGINS=composite,opengl,decor,resize,place,move,ccp"
-		"-DCOMPIZ_DISABLE_SCHEMAS_INSTALL=On"
-		"-DCOMPIZ_PACKAGING_ENABLED=On"
-		"-DCOMPIZ_BUILD_WITH_RPATH=Off"
-		"-DCOMPIZ_BUILD_TESTING=Off"
-		"-DCOMPIZ_WERROR=Off"
-		"-Wno-dev"
+		-DUSE_GLES=$(usex gles)
+		-DUSE_GNOME=$(usex gnome)
+		-DUSE_METACITY=$(usex gnome)
+		-DUSE_GTK=$(usex gtk)
+		-DCMAKE_BUILD_TYPE=Release
+		-DCOMPIZ_BUILD_TESTING=$(usex test)
+		-DCOMPIZ_DEFAULT_PLUGINS=composite,opengl,decor,resize,place,move,ccp
+		-DCOMPIZ_DISABLE_SCHEMAS_INSTALL=On
+		-DCOMPIZ_PACKAGING_ENABLED=On
+		-DCOMPIZ_BUILD_WITH_RPATH=Off
+		-DCOMPIZ_BUILD_TESTING=Off
+		-DCOMPIZ_WERROR=Off
+		-Wno-dev
 	)
 	cmake-utils_src_configure
 }
