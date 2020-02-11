@@ -103,6 +103,10 @@ pkg_pretend() {
 	fi
 }
 
+pkg_setup() {
+	python-single-r1_pkg_setup
+}
+
 src_prepare() {
 	cmake-utils_src_prepare
 	sed -i \
@@ -110,12 +114,7 @@ src_prepare() {
 		-e "s|/lib/python|/$(get_libdir)/python|" \
 		compizconfig/compizconfig-python/CMakeLists.txt
 	epatch "${FILESDIR}"/access_violation.patch
-	epatch "${FILESDIR}"/fix_pkgconfig_libdir.patch
 	eapply_user
-}
-
-pkg_setup() {
-	python-single-r1_pkg_setup
 }
 
 src_configure() {
@@ -138,6 +137,11 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
+src_install() {
+	cmake-utils_src_install
+	python_optimize
+}
+
 pkg_preinst() {
 	use gnome && gnome2_gconf_savelist
 	gnome2_icon_savelist
@@ -145,6 +149,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	use gnome && gnome2_gconf_install
+	xdg_desktop_database_update
 	xdg_icon_cache_update
 	if use dbus; then
 		ewarn "The dbus plugin is known to crash compiz in this version. Disable"
@@ -157,5 +162,6 @@ pkg_prerm() {
 }
 
 pkg_postrm() {
+	xdg_desktop_database_update
 	xdg_icon_cache_update
 }

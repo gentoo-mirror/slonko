@@ -113,15 +113,15 @@ src_unpack() {
 	fi
 }
 
+pkg_setup() {
+	python-single-r1_pkg_setup
+}
+
 src_prepare() {
 	cmake-utils_src_prepare
 	sed -i -e 's/CYTHON_BIN cython3/CYTHON_BIN cython/' compizconfig/compizconfig-python/CMakeLists.txt
 	epatch "${FILESDIR}"/access_violation.patch
 	eapply_user
-}
-
-pkg_setup() {
-	python-single-r1_pkg_setup
 }
 
 src_configure() {
@@ -144,6 +144,11 @@ src_configure() {
 		"-Wno-dev"
 	)
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+	python_optimize
 }
 
 pkg_preinst() {
