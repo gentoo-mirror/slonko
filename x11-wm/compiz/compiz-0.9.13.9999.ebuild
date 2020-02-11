@@ -1,7 +1,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-PYTHON_COMPAT=( python{3_4,3_5,3_6} )
+PYTHON_COMPAT=( python3_{4,5,6} )
 
 inherit cmake-utils eutils gnome2-utils python-single-r1 toolchain-funcs versionator
 
@@ -23,8 +23,10 @@ LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 
 IUSE="+cairo debug dbus fuse gles gnome gtk kde +svg test"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMONDEPEND="
+	${PYTHON_DEPS}
 	!x11-wm/compiz-fusion
 	!x11-libs/compiz-bcop
 	!x11-libs/libcompizconfig
@@ -41,7 +43,9 @@ COMMONDEPEND="
 	dev-cpp/glibmm
 	dev-libs/libxml2
 	dev-libs/libxslt
-	dev-python/cython[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep '
+		dev-python/cython[${PYTHON_MULTI_USEDEP}]
+	')
 	dev-python/pyrex
 	dev-libs/protobuf
 	media-libs/libpng
