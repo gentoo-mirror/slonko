@@ -10,7 +10,7 @@ if [[ ${PV} == 9999* ]]; then
     EGIT_REPO_URI="https://git.launchpad.net/${PN}"
     S="${WORKDIR}/${P}"
 else
-	SRC_URI="http://launchpad.net/${PN}/${BRANCH}/${PV}/+download/${P}.tar.bz2"
+	SRC_URI="http://launchpad.net/${PN}/${BRANCH}/${PV}/+download/${P}.tar.xz"
 fi
 
 KEYWORDS="~amd64"
@@ -139,6 +139,7 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
+	python_fix_shebang "${ED}"
 	python_optimize
 }
 
