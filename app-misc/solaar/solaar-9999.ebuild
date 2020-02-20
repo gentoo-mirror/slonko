@@ -1,32 +1,36 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-PYTHON_COMPAT=( python{2_7,3_5,3_6} )
+EAPI=7
 
-inherit distutils-r1 udev user linux-info gnome2-utils
+DISTUTILS_USE_SETUPTOOLS=no
+PYTHON_COMPAT=( python3_{6,7} )
+
+inherit linux-info udev xdg distutils-r1
 
 if [[ ${PV} == *9999 ]] ; then
-    EGIT_REPO_URI="https://github.com/pwr/Solaar"
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/pwr-Solaar/Solaar"
 	EGIT_CHECKOUT_DIR="${WORKDIR}/Solaar-${PV}"
-    inherit git-r3
 else
-    SRC_URI="https://github.com/pwr/Solaar/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/pwr-Solaar/Solaar/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
 DESCRIPTION="A Linux device manager for Logitech's Unifying Receiver peripherals"
-HOMEPAGE="https://pwr.github.com/Solaar/"
+HOMEPAGE="https://pwr-solaar.github.io/Solaar/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm x86"
 IUSE="doc"
 
-RDEPEND=">=dev-python/pyudev-0.13[${PYTHON_USEDEP}]
+RDEPEND="
+	acct-group/plugdev
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
+	>=dev-python/pyudev-0.13[${PYTHON_USEDEP}]
 	x11-libs/gtk+:3[introspection]"
 
-S=${WORKDIR}/Solaar-${PV}
+S="${WORKDIR}"/Solaar-${PV}
 
 CONFIG_CHECK="~HID_LOGITECH_DJ ~HIDRAW"
 
@@ -50,16 +54,3 @@ python_install_all() {
 		dodoc -r docs/*
 	fi
 }
-
-pkg_postinst() {
-	enewgroup plugdev
-
-	if [[ -z ${REPLACING_VERSIONS} ]] ; then
-		elog "Users must be in the plugdev group to use this application."
-	fi
-
-	gnome2_icon_cache_update
-}
-
-pkg_preinst() { gnome2_icon_savelist; }
-pkg_postrm() { gnome2_icon_cache_update; }
