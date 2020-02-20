@@ -8,7 +8,8 @@ inherit eutils prefix
 
 DESCRIPTION="rpm workalike for Gentoo Linux"
 HOMEPAGE="https://github.com/fuzzyray/epm"
-SRC_URI="http://dev.gentoo.org/~fuzzyray/distfiles/${P}.tar.gz"
+SRC_URI="epm"
+S="${WORKDIR}/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +19,12 @@ IUSE=""
 DEPEND=">=dev-lang/perl-5"
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	:
+}
+
 src_prepare() {
+	cp "${FILESDIR}"/epm ${S}/epm
 	epatch "${FILESDIR}"/${P}-prefix.patch
 	eprefixify epm
 }
