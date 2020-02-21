@@ -8,7 +8,6 @@ inherit eutils prefix
 
 DESCRIPTION="rpm workalike for Gentoo Linux"
 HOMEPAGE="https://github.com/fuzzyray/epm"
-SRC_URI="epm"
 S="${WORKDIR}/"
 
 LICENSE="GPL-2"
