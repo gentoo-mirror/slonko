@@ -1,0 +1,12 @@
+DEFINED_PHASES=install unpack
+DEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DESCRIPTION=Qualcomm Atheros Open Powerline Toolkit.
+EAPI=5
+HOMEPAGE=https://github.com/qca/open-plc-utils
+IUSE=doc
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	86a0188f2ad9eb3d65e4d031ab8a0422
+_md5_=3e12a09060b13e5edf83a436b4f2c0b9
