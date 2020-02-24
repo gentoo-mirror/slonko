@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3_{6,7,8} )
 
 inherit python-any-r1 go-module
 
-EGIT_COMMIT="50d543b5fcb0e1c0d7c27b1398a9a9790df09dfb"
+EGIT_COMMIT="436667c819c324e35d7e839f8116b968a2d0a3ff"
 
 EGO_VENDOR=(
 	"cloud.google.com/go v0.49.0 github.com/googleapis/google-cloud-go"
@@ -19,7 +19,7 @@ EGO_VENDOR=(
 	"github.com/cpuguy83/go-md2man v1.0.10"
 	"github.com/davecgh/go-spew v1.1.1"
 	"github.com/docker/distribution v2.7.1"
-	"github.com/docker/docker v1.13.1"
+	"github.com/docker/docker a8608b5b67c77169276863cf31c6bc89a9ab3d8c"
 	"github.com/docker/go-connections v0.3.0"
 	"github.com/docker/go-units v0.4.0"
 	"github.com/docker/machine a555e4f7a8f518a8b1b174824c377e46cbfc4fe2"
@@ -33,7 +33,7 @@ EGO_VENDOR=(
 	"github.com/googleapis/gax-go v2.0.5"
 	"github.com/googleapis/gnostic v0.3.0"
 	"github.com/google/go-cmp v0.3.0"
-	"github.com/google/go-containerregistry 697ee0b3d46eff19ed2b30f86230377061203f79"
+	"github.com/google/go-containerregistry aec8da010de25d23759d972d7896629d6ae897d8"
 	"github.com/google/gofuzz v1.0.0"
 	"github.com/hashicorp/errwrap 7554cd9344cec97297fa6649b055a8c98c2a1e55"
 	"github.com/hashicorp/go-cleanhttp v0.5.0"
@@ -73,7 +73,7 @@ EGO_VENDOR=(
 	"github.com/pkg/errors v0.8.1"
 	"github.com/pkg/profile 3a8809bd8a80f8ecfe4ee1b34b3f37194968617c"
 	"github.com/russross/blackfriday v1.5.2"
-	"github.com/samalba/dockerclient 91d7393ff85980ba3a8966405871a3d446ca28f2"
+	"github.com/samalba/dockerclient 015626177a9773c51b89c84fc763b717eaa22286"
 	"github.com/shirou/gopsutil v2.18.12"
 	"github.com/spf13/afero v1.2.2"
 	"github.com/spf13/cast v1.3.0"
@@ -83,11 +83,11 @@ EGO_VENDOR=(
 	"github.com/spf13/viper v1.3.2"
 	"github.com/ulikunitz/xz v0.5.5"
 	"github.com/VividCortex/ewma v1.1.1"
-	"golang.org/x/crypto 60c769a6c58655dab1b9adac0d58967dd517cfba github.com/golang/crypto"
+	"golang.org/x/crypto e9b2fee46413994441b28dfca259d911d963dfed github.com/golang/crypto"
 	"golang.org/x/net 13f9640d40b9cc418fb53703dfbd177679788ceb github.com/golang/net"
 	"golang.org/x/oauth2 0f29369cfe4552d0e4bcddc57cc75f4d7e672a33 github.com/golang/oauth2"
 	"golang.org/x/sync cd5d95a43a6e21273425c7ae415d3df9ea832eeb github.com/golang/sync"
-	"golang.org/x/sys c7b8b68b14567162c6602a7c5659ee0f26417c18 github.com/golang/sys"
+	"golang.org/x/sys b09406accb4736d857a32bf9444cd7edae2ffa79 github.com/golang/sys"
 	"golang.org/x/text v0.3.2 github.com/golang/text"
 	"golang.org/x/time 9d24e82272b4f38b78bc8cff74fa936d31ccd8ef github.com/golang/time"
 	"google.golang.org/api v0.9.0 github.com/googleapis/google-api-go-client"
