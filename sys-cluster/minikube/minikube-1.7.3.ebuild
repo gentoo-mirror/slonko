@@ -79,6 +79,7 @@ EGO_VENDOR=(
 	"github.com/russross/blackfriday v1.5.2"
 	"github.com/samalba/dockerclient 015626177a9773c51b89c84fc763b717eaa22286"
 	"github.com/shirou/gopsutil v2.18.12"
+	"github.com/sirupsen/logrus v1.4.2"
 	"github.com/opencontainers/image-spec v1.0.1"
 	"github.com/spf13/afero v1.2.2"
 	"github.com/spf13/cast v1.3.0"
