@@ -1,13 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=5
+EAPI=7
 
-inherit eutils user multilib autotools versionator
+inherit eutils user multilib autotools
 
-SYMPA_VERSION="$(get_version_component_range 1-2)"
-SYMPA_RELEASE="$(get_version_component_range 3-)"
+SYMPA_VERSION="$(ver_cut 1-2)"
+SYMPA_RELEASE="$(ver_cut 3-)"
 
 if [[ ${SYMPA_VERSION} == "9999" ]] ; then
 	# Development version
@@ -25,7 +24,7 @@ else
 fi
 
 DESCRIPTION="A feature-rich open source mailing list software"
-HOMEPAGE="http://www.sympa.org/"
+HOMEPAGE="https://www.sympa.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -33,7 +32,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="clamav -compat dkim fastcgi ldap mysql nls postgres soap sqlite ssl"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
-# See http://www.sympa.org/manual/installing-sympa#required_cpan_modules
+# See https://www.sympa.org/manual/installing-sympa#required_cpan_modules
 RDEPEND="
 	>=dev-lang/perl-5.8
 	>=dev-perl/CGI-3.51
@@ -103,16 +102,7 @@ pkg_setup() {
 	enewuser ${SYMPA_USER} -1 -1 -1 ${SYMPA_GROUP}
 }
 
-src_unpack() {
-	if [[ ${SYMPA_VERSION} == "9999" ]] ; then
-		subversion_src_unpack
-	elif [[ ${SYMPA_RELEASE} == "9999" ]] ; then
-		subversion_src_unpack
-	else
-		unpack ${A}
-		cd "${S}"
-	fi
-	cd "${S}"
+src_prepare() {
 	# Override defaults for certain options, so
 	# Sympa won't complain about conflicting paths
 	sed -i -e "/'queuebounce'/,/}/ s|'/bounce'|'/qbounce'|" src/lib/Sympa/ConfDef.pm
@@ -243,7 +233,7 @@ pkg_postinst() {
 	elog
 	elog "The Sympa web interface needs to be setup in your webserver."
 	elog "For more information please consult Sympa documentation at"
-	elog "http://www.sympa.org/manual/web-interface#web_server_setup"
+	elog "https://www.sympa.org/manual/web-interface#web_server_setup"
 	elog "Sample configs are installed in /usr/share/doc/${P}"
 	elog
 
