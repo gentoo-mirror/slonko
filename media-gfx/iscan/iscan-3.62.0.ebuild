@@ -39,9 +39,10 @@ src_prepare() {
 	default
 
 	# Remove vendored libraries
-	rm -r upstream/boost
-	# Workaround for deprecated warnings
-	sed -e 's|-Werror||g' -i configure.ac
+	rm -r upstream/boost || die
+	# Workaround for deprecation warnings:
+	# https://gitlab.com/utsushi/utsushi/issues/90
+	sed -e 's|-Werror||g' -i configure.ac || die
 	eautoreconf
 }
 
