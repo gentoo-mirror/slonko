@@ -1,25 +1,24 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=7
 
 inherit eutils flag-o-matic autotools multilib desktop
 
 DESCRIPTION="Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series)."
-HOMEPAGE="http://support-au.canon.com.au/contents/AU/EN/0100303302.html"
-RESTRICT="nomirror confcache"
+HOMEPAGE="https://support-au.canon.com.au/contents/AU/EN/0100303302.html"
+RESTRICT="mirror"
 
 if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/Ordissimo/${PN}.git"
 	S="${WORKDIR}/${P}"
 else
-	SRC_URI="http://gdlp01.c-wss.com/gds/3/0100009933/01/${PN}-source-${PV}-1.tar.gz"
+	SRC_URI="https://gdlp01.c-wss.com/gds/3/0100009933/01/${PN}-source-${PV}-1.tar.gz"
 	S="${WORKDIR}/${PN}-source-${PV}-1"
 fi
 
-LICENSE="UNKNOWN" # GPL-2 source and proprietary binaries
+LICENSE="GPL-2"
 
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
@@ -78,7 +77,7 @@ src_install() {
 		install -D -m 755 scangearmp2/src/.libs/libsane-canon_pixma.so.1.0.0 "${D}${_libdir}"/sane/libsane-canon_pixma.so.1.0.0
 		ln -sf "${_libdir}"/sane/libsane-canon_pixma.so.1.0.0 "${D}${_libdir}"/sane/libsane-canon_pixma.so.1
 		ln -sf "${_libdir}"/sane/libsane-canon_pixma.so.1.0.0 "${D}${_libdir}"/sane/libsane-canon_pixma.so
-		install -d ${D}/etc/sane.d/dll.d
+		install -d "${D}"/etc/sane.d/dll.d
 		echo canon_pixma > "${D}"/etc/sane.d/dll.d/canon_pixma.conf
 	fi
 }
