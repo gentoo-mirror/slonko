@@ -3,12 +3,12 @@ DEFINED_PHASES=configure install prepare
 DEPEND=dev-libs/boost:= media-gfx/sane-backends media-libs/tiff virtual/libusb:1 virtual/jpeg gui? ( dev-cpp/gtkmm:2.4 ) imagemagick? ( !graphicsmagick? ( media-gfx/imagemagick:= ) graphicsmagick? ( media-gfx/graphicsmagick:= ) )
 DESCRIPTION=EPSON Image Scan v3 for Linux
 EAPI=7
-HOMEPAGE=http://support.epson.net/linux/en/imagescanv3.php
+HOMEPAGE=https://support.epson.net/linux/en/imagescanv3.php
 IUSE=graphicsmagick gui imagemagick
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3+
 RDEPEND=dev-libs/boost:= media-gfx/sane-backends media-libs/tiff virtual/libusb:1 virtual/jpeg gui? ( dev-cpp/gtkmm:2.4 ) imagemagick? ( !graphicsmagick? ( media-gfx/imagemagick:= ) graphicsmagick? ( media-gfx/graphicsmagick:= ) )
 SLOT=0
-SRC_URI=http://support.epson.net/linux/src/scanner/imagescanv3/common/imagescan_3.62.0.orig.tar.gz
+SRC_URI=https://support.epson.net/linux/src/scanner/imagescanv3/common/imagescan_3.62.0.orig.tar.gz
 _eclasses_=autotools	ea7865c8fba1ea8d3639f355fffe1a3c	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	3719195b17f75382c225c2155e81198c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	udev	452708c3f55cf6e918b045adb949a9e6
-_md5_=f09051b5b348eeb01ceaed47bbffe580
+_md5_=ff05792aea32dd0339a5fe295dbd6f27
