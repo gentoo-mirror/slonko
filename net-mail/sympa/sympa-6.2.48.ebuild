@@ -103,15 +103,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	default
 	# Override defaults for certain options, so
 	# Sympa won't complain about conflicting paths
-	sed -i -e "/'queuebounce'/,/}/ s|'/bounce'|'/qbounce'|" src/lib/Sympa/ConfDef.pm
+	sed -i -e "/'queuebounce'/,/}/ s|'/bounce'|'/qbounce'|" src/lib/Sympa/ConfDef.pm || die
 	# Gentoo specific: redefine some defaults
 	sed -i -e 's|^\(\s*bouncedir=\).*|\1/var/spool/sympa/bounce|' \
 		-e 's|^\(\s*arcdir=\).*|\1/var/spool/sympa/arc|' \
-		configure.ac
+		configure.ac || die
 	# Do not create runtime directories
-	sed -i -e 's| $(piddir) | |' Makefile.am
+	sed -i -e 's| $(piddir) | |' Makefile.am || die
 	eautoreconf
 }
 
