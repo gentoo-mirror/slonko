@@ -47,8 +47,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# Workaround for:
-	# /usr/lib64/utsushi/libutsushi.so.0: undefined symbol: libcnx_usb_LTX_factory
+	# Workaround: https://gitlab.com/utsushi/utsushi/issues/91
 	append-ldflags $(no-as-needed)
 	econf \
 		$(use_with gui gtkmm) \
