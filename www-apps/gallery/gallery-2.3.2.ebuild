@@ -26,8 +26,8 @@ RDEPEND="raw? ( media-gfx/dcraw )
 	virtual/httpd-php"
 
 REQUIRED_USE="
-    || ( gd imagemagick netpbm )
-    || ( mysql postgres sqlite )
+	|| ( gd imagemagick netpbm )
+	|| ( mysql postgres sqlite )
 "
 S=${WORKDIR}/${PN}2
 

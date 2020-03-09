@@ -6,13 +6,13 @@ EAPI=5
 
 inherit perl-module
 
-DESCRIPTION="This module provides Unicode case-folding for Perl. Case-folding is a tool that allows a program to make case-insensitive string comparisons or do case-insensitive lookups."
+DESCRIPTION="Unicode::CaseFold - Unicode case-folding for case-insensitive lookups."
 HOMEPAGE="http://metacpan.org/release/Unicode-CaseFold"
 SRC_URI="mirror://cpan/authors/id/A/AR/ARODLAND/${P}.tar.gz"
 
 SLOT="0"
-LICENSE="Artistic & GPL"
-KEYWORDS="~x86 ~amd64"
+LICENSE="|| ( GPL-1+ Artistic )"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 SRC_TEST="do"
 
