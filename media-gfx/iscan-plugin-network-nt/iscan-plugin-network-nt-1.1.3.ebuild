@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -7,7 +7,7 @@ inherit linux-info rpm
 
 DESCRIPTION="Network scanning plugin for EPSON scanners (nonfree)"
 
-HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
+HOMEPAGE="https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 # This is distributed as part of the "bundle driver"; since we already have the
 # opensource part separately we just install the nonfree part here.
 
