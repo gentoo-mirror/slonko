@@ -3,7 +3,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils python-single-r1
 
@@ -20,13 +20,18 @@ SLOT="0"
 
 LICENSE="GPL-2"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
-RDEPEND="dev-python/pygobject[${PYTHON_USEDEP}]
-	dev-python/configobj[${PYTHON_USEDEP}]
-	dev-python/pybluez[${PYTHON_USEDEP}]
-	>=dev-python/pygtk-2.0[${PYTHON_USEDEP}]"
+RDEPEND="
+	${PYTHON_DEPS}
+	$(python_gen_cond_dep '
+		dev-python/pygobject[${PYTHON_MULTI_USEDEP}]
+		dev-python/configobj[${PYTHON_MULTI_USEDEP}]
+		dev-python/pybluez[${PYTHON_MULTI_USEDEP}]
+		>=dev-python/pygtk-2.0[${PYTHON_MULTI_USEDEP}]
+	')
+"
 
 S="${WORKDIR}/${P}.orig"
 
@@ -37,7 +42,6 @@ src_install() {
 	insinto "/usr/lib/${PN}"
 	doins blueproximity*
 	doins proximity*
-	dodoc COPYING
 	dodoc README
 	dodoc ChangeLog
 	doman doc/blueproximity.1

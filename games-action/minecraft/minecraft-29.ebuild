@@ -9,19 +9,20 @@ inherit games java-utils-2
 DESCRIPTION="An open-world game whose gameplay revolves around breaking and placing blocks"
 HOMEPAGE="http://www.minecraft.net"
 SRC_URI="
-  https://github.com/Tabinol/gentoo-minecraft/archive/${PV}.tar.gz -> ${P}.tar.gz
-  https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar -> ${PN}.jar"
-	
-LICENSE="Minecraft"
+	https://github.com/Tabinol/gentoo-minecraft/archive/${PV}.tar.gz -> ${P}.tar.gz
+	https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar -> ${PN}.jar"
+
+LICENSE="Mojang"
 SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="mirror"
 
 S="${WORKDIR}/gentoo-minecraft-${PV}"
 
-RDEPEND=">=virtual/jre-1.8.0
-  >=x11-apps/xrandr-1.4.3
-  virtual/ttf-fonts"
+RDEPEND="
+	>=virtual/jre-1.8.0
+	>=x11-apps/xrandr-1.4.3
+	virtual/ttf-fonts"
 
 DEPEND=""
 
@@ -39,7 +40,7 @@ src_prepare() {
 
 src_install() {
 	java-pkg_dojar "${DISTDIR}/${PN}.jar"
-  dogamesbin "${PN}"
+	dogamesbin "${PN}"
 	doicon "${PN}.png"
 	make_desktop_entry "${PN}" "Minecraft"
 
@@ -54,4 +55,3 @@ pkg_postinst() {
 
 	games_pkg_postinst
 }
-

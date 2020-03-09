@@ -4,9 +4,9 @@
 
 inherit eutils unpacker games
 
-DESCRIPTION="military simulations by the U.S. Army to provide civilians with insights on soldiering"
+DESCRIPTION="Military simulations by the U.S. Army to provide insights on soldiering"
 HOMEPAGE="http://www.americasarmy.com/"
-SRC_URI="mirror://3dgamers/${PN/-/}/${PN}${PV}-linux.run"
+SRC_URI="mirror://sourceforge/distrobuild/${PN}${PV}-linux.run"
 
 LICENSE="Army-EULA"
 SLOT="0"

@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python3_{4,5,6} )
 inherit cmake-utils eutils gnome2-utils xdg-utils python-single-r1 toolchain-funcs
 
 if [[ ${PV} == 9999* ]]; then
-    inherit git-r3
-    EGIT_REPO_URI="https://git.launchpad.net/${PN}"
-    S="${WORKDIR}/${P}"
+	inherit git-r3
+	EGIT_REPO_URI="https://git.launchpad.net/${PN}"
+	S="${WORKDIR}/${P}"
 else
 	SRC_URI="http://launchpad.net/${PN}/${BRANCH}/${PV}/+download/${P}.tar.xz"
 fi
@@ -72,7 +72,7 @@ COMMONDEPEND="
 			x11-wm/metacity
 		)
 	)
-	kde? ( kde-base/kwin:4 )
+	kde? ( kde-plasma/kwin )
 	svg? (
 		gnome-base/librsvg:2
 		x11-libs/cairo
@@ -82,11 +82,8 @@ COMMONDEPEND="
 DEPEND="${COMMONDEPEND}
 	app-admin/chrpath
 	virtual/pkgconfig
-	x11-proto/damageproto
-	x11-proto/xineramaproto
 	test? (
 		dev-cpp/gtest
-		dev-cpp/gmock
 	)"
 
 RDEPEND="${COMMONDEPEND}

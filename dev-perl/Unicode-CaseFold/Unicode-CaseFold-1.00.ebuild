@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/A/AR/ARODLAND/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-1+ Artistic )"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 SRC_TEST="do"
 

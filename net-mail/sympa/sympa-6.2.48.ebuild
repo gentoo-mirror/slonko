@@ -11,13 +11,13 @@ SYMPA_RELEASE="$(get_version_component_range 3-)"
 
 if [[ ${SYMPA_VERSION} == "9999" ]] ; then
 	# Development version
-    SRC_URI=""
-    EGIT_REPO_URI="https://github.com/sympa-community/sympa"
-    inherit git-r3
+	SRC_URI=""
+	EGIT_REPO_URI="https://github.com/sympa-community/sympa"
+	inherit git-r3
 elif [[ ${SYMPA_RELEASE} == "9999" ]] ; then
 	# Latest stable
 	EGIT_BRANCH="sympa-${SYMPA_VERSION}"
-    EGIT_REPO_URI="https://github.com/sympa-community/sympa"
+	EGIT_REPO_URI="https://github.com/sympa-community/sympa"
 	inherit git-r3
 else
 	# Release
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.sympa.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="clamav -compat dkim fastcgi ldap mysql nls postgres soap sqlite ssl"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
@@ -110,9 +110,9 @@ src_unpack() {
 		subversion_src_unpack
 	else
 		unpack ${A}
-		cd ${S}
+		cd "${S}"
 	fi
-	cd ${S}
+	cd "${S}"
 	# Override defaults for certain options, so
 	# Sympa won't complain about conflicting paths
 	sed -i -e "/'queuebounce'/,/}/ s|'/bounce'|'/qbounce'|" src/lib/Sympa/ConfDef.pm
@@ -170,7 +170,7 @@ src_install() {
 	fperms g+s /usr/libexec/sympa/{bouncequeue,familyqueue,queue}
 
 	# Docs
-	dodoc AUTHORS.md CONTRIBUTING.md INSTALL.md NEWS.md README.md COPYING etc_README
+	dodoc AUTHORS.md CONTRIBUTING.md INSTALL.md NEWS.md README.md etc_README
 
 	# Startup script
 	newinitd "${FILESDIR}/${PN}-${SYMPA_VERSION}.initd" "${PN}"
@@ -180,7 +180,7 @@ src_install() {
 		sed -i -r 's:^(\s*use_fast_cgi\s*).*:\11:' "${D}/etc/sympa/sympa.conf"
 	else
 		sed -i -r 's:^(\s*use_fast_cgi\s*).*:\10:' "${D}/etc/sympa/sympa.conf"
-	fi	
+	fi
 	# Update antivirus config
 	if use clamav; then
 		sed -i -r \

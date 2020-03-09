@@ -20,18 +20,16 @@ DEPEND=">=dev-db/kyotocabinet-1.2.65
 	app-arch/bzip2
 	lua? ( dev-lang/lua )"
 RDEPEND="${DEPEND}"
+PATCHES=(
+	"${FILESDIR}/remove_docinst.patch"
+	"${FILESDIR}/fix_compile.patch"
+)
 
 pkg_setup() {
 	if use !prefix ; then
 		enewgroup tycoon
 		enewuser tycoon -1 -1 /var/lib/${PN} tycoon
 	fi
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/remove_docinst.patch"
-    epatch "${FILESDIR}/fix_compile.patch"
-	epatch_user
 }
 
 src_configure() {
@@ -61,7 +59,7 @@ src_install() {
 		dohtml -r doc/*
 	fi
 
-	dodoc ChangeLog COPYING README
+	dodoc ChangeLog README
 
 	newinitd "${FILESDIR}/${PN}.initd" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}

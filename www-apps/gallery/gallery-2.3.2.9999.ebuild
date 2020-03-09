@@ -14,15 +14,15 @@ IUSE="ffmpeg +gd imagemagick +mysql netpbm postgres raw sqlite unzip zip"
 
 case ${PV} in
 *.9999)
-    SRC_URI=""
-    EGIT_REPO_URI="https://github.com/gregstoll/gallery2"
-    inherit git-r3
-    ;;
+	SRC_URI=""
+	EGIT_REPO_URI="https://github.com/gregstoll/gallery2"
+	inherit git-r3
+	;;
 *)
-    KEYWORDS="amd64 hppa ppc ppc64 x86"
-    SRC_URI="mirror://sourceforge/${PN}/${P}-full.tar.gz"
-    S=${WORKDIR}/${PN}2
-    ;;
+	KEYWORDS="amd64 hppa ppc ppc64 x86"
+	SRC_URI="mirror://sourceforge/${PN}/${P}-full.tar.gz"
+	S=${WORKDIR}/${PN}2
+	;;
 esac
 
 RDEPEND="raw? ( media-gfx/dcraw )
@@ -37,8 +37,8 @@ RDEPEND="raw? ( media-gfx/dcraw )
 	virtual/httpd-php"
 
 REQUIRED_USE="
-    || ( gd imagemagick netpbm )
-    || ( mysql postgres sqlite )
+	|| ( gd imagemagick netpbm )
+	|| ( mysql postgres sqlite )
 "
 
 need_httpd_cgi

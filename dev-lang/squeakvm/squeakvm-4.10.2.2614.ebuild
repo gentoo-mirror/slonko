@@ -1,20 +1,20 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 EAPI=6
-inherit versionator fixheadtails 
+inherit versionator fixheadtails
 DESCRIPTION="Highly-portable Smalltalk-80 implementation"
 HOMEPAGE="http://www.squeak.org/"
 SRC_URI="http://squeakvm.org/unix/release/Squeak-${PV}-src.tar.gz"
 LICENSE="Apple"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+X +mmx +threads +iconv +opengl image64 alsa oss pulseaudio nas +v4l fbcon dbus +scratch examples"
 
 
-DEPEND="X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXt ) 
+DEPEND="X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXt )
 	dev-util/cmake
 	media-libs/freetype
-    >=x11-libs/cairo-1.8.6
+	>=x11-libs/cairo-1.8.6
 	>=x11-libs/pango-1.20.5
 	>=dev-libs/glib-2.20.1:2
 	virtual/libffi
@@ -133,7 +133,7 @@ src_configure() {
 	#use threads 	&& myconf="${myconf} --enable-mpg-pthread"
 	#use iconv 		|| myconf="${myconf} --disable-iconv"
 	#use opengl 		|| myconf="${myconf} --without-gl"
-	use image64 	&& myconf="${myconf} --image64"
+	use image64 && myconf="${myconf} --image64"
 	#use alsa		|| myconf="${myconf} --without-alsa"
 	#use oss			|| myconf="${myconf} --without-OSS"
 	#use pulseaudio	|| myconf="${myconf} --without-pulse"
@@ -143,12 +143,10 @@ src_configure() {
 	#use dbus		|| myconf="${myconf} --without-DBusPlugin"
 	#use scratch		|| myconf="${myconf} --without-ScratchPlugin"
 
-	
-
 	cd ${S}
-    touch unix/npsqueak/CMakeLists.txt
+	touch unix/npsqueak/CMakeLists.txt
 	mkdir build
-	cd build	
+	cd build
 	../unix/cmake/configure \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
