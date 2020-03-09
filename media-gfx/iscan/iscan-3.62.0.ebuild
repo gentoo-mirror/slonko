@@ -6,8 +6,8 @@ EAPI=7
 inherit autotools flag-o-matic udev
 
 DESCRIPTION="EPSON Image Scan v3 for Linux"
-HOMEPAGE="http://support.epson.net/linux/en/imagescanv3.php"
-SRC_URI="http://support.epson.net/linux/src/scanner/imagescanv3/common/imagescan_${PV}.orig.tar.gz"
+HOMEPAGE="https://support.epson.net/linux/en/imagescanv3.php"
+SRC_URI="https://support.epson.net/linux/src/scanner/imagescanv3/common/imagescan_${PV}.orig.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
