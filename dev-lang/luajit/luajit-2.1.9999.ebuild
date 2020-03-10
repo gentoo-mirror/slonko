@@ -1,11 +1,11 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit pax-utils toolchain-funcs versionator git-r3
+inherit pax-utils toolchain-funcs git-r3
 
-#MY_PV="$(get_version_component_range 1-4)"
+#MY_PV="$(ver_cut 1-4)"
 #MY_PV="${MY_PV/_beta/-beta}"
 MY_PV="2.1.0-beta3"
 
