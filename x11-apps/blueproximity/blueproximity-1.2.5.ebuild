@@ -1,7 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
 PYTHON_COMPAT=( python2_7 )
 
@@ -14,7 +14,6 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 IUSE=""
 
 MY_AVAILABLE_LINGUAS="de en es fa hu it ru sv th"
-IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 SLOT="0"
 

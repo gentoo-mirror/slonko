@@ -1,6 +1,7 @@
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 PYTHON_COMPAT=( python3_{4,5,6} )
 
 inherit cmake-utils eutils gnome2-utils xdg-utils python-single-r1 toolchain-funcs
@@ -61,13 +62,13 @@ COMMONDEPEND="
 	virtual/opengl
 	virtual/glu
 	cairo? ( x11-libs/cairo[X] )
-	fuse? ( sys-fs/fuse )
+	fuse? ( sys-fs/fuse:= )
 	gtk? (
 		x11-libs/gtk+:3
 		x11-libs/libwnck:3
 		x11-libs/pango
 		gnome? (
-			gnome-base/gnome-desktop
+			gnome-base/gnome-desktop:=
 			gnome-base/gconf
 			x11-wm/metacity
 		)
@@ -87,10 +88,12 @@ DEPEND="${COMMONDEPEND}
 	)"
 
 RDEPEND="${COMMONDEPEND}
-	dev-python/pygtk
 	x11-apps/mesa-progs
 	x11-apps/xvinfo
 	x11-themes/hicolor-icon-theme"
+PATCHES=(
+	"${FILESDIR}/access_violation.patch"
+)
 
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
@@ -109,8 +112,7 @@ src_prepare() {
 	sed -i \
 		-e 's|CYTHON_BIN cython3|CYTHON_BIN cython|' \
 		-e "s|/lib/python|/$(get_libdir)/python|" \
-		compizconfig/compizconfig-python/CMakeLists.txt
-	epatch "${FILESDIR}"/access_violation.patch
+		compizconfig/compizconfig-python/CMakeLists.txt || die
 	eapply_user
 }
 
