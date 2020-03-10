@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI="7"
 
@@ -23,8 +22,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	cp "${FILESDIR}"/epm ${S}/epm
-	epatch "${FILESDIR}"/${P}-prefix.patch
+	cp "${FILESDIR}"/epm "${S}"/epm
+	epatch "${FILESDIR}/${P}"-prefix.patch
 	eprefixify epm
 }
 
