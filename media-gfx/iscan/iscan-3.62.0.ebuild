@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools flag-o-matic udev
+inherit autotools udev
 
 DESCRIPTION="EPSON Image Scan v3 for Linux"
 HOMEPAGE="https://support.epson.net/linux/en/imagescanv3.php"
@@ -43,12 +43,10 @@ src_prepare() {
 	# Workaround for deprecation warnings:
 	# https://gitlab.com/utsushi/utsushi/issues/90
 	sed -e 's|-Werror||g' -i configure.ac || die
-	eautoreconf
+	AT_NOELIBTOOLIZE=yes eautoreconf
 }
 
 src_configure() {
-	# Workaround: https://gitlab.com/utsushi/utsushi/issues/91
-	append-ldflags $(no-as-needed)
 	econf \
 		$(use_with gui gtkmm) \
 		$(use_with imagemagick magick) \
