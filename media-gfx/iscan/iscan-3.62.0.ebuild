@@ -47,7 +47,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
+	myconf=(
 		$(use_with gui gtkmm) \
 		$(use_with imagemagick magick) \
 		$(use_with imagemagick magick-pp) \
@@ -58,13 +58,17 @@ src_configure() {
 		--with-sane \
 		--with-tiff \
 		--with-udev-confdir="$(get_udevdir)"
+	)
+	econf "${myconf[@]}"
 }
 
 src_install() {
 	default
 	dodoc lib/devices.conf
 	find "${ED}" -name '*.la' -delete || die
+}
 
+pkg_postinst() {
 	elog "If you encounter problems with media-gfx/xsane when scanning (e.g., bad resolution),"
 	elog "please try the built-in GUI and kde-misc/skanlite first before reporting bugs."
 }
