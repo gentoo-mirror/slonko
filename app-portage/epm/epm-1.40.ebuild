@@ -14,6 +14,9 @@ SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
+PATCHES=(
+	"${FILESDIR}/${P}-prefix.patch"
+)
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}"
 
@@ -23,8 +26,8 @@ src_unpack() {
 
 src_prepare() {
 	cp "${FILESDIR}"/epm "${S}"/epm
-	epatch "${FILESDIR}/${P}"-prefix.patch
 	eprefixify epm
+	eapply_user
 }
 
 src_compile() {
