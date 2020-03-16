@@ -47,7 +47,7 @@ src_prepare() {
 }
 
 src_configure() {
-	myconf=(
+	local myconf=(
 		$(use_with gui gtkmm) \
 		$(use_with imagemagick magick) \
 		$(use_with imagemagick magick-pp) \
