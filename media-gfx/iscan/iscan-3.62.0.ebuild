@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools udev
+inherit autotools desktop udev xdg-utils
 
 DESCRIPTION="EPSON Image Scan v3 for Linux"
 HOMEPAGE="https://support.epson.net/linux/en/imagescanv3.php"
@@ -66,9 +66,16 @@ src_install() {
 	default
 	dodoc lib/devices.conf
 	find "${ED}" -name '*.la' -delete || die
+	if use gui; then
+		newicon -s scalable doc/icon.svg "${PN}".svg
+		make_desktop_entry utsushi "Image Scan"
+	fi
 }
 
 pkg_postinst() {
+	use gui && xdg_icon_cache_update
 	elog "If you encounter problems with media-gfx/xsane when scanning (e.g., bad resolution),"
 	elog "please try the built-in GUI and kde-misc/skanlite first before reporting bugs."
 }
+
+pkg_postrm() { use gui && xdg_icon_cache_update; }
