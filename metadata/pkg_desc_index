@@ -15,7 +15,7 @@ media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linu
 media-tv/sopcast 3.2.6: SopCast free P2P Internet TV binary
 net-mail/sympa 6.2.48: A feature-rich open source mailing list software
 net-misc/kyototycoon 0.9.56-r1: A andy cache/storage server
-net-print/epson-inkjet-printer-escpr2 1.1.9: Epson Inkjet Printer Driver (ESC/P-R) 2
+net-print/epson-inkjet-printer-escpr2 1.1.10: Epson Inkjet Printer Driver (ESC/P-R) 2
 sys-cluster/minikube 1.7.3: Single Node Kubernetes Cluster
 sys-fs/exfat-nofuse 9999: Non-fuse kernel driver for exFat and VFat file systems
 sys-kernel/hardened-sources 5.4.24: Minimal supplement to upstream Kernel Self Protection Project

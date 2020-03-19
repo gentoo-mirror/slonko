@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install unpack
+DEPEND=net-print/cups >=app-arch/rpm2targz-9.0.0.3g
+DESCRIPTION=Epson Inkjet Printer Driver (ESC/P-R) 2
+EAPI=7
+HOMEPAGE=http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=net-print/cups
+SLOT=0
+SRC_URI=https://download3.ebz.epson.net/dsc/f/03/00/10/85/32/3116071d74e340fcefabe151725c926f01469a91/epson-inkjet-printer-escpr2-1.1.10-1lsb3.2.src.rpm
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	rpm	c1d552831d4ee9c7bb82c35545c264c8
+_md5_=136bb0c7cad2b0738374b85d2c4df807
