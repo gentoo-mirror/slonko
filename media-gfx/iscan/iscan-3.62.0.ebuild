@@ -6,12 +6,12 @@ EAPI=7
 inherit autotools desktop udev xdg-utils
 
 DESCRIPTION="EPSON Image Scan v3 for Linux"
-HOMEPAGE="https://support.epson.net/linux/en/imagescanv3.php"
+HOMEPAGE="https://support.epson.net/linux/en/imagescanv3.php https://gitlab.com/utsushi/utsushi"
 SRC_URI="https://support.epson.net/linux/src/scanner/imagescanv3/common/imagescan_${PV}.orig.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-IUSE="graphicsmagick gui imagemagick"
+IUSE="graphicsmagick gui"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
@@ -21,10 +21,8 @@ DEPEND="
 	virtual/libusb:1
 	virtual/jpeg
 	gui? ( dev-cpp/gtkmm:2.4 )
-	imagemagick? (
-		!graphicsmagick? ( media-gfx/imagemagick:= )
-		graphicsmagick? ( media-gfx/graphicsmagick:= )
-	)
+	graphicsmagick? ( media-gfx/graphicsmagick:=[cxx] )
+	!graphicsmagick? ( media-gfx/imagemagick:=[cxx] )
 "
 RDEPEND="${DEPEND}"
 
@@ -48,15 +46,15 @@ src_prepare() {
 
 src_configure() {
 	local myconf=(
-		$(use_with gui gtkmm) \
-		$(use_with imagemagick magick) \
-		$(use_with imagemagick magick-pp) \
-		--enable-sane-config \
-		--enable-udev-config \
-		--with-boost=yes \
-		--with-jpeg \
-		--with-sane \
-		--with-tiff \
+		$(use_with gui gtkmm)
+		--enable-sane-config
+		--enable-udev-config
+		--with-boost=yes
+		--with-jpeg
+		--with-magick=$(usex graphicsmagick GraphicsMagick ImageMagick)
+		--with-magick-pp=$(usex graphicsmagick GraphicsMagick ImageMagick)
+		--with-sane
+		--with-tiff
 		--with-udev-confdir="$(get_udevdir)"
 	)
 	econf "${myconf[@]}"
@@ -78,4 +76,6 @@ pkg_postinst() {
 	elog "please try the built-in GUI and kde-misc/skanlite first before reporting bugs."
 }
 
-pkg_postrm() { use gui && xdg_icon_cache_update; }
+pkg_postrm() {
+	use gui && xdg_icon_cache_update
+}
