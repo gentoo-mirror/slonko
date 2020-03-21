@@ -45,7 +45,6 @@ COMMONDEPEND="
 	$(python_gen_cond_dep '
 		dev-python/cython[${PYTHON_MULTI_USEDEP}]
 	')
-	dev-python/pyrex
 	dev-libs/protobuf
 	media-libs/libpng
 	x11-base/xorg-server
