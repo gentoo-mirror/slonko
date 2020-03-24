@@ -20,9 +20,9 @@ DEPEND="
 	media-libs/tiff
 	virtual/libusb:1
 	virtual/jpeg
-	gui? ( dev-cpp/gtkmm:2.4 )
 	graphicsmagick? ( media-gfx/graphicsmagick:=[cxx] )
 	!graphicsmagick? ( media-gfx/imagemagick:=[cxx] )
+	gui? ( dev-cpp/gtkmm:2.4 )
 "
 RDEPEND="${DEPEND}"
 
