@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXt ) dev-util/cmake media-libs/freetype >=x11-libs/cairo-1.8.6 >=x11-libs/pango-1.20.5 >=dev-libs/glib-2.20.1:2 virtual/libffi sys-apps/util-linux iconv? ( virtual/libiconv ) opengl? ( virtual/opengl ) v4l? ( >=media-libs/libv4l-0.5.8 ) alsa? ( media-libs/alsa-lib ) oss? ( media-libs/alsa-oss ) pulseaudio? ( media-sound/pulseaudio ) nas? ( media-libs/nas ) dbus? ( sys-apps/dbus ) >=sys-apps/sed-4
+DEPEND=X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXt ) dev-util/cmake media-libs/freetype >=x11-libs/cairo-1.8.6 >=x11-libs/pango-1.20.5 >=dev-libs/glib-2.20.1:2 virtual/libffi sys-apps/util-linux iconv? ( virtual/libiconv ) opengl? ( virtual/opengl ) v4l? ( >=media-libs/libv4l-0.5.8 ) alsa? ( media-libs/alsa-lib ) oss? ( media-libs/alsa-oss ) pulseaudio? ( media-sound/pulseaudio ) nas? ( media-libs/nas ) dbus? ( sys-apps/dbus )
 DESCRIPTION=Highly-portable Smalltalk-80 implementation
 EAPI=7
 HOMEPAGE=http://www.squeak.org/
@@ -9,5 +9,5 @@ LICENSE=Apple
 RDEPEND=X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXt ) dev-util/cmake media-libs/freetype >=x11-libs/cairo-1.8.6 >=x11-libs/pango-1.20.5 >=dev-libs/glib-2.20.1:2 virtual/libffi sys-apps/util-linux iconv? ( virtual/libiconv ) opengl? ( virtual/opengl ) v4l? ( >=media-libs/libv4l-0.5.8 ) alsa? ( media-libs/alsa-lib ) oss? ( media-libs/alsa-oss ) pulseaudio? ( media-sound/pulseaudio ) nas? ( media-libs/nas ) dbus? ( sys-apps/dbus )
 SLOT=0
 SRC_URI=http://squeakvm.org/unix/release/Squeak-4.10.2.2614-src.tar.gz
-_eclasses_=fixheadtails	6b7b3d896b0b285c12a94f3105c2a06c
+_eclasses_=fixheadtails	662e80584ee2337b981d7188078e7c74
 _md5_=bbf24b87b00a73f162113fa83981684d
