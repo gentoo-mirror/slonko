@@ -14,12 +14,13 @@ SLOT="0"
 IUSE="graphicsmagick gui"
 KEYWORDS="~amd64 ~x86"
 
+BDEPEND="virtual/pkgconfig"
 DEPEND="
 	dev-libs/boost:=
 	media-gfx/sane-backends
 	media-libs/tiff
-	virtual/libusb:1
 	virtual/jpeg
+	virtual/libusb:1
 	graphicsmagick? ( media-gfx/graphicsmagick:=[cxx] )
 	!graphicsmagick? ( media-gfx/imagemagick:=[cxx] )
 	gui? ( dev-cpp/gtkmm:2.4 )
@@ -41,7 +42,7 @@ src_prepare() {
 	# Workaround for deprecation warnings:
 	# https://gitlab.com/utsushi/utsushi/issues/90
 	sed -e 's|-Werror||g' -i configure.ac || die
-	AT_NOELIBTOOLIZE=yes eautoreconf
+	eautoreconf
 }
 
 src_configure() {
