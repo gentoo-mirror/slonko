@@ -10,5 +10,5 @@ LICENSE=GPL-3+
 RDEPEND=dev-libs/boost:= media-gfx/sane-backends media-libs/tiff virtual/jpeg virtual/libusb:1 graphicsmagick? ( media-gfx/graphicsmagick:=[cxx] ) !graphicsmagick? ( media-gfx/imagemagick:=[cxx] ) gui? ( dev-cpp/gtkmm:2.4 )
 SLOT=0
 SRC_URI=https://support.epson.net/linux/src/scanner/imagescanv3/common/imagescan_3.62.0.orig.tar.gz
-_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	desktop	3b1f1d9a6b749c9ce2d5182877265b23	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	c9e26066f2b7b5a91ad08d042f7f7306	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	udev	452708c3f55cf6e918b045adb949a9e6	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	desktop	3b1f1d9a6b749c9ce2d5182877265b23	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	udev	452708c3f55cf6e918b045adb949a9e6	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
 _md5_=97851d56980462e34b61c61e859803a6
