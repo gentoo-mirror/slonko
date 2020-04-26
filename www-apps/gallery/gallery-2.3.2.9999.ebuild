@@ -13,7 +13,6 @@ IUSE="ffmpeg +gd imagemagick +mysql netpbm postgres raw sqlite unzip zip"
 
 case ${PV} in
 *.9999)
-	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/gregstoll/gallery2"
 	inherit git-r3
 	;;
