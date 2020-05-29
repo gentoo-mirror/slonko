@@ -4,12 +4,12 @@
 EAPI="6"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="39"
+K_GENPATCHES_VER="43"
 
 inherit kernel-2
 detect_version
 detect_arch
-SUBREL="a"
+SUBREL="b"
 HARDENED_URI="https://github.com/anthraxx/linux-hardened/releases/download/${PV}.${SUBREL}/linux-hardened-${PV}.${SUBREL}.patch"
 
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
