@@ -11,5 +11,5 @@ RDEPEND=>=dev-lang/perl-5.8 >=dev-perl/CGI-3.51 >=virtual/perl-Digest-MD5-2.00 v
 REQUIRED_USE=|| ( mysql postgres sqlite )
 SLOT=0
 SRC_URI=https://github.com/sympa-community/sympa/releases/download/6.2.48/sympa-6.2.48.tar.gz
-_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	eutils	fcb2aa98e1948b835b5ae66ca52868c5	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	0914eab919f4f11dd9e0407b92af4726	toolchain-funcs	d3e75048a89c0445838d2f44e5c65d97	user	7b7fc6ec5eb1c1eee55b0609f01e7362	user-info	a2abd4e2f4c3b9b06d64bf1329359a02
+_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	eutils	fcb2aa98e1948b835b5ae66ca52868c5	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	2477ebe553d3e4d2c606191fe6c33602	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	user	7b7fc6ec5eb1c1eee55b0609f01e7362	user-info	a2abd4e2f4c3b9b06d64bf1329359a02
 _md5_=b3556dd0816310f6c07da319268ce063
