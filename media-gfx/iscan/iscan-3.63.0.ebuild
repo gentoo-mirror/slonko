@@ -11,11 +11,11 @@ SRC_URI="https://support.epson.net/linux/src/scanner/imagescanv3/common/imagesca
 
 LICENSE="GPL-3+"
 SLOT="0"
-IUSE="graphicsmagick gui"
+IUSE="graphicsmagick gui test"
 KEYWORDS="~amd64 ~x86"
 
 BDEPEND="virtual/pkgconfig"
-DEPEND="
+RDEPEND="
 	dev-libs/boost:=
 	media-gfx/sane-backends
 	media-libs/tiff
@@ -25,8 +25,11 @@ DEPEND="
 	!graphicsmagick? ( media-gfx/imagemagick:=[cxx] )
 	gui? ( dev-cpp/gtkmm:2.4 )
 "
-RDEPEND="${DEPEND}"
-
+# Disable opencl as during reorient.utr test it produces inconsistent results
+DEPEND="${RDEPEND}
+	test? ( app-text/tesseract[training,-opencl] )
+"
+RESTRICT="!test? ( test )"
 S="${WORKDIR}/utsushi-0.$(ver_cut 2-3)"
 
 PATCHES=(
@@ -34,6 +37,10 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.61.0-imagemagick-7.patch
 	"${FILESDIR}"/${PN}-3.62.0-gcc-10.patch
 	"${FILESDIR}"/${PN}-3.62.0-boost-1.73.patch
+	"${FILESDIR}"/${PN}-3.62.0-fix-symbols.patch
+	"${FILESDIR}"/${PN}-3.62.0-tests-boost.patch
+	"${FILESDIR}"/${PN}-3.62.0-tests-tesseract.patch
+	"${FILESDIR}"/${PN}-3.62.0-tests-linkage.patch
 )
 
 src_prepare() {
@@ -44,6 +51,8 @@ src_prepare() {
 	# Workaround for deprecation warnings:
 	# https://gitlab.com/utsushi/utsushi/issues/90
 	sed -e 's|=-Werror|="-Werror -Wno-error=deprecated-declarations"|g' -i configure.ac || die
+	# Disable check-soname test
+	sed -e '/SANE_BACKEND_SANITY_CHECKS +=/d' -i sane/Makefile.am || die
 	eautoreconf
 }
 
