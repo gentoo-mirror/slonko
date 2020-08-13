@@ -4,7 +4,7 @@
 EAPI="6"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="15"
+K_GENPATCHES_VER="16"
 
 inherit kernel-2
 detect_version
@@ -13,7 +13,7 @@ SUBREL="a"
 HARDENED_URI="https://github.com/anthraxx/linux-hardened/releases/download/${PV}.${SUBREL}/linux-hardened-${PV}.${SUBREL}.patch"
 
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-HOMEPAGE="https://github.com/anthraxx/linux-hardened"
+HOMEPAGE="https://github.com/anthraxx/linux-hardened https://dev.gentoo.org/~mpagano/genpatches"
 IUSE="experimental"
 UNIPATCH_LIST="${DISTDIR}/linux-hardened-${PV}.${SUBREL}.patch"
 UNIPATCH_EXCLUDE="1510_fs-enable-link-security-restrictions-by-default.patch"
