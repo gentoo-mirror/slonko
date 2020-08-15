@@ -9,7 +9,6 @@ games-action/minecraft 1.6.93-r1: Official Java launcher for Minecraft
 games-fps/armyops 250: Military simulations by the U.S. Army to provide insights on soldiering
 games-kids/scratch 1.4.0.7: A programming environment for creating stories, animations, games, and music.
 mail-filter/greyfix 0.4.0: Greylisting policy daemon for Postfix
-media-gfx/iscan 3.63.0: EPSON Image Scan v3 for Linux
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 media-tv/sopcast 3.2.6: SopCast free P2P Internet TV binary
 net-mail/sympa 6.2.56: A feature-rich open source mailing list software
