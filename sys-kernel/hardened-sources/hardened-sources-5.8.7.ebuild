@@ -4,8 +4,7 @@
 EAPI="6"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-inherit versionator
-K_GENPATCHES_VER="$(($(get_version_component_range 3)+1))"
+K_GENPATCHES_VER="10"
 
 inherit kernel-2
 detect_version
