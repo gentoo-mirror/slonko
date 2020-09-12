@@ -93,7 +93,6 @@ RDEPEND="${COMMONDEPEND}
 	x11-themes/hicolor-icon-theme"
 PATCHES=(
 	"${FILESDIR}/access_violation.patch"
-	"${FILESDIR}/gcc-10.patch"
 	"${FILESDIR}/gtk-extents.patch"
 )
 
