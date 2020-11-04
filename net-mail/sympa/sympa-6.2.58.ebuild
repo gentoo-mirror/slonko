@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils user multilib autotools
+inherit eutils multilib autotools
 
 SYMPA_VERSION="$(ver_cut 1-2)"
 SYMPA_RELEASE="$(ver_cut 3-)"
@@ -32,8 +32,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="clamav -compat dkim fastcgi ldap mysql nls postgres soap sqlite ssl"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
-# See https://www.sympa.org/manual/installing-sympa#required_cpan_modules
+ACCT_DEPEND="
+	acct-group/sympa
+	acct-user/sympa
+"
 RDEPEND="
+	${ACCT_DEPEND}
 	>=dev-lang/perl-5.8
 	>=dev-perl/CGI-3.51
 	>=virtual/perl-Digest-MD5-2.00
@@ -94,14 +98,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	"
 
-SYMPA_USER="sympa"
-SYMPA_GROUP="sympa"
-
-pkg_setup() {
-	enewgroup ${SYMPA_GROUP}
-	enewuser ${SYMPA_USER} -1 -1 -1 ${SYMPA_GROUP}
-}
-
 src_prepare() {
 	default
 	# Override defaults for certain options, so
@@ -139,8 +135,8 @@ src_configure() {
 		--without-initdir \
 		--with-unitsdir=/usr/lib/systemd/system \
 		--with-defaultdir=/usr/share/sympa/default \
-		--with-user=${SYMPA_USER} \
-		--with-group=${SYMPA_GROUP} \
+		--with-user=sympa \
+		--with-group=sympa \
 		$(use_enable nls) \
 		|| die "econf failed"
 }
@@ -155,7 +151,7 @@ src_install() {
 	# Do not overwrite data_structure.version
 	rm -f "${D}/etc/sympa/data_structure.version"
 	# Set permissions and ownership on config files
-	fowners root:${SYMPA_GROUP} /etc/sympa/sympa.conf
+	fowners root:sympa /etc/sympa/sympa.conf
 	fperms u=rwX,g=rX,o= /etc/sympa/sympa.conf
 	# Elevate some permissions to read config files
 	fperms g+s /usr/libexec/sympa/{bouncequeue,familyqueue,queue}
@@ -206,7 +202,7 @@ src_install() {
 	local DIR
 	for DIR in ${SYMPA_DIRS}; do
 		keepdir /var/spool/sympa/${DIR}
-		fowners ${SYMPA_USER}:${SYMPA_GROUP} /var/spool/sympa/${DIR}
+		fowners sympa:sympa /var/spool/sympa/${DIR}
 		case "${DIR}" in
 			static_content*)
 				fperms 755 /var/spool/sympa/${DIR}
@@ -220,9 +216,7 @@ src_install() {
 	keepdir /var/lib/sympa/lists
 
 	newdoc "${FILESDIR}/${PN}-apache.conf" apache.conf
-	newdoc "${FILESDIR}/${PN}-apache_soap.conf" apache_soap.conf
 	newdoc "${FILESDIR}/${PN}-lighttpd.conf" lighttpd.conf
-	newdoc "${FILESDIR}/${PN}-lighttpd_soap.conf" lighttpd_soap.conf
 	newdoc "${FILESDIR}/${PN}-nginx.conf" nginx.conf
 }
 
@@ -234,7 +228,7 @@ pkg_postinst() {
 	elog
 	elog "The Sympa web interface needs to be setup in your webserver."
 	elog "For more information please consult Sympa documentation at"
-	elog "https://www.sympa.org/manual/web-interface#web_server_setup"
+	elog "https://www.sympa.org/manual/install/configure-http-server.md"
 	elog "Sample configs are installed in /usr/share/doc/${P}"
 	elog
 
