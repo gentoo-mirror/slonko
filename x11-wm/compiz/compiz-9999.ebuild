@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3_{6,7,8} )
 
-inherit cmake-utils eutils gnome2-utils xdg-utils python-single-r1 toolchain-funcs
+inherit cmake eutils gnome2-utils xdg-utils python-single-r1 toolchain-funcs
 
 if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.compiz.org/"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 
-IUSE="+cairo debug dbus fuse gles gnome gtk kde +svg test"
+IUSE="+cairo debug dbus gles gnome gtk kde +svg test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMONDEPEND="
@@ -62,7 +62,6 @@ COMMONDEPEND="
 	virtual/opengl
 	virtual/glu
 	cairo? ( x11-libs/cairo[X] )
-	fuse? ( sys-fs/fuse:= )
 	gtk? (
 		x11-libs/gtk+:3
 		x11-libs/libwnck:3
@@ -109,7 +108,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cmake-utils_src_prepare
+	cmake_src_prepare
 	sed -i \
 		-e 's|CYTHON_BIN cython3|CYTHON_BIN cython|' \
 		compizconfig/compizconfig-python/CMakeLists.txt || die
@@ -133,11 +132,11 @@ src_configure() {
 		-DCOMPIZ_WERROR=Off
 		-Wno-dev
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 	python_fix_shebang "${ED}"
 	python_optimize
 }
