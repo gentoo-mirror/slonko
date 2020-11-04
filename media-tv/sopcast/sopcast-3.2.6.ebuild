@@ -37,6 +37,6 @@ src_unpack() {
 src_install() {
 	exeinto /opt/${PN}
 	doexe sp-sc-auth
-	dosym /opt/${PN}/sp-sc-auth /usr/bin/sp-sc
+	dosym ../../opt/${PN}/sp-sc-auth /usr/bin/sp-sc
 	dodoc Readme
 }
