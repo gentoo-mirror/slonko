@@ -4,4 +4,5 @@
 
 net-mail/sympa:compat - Enable migration compatibility flag
 net-mail/sympa:dkim - Add DomainKeys Identified Mail support
+sys-kernel/hardened-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 x11-wm/compiz:gles - Enable support for GLES
