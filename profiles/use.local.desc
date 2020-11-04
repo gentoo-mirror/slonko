@@ -4,3 +4,4 @@
 
 net-mail/sympa:compat - Enable migration compatibility flag
 net-mail/sympa:dkim - Add DomainKeys Identified Mail support
+x11-wm/compiz:gles - Enable support for GLES
