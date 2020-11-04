@@ -1,3 +1,5 @@
+acct-group/sympa 0: System group: sympa
+acct-user/sympa 0: User for Sympa daemon
 app-misc/open-plc-utils 9999: Qualcomm Atheros Open Powerline Toolkit.
 app-misc/solaar 9999: A Linux device manager for Logitech's Unifying Receiver peripherals
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
@@ -11,7 +13,7 @@ games-kids/scratch 1.4.0.7: A programming environment for creating stories, anim
 mail-filter/greyfix 0.4.0: Greylisting policy daemon for Postfix
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 media-tv/sopcast 3.2.6: SopCast free P2P Internet TV binary
-net-mail/sympa 6.2.56: A feature-rich open source mailing list software
+net-mail/sympa 6.2.58: A feature-rich open source mailing list software
 net-misc/kyototycoon 0.9.56-r1: A andy cache/storage server
 net-print/epson-inkjet-printer-escpr2 1.1.13: Epson Inkjet Printer Driver (ESC/P-R) 2
 sys-kernel/hardened-sources 5.8.16 5.9.1: Minimal supplement to upstream Kernel Self Protection Project
