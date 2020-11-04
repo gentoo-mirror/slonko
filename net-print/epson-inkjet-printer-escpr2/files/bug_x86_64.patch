@@ -54,8 +54,8 @@ index d13f10e..105eae9 100755
  
  //	fwrite (pBuf, cbBuf, 1, outfp);
  
--	XFIFOWrite(context, pBuf, cbBuf);
-+	XFIFOWrite(context, (char *)pBuf, cbBuf);
+-//	XFIFOWrite(context, pBuf, cbBuf);
++//	XFIFOWrite(context, (char *)pBuf, cbBuf);
  
  	return 1;
  }
