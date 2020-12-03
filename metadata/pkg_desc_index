@@ -1,7 +1,6 @@
 acct-group/sympa 0: System group: sympa
 acct-user/sympa 0: User for Sympa daemon
 app-misc/open-plc-utils 9999: Qualcomm Atheros Open Powerline Toolkit.
-app-misc/solaar 9999: A Linux device manager for Logitech's Unifying Receiver peripherals
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
 dev-lang/squeakvm 4.10.2.2614: Highly-portable Smalltalk-80 implementation
