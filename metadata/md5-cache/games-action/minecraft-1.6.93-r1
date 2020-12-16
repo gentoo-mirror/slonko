@@ -7,5 +7,5 @@ LICENSE=Minecraft-clickwrap-EULA
 RDEPEND=media-libs/openal virtual/opengl >=virtual/jre-1.8
 SLOT=0
 SRC_URI=https://launcher.mojang.com/v1/objects/eabbff5ff8e21250e33670924a0c5e38f47c840b/launcher.jar -> minecraft-launcher-1.6.93.jar https://minecraft.net/android-icon-192x192.png -> minecraft.png
-_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8
+_eclasses_=desktop	8f9bfcc33705104f56748d9dedb3177a
 _md5_=d07b711b495101896f8e494be74901e4
