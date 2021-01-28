@@ -7,7 +7,7 @@ inherit rpm
 
 DESCRIPTION="Epson Inkjet Printer Driver (ESC/P-R) 2"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
-SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/12/09/63/b7d2bb6a97c9ad99a96ebc68f8abcb1254888e94/${P}-1lsb3.2.src.rpm"
+SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/12/46/43/e233a3fefeb49723ba4b0a2f357527e3b45bf53a/${P}-1lsb3.2.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
