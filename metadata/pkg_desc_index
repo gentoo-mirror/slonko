@@ -15,7 +15,7 @@ media-tv/sopcast 3.2.6: SopCast free P2P Internet TV binary
 net-mail/sympa 6.2.58: A feature-rich open source mailing list software
 net-misc/kyototycoon 0.9.56-r1: A andy cache/storage server
 net-print/epson-inkjet-printer-escpr2 1.1.28: Epson Inkjet Printer Driver (ESC/P-R) 2
-sys-kernel/hardened-sources 5.10.21: Minimal supplement to upstream Kernel Self Protection Project
+sys-kernel/hardened-sources 5.10.23: Minimal supplement to upstream Kernel Self Protection Project
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/joomla 3.9.16: A powerful Open Source Content Management System
 x11-wm/compiz 9999: OpenGL window and compositing manager
