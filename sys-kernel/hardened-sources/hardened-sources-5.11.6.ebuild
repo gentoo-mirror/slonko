@@ -5,7 +5,6 @@ EAPI="6"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
 K_GENPATCHES_VER="7"
-K_NODRYRUN="1"
 
 inherit kernel-2
 detect_version
@@ -17,7 +16,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~
 HOMEPAGE="https://github.com/anthraxx/linux-hardened https://dev.gentoo.org/~mpagano/genpatches"
 IUSE="experimental"
 UNIPATCH_LIST="${DISTDIR}/linux-hardened-${PV}-${SUBREL}.patch"
-UNIPATCH_EXCLUDE="1510_fs-enable-link-security-restrictions-by-default.patch"
 
 DESCRIPTION="Minimal supplement to upstream Kernel Self Protection Project"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${HARDENED_URI} ${ARCH_URI}"
