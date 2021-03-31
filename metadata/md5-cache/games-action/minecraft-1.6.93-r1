@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Official Java launcher for Minecraft
 EAPI=7
 HOMEPAGE=https://minecraft.net
+INHERIT=desktop
 KEYWORDS=~amd64 ~x86
 LICENSE=Minecraft-clickwrap-EULA
 RDEPEND=media-libs/openal virtual/opengl >=virtual/jre-1.8
