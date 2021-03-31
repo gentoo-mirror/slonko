@@ -4,10 +4,11 @@ DEPEND=>=virtual/perl-Scalar-List-Utils-1.11 >=dev-perl/Module-Build-0.360.1 vir
 DESCRIPTION=Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
 EAPI=7
 HOMEPAGE=http://metacpan.org/release/Unicode-CaseFold
+INHERIT=perl-module
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( GPL-1+ Artistic )
 RDEPEND=dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/A/AR/ARODLAND/Unicode-CaseFold-1.00.tar.gz
-_eclasses_=multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	6ec4c4d8fc8324200f1c14e8d158c59b	perl-module	97206c028d9bdc9f248e022ac5c9fc83
+_eclasses_=multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	6ec4c4d8fc8324200f1c14e8d158c59b	perl-module	ae176ff49e02bcbe576f6436b031c518
 _md5_=90913476e35e0c90ab6cc2e0254cb5ea
