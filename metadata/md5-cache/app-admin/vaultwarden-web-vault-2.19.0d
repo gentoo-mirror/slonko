@@ -1,4 +1,4 @@
-DEFINED_PHASES=install unpack
+DEFINED_PHASES=install
 DESCRIPTION=Unofficial patched bitwarden web-vault builds for vaultwarden
 EAPI=7
 HOMEPAGE=https://github.com/dani-garcia/bw_web_builds
@@ -6,4 +6,4 @@ KEYWORDS=~amd64
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=https://github.com/dani-garcia/bw_web_builds/releases/download/v2.19.0d/bw_web_v2.19.0d.tar.gz -> vaultwarden-web-vault-2.19.0d.tar.gz
-_md5_=7ff66951fb4011bd42835d663b16b8dc
+_md5_=184feba11963e98f0109cf62aa4fa93a
