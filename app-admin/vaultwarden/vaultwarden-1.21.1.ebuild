@@ -23,14 +23,12 @@ ACCT_DEPEND="
 	acct-user/vaultwarden
 "
 DEPEND="
+	${ACCT_DEPEND}
 	>=app-admin/vaultwarden-web-vault-2.19.0
 	dev-lang/rust[nightly]
 	dev-libs/openssl:0=
 "
-RDEPEND="
-	${ACCT_DEPEND}
-	${DEPEND}
-"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	git-r3_src_unpack
