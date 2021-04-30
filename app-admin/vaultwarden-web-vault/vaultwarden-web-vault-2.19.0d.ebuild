@@ -14,13 +14,9 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-
-src_unpack() {
-	unpack "${P}.tar.gz" || die
-	S="${WORKDIR}"
-}
+S="${WORKDIR}/web-vault"
 
 src_install() {
 	insinto /usr/share/vaultwarden-web-vault/htdocs
-	doins -r web-vault/*
+	doins -r *
 }
