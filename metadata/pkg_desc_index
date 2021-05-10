@@ -11,6 +11,7 @@ dev-lang/squeakvm 4.10.2.2614: Highly-portable Smalltalk-80 implementation
 dev-perl/Data-Password 1.10: Perl extension for assessing password quality.
 dev-perl/Unicode-CaseFold 1.00: Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
 games-action/minecraft 1.6.93-r1: Official Java launcher for Minecraft
+games-fps/armyops 250: Military simulations by the U.S. Army to provide insights on soldiering
 games-kids/scratch 1.4.0.7: A programming environment for creating stories, animations, games, and music.
 mail-filter/greyfix 0.4.0: Greylisting policy daemon for Postfix
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
