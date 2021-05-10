@@ -1,7 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-inherit eutils unpacker games
+EAPI=7
+
+inherit check-reqs desktop unpacker wrapper
 
 DESCRIPTION="Military simulations by the U.S. Army to provide insights on soldiering"
 HOMEPAGE="http://www.americasarmy.com/"
@@ -17,11 +19,17 @@ RDEPEND="sys-libs/glibc"
 
 S=${WORKDIR}
 
+pre_build_checks() {
+	CHECKREQS_DISK_BUILD="3G"
+	check-reqs_pkg_setup
+}
+
+pkg_pretend() {
+	pre_build_checks
+}
+
 pkg_setup() {
-	games_pkg_setup
-	einfo "The installed game takes about 1.6GB of space when installed and"
-	einfo "2.4GB of space in ${PORTAGE_TMPDIR} to build!"
-	echo
+	pre_build_checks
 }
 
 src_unpack() {
@@ -30,7 +38,7 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
+	local dir=/opt/${PN}
 	local Ddir=${D}/${dir}
 
 	einfo "This will take a while... go get a pizza or something."
@@ -48,18 +56,7 @@ src_install() {
 	fperms ug+x "${dir}"/System/pb/pbweb.x86
 
 	if use opengl ; then
-		games_make_wrapper armyops ./armyops "${dir}" "${dir}"
+		make_wrapper armyops ./armyops "${dir}" "${dir}"
 		make_desktop_entry armyops "America's Army" armyops.xpm
-	fi
-
-	prepgamesdirs
-}
-
-pkg_postinst() {
-	games_pkg_postinst
-
-	if use opengl ; then
-		elog "To play the game, run:  armyops"
-		echo
 	fi
 }
