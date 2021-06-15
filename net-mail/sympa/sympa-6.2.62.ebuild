@@ -137,6 +137,7 @@ src_configure() {
 		--with-defaultdir=/usr/share/sympa/default \
 		--with-user=sympa \
 		--with-group=sympa \
+		--disable-setuid \
 		$(use_enable nls) \
 		|| die "econf failed"
 }
@@ -150,11 +151,6 @@ src_install() {
 
 	# Do not overwrite data_structure.version
 	rm -f "${D}/etc/sympa/data_structure.version"
-	# Set permissions and ownership on config files
-	fowners root:sympa /etc/sympa/sympa.conf
-	fperms u=rwX,g=rX,o= /etc/sympa/sympa.conf
-	# Elevate some permissions to read config files
-	fperms g+s /usr/libexec/sympa/{bouncequeue,familyqueue,queue}
 
 	# Docs
 	dodoc AUTHORS.md CONTRIBUTING.md INSTALL.md NEWS.md README.md etc_README
