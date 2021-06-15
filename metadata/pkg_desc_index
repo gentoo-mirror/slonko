@@ -13,7 +13,7 @@ games-action/minecraft 1.6.93-r1: Official Java launcher for Minecraft
 games-fps/armyops 250: Military simulations by the U.S. Army to provide insights on soldiering
 games-kids/scratch 1.4.0.7: A programming environment for creating stories, animations, games, and music.
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
-net-mail/sympa 6.2.58: A feature-rich open source mailing list software
+net-mail/sympa 6.2.62: A feature-rich open source mailing list software
 net-misc/kyototycoon 0.9.56-r1: A andy cache/storage server
 net-print/epson-inkjet-printer-escpr2 1.1.33: Epson Inkjet Printer Driver (ESC/P-R) 2
 sys-kernel/hardened-sources 5.10.39 5.11.22 5.12.9: Minimal supplement to upstream Kernel Self Protection Project
