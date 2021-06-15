@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -153,7 +153,7 @@ src_install() {
 	rm -f "${D}/etc/sympa/data_structure.version"
 
 	# Docs
-	dodoc AUTHORS.md CONTRIBUTING.md INSTALL.md NEWS.md README.md etc_README
+	dodoc AUTHORS.md CONTRIBUTING.md INSTALL.md NEWS.md README.md
 
 	# Startup script
 	newinitd "${FILESDIR}/${PN}-${SYMPA_VERSION}.initd" "${PN}"
