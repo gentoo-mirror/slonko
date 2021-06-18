@@ -1,0 +1,27 @@
+Reverse conflicting patches
+
+diff --git a/mm/Kconfig b/mm/Kconfig
+index 24c045b24..e13fc740c 100644
+--- a/mm/Kconfig
++++ b/mm/Kconfig
+@@ -321,8 +321,6 @@ config KSM
+ config DEFAULT_MMAP_MIN_ADDR
+ 	int "Low address space to protect from user allocation"
+ 	depends on MMU
+-	default 65536 if ( X86_64 || X86_32 || PPC64 || IA64 ) && GENTOO_KERNEL_SELF_PROTECTION
+-	default 32768 if ( ARM64 || ARM ) && GENTOO_KERNEL_SELF_PROTECTION
+ 	default 4096
+ 	help
+ 	  This is the portion of low virtual memory which should be protected
+diff --git a/security/Kconfig b/security/Kconfig
+index 7561f6f99..01f0bf73f 100644
+--- a/security/Kconfig
++++ b/security/Kconfig
+@@ -166,7 +166,6 @@ config HARDENED_USERCOPY
+ config HARDENED_USERCOPY_FALLBACK
+ 	bool "Allow usercopy whitelist violations to fallback to object size"
+ 	depends on HARDENED_USERCOPY
+-	depends on !GENTOO_KERNEL_SELF_PROTECTION
+ 	default y
+ 	help
+ 	  This is a temporary option that allows missing usercopy whitelists
