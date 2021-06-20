@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=net-print/cups
 SLOT=0
 SRC_URI=https://download3.ebz.epson.net/dsc/f/03/00/12/70/17/b157323e14b6199f708c120307ef3ebe0e11231f/epson-inkjet-printer-escpr2-1.1.33-1lsb3.2.src.rpm
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	2d5b3f4b315094768576b6799e4f926e	rpm	760ff223c2c4299b68ea901e24c4cabd
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	6da6797255ab7fb848a02afa0cbc406f	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	f93c6ebbcd4a4e3e3f2328a13511b73a	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	a013c862fce4974c42fe270ad00430a2
 _md5_=d1741b04051c386284991b64f73c93cd
