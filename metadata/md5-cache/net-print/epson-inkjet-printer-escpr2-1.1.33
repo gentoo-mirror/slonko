@@ -1,4 +1,4 @@
-BDEPEND=>=app-arch/rpm2targz-9.0.0.3g
+BDEPEND=app-arch/rpm2targz
 DEFINED_PHASES=configure install unpack
 DEPEND=net-print/cups
 DESCRIPTION=Epson Inkjet Printer Driver (ESC/P-R) 2
@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=net-print/cups
 SLOT=0
 SRC_URI=https://download3.ebz.epson.net/dsc/f/03/00/12/70/17/b157323e14b6199f708c120307ef3ebe0e11231f/epson-inkjet-printer-escpr2-1.1.33-1lsb3.2.src.rpm
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	3c7381c56a184f0dd5ba3fb824808f30	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	9a53f21c753d823ba20a22f857c25cb4	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	17ff2249b50738c17c3824b58c813a5b
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	142025d51eac82f782a2dcb4f04a4b12
 _md5_=d1741b04051c386284991b64f73c93cd
