@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -7,7 +7,7 @@ inherit rpm
 
 DESCRIPTION="Epson Inkjet Printer Driver (ESC/P-R) 2"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
-SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/12/70/17/b157323e14b6199f708c120307ef3ebe0e11231f/${P}-1lsb3.2.src.rpm"
+SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/12/97/37/56099ae17308140c0f4c0b5e5186ee74a8b83a40/${P}-1lsb3.2.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
