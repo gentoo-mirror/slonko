@@ -2,11 +2,12 @@ BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Just-In-Time Compiler for the Lua programming language
 EAPI=7
-HOMEPAGE=http://luajit.org/
+HOMEPAGE=https://luajit.org/
 INHERIT=pax-utils toolchain-funcs git-r3
 IUSE=lua52compat static-libs
+KEYWORDS=~arm64 -hppa -riscv -sparc
 LICENSE=MIT
 PROPERTIES=live
 SLOT=2
 _eclasses_=pax-utils	fce6ad998516159787b92e8043167889	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=0a22e527c54567bb51d00dec3b0e753d
+_md5_=c807c4ac49c9c144e2dd450925a16b1c
