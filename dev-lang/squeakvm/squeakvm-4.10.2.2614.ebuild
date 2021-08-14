@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -17,7 +17,7 @@ DEPEND="X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXt )
 	>=x11-libs/cairo-1.8.6
 	>=x11-libs/pango-1.20.5
 	>=dev-libs/glib-2.20.1:2
-	virtual/libffi
+	dev-libs/libffi
 	sys-apps/util-linux
 	iconv? ( virtual/libiconv )
 	opengl? ( virtual/opengl )
