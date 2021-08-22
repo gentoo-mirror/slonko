@@ -12,11 +12,17 @@ SRC_URI="mirror://cpan/authors/id/A/AR/ARODLAND/${P}.tar.gz"
 SLOT="0"
 LICENSE="|| ( GPL-1+ Artistic )"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
+RESTRICT="!test? ( test )"
 SRC_TEST="do"
 
-DEPEND=">=virtual/perl-Scalar-List-Utils-1.11
-		dev-perl/Module-Build
-		virtual/perl-Exporter
+RDEPEND="
+	>=virtual/perl-Scalar-List-Utils-1.11
+	virtual/perl-Exporter
+"
+BDEPEND="${RDEPEND}
+	dev-perl/Module-Build
+	test? (
 		virtual/perl-Test-Simple
-		dev-lang/perl"
+	)
+"
