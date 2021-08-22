@@ -10,4 +10,6 @@ media-gfx/scangearmp2:sane - Build with SANE backend
 net-mail/sympa:compat - Enable migration compatibility flag
 net-mail/sympa:dkim - Add DomainKeys Identified Mail support
 sys-kernel/hardened-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
+www-apps/gallery:netpbm - Use Netpbm toolkit for manipulating of graphic images
+www-apps/gallery:unzip - Add unzip support for archive upload module
 x11-wm/compiz:gles - Enable support for GLES
