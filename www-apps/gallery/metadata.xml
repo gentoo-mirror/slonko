@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>marcin.deranek@slonko.net</email>
+		<name>Marcin Deranek</name>
+	</maintainer>
+	<use>
+		<flag name="netpbm">Use Netpbm toolkit for manipulating of graphic images</flag>
+		<flag name="unzip">Add unzip support for archive upload module</flag>
+	</use>
+</pkgmetadata>
