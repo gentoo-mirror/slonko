@@ -39,7 +39,7 @@ COMMONDEPEND="
 	!x11-apps/fusion-icon
 	dev-libs/boost
 	dev-libs/glib:2
-	dev-cpp/glibmm
+	dev-cpp/glibmm:2
 	dev-libs/libxml2
 	dev-libs/libxslt
 	$(python_gen_cond_dep '
