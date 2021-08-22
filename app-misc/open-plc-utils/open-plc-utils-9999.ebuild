@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -19,6 +19,7 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 SLOT="0"
 IUSE="doc"
+HTML_DOCS=( docbook/. )
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
@@ -26,5 +27,5 @@ DEPEND="${RDEPEND}"
 src_install() {
 	emake ROOTFS="${D}" install || die "emake install failed"
 	emake ROOTFS="${D}" manuals || die "emake manuals failed"
-	use doc && dohtml -r docbook
+	use doc && einstalldocs
 }
