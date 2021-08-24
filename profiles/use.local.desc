@@ -6,7 +6,6 @@ dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5
 dev-lang/squeakvm:image64 - 
 dev-lang/squeakvm:mmx - 
 dev-lang/squeakvm:scratch - 
-media-gfx/scangearmp2:sane - Build with SANE backend
 net-mail/sympa:compat - Enable migration compatibility flag
 net-mail/sympa:dkim - Add DomainKeys Identified Mail support
 sys-kernel/hardened-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
