@@ -51,6 +51,7 @@ COMMONDEPEND="
 	x11-base/xorg-server
 	x11-libs/libX11
 	x11-libs/libXcomposite
+	x11-libs/libXcursor
 	x11-libs/libXdamage
 	x11-libs/libXext
 	x11-libs/libXrandr
