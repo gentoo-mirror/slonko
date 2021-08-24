@@ -7,6 +7,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=Minecraft-clickwrap-EULA
 RDEPEND=media-libs/openal virtual/opengl >=virtual/jre-1.8
 SLOT=0
-SRC_URI=https://launcher.mojang.com/v1/objects/eabbff5ff8e21250e33670924a0c5e38f47c840b/launcher.jar -> minecraft-launcher-1.6.93.jar https://minecraft.net/android-icon-192x192.png -> minecraft.png
+SRC_URI=https://launcher.mojang.com/v1/objects/eabbff5ff8e21250e33670924a0c5e38f47c840b/launcher.jar -> minecraft-launcher-1.6.93.jar https://launcher.mojang.com/download/minecraft-launcher.svg -> minecraft.svg
 _eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28
-_md5_=d07b711b495101896f8e494be74901e4
+_md5_=5b2039a993d78257f790743eadf7d306
