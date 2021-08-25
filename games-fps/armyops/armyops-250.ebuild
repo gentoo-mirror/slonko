@@ -11,13 +11,28 @@ SRC_URI="mirror://sourceforge/distrobuild/${PN}${PV}-linux.run"
 
 LICENSE="Army-EULA"
 SLOT="0"
-KEYWORDS="amd64 x86"
-RESTRICT="mirror strip"
-IUSE="opengl"
+KEYWORDS="-* ~amd64 ~x86"
+RESTRICT="bindist mirror strip"
+IUSE=""
 
-RDEPEND="sys-libs/glibc"
+RDEPEND="
+	amd64? ( sys-libs/glibc[multilib] )
+	app-crypt/libmd[abi_x86_32(-)]
+	dev-libs/libbsd[abi_x86_32(-)]
+	sys-libs/glibc
+	sys-libs/libstdc++-v3:5
+	virtual/opengl[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXdmcp[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/libxcb[abi_x86_32(-)]
+"
 
 S=${WORKDIR}
+
+dir=opt/${PN}
+
+QA_PREBUILT="${dir}/System/*-bin ${dir}/System/*.so ${dir}/System/libSDL-1.2.so.0 ${dir}/System/pb/*.so"
 
 pre_build_checks() {
 	CHECKREQS_DISK_BUILD="3G"
@@ -55,8 +70,6 @@ src_install() {
 	doexe bin/armyops || die "doexe failed"
 	fperms ug+x "${dir}"/System/pb/pbweb.x86
 
-	if use opengl ; then
-		make_wrapper armyops ./armyops "${dir}" "${dir}"
-		make_desktop_entry armyops "America's Army" armyops.xpm
-	fi
+	make_wrapper armyops ./armyops "${dir}" "${dir}"
+	make_desktop_entry armyops "America's Army" armyops.xpm
 }
