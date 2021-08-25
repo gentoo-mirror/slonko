@@ -3,9 +3,6 @@
 # * generated automatically using pmaint *
 
 dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5.2 that are unlikely to break existing code
-dev-lang/squeakvm:image64 - 
-dev-lang/squeakvm:mmx - 
-dev-lang/squeakvm:scratch - 
 net-mail/sympa:compat - Enable migration compatibility flag
 net-mail/sympa:dkim - Add DomainKeys Identified Mail support
 sys-kernel/hardened-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
