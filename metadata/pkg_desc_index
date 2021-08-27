@@ -5,7 +5,6 @@ acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.22.2: Unofficial Bitwarden compatible server written in Rust
 app-admin/vaultwarden-web-vault 2.21.1: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.4.1: GZIP files indexer, compressor and data retriever.
-app-misc/open-plc-utils 9999: Qualcomm Atheros Open Powerline Toolkit.
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
 dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
