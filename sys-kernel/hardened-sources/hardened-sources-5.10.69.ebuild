@@ -13,7 +13,7 @@ SUBREL="hardened1"
 HARDENED_URI="https://github.com/anthraxx/linux-hardened/releases/download/${PV}-${SUBREL}/linux-hardened-${PV}-${SUBREL}.patch"
 
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
-HOMEPAGE="https://github.com/anthraxx/linux-hardened https://dev.gentoo.org/~mpagano/genpatches"
+HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches https://github.com/anthraxx/linux-hardened"
 IUSE="experimental"
 UNIPATCH_LIST="${FILESDIR}/9999_revert-conflicts.patch ${DISTDIR}/linux-hardened-${PV}-${SUBREL}.patch ${FILESDIR}/linux-hardened-gentoo.patch"
 UNIPATCH_EXCLUDE="1510_fs-enable-link-security-restrictions-by-default.patch"
