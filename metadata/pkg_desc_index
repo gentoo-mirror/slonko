@@ -11,7 +11,7 @@ dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for cas
 games-action/minecraft 1.6.93-r1: Official Java launcher for Minecraft
 games-fps/armyops 250: Military simulations by the U.S. Army to provide insights on soldiering
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
-net-mail/sympa 6.2.64: A feature-rich open source mailing list software
+net-mail/sympa 6.2.66: A feature-rich open source mailing list software
 net-print/epson-inkjet-printer-escpr2 1.1.42: Epson Inkjet Printer Driver (ESC/P-R) 2
 sys-kernel/hardened-sources 5.4.149 5.10.69 5.14.8: Minimal supplement to upstream Kernel Self Protection Project
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
