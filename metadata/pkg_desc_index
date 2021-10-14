@@ -8,7 +8,6 @@ app-arch/gztool 1.4.3: GZIP files indexer, compressor and data retriever.
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
 dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
-games-action/minecraft 1.6.93-r1: Official Java launcher for Minecraft
 games-fps/armyops 250: Military simulations by the U.S. Army to provide insights on soldiering
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 net-mail/sympa 6.2.66: A feature-rich open source mailing list software
