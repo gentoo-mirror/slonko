@@ -3,7 +3,7 @@ acct-group/vaultwarden 0: System group: vaultwarden
 acct-user/sympa 0: User for Sympa daemon
 acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.22.2: Unofficial Bitwarden compatible server written in Rust
-app-admin/vaultwarden-web-vault 2.23.0: Unofficial patched bitwarden web-vault builds for vaultwarden
+app-admin/vaultwarden-web-vault 2.23.0c: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.4.3: GZIP files indexer, compressor and data retriever.
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language

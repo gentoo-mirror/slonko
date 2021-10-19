@@ -5,5 +5,5 @@ HOMEPAGE=https://github.com/dani-garcia/bw_web_builds
 KEYWORDS=~amd64
 LICENSE=GPL-3
 SLOT=0
-SRC_URI=https://github.com/dani-garcia/bw_web_builds/releases/download/v2.23.0/bw_web_v2.23.0.tar.gz -> vaultwarden-web-vault-2.23.0.tar.gz
+SRC_URI=https://github.com/dani-garcia/bw_web_builds/releases/download/v2.23.0c/bw_web_v2.23.0c.tar.gz -> vaultwarden-web-vault-2.23.0c.tar.gz
 _md5_=184feba11963e98f0109cf62aa4fa93a
