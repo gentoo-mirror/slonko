@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3_{6,7,8,9} )
 
-inherit cmake eutils gnome2-utils xdg-utils python-single-r1 toolchain-funcs
+inherit cmake eutils xdg-utils python-single-r1 toolchain-funcs
 
 if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
@@ -141,23 +141,13 @@ src_install() {
 	python_optimize
 }
 
-pkg_preinst() {
-	use gnome && gnome2_gconf_savelist
-	gnome2_icon_savelist
-}
-
 pkg_postinst() {
-	use gnome && gnome2_gconf_install
 	xdg_desktop_database_update
 	xdg_icon_cache_update
 	if use dbus; then
 		ewarn "The dbus plugin is known to crash compiz in this version. Disable"
 		ewarn "it if you experience crashes when plugins are enabled/disabled."
 	fi
-}
-
-pkg_prerm() {
-	use gnome && gnome2_gconf_uninstall
 }
 
 pkg_postrm() {
