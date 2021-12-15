@@ -2,8 +2,8 @@ acct-group/sympa 0: System group: sympa
 acct-group/vaultwarden 0: System group: vaultwarden
 acct-user/sympa 0: User for Sympa daemon
 acct-user/vaultwarden 0: System user: vaultwarden
-app-admin/vaultwarden 1.23.0: Unofficial Bitwarden compatible server written in Rust
-app-admin/vaultwarden-web-vault 2.24.1: Unofficial patched bitwarden web-vault builds for vaultwarden
+app-admin/vaultwarden 1.23.1: Unofficial Bitwarden compatible server written in Rust
+app-admin/vaultwarden-web-vault 2.25.0: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.4.3: GZIP files indexer, compressor and data retriever.
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
@@ -12,7 +12,7 @@ games-fps/armyops 250: Military simulations by the U.S. Army to provide insights
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 net-mail/sympa 6.2.66: A feature-rich open source mailing list software
 net-print/epson-inkjet-printer-escpr2 1.1.42: Epson Inkjet Printer Driver (ESC/P-R) 2
-sys-kernel/hardened-sources 5.4.164 5.10.84 5.14.21 5.15.7: Minimal supplement to upstream Kernel Self Protection Project
+sys-kernel/hardened-sources 5.4.165 5.10.85 5.14.21 5.15.8: Minimal supplement to upstream Kernel Self Protection Project
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/joomla 3.9.27: A powerful Open Source Content Management System
 x11-wm/compiz 9999: OpenGL window and compositing manager
