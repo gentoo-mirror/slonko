@@ -1,6 +1,6 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install postinst prepare prerm setup unpack
-DEPEND=|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+DEPEND=|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) app-admin/webapp-config
 DESCRIPTION=Web based (PHP Script) photo album viewer/creator
 EAPI=7
 HOMEPAGE=http://galleryproject.org/
@@ -8,8 +8,8 @@ INHERIT=webapp eutils git-r3
 IUSE=ffmpeg +gd imagemagick +mysql netpbm postgres raw sqlite unzip zip vhosts
 LICENSE=GPL-2
 PROPERTIES=live
-RDEPEND=raw? ( media-gfx/dcraw ) ffmpeg? ( virtual/ffmpeg ) imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) netpbm? ( media-libs/netpbm media-gfx/jhead ) unzip? ( app-arch/unzip ) zip? ( app-arch/zip ) sqlite? ( dev-lang/php[pdo] dev-lang/php[sqlite] ) mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) ) dev-lang/php[session,postgres?,gd?] virtual/httpd-php >=app-admin/webapp-config-1.50.15
+RDEPEND=raw? ( media-gfx/dcraw ) ffmpeg? ( virtual/ffmpeg ) imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) netpbm? ( media-libs/netpbm media-gfx/jhead ) unzip? ( app-arch/unzip ) zip? ( app-arch/zip ) sqlite? ( dev-lang/php[pdo] dev-lang/php[sqlite] ) mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) ) dev-lang/php[session,postgres?,gd?] virtual/httpd-php app-admin/webapp-config
 REQUIRED_USE=|| ( gd imagemagick netpbm ) || ( mysql postgres sqlite )
 SLOT=2.3.2.9999
-_eclasses_=webapp	cd327e73cdb307ceb80dcca6b8ad8b52	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_eclasses_=webapp	60f2eb31dec733d05e8114cc078ebc33	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
 _md5_=cbd60df6cec55b6348db47291b998220
