@@ -1,0 +1,23 @@
+--- a/configure.ac.old	2020-05-09 05:52:50.000000000 -0500
++++ b/configure.ac	2020-08-24 10:56:26.198021804 -0500
+@@ -874,20 +874,12 @@
+ if test "x$enable_gstreamer" != "xno";
+ then
+     PKG_CHECK_MODULES([GSTREAMER],
+-                      [gstreamer-0.10],
+-                      [config_gstreamer=yes
+-                       AC_DEFINE(HAVE_GSTREAMER, 1, [Use GStreamer for playing sounds])], [ ])
+-
+-    if test "x$config_gstreamer" != "xyes";
+-    then
+-        PKG_CHECK_MODULES([GSTREAMER],
+                       [gstreamer-1.0],
+                       [config_gstreamer=yes
+                        AC_DEFINE(HAVE_GSTREAMER, 1, [Use GStreamer for playing sounds])],
+                          [if test "x$enable_gstreamer" = "xyes"; then
+                            AC_MSG_ERROR([GStreamer development headers not found.])
+                        fi])
+-    fi
+ fi
+ 
+ 
