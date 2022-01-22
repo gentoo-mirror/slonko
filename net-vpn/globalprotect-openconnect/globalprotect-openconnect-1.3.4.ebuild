@@ -35,7 +35,7 @@ src_unpack() {
 	default_src_unpack
 	## 3rd party submodules
 	# Plog
-	EGIT_REPO_URI="${PLOG_APP}"
+	EGIT_REPO_URI="${PLOG_REPO}"
 	EGIT_COMMIT="${PLOG_VERSION}"
 	EGIT_CHECKOUT_DIR="${S}/3rdparty/plog"
 	git-r3_src_unpack
