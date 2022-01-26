@@ -10,7 +10,7 @@ HOMEPAGE="https://support.epson.net/linux/en/epsonscan2.php"
 SRC_URI="https://support.epson.net/linux/src/scanner/${PN}/${PN}-${MY_VERSION}.src.tar.gz"
 S="${WORKDIR}/${PN}-${MY_VERSION}"
 
-inherit cmake
+inherit cmake desktop
 
 LICENSE="GPL-3+"
 SLOT="0"
@@ -33,13 +33,22 @@ BDEPEND=""
 src_prepare() {
 	cmake_src_prepare
 	sed -i \
-		-e "s|\(execute_process.*\)\${EPSON_INSTALL_ROOT}|\1${D}|g" \
+		-e '/\(execute_process.*\)${EPSON_INSTALL_ROOT}/d' \
 		-e "s|^\(set(EPSON_VERSION \).*|\1-${PV})|g" \
 		CMakeLists.txt || die
+	# Force usage of system libraries
 	rm -rf thirdparty/{HaruPDF,rapidjson,zlib}
 	sed -i \
 		-e '/thirdparty\/HaruPDF/d' \
 		-e '/thirdparty\/zlib/d' \
 		-e 's|^\([[:blank:]]*\)\(usb-1.0\)|\1\2\n\1hpdf\n\1z|' \
 		src/Controller/CMakeLists.txt || die
+}
+src_install() {
+	cmake_src_install
+	# Sane symlinks
+	dosym ../epsonscan2/libsane-epsonscan2.so /usr/$(get_libdir)/sane/libsane-epsonscan2.so.1
+	dosym ../epsonscan2/libsane-epsonscan2.so /usr/$(get_libdir)/sane/libsane-epsonscan2.so.1.0.0
+	# Desktop icon
+	domenu desktop/rpm/x86_64/epsonscan2.desktop
 }
