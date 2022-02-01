@@ -1,4 +1,4 @@
-# Copyright 2017-2021 Gentoo Authors
+# Copyright 2017-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -25,7 +25,7 @@ ACCT_DEPEND="
 DEPEND="
 	${ACCT_DEPEND}
 	>=app-admin/vaultwarden-web-vault-2.19.0
-	dev-lang/rust[nightly]
+	>=dev-lang/rust-1.58.1[nightly]
 	dev-libs/openssl:0=
 "
 RDEPEND="${DEPEND}"
@@ -41,6 +41,13 @@ src_unpack() {
 	popd > /dev/null || die
 
 	cargo_gen_config
+}
+
+src_prepare() {
+	default
+
+	# Lower rust requirements as 1.60 is not in the tree yet
+	sed -i -e 's|^rust-version[[:blank:]]*=.*|rust-version = "1.58.1"|' "${S}"/Cargo.toml || die
 }
 
 src_configure() {
