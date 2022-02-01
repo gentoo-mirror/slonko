@@ -1,6 +1,6 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl] >=virtual/rust-1.37.0 virtual/pkgconfig
-DEFINED_PHASES=compile configure install test unpack
-DEPEND=acct-group/vaultwarden acct-user/vaultwarden >=app-admin/vaultwarden-web-vault-2.19.0 dev-lang/rust[nightly] dev-libs/openssl:0=
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=acct-group/vaultwarden acct-user/vaultwarden >=app-admin/vaultwarden-web-vault-2.19.0 >=dev-lang/rust-1.58.1[nightly] dev-libs/openssl:0=
 DESCRIPTION=Unofficial Bitwarden compatible server written in Rust
 EAPI=7
 HOMEPAGE=https://github.com/dani-garcia/vaultwarden
@@ -9,8 +9,8 @@ IUSE=mysql postgres sqlite debug
 KEYWORDS=~amd64
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=acct-group/vaultwarden acct-user/vaultwarden >=app-admin/vaultwarden-web-vault-2.19.0 dev-lang/rust[nightly] dev-libs/openssl:0=
+RDEPEND=acct-group/vaultwarden acct-user/vaultwarden >=app-admin/vaultwarden-web-vault-2.19.0 >=dev-lang/rust-1.58.1[nightly] dev-libs/openssl:0=
 REQUIRED_USE=|| ( mysql postgres sqlite )
 SLOT=0
 _eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	cargo	7ea27a358c2ff39754bf66a96c06f3de	systemd	2736b403a83f194b59b767f3b344c2c1
-_md5_=aface89b14314409599f303164f65224
+_md5_=deca620535e28a7fdad8cddef6d8a16d
