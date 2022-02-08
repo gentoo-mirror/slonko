@@ -18,4 +18,5 @@ RDEPEND="
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/pygobject[${PYTHON_USEDEP}]
 	net-libs/webkit-gtk
+	net-vpn/openconnect
 "
