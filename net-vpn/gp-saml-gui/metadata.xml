@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>marcin.deranek@slonko.net</email>
+		<name>Marcin Deranek</name>
+	</maintainer>
+	<use>
+	</use>
+	<longdescription>
+		This is a helper script to allow you to interactively login
+		to a GlobalProtect VPN that uses SAML authentication, so
+		that you can subsequently connect with OpenConnect.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">dlenski/gp-saml-gui.git</remote-id>
+	</upstream>
+</pkgmetadata>
