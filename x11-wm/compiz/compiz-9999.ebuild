@@ -1,10 +1,10 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 PYTHON_COMPAT=( python3_{6,7,8,9} )
 
-inherit cmake eutils xdg-utils python-single-r1 toolchain-funcs
+inherit cmake xdg-utils python-single-r1 toolchain-funcs
 
 if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
@@ -43,8 +43,8 @@ COMMONDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	$(python_gen_cond_dep '
-		dev-python/cython[${PYTHON_MULTI_USEDEP}]
-		dev-python/setuptools[${PYTHON_MULTI_USEDEP}]
+		dev-python/cython[${PYTHON_USEDEP}]
+		dev-python/setuptools[${PYTHON_USEDEP}]
 	')
 	dev-libs/protobuf
 	media-libs/libpng
