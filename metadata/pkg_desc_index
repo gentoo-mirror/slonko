@@ -12,6 +12,8 @@ dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for cas
 games-fps/armyops 250: Military simulations by the U.S. Army to provide insights on soldiering
 media-gfx/epsonscan2 6.6.40.0: Epson scanner management utility
 media-gfx/epsonscan2-non-free-plugin 1.0.0.5: Plugins for Epson Scan 2
+media-gfx/imagescan 3.65.0: EPSON Image Scan v3 for Linux
+media-gfx/imagescan-plugin-network-nt 1.1.3: Network scanning plugin for EPSON scanners (nonfree)
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 net-mail/sympa 6.2.68: A feature-rich open source mailing list software
 net-vpn/globalprotect-openconnect 1.3.4: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
