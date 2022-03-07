@@ -25,7 +25,7 @@ ACCT_DEPEND="
 DEPEND="
 	${ACCT_DEPEND}
 	>=app-admin/vaultwarden-web-vault-2.19.0
-	>=dev-lang/rust-1.58.1[nightly]
+	>=dev-lang/rust-1.59[nightly]
 	dev-libs/openssl:0=
 "
 RDEPEND="${DEPEND}"
@@ -47,7 +47,7 @@ src_prepare() {
 	default
 
 	# Lower rust requirements as 1.60 is not in the tree yet
-	sed -i -e 's|^rust-version[[:blank:]]*=.*|rust-version = "1.58.1"|' "${S}"/Cargo.toml || die
+	sed -i -e 's|^rust-version[[:blank:]]*=.*|rust-version = "1.59"|' "${S}"/Cargo.toml || die
 }
 
 src_configure() {
