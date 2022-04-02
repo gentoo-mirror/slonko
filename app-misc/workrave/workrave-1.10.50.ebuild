@@ -75,7 +75,7 @@ src_unpack() {
 src_prepare() {
 	# Fix gstreamer slot automagic dependency, bug #563584
 	# http://issues.workrave.org/show_bug.cgi?id=1179
-	eapply "${FILESDIR}"/${P}-automagic-gstreamer.patch
+	eapply "${FILESDIR}"/${PN}-automagic-gstreamer.patch
 
 	eautoreconf
 	gnome2_src_prepare
