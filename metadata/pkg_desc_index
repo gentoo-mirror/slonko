@@ -18,7 +18,7 @@ media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linu
 net-mail/sympa 6.2.68: A feature-rich open source mailing list software
 net-vpn/globalprotect-openconnect 1.4.1: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
 net-vpn/gp-saml-gui 9999: Interactively authenticate to GlobalProtect VPNs that require SAML
-sys-kernel/hardened-sources 5.4.188 5.10.111 5.15.34 5.16.20: Minimal supplement to upstream Kernel Self Protection Project
+sys-kernel/hardened-sources 5.4.190 5.10.112 5.15.35 5.16.20: Minimal supplement to upstream Kernel Self Protection Project
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/joomla 3.10.5: A powerful Open Source Content Management System
 x11-wm/compiz 9999: OpenGL window and compositing manager
