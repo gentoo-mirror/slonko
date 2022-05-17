@@ -10,5 +10,5 @@ LICENSE=GPL-3+
 RDEPEND=dev-libs/boost dev-libs/rapidjson media-gfx/sane-backends media-libs/libharu media-libs/libpng media-libs/tiff virtual/jpeg virtual/libusb:1
 SLOT=0
 SRC_URI=https://support.epson.net/linux/src/scanner/epsonscan2/epsonscan2-6.6.40.0-1.src.tar.gz
-_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	90e2b29417d53718328f3a95227137a0	desktop	c0d27bf73aa08ca05b663dbd31fbef28
+_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	90e2b29417d53718328f3a95227137a0	desktop	c0d27bf73aa08ca05b663dbd31fbef28
 _md5_=503af15d0abadf342c40b032521d757a
