@@ -29,7 +29,7 @@ BDEPEND=""
 PLOG_REPO='https://github.com/SergiusTheBest/plog.git'
 PLOG_VERSION='1.1.6'
 SINGLEAPP_REPO='https://github.com/itay-grudev/SingleApplication.git'
-SINGLEAPP_VERSION='3.3.2'
+SINGLEAPP_VERSION='3.3.4'
 
 src_unpack() {
 	default_src_unpack
