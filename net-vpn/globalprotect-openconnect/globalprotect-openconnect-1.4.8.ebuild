@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 PLOG_REPO='https://github.com/SergiusTheBest/plog.git'
-PLOG_VERSION='1.1.6'
+PLOG_VERSION='1.1.8'
 SINGLEAPP_REPO='https://github.com/itay-grudev/SingleApplication.git'
 SINGLEAPP_VERSION='3.3.4'
 
