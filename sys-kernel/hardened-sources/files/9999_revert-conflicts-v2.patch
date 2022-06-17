@@ -16,7 +16,7 @@ Reverse conflicting patches
 @@ -167,7 +167,6 @@ config HARDENED_USERCOPY_PAGESPAN
  	bool "Refuse to copy allocations that span multiple pages"
  	depends on HARDENED_USERCOPY
- 	depends on EXPERT
+ 	depends on BROKEN
 -	depends on !GENTOO_KERNEL_SELF_PROTECTION
  	help
  	  When a multi-page allocation is done without __GFP_COMP,
