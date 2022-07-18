@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=raw? ( media-gfx/dcraw ) ffmpeg? ( virtual/ffmpeg ) imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) netpbm? ( media-libs/netpbm media-gfx/jhead ) unzip? ( app-arch/unzip ) zip? ( app-arch/zip ) sqlite? ( dev-lang/php[pdo] dev-lang/php[sqlite] ) mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) ) dev-lang/php[session,postgres?,gd?] virtual/httpd-php app-admin/webapp-config
 REQUIRED_USE=|| ( gd imagemagick netpbm ) || ( mysql postgres sqlite )
 SLOT=2.3.2.9999
-_eclasses_=webapp	d872f28d7595b70dd46545199ef35fb0	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	dab5d8ec471d025b79c9e6906bcf3bff	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_eclasses_=webapp	d872f28d7595b70dd46545199ef35fb0	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	23cb2d46c80c12aa8b25973b4cdcb257	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
 _md5_=cbd60df6cec55b6348db47291b998220
