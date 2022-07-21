@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils prefix
+inherit prefix
 
 DESCRIPTION="rpm workalike for Gentoo Linux"
 HOMEPAGE="https://github.com/fuzzyray/epm"
