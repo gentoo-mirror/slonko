@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils multilib autotools
+inherit autotools
 
 SYMPA_VERSION="$(ver_cut 1-2)"
 SYMPA_RELEASE="$(ver_cut 3-)"
@@ -29,7 +29,7 @@ HOMEPAGE="https://www.sympa.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="clamav -compat dkim fastcgi ldap mysql nls postgres soap sqlite ssl"
+IUSE="clamav compat dkim fastcgi ldap mysql nls postgres soap sqlite ssl"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 ACCT_DEPEND="
