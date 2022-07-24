@@ -11,7 +11,7 @@ SRC_URI="https://support.epson.net/linux/src/scanner/imagescanv3/common/imagesca
 
 LICENSE="GPL-3+"
 SLOT="0"
-IUSE="graphicsmagick gui test"
+IUSE="graphicsmagick gui test +udev"
 KEYWORDS="~amd64 ~x86"
 
 BDEPEND="virtual/pkgconfig"
@@ -24,6 +24,7 @@ RDEPEND="
 	graphicsmagick? ( media-gfx/graphicsmagick:=[cxx] )
 	!graphicsmagick? ( media-gfx/imagemagick:=[cxx] )
 	gui? ( dev-cpp/gtkmm:2.4 )
+	udev? ( virtual/libudev )
 "
 # Disable opencl as during reorient.utr test it produces inconsistent results
 DEPEND="${RDEPEND}
@@ -70,8 +71,8 @@ src_configure() {
 	append-ldflags -pthread
 	local myconf=(
 		$(use_with gui gtkmm)
+		$(use_enable udev udev-config)
 		--enable-sane-config
-		--enable-udev-config
 		--with-boost=yes
 		--with-jpeg
 		--with-magick=$(usex graphicsmagick GraphicsMagick ImageMagick)
@@ -95,10 +96,12 @@ src_install() {
 
 pkg_postinst() {
 	use gui && xdg_icon_cache_update
+	use udev && udev_reload
 	elog "If you encounter problems with media-gfx/xsane when scanning (e.g., bad resolution),"
 	elog "please try the built-in GUI and kde-misc/skanlite first before reporting bugs."
 }
 
 pkg_postrm() {
 	use gui && xdg_icon_cache_update
+	use udev && udev_reload
 }
