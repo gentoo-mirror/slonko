@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{8,9,10} )
+PYTHON_COMPAT=( python3_{8..11} )
 
 inherit cmake xdg-utils python-single-r1 toolchain-funcs
 
@@ -12,9 +12,9 @@ if [[ ${PV} == 9999* ]]; then
 	S="${WORKDIR}/${P}"
 else
 	SRC_URI="http://launchpad.net/${PN}/${BRANCH}/${PV}/+download/${P}.tar.xz"
+	KEYWORDS="~amd64"
 fi
 
-KEYWORDS="~amd64"
 DESCRIPTION="OpenGL window and compositing manager"
 HOMEPAGE="http://www.compiz.org/"
 
@@ -23,20 +23,10 @@ SLOT="0"
 
 IUSE="+cairo debug dbus gles gnome gtk kde +svg test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+RESTRICT="!test? ( test )"
 
 COMMONDEPEND="
 	${PYTHON_DEPS}
-	!x11-wm/compiz-fusion
-	!x11-libs/compiz-bcop
-	!x11-libs/libcompizconfig
-	!x11-libs/compizconfig-backend-gconf
-	!x11-libs/compizconfig-backend-kconfig4
-	!x11-plugins/compiz-plugins-main
-	!x11-plugins/compiz-plugins-extra
-	!x11-plugins/compiz-plugins-unsupported
-	!x11-apps/ccsm
-	!dev-python/compizconfig-python
-	!x11-apps/fusion-icon
 	dev-libs/boost
 	dev-libs/glib:2
 	dev-cpp/glibmm:2
@@ -69,7 +59,6 @@ COMMONDEPEND="
 		x11-libs/pango
 		gnome? (
 			gnome-base/gnome-desktop:=
-			gnome-base/gconf
 			x11-wm/metacity
 		)
 	)

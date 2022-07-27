@@ -1,19 +1,18 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 CMAKE_MAKEFILE_GENERATOR="emake"
 
-inherit cmake desktop eutils git-r3 udev
+inherit cmake desktop git-r3 udev
 
 DESCRIPTION="Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series)."
-HOMEPAGE="https://support-au.canon.com.au/contents/AU/EN/0100303302.html"
+HOMEPAGE="https://github.com/Ordissimo/scangearmp2"
 EGIT_REPO_URI="https://github.com/Ordissimo/${PN}.git"
 LICENSE="GPL-2"
 RESTRICT="mirror"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND="
 	dev-util/intltool
@@ -39,5 +38,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	udev_reload
+}
+
+pkg_postrm() {
 	udev_reload
 }

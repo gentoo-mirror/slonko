@@ -11,7 +11,7 @@ HOMEPAGE="https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 # This is distributed as part of the "bundle driver"; since we already have the
 # opensource part separately we just install the nonfree part here.
 
-ISCAN_VERSION="3.62.0"
+ISCAN_VERSION="3.65.0"
 
 SRC_URI="https://download2.ebz.epson.net/imagescanv3/centos/latest1/rpm/x64/imagescan-bundle-centos-8-${ISCAN_VERSION}.x64.rpm.tar.gz"
 LICENSE="GPL-3+"
