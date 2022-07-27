@@ -5,8 +5,6 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
-	<use>
-	</use>
 	<longdescription>
 		A GlobalProtect VPN client (GUI) for Linux based on Openconnect
 		and built with Qt5, supports SAML auth mode, inspired by gp-saml-gui.

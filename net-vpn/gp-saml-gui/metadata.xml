@@ -5,8 +5,6 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
-	<use>
-	</use>
 	<longdescription>
 		This is a helper script to allow you to interactively login
 		to a GlobalProtect VPN that uses SAML authentication, so

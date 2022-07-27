@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit webapp eutils
+inherit webapp
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator"
 HOMEPAGE="http://galleryproject.org/"
@@ -24,7 +24,7 @@ case ${PV} in
 esac
 
 RDEPEND="raw? ( media-gfx/dcraw )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( media-video/ffmpeg )
 	imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
 	netpbm? ( media-libs/netpbm media-gfx/jhead )
 	unzip? ( app-arch/unzip )
