@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3_{8..11} )
 inherit autotools gnome2 python-single-r1 vcs-snapshot
 
 DESCRIPTION="Helpful utility to attack Repetitive Strain Injury (RSI)"
-HOMEPAGE="http://www.workrave.org/"
+HOMEPAGE="https://www.workrave.org/"
 MY_PV=$(ver_rs 1- '_')
 SRC_URI="https://github.com/rcaelers/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
 

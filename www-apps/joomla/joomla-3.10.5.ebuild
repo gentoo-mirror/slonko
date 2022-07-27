@@ -7,7 +7,7 @@ inherit webapp
 MY_PV="${PV//_/-}"
 
 DESCRIPTION="A powerful Open Source Content Management System"
-HOMEPAGE="http://www.joomla.org/"
+HOMEPAGE="https://www.joomla.org/"
 M_PN="Joomla_${MY_PV}-Stable-Full_Package"
 SRC_URI="https://github.com/${PN}/${PN}-cms/releases/download/${MY_PV}/${M_PN}.tar.bz2"
 

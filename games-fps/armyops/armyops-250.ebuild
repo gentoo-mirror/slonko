@@ -6,7 +6,7 @@ EAPI=7
 inherit check-reqs desktop unpacker wrapper
 
 DESCRIPTION="Military simulations by the U.S. Army to provide insights on soldiering"
-HOMEPAGE="http://www.americasarmy.com/"
+HOMEPAGE="https://www.americasarmy.com/"
 SRC_URI="mirror://sourceforge/distrobuild/${PN}${PV}-linux.run"
 
 LICENSE="Army-EULA"
