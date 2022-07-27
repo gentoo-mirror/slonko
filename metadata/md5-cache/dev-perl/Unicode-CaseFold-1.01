@@ -1,16 +1,16 @@
-BDEPEND=>=virtual/perl-Scalar-List-Utils-1.11 virtual/perl-Exporter dev-perl/Module-Build test? ( virtual/perl-Test-Simple ) dev-lang/perl
+BDEPEND=>=virtual/perl-Scalar-List-Utils-1.11 virtual/perl-Exporter dev-perl/Module-Build test? ( virtual/perl-Test-Simple ) dev-lang/perl test? ( virtual/perl-Test-Simple )
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-lang/perl
 DESCRIPTION=Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
-EAPI=7
+EAPI=8
 HOMEPAGE=http://metacpan.org/release/Unicode-CaseFold
 INHERIT=perl-module
-IUSE=test
+IUSE=test test
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( GPL-1+ Artistic )
 RDEPEND=>=virtual/perl-Scalar-List-Utils-1.11 virtual/perl-Exporter dev-lang/perl:=
-RESTRICT=!test? ( test )
+RESTRICT=!test? ( test ) !test? ( test )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/A/AR/ARODLAND/Unicode-CaseFold-1.01.tar.gz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	c3fca037246e877693badea0df3b0ef8	perl-module	4f80b00fab088c2f6d68edb55a6c4bf4
-_md5_=7b98710dbf774a454efa57d2e3730d2c
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	c3fca037246e877693badea0df3b0ef8	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	perl-module	4f80b00fab088c2f6d68edb55a6c4bf4
+_md5_=f872ee478a563e0186d8276013f0e8a4
