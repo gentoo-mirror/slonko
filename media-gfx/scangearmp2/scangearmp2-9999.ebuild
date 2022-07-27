@@ -17,8 +17,8 @@ IUSE=""
 DEPEND="
 	dev-util/intltool
 	media-gfx/sane-backends
+	media-libs/libjpeg-turbo:=
 	sys-devel/gettext
-	virtual/jpeg
 	virtual/libusb:1
 	x11-libs/gtk+:3
 "

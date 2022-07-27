@@ -18,8 +18,8 @@ BDEPEND="virtual/pkgconfig"
 RDEPEND="
 	dev-libs/boost:=
 	media-gfx/sane-backends
+	media-libs/libjpeg-turbo:=
 	media-libs/tiff
-	virtual/jpeg
 	virtual/libusb:1
 	graphicsmagick? ( media-gfx/graphicsmagick:=[cxx] )
 	!graphicsmagick? ( media-gfx/imagemagick:=[cxx] )

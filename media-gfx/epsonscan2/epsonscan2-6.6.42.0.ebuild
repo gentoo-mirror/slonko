@@ -21,9 +21,9 @@ DEPEND="
 	dev-libs/rapidjson
 	media-gfx/sane-backends
 	media-libs/libharu
+	media-libs/libjpeg-turbo:=
 	media-libs/libpng
 	media-libs/tiff
-	virtual/jpeg
 	virtual/libusb:1
 "
 # dev-qt/qtsingleapplication
