@@ -1,13 +1,13 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 inherit webapp
 
 MY_PV="${PV//_/-}"
 
 DESCRIPTION="A powerful Open Source Content Management System"
-HOMEPAGE="http://www.joomla.org/"
+HOMEPAGE="https://www.joomla.org/"
 M_PN="Joomla_${MY_PV}-Stable-Full_Package"
 SRC_URI="https://github.com/${PN}/${PN}-cms/releases/download/${MY_PV}/${M_PN}.tar.bz2"
 
