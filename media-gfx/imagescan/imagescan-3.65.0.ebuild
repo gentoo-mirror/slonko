@@ -48,6 +48,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.62.0-tests-linkage.patch
 	"${FILESDIR}"/${PN}-3.63.0-autoconf-2.70.patch
 	"${FILESDIR}"/${PN}-3.65.0-sane-backends-1.1.patch
+	"${FILESDIR}"/${PN}-3.65.0-sane-force-dll.d.patch
 )
 
 src_prepare() {
