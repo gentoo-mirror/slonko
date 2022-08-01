@@ -7,7 +7,7 @@ inherit check-reqs desktop unpacker wrapper
 
 DESCRIPTION="Military simulations by the U.S. Army to provide insights on soldiering"
 HOMEPAGE="https://www.americasarmy.com/"
-SRC_URI="mirror://sourceforge/distrobuild/${PN}${PV}-linux.run"
+SRC_URI="mirror://sourceforge/project/distrobuild/sources/${PN}${PV}-linux.run"
 
 LICENSE="Army-EULA"
 SLOT="0"

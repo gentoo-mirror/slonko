@@ -6,7 +6,7 @@ EAPI=8
 inherit perl-module
 
 DESCRIPTION="Unicode::CaseFold - Unicode case-folding for case-insensitive lookups."
-HOMEPAGE="http://metacpan.org/release/Unicode-CaseFold"
+HOMEPAGE="https://metacpan.org/dist/Unicode-CaseFold"
 SRC_URI="mirror://cpan/authors/id/A/AR/ARODLAND/${P}.tar.gz"
 
 SLOT="0"
