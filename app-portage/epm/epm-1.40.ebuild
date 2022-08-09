@@ -3,11 +3,13 @@
 
 EAPI=8
 
-inherit prefix
+inherit git-r3 prefix
 
 DESCRIPTION="rpm workalike for Gentoo Linux"
 HOMEPAGE="https://github.com/fuzzyray/epm"
-S="${WORKDIR}/"
+
+EGIT_REPO_URI="https://github.com/ganto/epm.git"
+EGIT_COMMIT="df329631d9be14305a5cc5484a03c06012a9cc0f"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,11 +20,10 @@ DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	:
+	git-r3_src_unpack
 }
 
 src_prepare() {
-	cp "${FILESDIR}"/epm "${S}"/epm
 	eprefixify epm
 	eapply_user
 }
