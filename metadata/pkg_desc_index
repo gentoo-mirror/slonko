@@ -19,7 +19,7 @@ net-mail/sympa 6.2.68: A feature-rich open source mailing list software
 net-vpn/globalprotect-openconnect 1.4.8: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
 net-vpn/gp-saml-gui 9999: Interactively authenticate to GlobalProtect VPNs that require SAML
 net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunnel VPN setup
-sys-kernel/hardened-sources 5.4.210 5.10.136 5.15.61 5.18.18: Minimal supplement to upstream Kernel Self Protection Project
+sys-kernel/hardened-sources 5.4.210 5.10.137 5.15.62 5.18.19: Minimal supplement to upstream Kernel Self Protection Project
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/joomla 3.10.5: A powerful Open Source Content Management System
 x11-wm/compiz 9999: OpenGL window and compositing manager
