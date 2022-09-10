@@ -24,7 +24,7 @@ ACCT_DEPEND="
 "
 DEPEND="
 	${ACCT_DEPEND}
-	>=app-admin/vaultwarden-web-vault-2022.8.1
+	>=app-admin/vaultwarden-web-vault-2022.9.0
 	>=dev-lang/rust-1.60
 	dev-libs/openssl:0=
 "
