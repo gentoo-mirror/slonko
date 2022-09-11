@@ -30,6 +30,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	test? (
 		app-text/tesseract[png,tiff,training,-opencl]
+		dev-util/uncrustify
 		media-fonts/dejavu
 		virtual/imagemagick-tools[png,tiff]
 	)
