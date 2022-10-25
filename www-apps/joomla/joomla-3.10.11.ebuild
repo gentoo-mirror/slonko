@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 S="${WORKDIR}"
 need_httpd_cgi
 
-RDEPEND=">=dev-lang/php-5.3.10[json,zlib,xml]
+RDEPEND=">=dev-lang/php-5.3.10[json(+),zlib,xml]
 	virtual/httpd-php
 	|| ( dev-lang/php[mysql] dev-lang/php[postgres] )"
 
