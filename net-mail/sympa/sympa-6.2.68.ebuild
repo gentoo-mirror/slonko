@@ -24,7 +24,7 @@ else
 fi
 
 DESCRIPTION="A feature-rich open source mailing list software"
-HOMEPAGE="https://www.sympa.org/"
+HOMEPAGE="https://www.sympa.community/"
 
 SLOT="0"
 LICENSE="GPL-2"
