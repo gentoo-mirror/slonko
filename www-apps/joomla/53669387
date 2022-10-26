@@ -1,14 +1,16 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=8
-inherit webapp
+EAPI=5
+inherit webapp versionator
 
-MY_PV="${PV//_/-}"
+MY_PV=$(replace_version_separator '_' '-')
 
 DESCRIPTION="A powerful Open Source Content Management System"
-HOMEPAGE="https://www.joomla.org/"
+HOMEPAGE="http://www.joomla.org/"
 M_PN="Joomla_${MY_PV}-Stable-Full_Package"
+RESTRICT="mirror"
 SRC_URI="https://github.com/${PN}/${PN}-cms/releases/download/${MY_PV}/${M_PN}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -17,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 S="${WORKDIR}"
 need_httpd_cgi
 
-RDEPEND=">=dev-lang/php-5.3.10[json(+),zlib,xml]
+RDEPEND=">=dev-lang/php-5.3.10[json,zlib,xml]
 	virtual/httpd-php
 	|| ( dev-lang/php[mysql] dev-lang/php[postgres] )"
 
