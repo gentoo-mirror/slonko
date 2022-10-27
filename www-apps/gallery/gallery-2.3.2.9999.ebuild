@@ -6,7 +6,7 @@ EAPI=8
 inherit webapp
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator"
-HOMEPAGE="http://galleryproject.org/"
+HOMEPAGE="http://galleryproject.org/ https://github.com/gregstoll/gallery2/"
 
 LICENSE="GPL-2"
 IUSE="ffmpeg +gd imagemagick +mysql netpbm postgres raw sqlite unzip zip"
