@@ -9,4 +9,8 @@
 		<flag name="compat">Enable migration compatibility flag</flag>
 		<flag name="dkim">Add DomainKeys Identified Mail support</flag>
 	</use>
+	<upstream>
+		<bugs-to>https://github.com/sympa-community/sympa/issues</bugs-to>
+		<remote-id type="github">sympa-community/sympa</remote-id>
+	</upstream>
 </pkgmetadata>

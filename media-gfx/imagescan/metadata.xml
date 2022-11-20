@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person" proxied="yes">
+	<maintainer type="person">
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
-	</maintainer>
-	<maintainer type="project" proxied="proxy">
-		<email>proxy-maint@gentoo.org</email>
-		<name>Proxy Maintainers</name>
-	</maintainer>
-	<maintainer type="person">
-		<email>dilfridge@gentoo.org</email>
-		<name>Andreas K. Hüttel (only during xmas vacations)</name>
 	</maintainer>
 	<longdescription lang="en">
 		Image Scan! is a graphical scanner utility for people that do not need all
@@ -20,4 +12,8 @@
 		scanners and all-in-ones. However, the scanner driver it provides can
 		be used by any other SANE standard compliant scanner utility.
 	</longdescription>
+	<upstream>
+		<bugs-to>https://gitlab.com/utsushi/utsushi/-/issues</bugs-to>
+		<remote-id type="gitlab">utsushi/utsushi</remote-id>
+	</upstream>
 </pkgmetadata>
