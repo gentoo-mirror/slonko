@@ -385,7 +385,7 @@ DEPEND="
 	>=app-admin/vaultwarden-web-vault-2022.10.0
 	>=dev-lang/rust-1.60
 	dev-libs/openssl:0=
-	sqlite? ( system-sqlite? ( dev-db/sqlite:3 ) )
+	sqlite? ( system-sqlite? ( >=dev-db/sqlite-3.35.4:3 ) )
 "
 RDEPEND="${DEPEND}"
 
