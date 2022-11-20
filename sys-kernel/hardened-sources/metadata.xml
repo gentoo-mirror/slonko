@@ -8,4 +8,8 @@
 	<use>
 		<flag name="experimental">Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".</flag>
 	</use>
+	<upstream>
+		<bugs-to>https://github.com/anthraxx/linux-hardened/issues</bugs-to>
+		<remote-id type="github">anthraxx/linux-hardened</remote-id>
+	</upstream>
 </pkgmetadata>

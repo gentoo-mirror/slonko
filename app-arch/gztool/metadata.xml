@@ -5,4 +5,11 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
+	<upstream>
+		<maintainer status="active">
+			<name>Roberto S. Galende</name>
+		</maintainer>
+		<bugs-to>https://github.com/circulosmeos/gztool/issues</bugs-to>
+		<remote-id type="github">circulosmeos/gztool</remote-id>
+	</upstream>
 </pkgmetadata>

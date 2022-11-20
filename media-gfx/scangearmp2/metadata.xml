@@ -5,4 +5,8 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
+	<upstream>
+		<bugs-to>https://github.com/Ordissimo/scangearmp2/issues</bugs-to>
+		<remote-id type="github">Ordissimo/scangearmp2</remote-id>
+	</upstream>
 </pkgmetadata>

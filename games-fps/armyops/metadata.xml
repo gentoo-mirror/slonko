@@ -5,4 +5,7 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">distrobuild</remote-id>
+	</upstream>
 </pkgmetadata>

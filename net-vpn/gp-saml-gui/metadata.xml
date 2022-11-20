@@ -11,6 +11,10 @@
 		that you can subsequently connect with OpenConnect.
 	</longdescription>
 	<upstream>
-		<remote-id type="github">dlenski/gp-saml-gui.git</remote-id>
+		<maintainer status="active">
+			<name>Dan Lenski</name>
+		</maintainer>
+		<bugs-to>https://github.com/dlenski/gp-saml-gui/issues</bugs-to>
+		<remote-id type="github">dlenski/gp-saml-gui</remote-id>
 	</upstream>
 </pkgmetadata>
