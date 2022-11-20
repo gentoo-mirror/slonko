@@ -5,4 +5,14 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
+	<use>
+		<flag name="system-sqlite">Use the system SQLite instead of the bundled one</flag>
+	</use>
+	<upstream>
+		<maintainer status="active">
+			<name>Daniel García</name>
+		</maintainer>
+		<bugs-to>https://github.com/dani-garcia/vaultwarden/issues</bugs-to>
+		<remote-id type="github">dani-garcia/vaultwarden</remote-id>
+	</upstream>
 </pkgmetadata>
