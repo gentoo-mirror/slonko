@@ -372,7 +372,7 @@ SRC_URI="
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="mysql postgres sqlite"
+IUSE="mysql postgres sqlite system-sqlite"
 
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
@@ -385,12 +385,17 @@ DEPEND="
 	>=app-admin/vaultwarden-web-vault-2022.10.0
 	>=dev-lang/rust-1.60
 	dev-libs/openssl:0=
-	sqlite? ( dev-db/sqlite )
+	sqlite? ( system-sqlite? ( dev-db/sqlite:3 ) )
 "
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i "/^multer/d" "${S}/Cargo.toml" || die
+	sed -i -e '/^multer/d' "${S}/Cargo.toml" || die
+	if use system-sqlite; then
+		sed -i \
+			-e 's/^\(libsqlite3-sys =.*\)features\s*=\s*\["bundled"\],/\1/g' \
+			"${S}/Cargo.toml" || die
+	fi
 
 	default
 }
