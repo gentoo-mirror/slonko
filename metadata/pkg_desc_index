@@ -3,7 +3,7 @@ acct-group/vaultwarden 0: System group: vaultwarden
 acct-user/sympa 0: User for Sympa daemon
 acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.26.0-r1: Unofficial Bitwarden compatible server written in Rust
-app-admin/vaultwarden-web-vault 2022.10.2: Unofficial patched bitwarden web-vault builds for vaultwarden
+app-admin/vaultwarden-web-vault 2022.11.1: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.5.1: GZIP files indexer, compressor and data retriever.
 app-misc/workrave 1.10.50: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
@@ -19,6 +19,6 @@ net-mail/sympa 6.2.68: A feature-rich open source mailing list software
 net-vpn/globalprotect-openconnect 1.4.8: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
 net-vpn/gp-saml-gui 9999: Interactively authenticate to GlobalProtect VPNs that require SAML
 net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunnel VPN setup
-sys-kernel/hardened-sources 5.4.220 5.4.221 5.4.221-r1 5.4.222 5.4.223 5.4.224 5.4.225 5.10.150 5.10.152 5.10.152-r1 5.10.153 5.10.154 5.10.155 5.10.156 5.15.75 5.15.76 5.15.76-r1 5.15.77 5.15.78 5.15.79 5.18.19 5.19.17 6.0.5 6.0.6 6.0.6-r1 6.0.7 6.0.8 6.0.9: Minimal supplement to upstream Kernel Self Protection Project
+sys-kernel/hardened-sources 5.4.220 5.4.224 5.4.225 5.10.150 5.10.155 5.10.156 5.15.75 5.15.79 5.15.80 5.18.19 6.0.8 6.0.9 6.0.10: Minimal supplement to upstream Kernel Self Protection Project
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 x11-wm/compiz 9999: OpenGL window and compositing manager
