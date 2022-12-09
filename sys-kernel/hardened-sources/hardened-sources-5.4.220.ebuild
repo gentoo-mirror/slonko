@@ -12,7 +12,7 @@ detect_arch
 SUBREL="hardened1"
 HARDENED_URI="https://github.com/anthraxx/linux-hardened/releases/download/${PV}-${SUBREL}/linux-hardened-${PV}-${SUBREL}.patch"
 
-KEYWORDS="~alpha hppa ~ia64 ~m68k ~mips ppc ~s390 sparc"
+KEYWORDS="~m68k ~mips ppc ~s390"
 HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches https://github.com/anthraxx/linux-hardened"
 IUSE="experimental"
 UNIPATCH_LIST="${DISTDIR}/linux-hardened-${PV}-${SUBREL}.patch"
