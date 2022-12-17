@@ -18,6 +18,6 @@ SLOT="0"
 RDEPEND="
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/pygobject[${PYTHON_USEDEP}]
-	net-libs/webkit-gtk
+	net-libs/webkit-gtk:4
 	net-vpn/openconnect
 "
