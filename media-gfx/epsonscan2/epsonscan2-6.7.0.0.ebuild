@@ -14,39 +14,43 @@ inherit cmake desktop udev
 
 LICENSE="GPL-3+"
 SLOT="0"
-IUSE=""
+IUSE="bundled-libs"
 KEYWORDS="~amd64"
 
 DEPEND="
 	dev-libs/boost
-	dev-libs/rapidjson
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 	media-gfx/sane-backends
-	media-libs/libharu
 	media-libs/libjpeg-turbo:=
 	media-libs/libpng
 	media-libs/tiff
-	sys-libs/zlib
 	virtual/libusb:1
+	!bundled-libs? (
+		media-libs/libharu
+		sys-libs/zlib
+	)
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_prepare() {
-	cmake_src_prepare
 	sed -i \
 		-e '/\(execute_process.*\)${EPSON_INSTALL_ROOT}/d' \
 		-e "s|^\(set(EPSON_VERSION \).*|\1-${PV})|g" \
 		CMakeLists.txt || die
-	# Force usage of system libraries
-	rm -rf thirdparty/{HaruPDF,rapidjson,zlib}
-	sed -i \
-		-e '/thirdparty\/HaruPDF/d' \
-		-e '/thirdparty\/zlib/d' \
-		-e 's|^\([[:blank:]]*\)\(usb-1.0\)|\1\2\n\1hpdf\n\1z|' \
-		src/Controller/CMakeLists.txt || die
+	if ! use bundled-libs; then
+		# Force usage of system libraries
+		rm -rf thirdparty/{HaruPDF,zlib}
+		sed -i \
+			-e '/thirdparty\/HaruPDF/d' \
+			-e '/thirdparty\/zlib/d' \
+			-e 's|^\([[:blank:]]*\)\(usb-1.0\)|\1\2\n\1hpdf\n\1z|' \
+			src/Controller/CMakeLists.txt || die
+	fi
+
+	cmake_src_prepare
 }
 
 src_install() {
