@@ -12,4 +12,7 @@
 		It supports USB and network connection for the network capable scanners.
 		Scanner can be controlled via not only own front-end but also command line option.
 	</longdescription>
+	<use>
+		<flag name="bundled-libs">Use bundled libs</flag>
+	</use>
 </pkgmetadata>
