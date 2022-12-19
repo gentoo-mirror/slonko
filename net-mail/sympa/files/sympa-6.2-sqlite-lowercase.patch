@@ -1,0 +1,19 @@
+commit c2bb2ebc22111d808a8ecad9c05a520a939c1494
+Author: Emmanuel Bouthenot <kolter@openics.org>
+Date:   Sat Nov 12 08:11:13 2022 +0100
+
+    Fix SQLite upgrade with lowercase types
+
+diff --git a/src/lib/Sympa/DatabaseDriver/SQLite.pm b/src/lib/Sympa/DatabaseDriver/SQLite.pm
+index 06d7ad627..1b42083ac 100644
+--- a/src/lib/Sympa/DatabaseDriver/SQLite.pm
++++ b/src/lib/Sympa/DatabaseDriver/SQLite.pm
+@@ -191,7 +191,7 @@ sub get_fields {
+     }
+     while (my $field = $sth->fetchrow_hashref('NAME_lc')) {
+         # http://www.sqlite.org/datatype3.html
+-        my $type = $field->{'type'};
++        my $type = lc $field->{'type'};
+         if ($type =~ /int/) {
+             $type = 'integer';
+         } elsif ($type =~ /char|clob|text/) {
