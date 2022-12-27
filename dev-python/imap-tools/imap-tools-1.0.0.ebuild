@@ -11,7 +11,6 @@ inherit distutils-r1
 MY_PN="${PN/-/_}"
 DESCRIPTION="High level lib for work with email by IMAP"
 HOMEPAGE="https://github.com/ikvk/imap_tools"
-#SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 SRC_URI="https://github.com/ikvk/imap_tools/archive/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 S="${WORKDIR}/${MY_PN}-${PV}"
 
