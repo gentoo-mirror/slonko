@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>marcin.deranek@slonko.net</email>
+		<name>Marcin Deranek</name>
+	</maintainer>
+	<upstream>
+		<bugs-to>https://github.com/ocrmypdf/OCRmyPDF/issues</bugs-to>
+		<remote-id type="github">ocrmypdf/OCRmyPDF</remote-id>
+	</upstream>
+</pkgmetadata>
