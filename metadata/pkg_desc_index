@@ -11,6 +11,7 @@ app-text/OCRmyPDF 14.0.1: OCRmyPDF adds an OCR text layer to scanned PDF files
 dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
 dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
 dev-python/click-repl 0.2.0: Subcommand REPL for click apps
+dev-python/concurrent-log-handler 0.9.20: Python logging handler allowing safe concurrent write to the same log file
 dev-python/imap-tools 1.0.0: High level lib for work with email by IMAP
 dev-python/inotify-simple 1.3.5: Python wrapper around inotify
 dev-python/inotifyrecursive 0.3.5: Recursive inotify watches for Python
