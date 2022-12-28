@@ -19,8 +19,6 @@ KEYWORDS="~amd64"
 RDEPEND=">=dev-python/portalocker-1.4.0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
-distutils_enable_tests unittest
-
 python_test() {
 	${EPYTHON} stresstest.py || die "Test failed"
 }
