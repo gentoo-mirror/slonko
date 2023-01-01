@@ -15,10 +15,11 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-distutils_enable_tests unittest
 DEPEND="
 	>=dev-python/django-3.2[${PYTHON_USEDEP}]
 "
+
+DOCS=( README.rst )
 
 python_test() {
 	"${EPYTHON}" -m django test -v2 --settings=tests.settings || die "Tests fail with ${EPYTHON}"
