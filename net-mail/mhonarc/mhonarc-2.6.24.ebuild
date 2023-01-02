@@ -16,7 +16,6 @@ KEYWORDS="amd64 ~mips ~ppc x86"
 IUSE="examples"
 
 S="${WORKDIR}/${P/mhonarc/MHonArc}"
-mydoc="README.txt"
 
 src_install() {
 	sed -e "s|-prefix |-docpath '${D}/usr/share/doc/${PF}/html' -prefix '${D}'|g" -i Makefile ||
