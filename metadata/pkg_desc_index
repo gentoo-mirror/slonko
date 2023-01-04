@@ -12,6 +12,7 @@ dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
 dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
 dev-python/billiard 3.6.4.0: Python multiprocessing fork
 dev-python/channels 4.0.0: Extends Django abilities beyond HTTP protocol
+dev-python/channels-redis 4.0.0: Provides Django Channels channel layers that use Redis as a backing store.
 dev-python/click-repl 0.2.0: Subcommand REPL for click apps
 dev-python/concurrent-log-handler 0.9.20: Python logging handler allowing safe concurrent write to the same log file
 dev-python/daphne 4.0.0: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
