@@ -15,6 +15,7 @@ dev-python/channels 4.0.0: Extends Django abilities beyond HTTP protocol
 dev-python/click-repl 0.2.0: Subcommand REPL for click apps
 dev-python/concurrent-log-handler 0.9.20: Python logging handler allowing safe concurrent write to the same log file
 dev-python/daphne 4.0.0: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
+dev-python/django-extensions 3.2.1: A collection of custom extensions for the Django Framework
 dev-python/django-picklefield 3.1.0: Pickled object field for Django
 dev-python/djangorestframework 3.14.0: Web APIs with django made easy
 dev-python/imap-tools 1.0.0: High level lib for work with email by IMAP
