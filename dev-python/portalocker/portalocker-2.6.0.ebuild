@@ -6,7 +6,7 @@ EAPI=8
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..11} )
 
-inherit distutils-r1
+inherit distutils-r1 optfeature
 
 DESCRIPTION="Portalocker is a library to provide an easy API to file locking."
 HOMEPAGE="https://github.com/WoLpH/portalocker"
