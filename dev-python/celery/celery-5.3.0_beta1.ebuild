@@ -57,7 +57,6 @@ BDEPEND="
 		dev-python/sphinx-testing[${PYTHON_USEDEP}]
 		dev-python/tblib[${PYTHON_USEDEP}]
 		sci-astronomy/pyephem[${PYTHON_USEDEP}]
-		dev-python/sqlalchemy[${PYTHON_USEDEP}]
 	)
 	doc? (
 		dev-python/docutils[${PYTHON_USEDEP}]
@@ -74,13 +73,6 @@ EPYTEST_DESELECT=(
 	# Failing tests
 	t/unit/contrib/test_sphinx.py::test_sphinx
 )
-python_prepare_all() {
-	# Remove failed tests
-	rm t/unit/app/test_backends.py \
-		t/unit/backends/test_{base,rpc}.py
-
-	distutils-r1_python_prepare_all
-}
 
 python_install_all() {
 	# Main celeryd init.d and conf.d
