@@ -18,11 +18,10 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="
-	>=dev-python/asgiref-3.5.2[${PYTHON_USEDEP}]
+	>=dev-python/asgiref-3.2.10[${PYTHON_USEDEP}]
 	<dev-python/asgiref-4.0[${PYTHON_USEDEP}]
-	>=dev-python/autobahn-22.4.2[${PYTHON_USEDEP}]
-	>=dev-python/django-3.2[${PYTHON_USEDEP}]
-	>=dev-python/twisted-22.4[ssl,${PYTHON_USEDEP}]
+	>=dev-python/autobahn-0.18[${PYTHON_USEDEP}]
+	>=dev-python/twisted-18.7[ssl,${PYTHON_USEDEP}]
 "
 BDEPEND="
 	test? (
