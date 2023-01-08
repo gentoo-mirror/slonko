@@ -37,7 +37,7 @@ media-gfx/imagescan-plugin-network-nt 1.1.4: Network scanning plugin for EPSON s
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 net-mail/mhonarc 2.6.24: Perl Mail-to-HTML Converter
 net-mail/sympa 6.2.68-r1 6.2.70: A feature-rich open source mailing list software
-net-vpn/globalprotect-openconnect 1.4.8: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
+net-vpn/globalprotect-openconnect 1.4.8 1.4.9: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
 net-vpn/gp-saml-gui 9999: Interactively authenticate to GlobalProtect VPNs that require SAML
 net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunnel VPN setup
 sys-kernel/hardened-sources 5.4.225 5.4.226 5.4.227 5.4.228 5.10.155 5.10.156 5.10.157 5.10.158 5.10.159 5.10.160 5.10.161 5.10.162 5.15.80 5.15.81 5.15.82 5.15.83 5.15.84 5.15.85 5.15.86 5.18.19 6.0.13 6.0.14 6.0.15 6.0.16 6.0.17: Minimal supplement to upstream Kernel Self Protection Project
