@@ -29,28 +29,28 @@ BDEPEND="
 	)
 "
 
-DOCS=( README.md CHANGELOG.md )
+DOCS=( README.rst )
 
 distutils_enable_tests pytest
 
 EPYTEST_DESELECT=(
-        # Failing tests
-		tests/connection_commands_test.py::test_auth
-		tests/connection_test.py::test_connect_tcp_timeout
-		tests/connection_test.py::test_connect_unixsocket_timeout
-		tests/pool_test.py::test_create_connection_timeout
-		tests/pool_test.py::test_pool_idle_close
-		tests/sentinel_commands_test.py::test_master__auth
-		tests/sentinel_failover_test.py::test_auto_failover
-		tests/sentinel_failover_test.py::test_failover_command
-		tests/server_commands_test.py::test_client_list
-		tests/server_commands_test.py::test_client_list__unixsocket
-		tests/server_commands_test.py::test_command_info
-		tests/server_commands_test.py::test_config_set
-		tests/server_commands_test.py::test_debug_object
-		tests/server_commands_test.py::test_debug_sleep
-		tests/stream_commands_test.py::test_xgroup_create
-		tests/stream_commands_test.py::test_xgroup_create_mkstream
+	# Failing tests
+	tests/connection_commands_test.py::test_auth
+	tests/connection_test.py::test_connect_tcp_timeout
+	tests/connection_test.py::test_connect_unixsocket_timeout
+	tests/pool_test.py::test_create_connection_timeout
+	tests/pool_test.py::test_pool_idle_close
+	tests/sentinel_commands_test.py::test_master__auth
+	tests/sentinel_failover_test.py::test_auto_failover
+	tests/sentinel_failover_test.py::test_failover_command
+	tests/server_commands_test.py::test_client_list
+	tests/server_commands_test.py::test_client_list__unixsocket
+	tests/server_commands_test.py::test_command_info
+	tests/server_commands_test.py::test_config_set
+	tests/server_commands_test.py::test_debug_object
+	tests/server_commands_test.py::test_debug_sleep
+	tests/stream_commands_test.py::test_xgroup_create
+	tests/stream_commands_test.py::test_xgroup_create_mkstream
 )
 
 python_prepare_all() {
