@@ -1,0 +1,17 @@
+[Unit]
+Description=Paperless webserver service
+Requires=redis.service
+After=network.target
+Wants=network.target
+PartOf=paperless.target
+
+[Service]
+User=paperless
+Group=paperless
+EnvironmentFile=/etc/paperless.conf
+WorkingDirectory=/usr/share/paperless/src
+ExecStart=/usr/bin/gunicorn -c /usr/share/paperless/gunicorn.conf.py paperless.asgi:application
+Restart=on-abort
+
+[Install]
+WantedBy=paperless.target

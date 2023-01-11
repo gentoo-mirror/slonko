@@ -1,0 +1,15 @@
+[Unit]
+Description=Paperless scheduler service
+Requires=redis.service
+After=network.target
+PartOf=paperless.target
+
+[Service]
+User=paperless
+Group=paperless
+WorkingDirectory=/usr/share/paperless/src
+ExecStart=celery --app paperless beat --loglevel INFO
+Restart=on-abort
+
+[Install]
+WantedBy=paperless.target
