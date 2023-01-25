@@ -22,6 +22,7 @@ ACCT_DEPEND="
 EXTRA_DEPEND="
 	app-text/unpaper
 	dev-python/hiredis
+	dev-python/websockets
 "
 
 DEPEND="
