@@ -31,6 +31,7 @@ DEPEND="
 	app-text/poppler[utils]
 	app-text/pdfminer
 	dev-python/asgiref
+	dev-python/bleach
 	dev-python/celery
 	>=dev-python/channels-3.0
 	<dev-python/channels-4.0
@@ -49,6 +50,7 @@ DEPEND="
 	dev-python/imap-tools
 	>=dev-python/inotifyrecursive-0.3
 	dev-python/langdetect
+	dev-python/nltk
 	dev-python/pathvalidate
 	dev-python/pdf2image
 	dev-python/pikepdf
@@ -68,6 +70,7 @@ DEPEND="
 	media-gfx/imagemagick
 	media-gfx/optipng
 	media-libs/jbig2enc
+	>=sci-libs/scikit-learn-1.1
 	www-servers/gunicorn
 	mysql? ( dev-python/mysqlclient )
 	ocr? ( >=app-text/OCRmyPDF-14.0 )
@@ -75,10 +78,7 @@ DEPEND="
 	!remote-redis? ( dev-db/redis )
 "
 RDEPEND="${DEPEND}"
-# dev-python/nltk - masked
-# dev-python/requests - Tika
-# tika
-# sci-libs/scikit-learn (lots of deps)
+# dev-python/tika
 
 DOCS=( docker/imagemagick-policy.xml )
 
