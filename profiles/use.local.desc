@@ -6,6 +6,7 @@ app-admin/vaultwarden:system-sqlite - Use the system SQLite instead of the bundl
 app-misc/workrave:mate - Add support for MATE panel
 app-misc/workrave:xfce - Add support for XFCE panel
 dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5.2 that are unlikely to break existing code
+dev-python/nltk-data:extra - Install the complete set of data files. Otherwise, only files required by tests are installed.
 media-gfx/epsonscan2:bundled-libs - Use bundled libs
 net-mail/sympa:compat - Enable migration compatibility flag
 net-mail/sympa:dkim - Add DomainKeys Identified Mail support
