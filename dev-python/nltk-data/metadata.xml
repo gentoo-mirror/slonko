@@ -5,9 +5,10 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
-	<upstream>
-		<bugs-to>https://github.com/Mimino666/langdetect/issues</bugs-to>
-		<remote-id type="github">Mimino666/langdetect</remote-id>
-		<remote-id type="pypi">langdetect</remote-id>
-	</upstream>
+	<use>
+		<flag name="extra">
+			Install the complete set of data files.  Otherwise, only
+			files required by tests are installed.
+		</flag>
+	</use>
 </pkgmetadata>
