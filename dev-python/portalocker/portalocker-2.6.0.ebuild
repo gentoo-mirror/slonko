@@ -20,7 +20,7 @@ BDEPEND="
 	test? (
 		dev-db/redis
 		dev-python/pytest-timeout[${PYTHON_USEDEP}]
-		dev-python/redis-py[${PYTHON_USEDEP}]
+		dev-python/redis[${PYTHON_USEDEP}]
 	)
 "
 
@@ -48,5 +48,5 @@ src_test() {
 }
 
 pkg_postinst() {
-	optfeature "redis support" dev-python/redis-py
+	optfeature "redis support" dev-python/redis
 }
