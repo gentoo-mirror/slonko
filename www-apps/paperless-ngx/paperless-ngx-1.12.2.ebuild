@@ -61,7 +61,7 @@ DEPEND="
 	dev-python/python-magic
 	dev-python/pyzbar
 	dev-python/rapidfuzz
-	dev-python/redis-py
+	dev-python/redis
 	dev-python/tqdm
 	dev-python/uvicorn
 	>=dev-python/watchdog-2.1
