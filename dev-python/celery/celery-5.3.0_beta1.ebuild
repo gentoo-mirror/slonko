@@ -53,7 +53,7 @@ BDEPEND="
 		dev-python/pytest-subtests[${PYTHON_USEDEP}]
 		>=dev-python/pytest-timeout-1.4.2[${PYTHON_USEDEP}]
 		>=dev-python/pyyaml-3.10[${PYTHON_USEDEP}]
-		dev-python/redis-py[${PYTHON_USEDEP}]
+		dev-python/redis[${PYTHON_USEDEP}]
 		dev-python/sphinx-testing[${PYTHON_USEDEP}]
 		dev-python/tblib[${PYTHON_USEDEP}]
 		sci-astronomy/pyephem[${PYTHON_USEDEP}]
@@ -95,7 +95,7 @@ pkg_postinst() {
 	#optfeature "rabbitmq support" dev-python/librabbitmq
 	#optfeature "slmq support" dev-python/softlayer_messaging
 	#optfeature "couchbase support" dev-python/couchbase
-	optfeature "redis support" dev-python/redis-py
+	optfeature "redis support" dev-python/redis
 	optfeature "auth support" dev-python/pyopenssl
 	optfeature "pyro support" dev-python/Pyro4
 	optfeature "yaml support" dev-python/pyyaml

@@ -30,7 +30,7 @@ BDEPEND="
 		>=dev-python/cryptography-1.3.0[${PYTHON_USEDEP}]
 		dev-python/msgpack[${PYTHON_USEDEP}]
 		dev-python/pytest-asyncio[${PYTHON_USEDEP}]
-		>=dev-python/redis-py-4.2.0[${PYTHON_USEDEP}]
+		>=dev-python/redis-4.2.0[${PYTHON_USEDEP}]
 	)
 "
 
