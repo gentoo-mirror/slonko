@@ -4,18 +4,18 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="8"
+K_GENPATCHES_VER="237"
 
 inherit kernel-2
 detect_version
 detect_arch
-SUBREL="hardened2"
+SUBREL="hardened1"
 HARDENED_URI="https://github.com/anthraxx/linux-hardened/releases/download/${PV}-${SUBREL}/linux-hardened-${PV}-${SUBREL}.patch"
 
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches https://github.com/anthraxx/linux-hardened"
 IUSE="experimental"
-UNIPATCH_LIST="${FILESDIR}/9999_revert-conflicts-v2.patch ${DISTDIR}/linux-hardened-${PV}-${SUBREL}.patch"
+UNIPATCH_LIST="${DISTDIR}/linux-hardened-${PV}-${SUBREL}.patch"
 UNIPATCH_EXCLUDE="1510_fs-enable-link-security-restrictions-by-default.patch"
 
 DESCRIPTION="Minimal supplement to upstream Kernel Self Protection Project"
