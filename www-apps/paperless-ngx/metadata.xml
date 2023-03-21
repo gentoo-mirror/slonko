@@ -8,6 +8,7 @@
 	<use>
 		<flag name="ocr">Enable support for Optical Character Recognition</flag>
 		<flag name="remote-redis">Use remote Redis instance</flag>
+		<flag name="compression">Enable compression of the responses in application</flag>
 	</use>
 	<upstream>
 		<bugs-to>https://github.com/paperless-ngx/paperless-ngx/issues</bugs-to>
