@@ -31,7 +31,7 @@ RDEPEND="
 	>=media-gfx/img2pdf-0.3.0[${PYTHON_USEDEP}]
 "
 BDEPEND="
-	>=dev-python/setuptools_scm-7.0.5[${PYTHON_USEDEP}]
+	>=dev-python/setuptools-scm-7.0.5[${PYTHON_USEDEP}]
 	test? (
 		>=app-text/unpaper-6.1
 		dev-python/pytest-helpers-namespace[${PYTHON_USEDEP}]
@@ -44,7 +44,7 @@ BDEPEND="
 distutils_enable_tests pytest
 distutils_enable_sphinx docs \
 	dev-python/sphinx-issues \
-	dev-python/sphinx_rtd_theme
+	dev-python/sphinx-rtd-theme
 
 export SETUPTOOLS_SCM_PRETEND_VERSION=${PV}
 
