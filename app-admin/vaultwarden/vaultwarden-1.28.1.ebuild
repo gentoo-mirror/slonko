@@ -62,10 +62,10 @@ CRATES="
 	crossbeam-utils-0.8.15
 	crypto-common-0.1.6
 	ctor-0.1.26
-	cxx-1.0.93
-	cxx-build-1.0.93
-	cxxbridge-flags-1.0.93
-	cxxbridge-macro-1.0.93
+	cxx-1.0.94
+	cxx-build-1.0.94
+	cxxbridge-flags-1.0.94
+	cxxbridge-macro-1.0.94
 	darling-0.14.4
 	darling_core-0.14.4
 	darling_macro-0.14.4
@@ -86,7 +86,6 @@ CRATES="
 	email_address-0.2.4
 	encoding_rs-0.8.32
 	enum-as-inner-0.5.1
-	errno-0.2.8
 	errno-0.3.0
 	errno-dragonfly-0.1.2
 	error-chain-0.12.4
@@ -99,19 +98,19 @@ CRATES="
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
 	form_urlencoded-1.1.0
-	futures-0.3.27
-	futures-channel-0.3.27
-	futures-core-0.3.27
-	futures-executor-0.3.27
-	futures-io-0.3.27
+	futures-0.3.28
+	futures-channel-0.3.28
+	futures-core-0.3.28
+	futures-executor-0.3.28
+	futures-io-0.3.28
 	futures-lite-1.12.0
-	futures-macro-0.3.27
-	futures-sink-0.3.27
-	futures-task-0.3.27
+	futures-macro-0.3.28
+	futures-sink-0.3.28
+	futures-task-0.3.28
 	futures-timer-3.0.2
-	futures-util-0.3.27
+	futures-util-0.3.28
 	generator-0.7.3
-	generic-array-0.14.6
+	generic-array-0.14.7
 	getrandom-0.2.8
 	glob-0.3.1
 	gloo-timers-0.2.6
@@ -143,8 +142,8 @@ CRATES="
 	instant-0.1.12
 	io-lifetimes-1.0.9
 	ipconfig-0.3.1
-	ipnet-2.7.1
-	is-terminal-0.4.5
+	ipnet-2.7.2
+	is-terminal-0.4.6
 	itoa-1.0.6
 	jetscii-0.5.3
 	job_scheduler_ng-2.0.4
@@ -152,14 +151,13 @@ CRATES="
 	jsonwebtoken-8.3.0
 	kv-log-macro-1.0.7
 	lazy_static-1.4.0
-	lettre-0.10.3
+	lettre-0.10.4
 	libc-0.2.140
 	libmimalloc-sys-0.1.30
 	libsqlite3-sys-0.25.2
 	link-cplusplus-1.0.8
 	linked-hash-map-0.5.6
-	linux-raw-sys-0.1.4
-	linux-raw-sys-0.3.0
+	linux-raw-sys-0.3.1
 	lock_api-0.4.9
 	log-0.4.17
 	loom-0.5.6
@@ -176,7 +174,7 @@ CRATES="
 	minimal-lexical-0.2.1
 	miniz_oxide-0.6.2
 	mio-0.8.6
-	multer-2.0.4
+	multer-2.1.0
 	mysqlclient-sys-0.2.5
 	native-tls-0.2.11
 	no-std-compat-0.4.1
@@ -190,11 +188,11 @@ CRATES="
 	num_cpus-1.15.0
 	num_threads-0.1.6
 	once_cell-1.17.1
-	openssl-0.10.48
-	openssl-macros-0.1.0
+	openssl-0.10.49
+	openssl-macros-0.1.1
 	openssl-probe-0.1.5
 	openssl-src-111.25.2+1.1.1t
-	openssl-sys-0.9.83
+	openssl-sys-0.9.84
 	overload-0.1.1
 	parking-2.0.0
 	parking_lot-0.12.1
@@ -206,10 +204,10 @@ CRATES="
 	pear_codegen-0.2.4
 	pem-1.1.1
 	percent-encoding-2.2.0
-	pest-2.5.6
-	pest_derive-2.5.6
-	pest_generator-2.5.6
-	pest_meta-2.5.6
+	pest-2.5.7
+	pest_derive-2.5.7
+	pest_generator-2.5.7
+	pest_meta-2.5.7
 	phf-0.11.1
 	phf_codegen-0.11.1
 	phf_generator-0.11.1
@@ -223,7 +221,7 @@ CRATES="
 	pq-sys-0.4.7
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
-	proc-macro2-1.0.53
+	proc-macro2-1.0.55
 	proc-macro2-diagnostics-0.10.0
 	psl-types-2.0.11
 	publicsuffix-2.2.3
@@ -237,12 +235,13 @@ CRATES="
 	rand_core-0.6.4
 	raw-cpuid-10.7.0
 	redox_syscall-0.2.16
+	redox_syscall-0.3.5
 	ref-cast-1.0.16
 	ref-cast-impl-1.0.16
 	regex-1.7.3
 	regex-automata-0.1.10
 	regex-syntax-0.6.29
-	reqwest-0.11.15
+	reqwest-0.11.16
 	resolv-conf-0.7.0
 	ring-0.16.20
 	rmp-0.8.11
@@ -252,8 +251,7 @@ CRATES="
 	rocket_http-0.5.0-rc.3
 	rpassword-7.2.0
 	rtoolbox-0.0.1
-	rustix-0.36.11
-	rustix-0.37.3
+	rustix-0.37.6
 	rustls-0.20.8
 	rustls-pemfile-1.0.2
 	rustversion-1.0.12
@@ -268,10 +266,10 @@ CRATES="
 	security-framework-2.8.2
 	security-framework-sys-2.8.0
 	semver-1.0.17
-	serde-1.0.158
+	serde-1.0.159
 	serde_cbor-0.11.2
-	serde_derive-1.0.158
-	serde_json-1.0.94
+	serde_derive-1.0.159
+	serde_json-1.0.95
 	serde_urlencoded-0.7.1
 	sha-1-0.10.1
 	sha1-0.10.5
@@ -285,15 +283,15 @@ CRATES="
 	smallvec-1.10.0
 	socket2-0.4.9
 	spin-0.5.2
-	spin-0.9.6
+	spin-0.9.7
 	stable-pattern-0.1.0
 	state-0.5.3
 	strsim-0.10.0
 	subtle-2.4.1
 	syn-1.0.109
-	syn-2.0.10
+	syn-2.0.13
 	syslog-6.0.1
-	tempfile-3.4.0
+	tempfile-3.5.0
 	termcolor-1.2.0
 	thiserror-1.0.40
 	thiserror-impl-1.0.40
@@ -304,8 +302,8 @@ CRATES="
 	time-macros-0.2.8
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.1
-	tokio-1.26.0
-	tokio-macros-1.8.2
+	tokio-1.27.0
+	tokio-macros-2.0.0
 	tokio-native-tls-0.3.1
 	tokio-rustls-0.23.4
 	tokio-socks-0.5.1
