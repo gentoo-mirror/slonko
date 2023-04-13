@@ -12,7 +12,7 @@ detect_arch
 SUBREL="hardened2"
 HARDENED_URI="https://github.com/anthraxx/linux-hardened/releases/download/${PV}-${SUBREL}/linux-hardened-${PV}-${SUBREL}.patch"
 
-KEYWORDS="hppa sparc"
+KEYWORDS="sparc"
 HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches https://github.com/anthraxx/linux-hardened"
 IUSE="experimental"
 UNIPATCH_LIST="${FILESDIR}/9999_revert-conflicts-v1.patch ${DISTDIR}/linux-hardened-${PV}-${SUBREL}.patch ${FILESDIR}/linux-hardened-gentoo-v1.patch"
