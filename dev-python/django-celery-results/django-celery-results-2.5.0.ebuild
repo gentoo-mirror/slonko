@@ -6,12 +6,11 @@ EAPI=8
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..11} )
 
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 MY_P=${PN//-/_}-${PV}
 DESCRIPTION="Celery Result Backends using the Django ORM/Cache framework."
 HOMEPAGE="https://github.com/celery/django-celery-results"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD"
@@ -20,9 +19,9 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="
-	>=dev-python/celery-5.2.3[${PYTHON_USEDEP}]
+	>=dev-python/celery-5.2.7[${PYTHON_USEDEP}]
 	<dev-python/celery-6.0[${PYTHON_USEDEP}]
-	>=dev-python/django-3.2[${PYTHON_USEDEP}]
+	>=dev-python/django-3.2.18[${PYTHON_USEDEP}]
 "
 
 DOCS=( README.rst )
@@ -33,6 +32,15 @@ DOCS=( README.rst )
 #		dev-python/pytz[${PYTHON_USEDEP}]
 #	)
 #"
+
+#python_prepare_all() {
+#	# Prevent un-needed download during build
+#	sed -e "/^    include_intersphinx=/d" \
+#		-i docs/conf.py || die
 #
+#	distutils-r1_python_prepare_all
+#}
+
 #distutils_enable_tests pytest
-distutils_enable_sphinx doc
+#distutils_enable_sphinx docs \
+#	dev-python/sphinx_celery

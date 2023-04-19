@@ -5,11 +5,10 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{8..11} )
 DISTUTILS_USE_PEP517=setuptools
-inherit distutils-r1 optfeature
+inherit distutils-r1 optfeature pypi
 
 DESCRIPTION="Date parsing library designed to parse dates from HTML pages"
 HOMEPAGE="https://github.com/scrapinghub/dateparser"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD-4"
 SLOT="0"
@@ -44,7 +43,7 @@ EPYTEST_DESELECT=(
 distutils_enable_tests pytest
 
 distutils_enable_sphinx docs \
-	dev-python/sphinx_rtd_theme
+	dev-python/sphinx-rtd-theme
 
 pkg_postinst() {
 	optfeature "calendars support" "dev-python/hijri-converter dev-python/convertdate"
