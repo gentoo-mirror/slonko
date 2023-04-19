@@ -6,12 +6,11 @@ EAPI=8
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..11} )
 
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 MY_P=${PN//-/_}-${PV}
 DESCRIPTION="Celery Result Backends using the Django ORM/Cache framework."
 HOMEPAGE="https://github.com/celery/django-celery-results"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD"
