@@ -23,7 +23,10 @@ CDEPEND="dev-python/numpy[${PYTHON_USEDEP}]"
 RDEPEND="python? ( ${PYTHON_DEPS}
 		${CDEPEND} )"
 DEPEND="python? ( ${CDEPEND} )"
-BDEPEND="python? ( dev-python/pybind11[${PYTHON_USEDEP}] )"
+BDEPEND="
+	${DISTUTILS_DEPS}
+	python? ( dev-python/pybind11[${PYTHON_USEDEP}] )
+"
 
 src_prepare() {
 	cmake_src_prepare
