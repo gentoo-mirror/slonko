@@ -24,7 +24,7 @@ dev-python/click-repl 0.2.0: Subcommand REPL for click apps
 dev-python/concurrent-log-handler 0.9.20: Python logging handler allowing safe concurrent write to the same log file
 dev-python/daphne 3.0.2 4.0.0: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
 dev-python/dateparser 1.1.4: Date parsing library designed to parse dates from HTML pages
-dev-python/django-celery-results 2.4.0: Celery Result Backends using the Django ORM/Cache framework.
+dev-python/django-celery-results 2.5.0: Celery Result Backends using the Django ORM/Cache framework.
 dev-python/django-compression-middleware 0.4.2: Django middleware to compress responses using several algorithms.
 dev-python/django-extensions 3.2.1: A collection of custom extensions for the Django Framework
 dev-python/django-picklefield 3.1.0: Pickled object field for Django
