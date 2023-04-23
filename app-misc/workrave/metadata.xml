@@ -6,6 +6,7 @@
 		<name>Marcin Deranek</name>
 	</maintainer>
 	<use>
+		<flag name="indicator">Enable Ayatana indicator support</flag>
 		<flag name="mate">Add support for MATE panel</flag>
 		<flag name="xfce">Add support for XFCE panel</flag>
 	</use>

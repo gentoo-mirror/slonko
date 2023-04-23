@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>marcin.deranek@slonko.net</email>
+		<name>Marcin Deranek</name>
+	</maintainer>
+	<use>
+		<flag name="gui">Enable the GameConqueror GUI</flag>
+	</use>
+	<upstream>
+		<bugs-to>https://github.com/scanmem/scanmem/issues</bugs-to>
+		<remote-id type="github">scanmem/scanmem</remote-id>
+	</upstream>
+</pkgmetadata>
