@@ -6,7 +6,7 @@ acct-user/sympa 0: User for Sympa daemon
 acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.27.0 1.28.1: Unofficial Bitwarden compatible server written in Rust
 app-admin/vaultwarden-web-vault 2023.2.0 2023.3.0b: Unofficial patched bitwarden web-vault builds for vaultwarden
-app-arch/gztool 1.5.2: GZIP files indexer, compressor and data retriever.
+app-arch/gztool 1.5.2 1.6.0: GZIP files indexer, compressor and data retriever.
 app-misc/workrave 1.10.50 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 app-text/OCRmyPDF 14.0.4: OCRmyPDF adds an OCR text layer to scanned PDF files
@@ -40,6 +40,8 @@ dev-python/portalocker 2.6.0: Portalocker is a library to provide an easy API to
 dev-python/pytest-celery 0.1.0: a shim pytest plugin to enable celery.contrib.pytest
 dev-python/pytest-click 1.1.0: Pytest plugin for Click
 dev-python/whitenoise 6.3.0: Portalocker is a library to provide an easy API to file locking.
+dev-util/scanmem 9999: Locate and modify variables in executing processes
+dev-util/ugtrain 9999: Universal Game Trainer
 games-fps/armyops 250: Military simulations by the U.S. Army to provide insights on soldiering
 media-gfx/epsonscan2 6.6.42.0 6.7.43.0: Epson scanner management utility
 media-gfx/epsonscan2-non-free-plugin 1.0.0.5 1.0.0.6: Plugins for Epson Scan 2
