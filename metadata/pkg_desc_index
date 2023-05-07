@@ -56,5 +56,4 @@ net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunn
 sys-kernel/hardened-sources 5.4.228 5.4.231 5.4.236 5.4.239 5.4.240 5.4.241 5.4.242 5.10.163 5.10.163-r1 5.10.167 5.10.174 5.10.176 5.10.177 5.10.178 5.10.179 5.15.88 5.15.88-r1 5.15.94 5.15.102 5.15.107 5.15.108 5.15.109 5.15.110 5.18.19 6.1.12 6.1.19 6.1.24 6.1.24-r1 6.1.25 6.1.26 6.1.27: Minimal supplement to upstream Kernel Self Protection Project
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/paperless-ngx 1.12.2 1.13.0: Community supported paperless: scan, index and archive your physical documents
-www-apps/ttyd 1.7.3: Share your terminal over the web
 x11-wm/compiz 9999: OpenGL window and compositing manager
