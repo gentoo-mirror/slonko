@@ -28,6 +28,7 @@ dev-python/django-celery-results 2.5.0: Celery Result Backends using the Django 
 dev-python/django-compression-middleware 0.4.2: Django middleware to compress responses using several algorithms.
 dev-python/django-environ 0.10.0: An environment variables to configure Django
 dev-python/django-extensions 3.2.1: A collection of custom extensions for the Django Framework
+dev-python/django-guardian 2.4.0: Implementation of per object permissions for Django
 dev-python/django-picklefield 3.1.0: Pickled object field for Django
 dev-python/djangorestframework 3.14.0: Web APIs with django made easy
 dev-python/imap-tools 1.0.0: High level lib for work with email by IMAP
