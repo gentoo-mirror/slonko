@@ -3,12 +3,12 @@
 
 EAPI=8
 
-MY_VERSION="${PV}-1"
+MY_PROG="${P}-1"
 
 DESCRIPTION="Epson scanner management utility"
 HOMEPAGE="https://support.epson.net/linux/en/epsonscan2.php"
-SRC_URI="https://support.epson.net/linux/src/scanner/${PN}/${PN}-${MY_VERSION}.src.tar.gz"
-S="${WORKDIR}/${PN}-${MY_VERSION}"
+SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/14/53/67/1a6447b4acc5568dfd970feba0518fabea35bca2/${MY_PROG}.src.tar.gz"
+S="${WORKDIR}/${MY_PROG}"
 
 inherit cmake desktop udev
 
