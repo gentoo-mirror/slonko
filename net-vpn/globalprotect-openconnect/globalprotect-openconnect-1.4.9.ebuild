@@ -17,6 +17,7 @@ KEYWORDS="~amd64"
 DEPEND="
 	dev-qt/qtcore
 	dev-qt/qtdbus
+	dev-qt/qtkeychain
 	dev-qt/qtnetwork
 	dev-qt/qtwebengine
 	dev-qt/qtwebsockets
@@ -27,7 +28,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 PLOG_REPO='https://github.com/SergiusTheBest/plog.git'
-PLOG_VERSION='1.1.8'
+PLOG_VERSION='1.1.9'
 SINGLEAPP_REPO='https://github.com/itay-grudev/SingleApplication.git'
 SINGLEAPP_VERSION='3.3.4'
 
