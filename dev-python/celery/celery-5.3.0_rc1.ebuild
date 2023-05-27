@@ -4,11 +4,11 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 
 inherit bash-completion-r1 distutils-r1 optfeature
 
-MY_PV="${PV/_beta/b}"
+MY_PV="${PV/_/}"
 DESCRIPTION="Asynchronous task queue/job queue based on distributed message passing"
 HOMEPAGE="
 	https://celeryproject.org/
@@ -24,16 +24,17 @@ KEYWORDS="~amd64"
 IUSE="examples"
 
 RDEPEND="
-	>=dev-python/billiard-3.6.4.0[${PYTHON_USEDEP}]
+	>=dev-python/billiard-4.1.0[${PYTHON_USEDEP}]
 	<dev-python/billiard-5.0.0[${PYTHON_USEDEP}]
 	>=dev-python/click-8.1.2[${PYTHON_USEDEP}]
 	<dev-python/click-9.0.0[${PYTHON_USEDEP}]
 	>=dev-python/click-didyoumean-0.3.0[${PYTHON_USEDEP}]
 	>=dev-python/click-plugins-1.1.1[${PYTHON_USEDEP}]
 	>=dev-python/click-repl-0.2.0[${PYTHON_USEDEP}]
-	>=dev-python/kombu-5.3.0_beta1[${PYTHON_USEDEP}]
+	>=dev-python/python-dateutil-2.8.2[${PYTHON_USEDEP}]
+	>=dev-python/kombu-5.3.0_rc1[${PYTHON_USEDEP}]
 	<dev-python/kombu-6.0[${PYTHON_USEDEP}]
-	>=dev-python/pytz-2021.3[${PYTHON_USEDEP}]
+	>=dev-python/pytz-2022.7[${PYTHON_USEDEP}]
 	>=dev-python/vine-5.0.0[${PYTHON_USEDEP}]
 	<dev-python/vine-6.0.0[${PYTHON_USEDEP}]
 "
@@ -41,16 +42,16 @@ RDEPEND="
 BDEPEND="
 	test? (
 		$(python_gen_impl_dep 'ncurses(+)')
-		>=dev-python/boto3-1.9.178[${PYTHON_USEDEP}]
+		>=dev-python/boto3-1.26.114[${PYTHON_USEDEP}]
 		dev-python/cryptography[${PYTHON_USEDEP}]
 		dev-python/elasticsearch-py[${PYTHON_USEDEP}]
-		>=dev-python/moto-2.2.6[${PYTHON_USEDEP}]
+		>=dev-python/moto-4.1.10[${PYTHON_USEDEP}]
 		dev-python/msgpack[${PYTHON_USEDEP}]
 		dev-python/pylibmc[${PYTHON_USEDEP}]
 		>=dev-python/pymongo-4.0.2[${PYTHON_USEDEP}]
 		dev-python/pytest-celery[${PYTHON_USEDEP}]
 		dev-python/pytest-click[${PYTHON_USEDEP}]
-		dev-python/pytest-subtests[${PYTHON_USEDEP}]
+		>=dev-python/pytest-subtests-0.11.0[${PYTHON_USEDEP}]
 		>=dev-python/pytest-timeout-1.4.2[${PYTHON_USEDEP}]
 		>=dev-python/pyyaml-3.10[${PYTHON_USEDEP}]
 		dev-python/redis[${PYTHON_USEDEP}]
@@ -60,7 +61,7 @@ BDEPEND="
 	)
 	doc? (
 		dev-python/docutils[${PYTHON_USEDEP}]
-		>=dev-python/sphinx_celery-2.0.0[${PYTHON_USEDEP}]
+		>=dev-python/sphinx-celery-2.0.0[${PYTHON_USEDEP}]
 		dev-python/jinja[${PYTHON_USEDEP}]
 		dev-python/sqlalchemy[${PYTHON_USEDEP}]
 	)
