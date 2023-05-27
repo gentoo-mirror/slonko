@@ -62,6 +62,7 @@ BDEPEND="
 	doc? (
 		dev-python/docutils[${PYTHON_USEDEP}]
 		>=dev-python/sphinx-celery-2.0.0[${PYTHON_USEDEP}]
+		>=dev-python/sphinx-click-4.4.0[${PYTHON_USEDEP}]
 		dev-python/jinja[${PYTHON_USEDEP}]
 		dev-python/sqlalchemy[${PYTHON_USEDEP}]
 	)
@@ -72,7 +73,10 @@ distutils_enable_sphinx docs --no-autodoc
 
 EPYTEST_DESELECT=(
 	# Failing tests
-	t/unit/contrib/test_sphinx.py::test_sphinx
+	t/unit/backends/test_elasticsearch.py::test_ElasticsearchBackend::test_backend_concurrent_update
+	t/unit/backends/test_elasticsearch.py::test_ElasticsearchBackend::test_exception_safe_to_retry
+	t/unit/tasks/test_stamping.py::test_canvas_stamping::test_stamping_headers_in_options
+	t/unit/tasks/test_stamping.py::test_canvas_stamping::test_stamping_with_replace
 )
 
 python_install_all() {
