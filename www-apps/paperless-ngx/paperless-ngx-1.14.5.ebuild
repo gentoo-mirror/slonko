@@ -127,7 +127,7 @@ src_install() {
 	fperms 644 /usr/lib/tmpfiles.d/paperless.tmpfiles
 
 	# Set directories
-	for dir in data media tmp; do
+	for dir in consume data media tmp; do
 		keepdir /var/lib/paperless/${dir}
 		fowners paperless:paperless /var/lib/paperless/${dir}
 		case "${dir}" in
