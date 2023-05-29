@@ -94,8 +94,7 @@ src_prepare() {
 		-e "s|#PAPERLESS_MEDIA_ROOT=../media|PAPERLESS_MEDIA_ROOT=/var/lib/paperless/media|" \
 		-e "s|#PAPERLESS_STATICDIR=../static|PAPERLESS_STATICDIR=/usr/share/paperless/static|" \
 		-e "s|#PAPERLESS_CONVERT_TMPDIR=/var/tmp/paperless|PAPERLESS_CONVERT_TMPDIR=/var/lib/paperless/tmp|" \
-		"${FILESDIR}/paperless.conf.example" > "paperless.conf" || die "Cannot update paperless.conf"
-		#-i "paperless.conf.example" || die "Cannot update paperless.conf"
+		-i "paperless.conf" || die "Cannot update paperless.conf"
 
 	echo -e "\n# Custom\nPAPERLESS_ENABLE_COMPRESSION=$(use compression && echo 1 || echo 0)" >> "paperless.conf"
 }
