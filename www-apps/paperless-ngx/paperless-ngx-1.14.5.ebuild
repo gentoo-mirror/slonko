@@ -49,6 +49,7 @@ DEPEND="
 	dev-python/imap-tools
 	>=dev-python/inotifyrecursive-0.3
 	dev-python/langdetect
+	dev-python/msgpack
 	dev-python/nltk
 	dev-python/pathvalidate
 	dev-python/pdf2image
