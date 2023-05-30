@@ -6,7 +6,7 @@ EAPI=8
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..11} )
 
-inherit distutils-r1
+inherit distutils-r1 optfeature
 
 MY_P=${P/-/_}
 DESCRIPTION="Provides Django Channels channel layers that use Redis as a backing store."
@@ -20,30 +20,24 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="
+	>=dev-python/asgiref-3.2.10[${PYTHON_USEDEP}]
 	dev-python/channels[${PYTHON_USEDEP}]
-	>=dev-python/django-3.2[${PYTHON_USEDEP}]
+	dev-python/msgpack[${PYTHON_USEDEP}]
+	>=dev-python/redis-4.5.3[${PYTHON_USEDEP}]
 "
 BDEPEND="
 	test? (
 		dev-db/redis
 		dev-python/async-timeout[${PYTHON_USEDEP}]
 		>=dev-python/cryptography-1.3.0[${PYTHON_USEDEP}]
-		dev-python/msgpack[${PYTHON_USEDEP}]
 		dev-python/pytest-asyncio[${PYTHON_USEDEP}]
-		>=dev-python/redis-4.2.0[${PYTHON_USEDEP}]
+		dev-python/pytest-timeout[${PYTHON_USEDEP}]
 	)
 "
 
 DOCS=( README.rst )
 
 distutils_enable_tests pytest
-
-EPYTEST_DESELECT=(
-	# Hangs
-	tests/test_core.py::test_message_expiry__group_send__one_channel_expires_message
-	# Fails with: TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
-	tests/test_core.py::test_receive_cancel
-)
 
 python_prepare_all() {
 	# Remove sentinel tests
@@ -70,4 +64,8 @@ src_test() {
 
 	# Clean up afterwards
 	kill "$(<"${redis_pid}")" || die
+}
+
+pkg_postinst() {
+	optfeature "Backend encrytion support" dev-python/cryptography
 }
