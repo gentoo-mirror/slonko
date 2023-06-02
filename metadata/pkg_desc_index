@@ -54,12 +54,12 @@ media-gfx/epsonscan2 6.6.42.0 6.7.61.0: Epson scanner management utility
 media-gfx/epsonscan2-non-free-plugin 1.0.0.6: Plugins for Epson Scan 2
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 net-mail/mhonarc 2.6.24: Perl Mail-to-HTML Converter
-net-mail/sympa 6.2.68-r1 6.2.70: A feature-rich open source mailing list software
+net-mail/sympa 6.2.70: A feature-rich open source mailing list software
 net-vpn/globalprotect-openconnect 1.4.8 1.4.9: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
 net-vpn/gp-saml-gui 9999: Interactively authenticate to GlobalProtect VPNs that require SAML
 net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunnel VPN setup
 sci-libs/scikit-learn 1.2.2: Machine learning library for Python
-sys-kernel/hardened-sources 5.4.242 5.4.243 5.10.179 5.10.180 5.15.110 5.15.111 5.15.112 5.18.19 6.1.27 6.1.28 6.1.29: Minimal supplement to upstream Kernel Self Protection Project
+sys-kernel/hardened-sources 5.4.242 5.4.243 5.4.244 5.10.179 5.10.180 5.10.181 5.15.110 5.15.111 5.15.112 5.15.113 5.15.114 5.18.19 6.1.27 6.1.28 6.1.29 6.1.30 6.1.31: Minimal supplement to upstream Kernel Self Protection Project
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/paperless-ngx 1.12.2 1.13.0 1.14.5: Community supported paperless: scan, index and archive your physical documents
 x11-wm/compiz 9999: OpenGL window and compositing manager
