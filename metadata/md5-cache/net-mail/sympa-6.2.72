@@ -13,4 +13,4 @@ REQUIRED_USE=|| ( mysql postgres sqlite )
 SLOT=0
 SRC_URI=https://github.com/sympa-community/sympa/releases/download/6.2.72/sympa-6.2.72.tar.gz
 _eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
-_md5_=f4006323a54adce2ec36ad726ddf5c3f
+_md5_=75ba932ac4679a5354dcf7e00f979761
