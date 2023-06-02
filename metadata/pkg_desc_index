@@ -54,7 +54,7 @@ media-gfx/epsonscan2 6.6.42.0 6.7.61.0: Epson scanner management utility
 media-gfx/epsonscan2-non-free-plugin 1.0.0.6: Plugins for Epson Scan 2
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 net-mail/mhonarc 2.6.24: Perl Mail-to-HTML Converter
-net-mail/sympa 6.2.70: A feature-rich open source mailing list software
+net-mail/sympa 6.2.70 6.2.72: A feature-rich open source mailing list software
 net-vpn/globalprotect-openconnect 1.4.8 1.4.9: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
 net-vpn/gp-saml-gui 9999: Interactively authenticate to GlobalProtect VPNs that require SAML
 net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunnel VPN setup
