@@ -98,8 +98,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	"
 
-PATCHES=( "${FILESDIR}/${PN}-${SYMPA_VERSION}"-sqlite-lowercase.patch )
-
 src_prepare() {
 	default
 	# Override defaults for certain options, so
