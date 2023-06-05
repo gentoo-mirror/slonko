@@ -61,5 +61,5 @@ net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunn
 sci-libs/scikit-learn 1.2.2: Machine learning library for Python
 sys-kernel/hardened-sources 5.4.242 5.4.243 5.4.244 5.10.179 5.10.180 5.10.181 5.15.110 5.15.111 5.15.112 5.15.113 5.15.114 5.18.19 6.1.27 6.1.28 6.1.29 6.1.30 6.1.31: Minimal supplement to upstream Kernel Self Protection Project
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
-www-apps/paperless-ngx 1.12.2 1.13.0 1.14.5: Community supported paperless: scan, index and archive your physical documents
+www-apps/paperless-ngx 1.14.5 1.15.1: Community supported paperless: scan, index and archive your physical documents
 x11-wm/compiz 9999: OpenGL window and compositing manager
