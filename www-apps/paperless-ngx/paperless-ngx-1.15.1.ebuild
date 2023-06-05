@@ -29,23 +29,22 @@ DEPEND="
 	${ACCT_DEPEND}
 	${EXTRA_DEPEND}
 	app-text/poppler[utils]
-	app-text/pdfminer
 	dev-python/asgiref
 	dev-python/bleach
 	dev-python/celery
-	>=dev-python/channels-3.0
-	<dev-python/channels-4.0
-	>=dev-python/channels-redis-3.4.1
-	<dev-python/channels-redis-4.0
+	>=dev-python/channels-4.0
+	>=dev-python/channels-redis-4.0
 	dev-python/concurrent-log-handler
 	>=dev-python/dateparser-1.1
-	>=dev-python/django-4.1
+	>=dev-python/django-4.1.9
 	dev-python/django-celery-results
 	dev-python/django-cors-headers
 	dev-python/django-extensions
 	>=dev-python/django-filter-22.1
+	dev-python/django-guardian
 	dev-python/django-redis
 	>=dev-python/djangorestframework-3.14
+	dev-python/djangorestframework-guardian
 	dev-python/filelock
 	dev-python/imap-tools
 	>=dev-python/inotifyrecursive-0.3
@@ -54,23 +53,25 @@ DEPEND="
 	dev-python/pathvalidate
 	dev-python/pdf2image
 	dev-python/pikepdf
-	>=dev-python/pillow-9.3
+	dev-python/pillow
 	dev-python/python-dateutil
 	dev-python/python-dotenv
 	dev-python/python-gnupg
+	dev-python/python-ipware
 	dev-python/python-magic
 	dev-python/pyzbar
 	dev-python/rapidfuzz
 	dev-python/redis
+	=dev-python/reportlab-3.6.12
 	dev-python/tqdm
 	dev-python/uvicorn
-	>=dev-python/watchdog-2.1
-	>=dev-python/whitenoise-6.2
+	>=dev-python/watchdog-2.2
+	>=dev-python/whitenoise-6.3
 	>=dev-python/whoosh-2.7
 	media-gfx/imagemagick
 	media-gfx/optipng
 	media-libs/jbig2enc
-	>=sci-libs/scikit-learn-1.1
+	>=sci-libs/scikit-learn-1.2
 	www-servers/gunicorn
 	compression? ( dev-python/django-compression-middleware )
 	mysql? ( dev-python/mysqlclient )
@@ -80,6 +81,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 # dev-python/tika
+# dev-python/zxing-cpp
 
 DOCS=( docker/imagemagick-policy.xml )
 
@@ -92,8 +94,7 @@ src_prepare() {
 		-e "s|#PAPERLESS_MEDIA_ROOT=../media|PAPERLESS_MEDIA_ROOT=/var/lib/paperless/media|" \
 		-e "s|#PAPERLESS_STATICDIR=../static|PAPERLESS_STATICDIR=/usr/share/paperless/static|" \
 		-e "s|#PAPERLESS_CONVERT_TMPDIR=/var/tmp/paperless|PAPERLESS_CONVERT_TMPDIR=/var/lib/paperless/tmp|" \
-		"${FILESDIR}/paperless.conf.example" > "paperless.conf" || die "Cannot update paperless.conf"
-		#-i "paperless.conf.example" || die "Cannot update paperless.conf"
+		-i "paperless.conf" || die "Cannot update paperless.conf"
 
 	echo -e "\n# Custom\nPAPERLESS_ENABLE_COMPRESSION=$(use compression && echo 1 || echo 0)" >> "paperless.conf"
 }
@@ -125,7 +126,7 @@ src_install() {
 	fperms 644 /usr/lib/tmpfiles.d/paperless.tmpfiles
 
 	# Set directories
-	for dir in data media tmp; do
+	for dir in consume data media tmp; do
 		keepdir /var/lib/paperless/${dir}
 		fowners paperless:paperless /var/lib/paperless/${dir}
 		case "${dir}" in
