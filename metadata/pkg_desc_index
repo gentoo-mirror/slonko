@@ -61,3 +61,4 @@ sys-kernel/hardened-sources 5.4.242 5.4.243 5.4.244 5.4.245 5.4.246 5.10.179 5.1
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/paperless-ngx 1.15.1 1.16.2: Community supported paperless: scan, index and archive your physical documents
 x11-wm/compiz 9999: OpenGL window and compositing manager
+xfce-base/xfdesktop 4.19.0: Desktop manager for the Xfce desktop environment
