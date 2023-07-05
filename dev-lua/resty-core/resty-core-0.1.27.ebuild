@@ -16,8 +16,7 @@ if [[ "${PV}" =~ 9999 ]]; then
 else
 	SRC_URI="https://github.com/openresty/lua-resty-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/lua-${P}"
-	KEYWORDS="~amd64 ~arm ~x86"
-	# TODO: arm64 and others
+	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
 LICENSE="BSD"
@@ -28,7 +27,7 @@ IUSE="+lua_targets_luajit"
 
 RDEPEND="
 	${LUA_DEPS}
-	www-servers/nginx:*[nginx_modules_http_lua]
+	>=www-servers/nginx-1.25.1-r2[nginx_modules_http_lua,lua_single_target_luajit]
 	dev-lua/resty-lrucache[${LUA_USEDEP}]
 "
 DEPEND="
