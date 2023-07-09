@@ -40,7 +40,7 @@ dev-python/langdetect 1.0.9: Port of Google's language-detection library to Pyth
 dev-python/nltk 3.7: Natural Language Toolkit
 dev-python/nltk-data 20221108: Data files for NLTK
 dev-python/pdf2image 1.16.3: Module that wraps pdftoppm and pdftocairo to convert PDF to a PIL Image object
-dev-python/portalocker 2.6.0: Portalocker is a library to provide an easy API to file locking.
+dev-python/portalocker 2.6.0 2.7.0: Portalocker is a library to provide an easy API to file locking.
 dev-python/pytest-celery 0.1.0: a shim pytest plugin to enable celery.contrib.pytest
 dev-python/pytest-click 1.1.0: Pytest plugin for Click
 dev-python/python-ipware 0.9.0: A Python package to retrieve user's IP address
