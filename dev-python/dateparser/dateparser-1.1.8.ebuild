@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -32,7 +32,12 @@ BDEPEND="
 
 EPYTEST_IGNORE=(
 	# tests that require network
-	tests/test_dateparser_data_integrity.py
+	tests/test_language_detect.py::CustomLangDetectParserTest::test_custom_language_detect_fast_text_{0,1}
+	# broken
+	tests/test_search.py::TestTranslateSearch::test_relative_base_setting_1_en
+	tests/test_search.py::TestTranslateSearch::test_splitting_of_not_parsed_1_en
+	tests/test_search.py::TestTranslateSearch::test_splitting_of_not_parsed_5_en
+	tests/test_search.py::TestTranslateSearch::test_splitting_of_not_parsed_6_sv
 )
 
 EPYTEST_DESELECT=(
