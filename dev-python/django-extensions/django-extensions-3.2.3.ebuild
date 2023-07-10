@@ -18,13 +18,16 @@ KEYWORDS="~amd64"
 
 DEPEND="
 	>=dev-python/django-3.2[${PYTHON_USEDEP}]
+	dev-python/pytest-django[${PYTHON_USEDEP}]
+	dev-python/shortuuid[${PYTHON_USEDEP}]
 "
 
 DOCS=( README.rst CHANGELOG.md )
 
 # TODO: tests
-#distutils_enable_tests unittest
+#distutils_enable_tests pytest
 #
-#python_test() {
-#	"${EPYTHON}" -m django test -v2 --settings=tests.testapp.settings || die "Tests fail with ${EPYTHON}"
+#src_prepare() {
+#	sed -i -e 's/--nomigrations .*//' setup.cfg || die
+#	default
 #}
