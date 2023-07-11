@@ -18,10 +18,13 @@ KEYWORDS="~amd64"
 
 DEPEND="
 	>=dev-python/django-3.2[${PYTHON_USEDEP}]
-	dev-python/pytest-django[${PYTHON_USEDEP}]
 	dev-python/shortuuid[${PYTHON_USEDEP}]
 "
-
+#BDEPEND="
+#	test? (
+#		dev-python/pytest-django[${PYTHON_USEDEP}]
+#	)
+#"
 DOCS=( README.rst CHANGELOG.md )
 
 # TODO: tests
