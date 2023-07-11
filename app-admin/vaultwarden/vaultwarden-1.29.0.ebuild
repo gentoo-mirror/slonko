@@ -377,10 +377,8 @@ CRATES="
 	yubico-0.11.0
 "
 declare -A GIT_CRATES=(
-       [rocket]="https://github.com/SergioBenitez/Rocket;ce441b5f46fdf5cd99cb32b8b8638835e4c2a5fa;Rocket-%commit%/core/lib"
-       [rocket_codegen]="https://github.com/SergioBenitez/Rocket;ce441b5f46fdf5cd99cb32b8b8638835e4c2a5fa;Rocket-%commit%/core/codegen"
-       [rocket_http]="https://github.com/SergioBenitez/Rocket;ce441b5f46fdf5cd99cb32b8b8638835e4c2a5fa;Rocket-%commit%/core/http"
-       [rocket_ws]="https://github.com/SergioBenitez/Rocket;ce441b5f46fdf5cd99cb32b8b8638835e4c2a5fa;Rocket-%commit%/contrib/ws"
+	[rocket]="https://github.com/SergioBenitez/Rocket;ce441b5f46fdf5cd99cb32b8b8638835e4c2a5fa;Rocket-%commit%/core/lib"
+	[rocket_ws]="https://github.com/SergioBenitez/Rocket;ce441b5f46fdf5cd99cb32b8b8638835e4c2a5fa;Rocket-%commit%/contrib/ws"
 )
 
 inherit cargo systemd
