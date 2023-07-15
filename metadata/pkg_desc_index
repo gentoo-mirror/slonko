@@ -9,7 +9,7 @@ app-admin/vaultwarden-web-vault 2023.4.2 2023.5.0: Unofficial patched bitwarden 
 app-arch/gztool 1.5.2 1.6.0: GZIP files indexer, compressor and data retriever.
 app-misc/workrave 1.10.51.1 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
-app-text/OCRmyPDF 14.0.4: OCRmyPDF adds an OCR text layer to scanned PDF files
+app-text/OCRmyPDF 14.0.4 14.3.0: OCRmyPDF adds an OCR text layer to scanned PDF files
 dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
 dev-libs/fastText 0.9.2: Library for fast text representation and classification
 dev-lua/resty-core 0.1.23 0.1.27: New LuaJIT FFI based API for lua-nginx-module
@@ -26,7 +26,7 @@ dev-python/concurrent-log-handler 0.9.20 0.9.24: Python logging handler allowing
 dev-python/daphne 3.0.2 4.0.0: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
 dev-python/dateparser 1.1.8: Date parsing library designed to parse dates from HTML pages
 dev-python/django-celery-results 2.5.1: Celery Result Backends using the Django ORM/Cache framework.
-dev-python/django-compression-middleware 0.4.2: Django middleware to compress responses using several algorithms.
+dev-python/django-compression-middleware 0.5.0: Django middleware to compress responses using several algorithms.
 dev-python/django-environ 0.10.0: An environment variables to configure Django
 dev-python/django-extensions 3.2.3: A collection of custom extensions for the Django Framework
 dev-python/django-guardian 2.4.0: Implementation of per object permissions for Django
@@ -41,7 +41,7 @@ dev-python/nltk 3.7: Natural Language Toolkit
 dev-python/nltk-data 20221108: Data files for NLTK
 dev-python/pdf2image 1.16.3: Module that wraps pdftoppm and pdftocairo to convert PDF to a PIL Image object
 dev-python/portalocker 2.6.0 2.7.0: Portalocker is a library to provide an easy API to file locking.
-dev-python/pytest-celery 0.1.0: a shim pytest plugin to enable celery.contrib.pytest
+dev-python/pytest-celery 0.1.0 1.0.0_alpha1: a shim pytest plugin to enable celery.contrib.pytest
 dev-python/pytest-click 1.1.0: Pytest plugin for Click
 dev-python/python-ipware 0.9.0: A Python package to retrieve user's IP address
 dev-python/shortuuid 1.0.11: A generator library for concise, unambiguous and URL-safe UUIDs.
