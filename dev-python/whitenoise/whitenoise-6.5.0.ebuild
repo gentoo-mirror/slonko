@@ -4,19 +4,17 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{8..12} )
 
 inherit distutils-r1 optfeature
 
-DESCRIPTION="Portalocker is a library to provide an easy API to file locking."
+DESCRIPTION="Radically simplified static file serving for Python web apps"
 HOMEPAGE="https://github.com/evansd/whitenoise"
 SRC_URI="https://github.com/evansd/${PN}/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
-LICENSE="BSD"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-
-distutils_enable_tests pytest
 
 DEPEND="
 	dev-python/django[${PYTHON_USEDEP}]
@@ -26,6 +24,10 @@ BDEPEND="
 		app-arch/brotli[python,${PYTHON_USEDEP}]
 	)
 "
+
+distutils_enable_tests pytest
+distutils_enable_sphinx docs \
+	dev-python/furo
 
 pkg_postinst() {
 	optfeature "brotli compression" "app-arch/brotli[python]"
