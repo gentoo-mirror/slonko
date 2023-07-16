@@ -62,7 +62,7 @@ DEPEND="
 	dev-python/pyzbar
 	dev-python/rapidfuzz
 	dev-python/redis
-	=dev-python/reportlab-3.6.12
+	<dev-python/reportlab-4.0.0
 	dev-python/tqdm
 	dev-python/uvicorn
 	>=dev-python/watchdog-2.2
