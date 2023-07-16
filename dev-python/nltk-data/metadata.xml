@@ -5,10 +5,4 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
-	<use>
-		<flag name="extra">
-			Install the complete set of data files.  Otherwise, only
-			files required by tests are installed.
-		</flag>
-	</use>
 </pkgmetadata>
