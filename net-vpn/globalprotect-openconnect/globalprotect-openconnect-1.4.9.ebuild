@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
+	dev-libs/qtkeychain
 	dev-qt/qtcore
 	dev-qt/qtdbus
-	dev-qt/qtkeychain
 	dev-qt/qtnetwork
 	dev-qt/qtwebengine
 	dev-qt/qtwebsockets
