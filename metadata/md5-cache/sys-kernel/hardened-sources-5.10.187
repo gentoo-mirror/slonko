@@ -8,7 +8,7 @@ KEYWORDS=~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sp
 LICENSE=GPL-2
 RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
 RESTRICT=binchecks strip
-SLOT=5.4.242
-SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.4.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.4-249.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.4-249.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.4-249.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.4-249.extras.tar.xz experimental? ( https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.4-249.experimental.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.4-249.experimental.tar.xz ) https://github.com/anthraxx/linux-hardened/releases/download/5.4.242-hardened1/linux-hardened-5.4.242-hardened1.patch
+SLOT=5.10.187
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.10.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.10-197.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.10-197.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.10-197.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.10-197.extras.tar.xz experimental? ( https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.10-197.experimental.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.10-197.experimental.tar.xz ) https://github.com/anthraxx/linux-hardened/releases/download/5.10.187-hardened1/linux-hardened-5.10.187-hardened1.patch
 _eclasses_=estack	c61c368a76fdf3a82fdf8dbaebea3804	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	8e3fb781f3258ae2757d1dfc2c7c170e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	kernel-2	f3fe06845554116f3a63786f864ff07f
-_md5_=7ada57a6c1186a6299ca7d0a3b30853b
+_md5_=0572b3a4227f1db822b666f3a52f0117
