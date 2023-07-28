@@ -4,7 +4,7 @@ acct-group/vaultwarden 0: System group: vaultwarden
 acct-user/paperless 0: User for Paperless services
 acct-user/sympa 0: User for Sympa daemon
 acct-user/vaultwarden 0: System user: vaultwarden
-app-admin/vaultwarden 1.28.1 1.29.0: Unofficial Bitwarden compatible server written in Rust
+app-admin/vaultwarden 1.28.1 1.29.1: Unofficial Bitwarden compatible server written in Rust
 app-admin/vaultwarden-web-vault 2023.4.2 2023.5.0: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.5.2 1.6.0: GZIP files indexer, compressor and data retriever.
 app-misc/workrave 1.10.51.1 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
