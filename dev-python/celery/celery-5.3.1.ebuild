@@ -44,7 +44,7 @@ BDEPEND="
 		$(python_gen_impl_dep 'ncurses(+)')
 		>=dev-python/boto3-1.26.143[${PYTHON_USEDEP}]
 		dev-python/cryptography[${PYTHON_USEDEP}]
-		dev-python/elasticsearch-py[${PYTHON_USEDEP}]
+		dev-python/elasticsearch[${PYTHON_USEDEP}]
 		>=dev-python/moto-4.1.11[${PYTHON_USEDEP}]
 		dev-python/msgpack[${PYTHON_USEDEP}]
 		dev-python/pylibmc[${PYTHON_USEDEP}]
@@ -59,17 +59,17 @@ BDEPEND="
 		dev-python/tblib[${PYTHON_USEDEP}]
 		sci-astronomy/pyephem[${PYTHON_USEDEP}]
 	)
+	doc? (
+		dev-python/docutils[${PYTHON_USEDEP}]
+		>=dev-python/sphinx-celery-2.0.0[${PYTHON_USEDEP}]
+		>=dev-python/sphinx-click-4.4.0[${PYTHON_USEDEP}]
+		dev-python/jinja[${PYTHON_USEDEP}]
+		dev-python/sqlalchemy[${PYTHON_USEDEP}]
+	)
 "
-	#doc? (
-	#	dev-python/docutils[${PYTHON_USEDEP}]
-	#	>=dev-python/sphinx-celery-2.0.0[${PYTHON_USEDEP}]
-	#	>=dev-python/sphinx-click-4.4.0[${PYTHON_USEDEP}]
-	#	dev-python/jinja[${PYTHON_USEDEP}]
-	#	dev-python/sqlalchemy[${PYTHON_USEDEP}]
-	#)
 
 distutils_enable_tests pytest
-#distutils_enable_sphinx docs --no-autodoc
+distutils_enable_sphinx docs --no-autodoc
 
 EPYTEST_DESELECT=(
 	# Failing tests

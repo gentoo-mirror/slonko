@@ -44,7 +44,7 @@ BDEPEND="
 		$(python_gen_impl_dep 'ncurses(+)')
 		>=dev-python/boto3-1.26.114[${PYTHON_USEDEP}]
 		dev-python/cryptography[${PYTHON_USEDEP}]
-		dev-python/elasticsearch-py[${PYTHON_USEDEP}]
+		dev-python/elasticsearch[${PYTHON_USEDEP}]
 		>=dev-python/moto-4.1.10[${PYTHON_USEDEP}]
 		dev-python/msgpack[${PYTHON_USEDEP}]
 		dev-python/pylibmc[${PYTHON_USEDEP}]
