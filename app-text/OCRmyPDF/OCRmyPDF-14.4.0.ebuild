@@ -1,10 +1,10 @@
-# Copyright 2020-2022 Gentoo Authors
+# Copyright 2020-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{10..11} )
 
 inherit bash-completion-r1 distutils-r1 optfeature
 
@@ -20,13 +20,13 @@ RDEPEND="
 	>=app-text/ghostscript-gpl-9.50
 	>=app-text/pdfminer-20201018[${PYTHON_USEDEP}]
 	>=app-text/tesseract-4.1.1[jpeg,tiff,png,webp]
-	>=dev-python/coloredlogs-14.0[${PYTHON_USEDEP}]
 	>=dev-python/deprecation-2.1.0[${PYTHON_USEDEP}]
 	>=dev-python/packaging-20[${PYTHON_USEDEP}]
 	>=dev-python/pikepdf-5.0.1[${PYTHON_USEDEP}]
 	>=dev-python/pillow-8.2.0[lcms,${PYTHON_USEDEP}]
 	>=dev-python/pluggy-0.13.0[${PYTHON_USEDEP}]
 	>=dev-python/reportlab-3.5.66[${PYTHON_USEDEP}]
+	>=dev-python/rich-13[${PYTHON_USEDEP}]
 	>=dev-python/tqdm-4[${PYTHON_USEDEP}]
 	>=media-gfx/img2pdf-0.3.0[${PYTHON_USEDEP}]
 "
@@ -34,9 +34,12 @@ BDEPEND="
 	>=dev-python/setuptools-scm-7.0.5[${PYTHON_USEDEP}]
 	test? (
 		>=app-text/unpaper-6.1
+		>=dev-python/hypothesis-6.0.0[${PYTHON_USEDEP}]
 		dev-python/pytest-helpers-namespace[${PYTHON_USEDEP}]
 		~dev-python/python-xmp-toolkit-2.0.1[${PYTHON_USEDEP}]
+		media-libs/exempi
 		>=media-libs/jbig2enc-0.29
+		media-libs/libxmp
 		>=media-gfx/pngquant-2.5
 	)
 "
