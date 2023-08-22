@@ -40,7 +40,7 @@ DEPEND="
 	dev-python/django-celery-results
 	dev-python/django-cors-headers
 	dev-python/django-extensions
-	>=dev-python/django-filter-22.1
+	>=dev-python/django-filter-23.1
 	dev-python/django-guardian
 	dev-python/django-redis
 	>=dev-python/djangorestframework-3.14
@@ -65,13 +65,13 @@ DEPEND="
 	<dev-python/reportlab-4.0.0
 	dev-python/tqdm
 	dev-python/uvicorn
-	>=dev-python/watchdog-2.2
-	>=dev-python/whitenoise-6.3
+	>=dev-python/watchdog-3.0
+	>=dev-python/whitenoise-6.5
 	>=dev-python/whoosh-2.7
 	media-gfx/imagemagick
 	media-gfx/optipng
 	media-libs/jbig2enc
-	>=sci-libs/scikit-learn-1.2
+	>=sci-libs/scikit-learn-1.3
 	www-servers/gunicorn
 	compression? ( dev-python/django-compression-middleware )
 	mysql? ( dev-python/mysqlclient )
