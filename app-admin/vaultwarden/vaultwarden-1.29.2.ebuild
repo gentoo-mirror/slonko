@@ -413,6 +413,10 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	# Force update of vulnerable rustls-webpki
+	sed -i\
+		-e '/^name = "rustls-webpki"/ {n; s/0\.101\.3/0.101.4/; n; n; s/261e9e0888cba427c3316e6322805653c9425240b6fd96cee7cb671ab70ab8d0/7d93931baf2d282fff8d3a532bbfd7653f734643161b87e3e01e59a04439bf0d/}' \
+		"${S}/Cargo.lock" || die
 	sed -i \
 		-e '/^rocket /d' \
 		-e 's/^rocket_ws = {\(.*\)}.*/rocket = {features = ["tls", "json"], default-features = false, \1}\nrocket_ws = {\1}\n/' \
