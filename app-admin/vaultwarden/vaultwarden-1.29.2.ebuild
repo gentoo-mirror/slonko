@@ -405,8 +405,8 @@ ACCT_DEPEND="
 "
 DEPEND="
 	${ACCT_DEPEND}
-	>=app-admin/vaultwarden-web-vault-2023.5.0
-	>=dev-lang/rust-1.68.2
+	>=app-admin/vaultwarden-web-vault-2023.7.1
+	>=dev-lang/rust-1.69.0
 	dev-libs/openssl:0=
 	sqlite? ( system-sqlite? ( >=dev-db/sqlite-3.41.2:3 ) )
 "
