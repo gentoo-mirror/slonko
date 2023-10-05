@@ -383,7 +383,7 @@ DESCRIPTION="Unofficial Bitwarden compatible server written in Rust"
 HOMEPAGE="https://github.com/dani-garcia/vaultwarden"
 SRC_URI="
 	https://github.com/dani-garcia/vaultwarden/archive/${PV}.tar.gz -> ${P}.tar.gz
-	$(cargo_crate_uris)"
+	${CARGO_CRATE_URIS}"
 
 LICENSE="AGPL-3"
 SLOT="0"
