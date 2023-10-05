@@ -40,7 +40,7 @@ RDEPEND="
 		media-plugins/gst-plugins-meta:1.0 )
 	introspection? ( dev-libs/gobject-introspection:= )
 	mate? ( mate-base/mate-applets )
-	pulseaudio? ( >=media-sound/pulseaudio-0.9.15 )
+	pulseaudio? ( media-libs/libpulse )
 	xfce? (
 		>=x11-libs/gtk+-2.6.0:2[introspection?]
 		>=xfce-base/xfce4-panel-4.4 )
