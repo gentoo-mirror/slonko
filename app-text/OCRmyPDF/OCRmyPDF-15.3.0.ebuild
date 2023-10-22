@@ -6,7 +6,7 @@ EAPI=8
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
 
-inherit bash-completion-r1 distutils-r1 optfeature
+inherit distutils-r1 optfeature shell-completion
 
 DESCRIPTION="OCRmyPDF adds an OCR text layer to scanned PDF files"
 HOMEPAGE="https://github.com/ocrmypdf/OCRmyPDF"
@@ -15,6 +15,7 @@ SRC_URI="https://github.com/ocrmypdf/OCRmyPDF/archive/v${PV}.tar.gz -> ${P}.tar.
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="bash-completion fish-completion"
 
 RDEPEND="
 	>=app-text/ghostscript-gpl-9.55
@@ -62,9 +63,11 @@ src_prepare() {
 
 src_install() {
 	distutils-r1_src_install
-	newbashcomp misc/completion/ocrmypdf.bash "${PN,,}"
-	insinto /usr/share/fish/vendor_completions.d
-	doins misc/completion/ocrmypdf.fish
+
+	use bash-completion &&
+		newbashcomp misc/completion/ocrmypdf.bash "${PN,,}"
+	use fish-completion &&
+		newfishcomp misc/completion/ocrmypdf.fish "${PN,,}"
 }
 
 pkg_postinst() {
