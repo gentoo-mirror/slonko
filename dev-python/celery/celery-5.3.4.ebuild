@@ -32,7 +32,7 @@ RDEPEND="
 	>=dev-python/click-plugins-1.1.1[${PYTHON_USEDEP}]
 	>=dev-python/click-repl-0.2.0[${PYTHON_USEDEP}]
 	>=dev-python/python-dateutil-2.8.2[${PYTHON_USEDEP}]
-	>=dev-python/kombu-5.3.0_rc1[${PYTHON_USEDEP}]
+	>=dev-python/kombu-5.3.2[${PYTHON_USEDEP}]
 	<dev-python/kombu-6.0[${PYTHON_USEDEP}]
 	>=dev-python/pytz-2022.7[${PYTHON_USEDEP}]
 	>=dev-python/vine-5.0.0[${PYTHON_USEDEP}]
@@ -42,10 +42,10 @@ RDEPEND="
 BDEPEND="
 	test? (
 		$(python_gen_impl_dep 'ncurses(+)')
-		>=dev-python/boto3-1.26.114[${PYTHON_USEDEP}]
-		dev-python/cryptography[${PYTHON_USEDEP}]
+		>=dev-python/boto3-1.26.143[${PYTHON_USEDEP}]
+		>=dev-python/cryptography-41.0.3[${PYTHON_USEDEP}]
 		dev-python/elasticsearch[${PYTHON_USEDEP}]
-		>=dev-python/moto-4.1.10[${PYTHON_USEDEP}]
+		>=dev-python/moto-4.1.11[${PYTHON_USEDEP}]
 		dev-python/msgpack[${PYTHON_USEDEP}]
 		dev-python/pylibmc[${PYTHON_USEDEP}]
 		>=dev-python/pymongo-4.0.2[${PYTHON_USEDEP}]
@@ -55,7 +55,6 @@ BDEPEND="
 		>=dev-python/pytest-timeout-1.4.2[${PYTHON_USEDEP}]
 		>=dev-python/pyyaml-3.10[${PYTHON_USEDEP}]
 		dev-python/redis[${PYTHON_USEDEP}]
-		dev-python/sphinx-testing[${PYTHON_USEDEP}]
 		dev-python/tblib[${PYTHON_USEDEP}]
 		sci-astronomy/pyephem[${PYTHON_USEDEP}]
 	)
@@ -75,8 +74,8 @@ EPYTEST_DESELECT=(
 	# Failing tests
 	t/unit/backends/test_elasticsearch.py::test_ElasticsearchBackend::test_backend_concurrent_update
 	t/unit/backends/test_elasticsearch.py::test_ElasticsearchBackend::test_exception_safe_to_retry
-	t/unit/tasks/test_stamping.py::test_canvas_stamping::test_stamping_headers_in_options
-	t/unit/tasks/test_stamping.py::test_canvas_stamping::test_stamping_with_replace
+	t/unit/utils/test_platforms.py::test_fd_by_path
+	t/unit/utils/test_platforms.py::test_DaemonContext::test_open
 )
 
 python_install_all() {
