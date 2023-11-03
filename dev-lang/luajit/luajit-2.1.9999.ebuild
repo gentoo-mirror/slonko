@@ -11,7 +11,6 @@ MY_P="LuaJIT-${MY_PV}"
 
 DESCRIPTION="Just-In-Time Compiler for the Lua programming language"
 HOMEPAGE="https://luajit.org/"
-SRC_URI=""
 EGIT_REPO_URI="https://luajit.org/git/luajit.git"
 EGIT_BRANCH="v2.1"
 EGIT_CHECKOUT_DIR="${MY_P}"
