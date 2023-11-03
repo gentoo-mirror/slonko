@@ -9,7 +9,7 @@ app-admin/vaultwarden-web-vault 2023.8.2 2023.9.1: Unofficial patched bitwarden 
 app-arch/gztool 1.5.2 1.6.0: GZIP files indexer, compressor and data retriever.
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
-app-text/OCRmyPDF 14.4.0 15.3.1: OCRmyPDF adds an OCR text layer to scanned PDF files
+app-text/OCRmyPDF 14.4.0 15.3.1 15.4.0: OCRmyPDF adds an OCR text layer to scanned PDF files
 dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
 dev-libs/fastText 0.9.2: Library for fast text representation and classification
 dev-lua/resty-core 0.1.23 0.1.27: New LuaJIT FFI based API for lua-nginx-module
