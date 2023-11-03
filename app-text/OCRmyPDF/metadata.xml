@@ -5,6 +5,9 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
+	<use>
+		<flag name="fish-completion">Enable fish completion support</flag>
+	</use>
 	<upstream>
 		<bugs-to>https://github.com/ocrmypdf/OCRmyPDF/issues</bugs-to>
 		<remote-id type="github">ocrmypdf/OCRmyPDF</remote-id>
