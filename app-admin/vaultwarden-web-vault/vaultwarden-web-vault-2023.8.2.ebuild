@@ -10,10 +10,7 @@ SRC_URI="https://github.com/dani-garcia/bw_web_builds/releases/download/v${PV}/b
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
 S="${WORKDIR}/web-vault"
 
 src_install() {
