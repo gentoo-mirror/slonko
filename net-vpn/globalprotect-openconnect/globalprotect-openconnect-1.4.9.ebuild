@@ -25,7 +25,6 @@ DEPEND="
 	net-vpn/openconnect
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 PLOG_REPO='https://github.com/SergiusTheBest/plog.git'
 PLOG_VERSION='1.1.9'

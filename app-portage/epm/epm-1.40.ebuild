@@ -14,7 +14,6 @@ EGIT_COMMIT="df329631d9be14305a5cc5484a03c06012a9cc0f"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
-IUSE=""
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}"

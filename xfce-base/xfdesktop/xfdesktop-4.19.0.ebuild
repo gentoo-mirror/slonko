@@ -42,7 +42,7 @@ BDEPEND="
 	virtual/pkgconfig
 "
 PATCHES=(
-        "${FILESDIR}/non-wayland.patch"
+	"${FILESDIR}/non-wayland.patch"
 )
 
 src_configure() {

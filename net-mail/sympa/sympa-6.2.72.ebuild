@@ -10,7 +10,6 @@ SYMPA_RELEASE="$(ver_cut 3-)"
 
 if [[ ${SYMPA_VERSION} == "9999" ]] ; then
 	# Development version
-	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/sympa-community/sympa"
 	inherit git-r3
 elif [[ ${SYMPA_RELEASE} == "9999" ]] ; then

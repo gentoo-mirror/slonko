@@ -16,7 +16,6 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 DEPEND="
 	>=dev-python/celery-5.2.7[${PYTHON_USEDEP}]

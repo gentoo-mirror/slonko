@@ -21,7 +21,6 @@ LICENSE="GPL-3"
 RESTRICT="!test? ( test )"
 IUSE="bash-completion examples glib multilib test"
 
-DEPEND=""
 RDEPEND="
 	dev-util/scanmem
 	sys-devel/binutils

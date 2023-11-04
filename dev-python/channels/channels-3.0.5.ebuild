@@ -15,7 +15,6 @@ SRC_URI="https://github.com/django/${PN}/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 DEPEND="
 	>=dev-python/django-2.2[${PYTHON_USEDEP}]

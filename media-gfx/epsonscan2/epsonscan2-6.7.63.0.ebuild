@@ -33,7 +33,6 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_prepare() {
 	sed -i \
