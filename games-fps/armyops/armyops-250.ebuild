@@ -13,7 +13,6 @@ LICENSE="Army-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="bindist mirror strip"
-IUSE=""
 
 RDEPEND="
 	amd64? ( sys-libs/glibc[multilib] )

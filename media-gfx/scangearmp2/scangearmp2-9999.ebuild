@@ -13,7 +13,6 @@ EGIT_REPO_URI="https://github.com/Ordissimo/${PN}.git"
 LICENSE="GPL-2"
 RESTRICT="mirror"
 SLOT="2"
-IUSE=""
 DEPEND="
 	dev-util/intltool
 	media-gfx/sane-backends

@@ -17,7 +17,6 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RDEPEND="
 	>=dev-python/asgiref-3.2.10[${PYTHON_USEDEP}]

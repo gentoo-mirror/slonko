@@ -17,7 +17,6 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RDEPEND="
 	>=dev-python/aioredis-1.0[${PYTHON_USEDEP}]

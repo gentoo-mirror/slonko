@@ -8,4 +8,7 @@
 	<use>
 		<flag name="gles">Enable support for GLES</flag>
 	</use>
+	<upstream>
+		<remote-id type="launchpad">compiz</remote-id>
+	</upstream>
 </pkgmetadata>

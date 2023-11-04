@@ -14,7 +14,6 @@ inherit cmake desktop udev
 
 LICENSE="GPL-3+"
 SLOT="0"
-IUSE=""
 KEYWORDS="amd64"
 
 DEPEND="
@@ -32,7 +31,6 @@ DEPEND="
 	virtual/libusb:1
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_prepare() {
 	cmake_src_prepare

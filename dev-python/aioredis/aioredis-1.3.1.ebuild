@@ -14,7 +14,6 @@ HOMEPAGE="https://github.com/aio-libs/aioredis-py"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 DEPEND="
 	dev-python/async-timeout[${PYTHON_USEDEP}]

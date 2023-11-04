@@ -14,7 +14,6 @@ HOMEPAGE="https://github.com/letorbi/inotifyrecursive"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 DEPEND="
 	>=dev-python/inotify-simple-1.3.5
