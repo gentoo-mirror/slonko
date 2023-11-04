@@ -11,4 +11,4 @@ RDEPEND=dev-util/scanmem sys-devel/binutils
 RESTRICT=!test? ( test )
 SLOT=0
 _eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	git-r3	2358a7b20091609e24bd3a83b3ac5991
-_md5_=0586cc8fe16158b639efb5adf15be0ce
+_md5_=7711c119ab886a18524c7ef99e0c5961

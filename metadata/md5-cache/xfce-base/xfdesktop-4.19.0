@@ -13,4 +13,4 @@ REQUIRED_USE=|| ( wayland X )
 SLOT=0
 SRC_URI=https://archive.xfce.org/src/xfce/xfdesktop/4.19/xfdesktop-4.19.0.tar.bz2
 _eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=a6025a7637a3cd2572485c153b7f0570
+_md5_=a8676d6c5a8acaf16d79a29592cefa8c
