@@ -9,5 +9,5 @@ KEYWORDS=~arm64 -hppa -riscv -sparc
 LICENSE=MIT
 PROPERTIES=live
 SLOT=2
-_eclasses_=pax-utils	91d47e5d20627c717aa878b9167c62a8	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0	git-r3	2358a7b20091609e24bd3a83b3ac5991
+_eclasses_=pax-utils	91d47e5d20627c717aa878b9167c62a8	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	git-r3	2358a7b20091609e24bd3a83b3ac5991
 _md5_=2fad474a173bf2e7197830b4087c2da1
