@@ -6,7 +6,7 @@ acct-user/sympa 0: User for Sympa daemon
 acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.29.2 1.30.0: Unofficial Bitwarden compatible server written in Rust
 app-admin/vaultwarden-web-vault 2023.9.1 2023.10.0: Unofficial patched bitwarden web-vault builds for vaultwarden
-app-arch/gztool 1.5.2 1.6.0: GZIP files indexer, compressor and data retriever.
+app-arch/gztool 1.6.0 1.6.1: GZIP files indexer, compressor and data retriever.
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 app-text/OCRmyPDF 14.4.0 15.3.1 15.4.0: OCRmyPDF adds an OCR text layer to scanned PDF files
