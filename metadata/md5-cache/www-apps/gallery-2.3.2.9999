@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=raw? ( media-gfx/dcraw ) ffmpeg? ( media-video/ffmpeg ) imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) netpbm? ( media-libs/netpbm media-gfx/jhead ) unzip? ( app-arch/unzip ) zip? ( app-arch/zip ) sqlite? ( dev-lang/php[pdo] dev-lang/php[sqlite] ) mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) ) dev-lang/php[session,postgres?,gd?] virtual/httpd-php app-admin/webapp-config
 REQUIRED_USE=|| ( gd imagemagick netpbm ) || ( mysql postgres sqlite )
 SLOT=2.3.2.9999
-_eclasses_=webapp	de2d3d345b44597c10d7104a7bcdf7b2	git-r3	2358a7b20091609e24bd3a83b3ac5991
+_eclasses_=webapp	de2d3d345b44597c10d7104a7bcdf7b2	git-r3	5133e393e8717a3a093660f990801dc1
 _md5_=cbccde1e3b80e747b1f73d0a15083ef6

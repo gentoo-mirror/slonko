@@ -10,5 +10,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=dev-lang/perl
 SLOT=0
-_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991	prefix	eab3c99d77fe00506c109c8a736186f7
+_eclasses_=git-r3	5133e393e8717a3a093660f990801dc1	prefix	eab3c99d77fe00506c109c8a736186f7
 _md5_=daaade764a6b60cd8d91e4fe3c19c171
