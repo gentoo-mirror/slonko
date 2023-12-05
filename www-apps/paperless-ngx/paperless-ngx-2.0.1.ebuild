@@ -67,7 +67,7 @@ DEPEND="
 		dev-python/python-dateutil[${PYTHON_USEDEP}]
 		dev-python/python-dotenv[${PYTHON_USEDEP}]
 		dev-python/python-gnupg[${PYTHON_USEDEP}]
-		dev-python/python-ipware[${PYTHON_USEDEP}]
+		>=dev-python/python-ipware-2.0.0[${PYTHON_USEDEP}]
 		dev-python/python-magic[${PYTHON_USEDEP}]
 		dev-python/pyzbar[${PYTHON_USEDEP}]
 		dev-python/rapidfuzz[${PYTHON_USEDEP}]
