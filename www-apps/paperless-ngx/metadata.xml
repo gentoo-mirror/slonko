@@ -6,6 +6,7 @@
 		<name>Marcin Deranek</name>
 	</maintainer>
 	<use>
+		<flag name="audit">Enables an audit trail for documents, document types, correspondents and tags</flag>
 		<flag name="ocr">Enable support for Optical Character Recognition</flag>
 		<flag name="remote-redis">Use remote Redis instance</flag>
 		<flag name="compression">Enable compression of the responses in application</flag>
