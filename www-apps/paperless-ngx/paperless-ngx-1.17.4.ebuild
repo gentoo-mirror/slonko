@@ -57,7 +57,7 @@ DEPEND="
 	dev-python/python-dateutil
 	dev-python/python-dotenv
 	dev-python/python-gnupg
-	dev-python/python-ipware
+	<dev-python/python-ipware-2.0.0
 	dev-python/python-magic
 	dev-python/pyzbar
 	dev-python/rapidfuzz
