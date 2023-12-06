@@ -45,6 +45,7 @@ DEPEND="
 		dev-python/concurrent-log-handler[${PYTHON_USEDEP}]
 		>=dev-python/dateparser-1.1[${PYTHON_USEDEP}]
 		>=dev-python/django-4.2.7[${PYTHON_USEDEP}]
+		<dev-python/django-5.0[${PYTHON_USEDEP}]
 		dev-python/django-celery-results[${PYTHON_USEDEP}]
 		dev-python/django-cors-headers[${PYTHON_USEDEP}]
 		dev-python/django-extensions[${PYTHON_USEDEP}]
