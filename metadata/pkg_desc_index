@@ -33,7 +33,6 @@ dev-python/django-extensions 3.2.3: A collection of custom extensions for the Dj
 dev-python/django-guardian 2.4.0: Implementation of per object permissions for Django
 dev-python/django-multiselectfield 0.1.12: Django multiple select field
 dev-python/django-picklefield 3.1.0: Pickled object field for Django
-dev-python/djangorestframework 3.14.0: Web APIs with django made easy
 dev-python/djangorestframework-guardian 0.3.0: django-guardian support for Django REST Framework
 dev-python/drf-writable-nested 0.7.0: Writable nested helpers for django-rest-framework's serializers
 dev-python/imap-tools 1.0.0: High level lib for work with email by IMAP
