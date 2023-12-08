@@ -28,14 +28,14 @@ dev-python/dateparser 1.1.8: Date parsing library designed to parse dates from H
 dev-python/django-auditlog 2.3.0: Audit log app for Django
 dev-python/django-celery-results 2.5.1: Celery Result Backends using the Django ORM/Cache framework.
 dev-python/django-compression-middleware 0.5.0: Django middleware to compress responses using several algorithms.
-dev-python/django-environ 0.10.0: An environment variables to configure Django
+dev-python/django-environ 0.10.0 0.11.2: An environment variables to configure Django
 dev-python/django-extensions 3.2.3: A collection of custom extensions for the Django Framework
 dev-python/django-guardian 2.4.0: Implementation of per object permissions for Django
 dev-python/django-multiselectfield 0.1.12: Django multiple select field
 dev-python/django-picklefield 3.1.0: Pickled object field for Django
 dev-python/djangorestframework-guardian 0.3.0: django-guardian support for Django REST Framework
 dev-python/drf-writable-nested 0.7.0: Writable nested helpers for django-rest-framework's serializers
-dev-python/imap-tools 1.0.0: High level lib for work with email by IMAP
+dev-python/imap-tools 1.0.0 1.5.0: High level lib for work with email by IMAP
 dev-python/inotify-simple 1.3.5: Python wrapper around inotify
 dev-python/inotifyrecursive 0.3.5: Recursive inotify watches for Python
 dev-python/langdetect 1.0.9: Port of Google's language-detection library to Python
@@ -46,7 +46,7 @@ dev-python/pytest-celery 0.1.0: a shim pytest plugin to enable celery.contrib.py
 dev-python/pytest-click 1.1.0: Pytest plugin for Click
 dev-python/python-ipware 0.9.0 2.0.0: A Python package to retrieve user's IP address
 dev-python/shortuuid 1.0.11: A generator library for concise, unambiguous and URL-safe UUIDs.
-dev-python/sphinx-click 4.4.0: Sphinx plugin to automatically document click-based applications
+dev-python/sphinx-click 4.4.0 5.1.0: Sphinx plugin to automatically document click-based applications
 dev-python/whitenoise 6.6.0: Radically simplified static file serving for Python web apps
 dev-util/scanmem 9999: Locate and modify variables in executing processes
 dev-util/ugtrain 9999: Universal Game Trainer
@@ -62,6 +62,6 @@ net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunn
 sys-kernel/hardened-sources 5.10.187 5.10.198 5.10.199 5.10.200 5.10.201 5.10.202 5.15.122 5.15.135 5.15.136 5.15.137 5.15.138 5.15.139 5.15.140 6.1.53 6.1.56 6.1.57 6.1.60 6.1.61 6.1.62 6.1.63 6.1.64 6.5.9 6.5.10 6.5.11 6.5.12 6.5.13: Minimal supplement to upstream Kernel Self Protection Project
 sys-kernel/it87 9999: IT8705F/IT871xF/IT872xF hardware monitoring driver
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
-www-apps/paperless-ngx 1.17.4 2.0.1: Community supported paperless: scan, index and archive your physical documents
+www-apps/paperless-ngx 1.17.4 2.1.0: Community supported paperless: scan, index and archive your physical documents
 x11-wm/compiz 9999: OpenGL window and compositing manager
 xfce-base/xfdesktop 4.19.0: Desktop manager for the Xfce desktop environment
