@@ -30,7 +30,7 @@ BDEPEND="
 	${RDEPEND}
 	test? (
 		dev-cpp/gtest
-		>=dev-libs/stb-20231115
+		dev-libs/stb
 	)
 "
 
