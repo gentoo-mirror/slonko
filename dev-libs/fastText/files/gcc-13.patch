@@ -1,0 +1,34 @@
+From 6c2204ba66776b700095ff73e3e599a908ffd9c3 Mon Sep 17 00:00:00 2001
+From: Cherilyn Buren <88433283+NiuBlibing@users.noreply.github.com>
+Date: Mon, 27 Nov 2023 15:41:10 -0800
+Subject: [PATCH] fix compile error with gcc13 #1281 (#1340)
+
+Summary:
+Due to[ header dependency changes](https://gcc.gnu.org/gcc-13/porting_to.html#header-dep-changes) in GCC 13, we need to include the <cstdint> header.
+
+Pull Request resolved: https://github.com/facebookresearch/fastText/pull/1340
+
+Reviewed By: jmp84
+
+Differential Revision: D51602433
+
+Pulled By: alexkosau
+
+fbshipit-source-id: cc9bffb276cb00f1db8ec97a36784c484ae4563a
+---
+ src/args.cc | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/args.cc b/src/args.cc
+index 313e9816e..5f65f6693 100644
+--- a/src/args.cc
++++ b/src/args.cc
+@@ -9,6 +9,7 @@
+ #include "args.h"
+ 
+-#include <stdlib.h>
++#include <cstdlib>
++#include <cstdint>
+ 
+ #include <iostream>
+ #include <stdexcept>
