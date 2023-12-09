@@ -27,6 +27,7 @@ BDEPEND="
 	${DISTUTILS_DEPS}
 	python? ( dev-python/pybind11[${PYTHON_USEDEP}] )
 "
+PATCHES=( "${FILESDIR}/gcc-13.patch" )
 
 src_prepare() {
 	cmake_src_prepare
