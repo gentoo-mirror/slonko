@@ -78,11 +78,11 @@ DEPEND="
 		dev-python/uvicorn[${PYTHON_USEDEP}]
 		>=dev-python/watchdog-3.0[${PYTHON_USEDEP}]
 		>=dev-python/whitenoise-6.6[${PYTHON_USEDEP}]
-		>=dev-python/whoosh-2.7[${PYTHON_USEDEP}]
-		media-libs/zxing-cpp[python,${PYTHON_USEDEP}]')
+		>=dev-python/whoosh-2.7[${PYTHON_USEDEP}]')
 	media-gfx/imagemagick
 	media-gfx/optipng
 	media-libs/jbig2enc
+	media-libs/zxing-cpp[python,${PYTHON_SINGLE_USEDEP}]
 	>=sci-libs/scikit-learn-1.3
 	www-servers/gunicorn
 	audit? ( $(python_gen_cond_dep '
