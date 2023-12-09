@@ -11,7 +11,7 @@ app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Inju
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 app-text/OCRmyPDF 14.4.0 15.3.1 15.4.4: OCRmyPDF adds an OCR text layer to scanned PDF files
 dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
-dev-libs/fastText 0.9.2: Library for fast text representation and classification
+dev-libs/fastText 0.9.2-r1: Library for fast text representation and classification
 dev-lua/resty-core 0.1.23 0.1.27: New LuaJIT FFI based API for lua-nginx-module
 dev-lua/resty-http 0.17.1: Lua HTTP client cosocket driver for OpenResty / ngx_lua
 dev-lua/resty-lrucache 0.13: A simple LRU cache for OpenResty and the ngx_lua module (based on LuaJIT FFI)
