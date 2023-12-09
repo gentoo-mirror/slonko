@@ -15,7 +15,7 @@ S="${WORKDIR}/${PN}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="audit compression mysql +ocr postgres remote-redis +sqlite"
+IUSE="audit compression mysql +ocr postgres remote-redis +sqlite zxing"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	|| ( mysql postgres sqlite )
@@ -82,11 +82,11 @@ DEPEND="
 	media-gfx/imagemagick
 	media-gfx/optipng
 	media-libs/jbig2enc
-	media-libs/zxing-cpp[python,${PYTHON_SINGLE_USEDEP}]
 	>=sci-libs/scikit-learn-1.3
 	www-servers/gunicorn
 	audit? ( $(python_gen_cond_dep '
 		dev-python/django-auditlog[${PYTHON_USEDEP}]') )
+	zxing? ( media-libs/zxing-cpp[python,${PYTHON_SINGLE_USEDEP}] )
 	compression? ( $(python_gen_cond_dep '
 		dev-python/django-compression-middleware[${PYTHON_USEDEP}]') )
 	mysql? ( dev-python/mysqlclient )
@@ -97,7 +97,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 # dev-python/tika
 # dev-python/gotenberg-client
-# dev-python/zxing-cpp
 
 DOCS=( docker/imagemagick-policy.xml )
 
