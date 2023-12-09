@@ -18,16 +18,14 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	python? (
-		${PYTHON_DEPS}
-		$(python_gen_cond_dep 'dev-python/pybind11[${PYTHON_USEDEP}]')
-	)
+	python? ( ${PYTHON_DEPS} )
 "
 DEPEND="
 	${RDEPEND}
 "
 BDEPEND="
 	${RDEPEND}
+	python? ( $(python_gen_cond_dep 'dev-python/pybind11[${PYTHON_USEDEP}]') )
 	test? (
 		dev-cpp/gtest
 		dev-libs/stb
