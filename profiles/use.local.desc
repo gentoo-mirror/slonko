@@ -20,4 +20,5 @@ www-apps/paperless-ngx:audit - Enables an audit trail for documents, document ty
 www-apps/paperless-ngx:compression - Enable compression of the responses in application
 www-apps/paperless-ngx:ocr - Enable support for Optical Character Recognition
 www-apps/paperless-ngx:remote-redis - Use remote Redis instance
+www-apps/paperless-ngx:zxing - Use zxing-cpp as an alternative barcodes scanning library
 x11-wm/compiz:gles - Enable support for GLES
