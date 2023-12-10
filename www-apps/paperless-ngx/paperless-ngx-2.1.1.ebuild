@@ -86,13 +86,13 @@ DEPEND="
 	www-servers/gunicorn
 	audit? ( $(python_gen_cond_dep '
 		dev-python/django-auditlog[${PYTHON_USEDEP}]') )
-	zxing? ( media-libs/zxing-cpp[python,${PYTHON_SINGLE_USEDEP}] )
 	compression? ( $(python_gen_cond_dep '
 		dev-python/django-compression-middleware[${PYTHON_USEDEP}]') )
 	mysql? ( dev-python/mysqlclient )
 	ocr? ( >=app-text/OCRmyPDF-15.0 )
 	postgres? ( dev-python/psycopg:2 )
 	!remote-redis? ( dev-db/redis )
+	zxing? ( media-libs/zxing-cpp[python,${PYTHON_SINGLE_USEDEP}] )
 "
 RDEPEND="${DEPEND}"
 # dev-python/tika
