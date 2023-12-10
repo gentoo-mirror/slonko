@@ -37,9 +37,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i \
-		-e "s#\${CMAKE_INSTALL_LIBDIR}#$(python_get_sitedir)#g" \
-		wrappers/python/CMakeLists.txt || die "sed failed"
+	if use python; then
+		sed -i \
+			-e "s#\${CMAKE_INSTALL_LIBDIR}#$(python_get_sitedir)#g" \
+			wrappers/python/CMakeLists.txt || die "sed failed"
+	fi
 	sed -i \
 		-e 's#zxing_add_package_stb.*#include_directories(/usr/include/stb)#' \
 		-e 's#stb::stb##g' \
