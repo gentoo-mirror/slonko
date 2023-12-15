@@ -1,0 +1,17 @@
+# -disable-live value
+#   	Ids of homes to disable live measurements
+# -disable-subscription-check
+#   	Disable check on active Tibber subscription
+# -listen-address string
+#   	Address to listen on for HTTP requests (default ":8080")
+# -live value
+#   	Ids of homes to always start live measurements
+# -live-feed-timeout int
+#   	Timeout in minutes for live feed (default 1)
+# -live-url string
+#   	Override websocket url for live measurements
+# -token string
+#   	Tibber API token
+
+#command_args="--listen-address=:9150"
+TIBBER_TOKEN=""

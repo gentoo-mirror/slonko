@@ -1,0 +1,16 @@
+[Unit]
+Description=Tibber metrics exporter for prometheus.io
+Documentation=https://github.com/terjesannum/tibber-exporter
+After=network-online.target
+
+[Service]
+User=tibber-exporter
+Restart=on-failure
+EnvironmentFile=/etc/conf.d/tibber-exporter
+ExecStart=/usr/bin/tibber-exporter $command_args
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutStopSec=20s
+SendSIGKILL=no
+
+[Install]
+WantedBy=multi-user.target
