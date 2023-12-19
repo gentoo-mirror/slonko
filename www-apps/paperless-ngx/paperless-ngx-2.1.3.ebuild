@@ -73,7 +73,6 @@ DEPEND="
 		dev-python/pyzbar[${PYTHON_USEDEP}]
 		dev-python/rapidfuzz[${PYTHON_USEDEP}]
 		dev-python/redis[${PYTHON_USEDEP}]
-		dev-python/reportlab[${PYTHON_USEDEP}]
 		dev-python/tqdm[${PYTHON_USEDEP}]
 		dev-python/uvicorn[${PYTHON_USEDEP}]
 		>=dev-python/watchdog-3.0[${PYTHON_USEDEP}]
