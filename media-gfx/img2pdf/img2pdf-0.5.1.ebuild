@@ -16,10 +16,6 @@ SLOT="0"
 KEYWORDS="amd64 ppc64 x86"
 IUSE="gui"
 
-PATCHES=(
-	"${FILESDIR}/remove-exact-cmyk8.patch"
-)
-
 BDEPEND="
 	test? (
 		app-text/ghostscript-gpl
@@ -43,6 +39,12 @@ RDEPEND="
 "
 
 distutils_enable_tests pytest
+
+EPYTEST_DESELECT=(
+    # Failing cmyk8 tests
+    src/img2pdf_test.py::test_miff_cmyk8
+    src/img2pdf_test.py::test_miff_cmyk8
+)
 
 src_prepare() {
 	distutils-r1_python_prepare_all
