@@ -18,7 +18,7 @@ KEYWORDS="~amd64"
 IUSE="bash-completion fish-completion"
 
 RDEPEND="
-	>=app-text/ghostscript-gpl-9.55
+	>=app-text/ghostscript-gpl-9.54
 	>=app-text/pdfminer-20220319[${PYTHON_USEDEP}]
 	>=app-text/tesseract-4.1.1[jpeg,tiff,png,webp]
 	>=dev-python/deprecation-2.1.0[${PYTHON_USEDEP}]
