@@ -15,13 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-	dev-libs/qtkeychain
-	dev-qt/qtcore
-	dev-qt/qtdbus
-	dev-qt/qtnetwork
-	dev-qt/qtwebengine
-	dev-qt/qtwebsockets
-	dev-qt/qtwidgets
+	dev-libs/qtkeychain[qt5]
+	dev-qt/qtcore:5
+	dev-qt/qtdbus:5
+	dev-qt/qtnetwork:5
+	dev-qt/qtwebengine:5
+	dev-qt/qtwebsockets:5
+	dev-qt/qtwidgets:5
 	net-vpn/openconnect
 "
 RDEPEND="${DEPEND}"
