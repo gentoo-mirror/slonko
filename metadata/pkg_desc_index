@@ -8,7 +8,7 @@ acct-user/tibber-exporter 0: A user for app-metrics/tibber-exporter
 acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.29.2 1.30.1: Unofficial Bitwarden compatible server written in Rust
 app-admin/vaultwarden-web-vault 2023.10.0 2023.12.0: Unofficial patched bitwarden web-vault builds for vaultwarden
-app-arch/gztool 1.6.0 1.6.1: GZIP files indexer, compressor and data retriever.
+app-arch/gztool 1.6.1: GZIP files indexer, compressor and data retriever.
 app-metrics/tibber-exporter 3.6.3: Monitor your power usage and costs with Prometheus and Grafana
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
@@ -67,7 +67,7 @@ media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linu
 media-libs/zxing-cpp 2.2.0: C++ Multi-format 1D/2D barcode image processing library
 net-mail/mhonarc 2.6.24: Perl Mail-to-HTML Converter
 net-mail/sympa 6.2.70 6.2.72: A feature-rich open source mailing list software
-net-vpn/globalprotect-openconnect 1.4.8 1.4.9: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
+net-vpn/globalprotect-openconnect 1.4.9: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
 net-vpn/gp-saml-gui 9999: Interactively authenticate to GlobalProtect VPNs that require SAML
 net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunnel VPN setup
 sys-kernel/hardened-sources 5.10.203 5.10.204 5.10.205 5.15.142 5.15.143 5.15.144 5.15.145 6.1.67 6.1.68 6.1.69 6.6.6 6.6.7 6.6.8: Minimal supplement to upstream Kernel Self Protection Project
