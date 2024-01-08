@@ -43,13 +43,13 @@ DEPEND="
 		>=dev-python/channels-4.0[${PYTHON_USEDEP}]
 		>=dev-python/channels-redis-4.0[${PYTHON_USEDEP}]
 		dev-python/concurrent-log-handler[${PYTHON_USEDEP}]
-		>=dev-python/dateparser-1.1[${PYTHON_USEDEP}]
-		>=dev-python/django-4.2.7[${PYTHON_USEDEP}]
+		>=dev-python/dateparser-1.2[${PYTHON_USEDEP}]
+		>=dev-python/django-4.2.8[${PYTHON_USEDEP}]
 		<dev-python/django-5.0[${PYTHON_USEDEP}]
 		dev-python/django-celery-results[${PYTHON_USEDEP}]
 		dev-python/django-cors-headers[${PYTHON_USEDEP}]
 		dev-python/django-extensions[${PYTHON_USEDEP}]
-		>=dev-python/django-filter-23.3[${PYTHON_USEDEP}]
+		>=dev-python/django-filter-23.5[${PYTHON_USEDEP}]
 		dev-python/django-guardian[${PYTHON_USEDEP}]
 		dev-python/django-multiselectfield[${PYTHON_USEDEP}]
 		dev-python/django-redis[${PYTHON_USEDEP}]
@@ -88,7 +88,7 @@ DEPEND="
 	compression? ( $(python_gen_cond_dep '
 		dev-python/django-compression-middleware[${PYTHON_USEDEP}]') )
 	mysql? ( dev-python/mysqlclient )
-	ocr? ( >=app-text/OCRmyPDF-15.0 )
+	ocr? ( >=app-text/OCRmyPDF-15.4 )
 	postgres? ( dev-python/psycopg:2 )
 	!remote-redis? ( dev-db/redis )
 	zxing? ( media-libs/zxing-cpp[python,${PYTHON_SINGLE_USEDEP}] )
