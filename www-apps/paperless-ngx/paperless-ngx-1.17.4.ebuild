@@ -65,7 +65,7 @@ DEPEND="
 	dev-python/redis
 	dev-python/reportlab
 	dev-python/tqdm
-	dev-python/uvicorn
+	<dev-python/uvicorn-0.26.0
 	>=dev-python/watchdog-3.0
 	>=dev-python/whitenoise-6.5
 	>=dev-python/whoosh-2.7
