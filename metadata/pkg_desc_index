@@ -30,6 +30,7 @@ dev-python/concurrent-log-handler 0.9.20 0.9.24: Python logging handler allowing
 dev-python/convertdate 2.4.0: Converts between Gregorian dates and other calendar systems.
 dev-python/daphne 3.0.2 4.0.0: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
 dev-python/dateparser 1.2.0: Date parsing library designed to parse dates from HTML pages
+dev-python/django-allauth 0.61.1: Django 3rd party (social) account authentication
 dev-python/django-auditlog 2.3.0: Audit log app for Django
 dev-python/django-celery-results 2.5.1: Celery Result Backends using the Django ORM/Cache framework.
 dev-python/django-compression-middleware 0.5.0: Django middleware to compress responses using several algorithms.
@@ -52,6 +53,7 @@ dev-python/pdf2image 1.16.3: Module that wraps pdftoppm and pdftocairo to conver
 dev-python/pytest-celery 0.1.0: a shim pytest plugin to enable celery.contrib.pytest
 dev-python/pytest-click 1.1.0: Pytest plugin for Click
 dev-python/python-ipware 0.9.0 2.0.0: A Python package to retrieve user's IP address
+dev-python/python3-openid 3.2.0: OpenID support for modern servers and consumers
 dev-python/shortuuid 1.0.11: A generator library for concise, unambiguous and URL-safe UUIDs.
 dev-python/sphinx-click 4.4.0 5.1.0: Sphinx plugin to automatically document click-based applications
 dev-python/sphinx-hoverxref 1.3.0: Sphinx extension to show tooltips with content embedded when hover a reference
