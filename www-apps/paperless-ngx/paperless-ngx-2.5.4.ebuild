@@ -14,7 +14,7 @@ S="${WORKDIR}/${PN}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE="audit compression mysql +ocr postgres remote-redis +sqlite zxing"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
