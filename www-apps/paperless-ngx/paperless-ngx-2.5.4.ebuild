@@ -79,7 +79,7 @@ DEPEND="
 		>=dev-python/watchdog-4.0[${PYTHON_USEDEP}]
 		>=dev-python/whitenoise-6.6[${PYTHON_USEDEP}]
 		>=dev-python/whoosh-2.7[${PYTHON_USEDEP}]')
-	media-gfx/imagemagick
+	media-gfx/imagemagick[xml]
 	media-gfx/optipng
 	media-libs/jbig2enc
 	>=sci-libs/scikit-learn-1.4
