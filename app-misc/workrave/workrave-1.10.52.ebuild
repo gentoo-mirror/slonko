@@ -52,9 +52,9 @@ RDEPEND="
 	x11-libs/libXmu
 "
 DEPEND="${RDEPEND}
+	dev-build/autoconf-archive
 	dev-util/glib-utils
 	>=dev-util/intltool-0.40.0
-	sys-devel/autoconf-archive
 	x11-base/xorg-proto
 	virtual/pkgconfig
 	dbus? ( dev-python/jinja )
