@@ -429,7 +429,7 @@ SRC_URI="
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="mysql postgres +sqlite system-sqlite"
+IUSE="mysql postgres +sqlite system-sqlite +web"
 
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
@@ -439,10 +439,10 @@ ACCT_DEPEND="
 "
 DEPEND="
 	${ACCT_DEPEND}
-	>=app-admin/vaultwarden-web-vault-2024.1.2
 	>=dev-lang/rust-1.74.0
 	dev-libs/openssl:0=
 	sqlite? ( system-sqlite? ( >=dev-db/sqlite-3.44.0:3 ) )
+	web? ( >=app-admin/vaultwarden-web-vault-2024.1.2 )
 "
 RDEPEND="${DEPEND}"
 
@@ -454,6 +454,7 @@ src_prepare() {
 	fi
 
 	default
+	sed -i -r "s|^#?\s*(WEB_VAULT_ENABLED)\s*=.*|\1=$(use web && echo true || echo false)|" .env.template || die
 }
 
 src_configure() {
