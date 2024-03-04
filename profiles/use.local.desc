@@ -3,6 +3,7 @@
 # * generated automatically using pmaint *
 
 app-admin/vaultwarden:system-sqlite - Use the system SQLite instead of the bundled one
+app-admin/vaultwarden:web - Disable default Web vault
 app-misc/workrave:indicator - Enable Ayatana indicator support
 app-misc/workrave:mate - Add support for MATE panel
 app-misc/workrave:xfce - Add support for XFCE panel
