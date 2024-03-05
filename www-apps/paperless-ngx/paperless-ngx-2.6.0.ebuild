@@ -44,7 +44,7 @@ DEPEND="
 		>=dev-python/channels-redis-4.0[${PYTHON_USEDEP}]
 		dev-python/concurrent-log-handler[${PYTHON_USEDEP}]
 		>=dev-python/dateparser-1.2[${PYTHON_USEDEP}]
-		>=dev-python/django-4.2.10[${PYTHON_USEDEP}]
+		>=dev-python/django-4.2.11[${PYTHON_USEDEP}]
 		<dev-python/django-5.0[${PYTHON_USEDEP}]
 		dev-python/django-allauth[${PYTHON_USEDEP}]
 		dev-python/django-celery-results[${PYTHON_USEDEP}]
