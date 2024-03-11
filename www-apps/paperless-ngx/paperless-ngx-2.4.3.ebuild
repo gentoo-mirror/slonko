@@ -73,6 +73,7 @@ DEPEND="
 		dev-python/pyzbar[${PYTHON_USEDEP}]
 		dev-python/rapidfuzz[${PYTHON_USEDEP}]
 		dev-python/redis[${PYTHON_USEDEP}]
+		>=dev-python/scikit-learn-1.3
 		dev-python/tqdm[${PYTHON_USEDEP}]
 		<dev-python/uvicorn-0.26.0[${PYTHON_USEDEP}]
 		>=dev-python/watchdog-3.0[${PYTHON_USEDEP}]
@@ -81,7 +82,6 @@ DEPEND="
 	media-gfx/imagemagick[xml]
 	media-gfx/optipng
 	media-libs/jbig2enc
-	>=sci-libs/scikit-learn-1.3
 	www-servers/gunicorn
 	audit? ( $(python_gen_cond_dep '
 		dev-python/django-auditlog[${PYTHON_USEDEP}]') )
