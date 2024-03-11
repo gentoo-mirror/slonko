@@ -64,6 +64,7 @@ DEPEND="
 	dev-python/rapidfuzz
 	dev-python/redis
 	dev-python/reportlab
+	>=dev-python/scikit-learn-1.3
 	dev-python/tqdm
 	<dev-python/uvicorn-0.26.0
 	>=dev-python/watchdog-3.0
@@ -72,7 +73,6 @@ DEPEND="
 	media-gfx/imagemagick
 	media-gfx/optipng
 	media-libs/jbig2enc
-	>=sci-libs/scikit-learn-1.3
 	www-servers/gunicorn
 	compression? ( dev-python/django-compression-middleware )
 	mysql? ( dev-python/mysqlclient )
