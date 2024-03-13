@@ -1,6 +1,6 @@
 [Unit]
 Description=Paperless webserver service
-Requires=redis.service
+Requires=redis.service paperless-webserver.socket
 After=network.target
 Wants=network.target
 PartOf=paperless.target
@@ -14,4 +14,5 @@ ExecStart=/usr/bin/gunicorn -c /usr/share/paperless/gunicorn.conf.py paperless.a
 Restart=on-abort
 
 [Install]
+Also=paperless-webserver.socket
 WantedBy=paperless.target

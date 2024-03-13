@@ -114,6 +114,9 @@ src_prepare() {
 	cat >> "paperless.conf" <<- EOF
 
 	# Custom
+	PAPERLESS_BIND_ADDR=unix
+	PAPERLESS_PORT=/run/paperless.sock
+
 	PAPERLESS_ENABLE_COMPRESSION=$(use compression && echo true || echo false)
 	PAPERLESS_AUDIT_LOG_ENABLED=$(use audit && echo true || echo false)
 	EOF
@@ -124,6 +127,7 @@ src_install() {
 
 	# Install service files
 	systemd_newunit "${FILESDIR}"/paperless-webserver.service paperless-webserver.service
+	systemd_newunit "${FILESDIR}"/paperless-webserver.socket paperless-webserver.socket
 	systemd_newunit "${FILESDIR}"/paperless-scheduler.service paperless-scheduler.service
 	systemd_newunit "${FILESDIR}"/paperless-consumer.service paperless-consumer.service
 	systemd_newunit "${FILESDIR}"/paperless-task-queue.service paperless-task-queue.service
