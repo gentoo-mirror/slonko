@@ -50,7 +50,7 @@ DEPEND="
 		dev-python/django-celery-results[${PYTHON_USEDEP}]
 		dev-python/django-cors-headers[${PYTHON_USEDEP}]
 		dev-python/django-extensions[${PYTHON_USEDEP}]
-		>=dev-python/django-filter-23.5[${PYTHON_USEDEP}]
+		>=dev-python/django-filter-24.1[${PYTHON_USEDEP}]
 		dev-python/django-guardian[${PYTHON_USEDEP}]
 		dev-python/django-multiselectfield[${PYTHON_USEDEP}]
 		dev-python/django-redis[${PYTHON_USEDEP}]
