@@ -27,8 +27,9 @@ ACCT_DEPEND="
 "
 EXTRA_DEPEND="
 	app-text/unpaper
-	dev-python/hiredis
-	dev-python/websockets
+	$(python_gen_cond_dep '
+		dev-python/hiredis[${PYTHON_USEDEP}]
+		dev-python/websockets[${PYTHON_USEDEP}]')
 "
 
 DEPEND="
