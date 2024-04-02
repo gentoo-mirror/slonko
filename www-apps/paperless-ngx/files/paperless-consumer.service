@@ -12,4 +12,4 @@ ExecStart=/usr/bin/paperless-manage document_consumer
 Restart=on-abort
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=paperless.target
