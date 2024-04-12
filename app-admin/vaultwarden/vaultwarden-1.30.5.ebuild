@@ -439,7 +439,7 @@ ACCT_DEPEND="
 "
 DEPEND="
 	${ACCT_DEPEND}
-	>=dev-lang/rust-1.74.0
+	>=virtual/rust-1.74.0
 	dev-libs/openssl:0=
 	sqlite? ( system-sqlite? ( >=dev-db/sqlite-3.44.0:3 ) )
 	web? ( >=app-admin/vaultwarden-web-vault-2024.1.2 )
