@@ -8,14 +8,13 @@ inherit perl-module
 DESCRIPTION="Perl Mail-to-HTML Converter"
 HOMEPAGE="https://www.mhonarc.org/"
 SRC_URI="https://github.com/sympa-community/MHonArc/archive/${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${P/mhonarc/MHonArc}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ~ppc x86"
+KEYWORDS="amd64 mips ppc x86"
 # Warrants IUSE examples, and here it is + ? IUSE doc; see also extras folder with html docs
 IUSE="examples"
-
-S="${WORKDIR}/${P/mhonarc/MHonArc}"
 
 src_install() {
 	sed -e "s|-prefix |-docpath '${D}/usr/share/doc/${PF}/html' -prefix '${D}'|g" -i Makefile ||
