@@ -25,8 +25,8 @@ fi
 DESCRIPTION="A feature-rich open source mailing list software"
 HOMEPAGE="https://www.sympa.community/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="clamav compat dkim fastcgi ldap mysql nls postgres soap +sqlite ssl"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
