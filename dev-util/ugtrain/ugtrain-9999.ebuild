@@ -16,10 +16,10 @@ else
 	KEYWORDS="~amd64"
 fi
 
-SLOT="0"
 LICENSE="GPL-3"
-RESTRICT="!test? ( test )"
+SLOT="0"
 IUSE="bash-completion examples glib multilib test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="
 	dev-util/scanmem
