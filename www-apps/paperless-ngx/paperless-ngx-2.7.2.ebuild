@@ -55,7 +55,7 @@ DEPEND="
 		dev-python/django-guardian[${PYTHON_USEDEP}]
 		dev-python/django-multiselectfield[${PYTHON_USEDEP}]
 		dev-python/django-redis[${PYTHON_USEDEP}]
-		=dev-python/djangorestframework-3.14.0[${PYTHON_USEDEP}]
+		~dev-python/djangorestframework-3.14.0[${PYTHON_USEDEP}]
 		dev-python/djangorestframework-guardian[${PYTHON_USEDEP}]
 		dev-python/drf-writable-nested[${PYTHON_USEDEP}]
 		dev-python/filelock[${PYTHON_USEDEP}]

@@ -8,16 +8,6 @@ DESCRIPTION="Monitor your power usage and costs with Prometheus and Grafana"
 HOMEPAGE="https://github.com/terjesannum/tibber-exporter"
 SRC_URI="https://github.com/terjesannum/tibber-exporter/archive/${P}.tar.gz"
 
-LICENSE="MIT"
-SLOT="0"
-KEYWORDS="~amd64"
-
-DEPEND="
-	acct-group/tibber-exporter
-	acct-user/tibber-exporter
-"
-RDEPEND="${DEPEND}"
-
 EGO_SUM=(
 	"github.com/beorn7/perks v1.0.1"
 	"github.com/beorn7/perks v1.0.1/go.mod"
@@ -64,6 +54,16 @@ go-module_set_globals
 SRC_URI+="${EGO_SUM_SRC_URI}"
 
 S="${WORKDIR}/${PN}-${P}"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="~amd64"
+
+DEPEND="
+	acct-group/tibber-exporter
+	acct-user/tibber-exporter
+"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	ego build

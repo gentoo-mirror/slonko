@@ -14,14 +14,13 @@ HOMEPAGE="https://luajit.org/"
 EGIT_REPO_URI="https://luajit.org/git/luajit.git"
 EGIT_BRANCH="v2.1"
 EGIT_CHECKOUT_DIR="${MY_P}"
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="MIT"
 # this should probably be pkgmoved to 2.0 for sake of consistency.
 SLOT="2"
 KEYWORDS="~arm64 -hppa -riscv -sparc"
 IUSE="lua52compat static-libs"
-
-S="${WORKDIR}/${MY_P}"
 
 _emake() {
 	emake \
