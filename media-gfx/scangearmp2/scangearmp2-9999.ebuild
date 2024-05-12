@@ -11,8 +11,9 @@ DESCRIPTION="Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-
 HOMEPAGE="https://github.com/Ordissimo/scangearmp2"
 EGIT_REPO_URI="https://github.com/Ordissimo/${PN}.git"
 LICENSE="GPL-2"
-RESTRICT="mirror"
 SLOT="2"
+RESTRICT="mirror"
+
 DEPEND="
 	dev-util/intltool
 	media-gfx/sane-backends
