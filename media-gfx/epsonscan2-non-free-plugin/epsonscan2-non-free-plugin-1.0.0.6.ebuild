@@ -15,13 +15,14 @@ EPSONSCAN2_VERSION="6.7.63.0"
 REL="1"
 
 SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/15/17/66/aef42e9eaebe3f7365ef597c7dbd8578e252beff/epsonscan2-bundle-${EPSONSCAN2_VERSION}.x86_64.rpm.tar.gz"
+S=${WORKDIR}
+
 LICENSE="EPSON"
 SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="media-gfx/epsonscan2"
 RESTRICT="bindist mirror strip"
-S=${WORKDIR}
 
 src_unpack() {
 	default

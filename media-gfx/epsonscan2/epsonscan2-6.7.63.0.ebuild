@@ -14,8 +14,8 @@ inherit cmake desktop udev
 
 LICENSE="GPL-3+"
 SLOT="0"
-IUSE="bundled-libs"
 KEYWORDS="~amd64"
+IUSE="bundled-libs"
 
 DEPEND="
 	dev-libs/boost

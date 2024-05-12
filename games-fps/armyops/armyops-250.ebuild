@@ -7,7 +7,8 @@ inherit check-reqs desktop unpacker wrapper
 
 DESCRIPTION="Military simulations by the U.S. Army to provide insights on soldiering"
 HOMEPAGE="https://www.americasarmy.com/"
-SRC_URI="mirror://sourceforge/project/distrobuild/sources/${PN}${PV}-linux.run"
+SRC_URI="https://downloads.sourceforge.net/project/distrobuild/sources/${PN}${PV}-linux.run"
+S=${WORKDIR}
 
 LICENSE="Army-EULA"
 SLOT="0"
@@ -26,8 +27,6 @@ RDEPEND="
 	x11-libs/libXext[abi_x86_32(-)]
 	x11-libs/libxcb[abi_x86_32(-)]
 "
-
-S=${WORKDIR}
 
 dir=opt/${PN}
 
