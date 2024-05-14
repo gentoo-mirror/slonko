@@ -41,9 +41,8 @@ RDEPEND="
 distutils_enable_tests pytest
 
 EPYTEST_DESELECT=(
-    # Failing cmyk8 tests
-    src/img2pdf_test.py::test_miff_cmyk8
-    src/img2pdf_test.py::test_miff_cmyk8
+	# Failing cmyk8 tests
+	src/img2pdf_test.py::test_miff_cmyk8
 )
 
 src_prepare() {
