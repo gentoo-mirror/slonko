@@ -21,7 +21,7 @@ fi
 LICENSE="GPL-3+"
 SLOT="0"
 
-IUSE="dbus debug gstreamer +gtk indicator mate nls pulseaudio test xfce"
+IUSE="dbus debug gstreamer +gtk indicator mate nls pulseaudio test wayland xfce"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -38,7 +38,7 @@ RDEPEND="
 	gtk? (
 		>=dev-libs/glib-2.56.0
 		>=x11-libs/gtk+-3.22.0
-		>=dev-cpp/gtkmm-3.22.5
+		>=dev-cpp/gtkmm-3.22.0
 	)
 	indicator? (
 		>=dev-libs/libayatana-indicator-0.4:3
@@ -68,8 +68,10 @@ src_configure() {
 		-DWITH_MATE=$(usex mate)
 		-DWITH_PULSE=$(usex pulseaudio)
 		-DWITH_TESTS=$(usex test)
-		-DWITH_XFCE4=$(usex xfce)
 		-DWITH_TRACING=$(usex debug)
+		-DWITH_UI=$(usex gtk Gtk+3 None)
+		-DWITH_WAYLAND=$(usex wayland)
+		-DWITH_XFCE4=$(usex xfce)
 	)
 	cmake_src_configure
 }
