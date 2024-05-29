@@ -42,6 +42,7 @@ DEPEND="
 		dev-python/bleach[${PYTHON_USEDEP}]
 		dev-python/celery[${PYTHON_USEDEP}]
 		>=dev-python/channels-4.0[${PYTHON_USEDEP}]
+		<dev-python/channels-4.1[${PYTHON_USEDEP}]
 		>=dev-python/channels-redis-4.0[${PYTHON_USEDEP}]
 		dev-python/concurrent-log-handler[${PYTHON_USEDEP}]
 		>=dev-python/dateparser-1.2[${PYTHON_USEDEP}]
