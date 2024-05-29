@@ -41,8 +41,7 @@ DEPEND="
 		dev-python/asgiref[${PYTHON_USEDEP}]
 		dev-python/bleach[${PYTHON_USEDEP}]
 		dev-python/celery[${PYTHON_USEDEP}]
-		>=dev-python/channels-4.0[${PYTHON_USEDEP}]
-		<dev-python/channels-4.1[${PYTHON_USEDEP}]
+		>=dev-python/channels-4.1[${PYTHON_USEDEP}]
 		>=dev-python/channels-redis-4.0[${PYTHON_USEDEP}]
 		dev-python/concurrent-log-handler[${PYTHON_USEDEP}]
 		>=dev-python/dateparser-1.2[${PYTHON_USEDEP}]
@@ -99,6 +98,10 @@ DEPEND="
 RDEPEND="${DEPEND}"
 # dev-python/tika
 # dev-python/gotenberg-client
+
+PATCHES=(
+    "${FILESDIR}/channels-4.1.patch"
+)
 
 DOCS=( docker/imagemagick-policy.xml )
 
