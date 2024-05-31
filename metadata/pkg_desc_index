@@ -28,7 +28,7 @@ dev-python/channels-redis 4.1.0: Provides Django Channels channel layers that us
 dev-python/click-repl 0.2.0 0.3.0: Subcommand REPL for click apps
 dev-python/concurrent-log-handler 0.9.24: Python logging handler allowing safe concurrent write to the same log file
 dev-python/convertdate 2.4.0: Converts between Gregorian dates and other calendar systems.
-dev-python/daphne 3.0.2 4.0.0: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
+dev-python/daphne 3.0.2 4.1.2: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
 dev-python/dateparser 1.2.0: Date parsing library designed to parse dates from HTML pages
 dev-python/django-allauth 0.61.1 0.63.3: Django 3rd party (social) account authentication
 dev-python/django-auditlog 2.3.0 3.0.0: Audit log app for Django
