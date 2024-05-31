@@ -50,7 +50,7 @@ dev-python/langdetect 1.0.9: Port of Google's language-detection library to Pyth
 dev-python/nltk 3.7 3.8.1: Natural Language Toolkit
 dev-python/nltk-data 20230202: Data files for NLTK
 dev-python/parsel 1.8.1: Utility to extract data from XML/HTML documents using XPath or CSS selectors
-dev-python/pdf2image 1.16.3: Module that wraps pdftoppm and pdftocairo to convert PDF to a PIL Image object
+dev-python/pdf2image 1.16.3 1.17.0: Module that wraps pdftoppm and pdftocairo to convert PDF to a PIL Image object
 dev-python/pytest-celery 0.1.0: a shim pytest plugin to enable celery.contrib.pytest
 dev-python/pytest-click 1.1.0: Pytest plugin for Click
 dev-python/python-ipware 2.0.0 3.0.0: A Python package to retrieve user's IP address
