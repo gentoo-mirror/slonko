@@ -56,8 +56,8 @@ dev-python/pytest-click 1.1.0: Pytest plugin for Click
 dev-python/python-ipware 0.9.0 2.0.0: A Python package to retrieve user's IP address
 dev-python/python3-openid 3.2.0: OpenID support for modern servers and consumers
 dev-python/shortuuid 1.0.11: A generator library for concise, unambiguous and URL-safe UUIDs.
-dev-python/sphinx-click 4.4.0 5.1.0: Sphinx plugin to automatically document click-based applications
-dev-python/sphinx-hoverxref 1.3.0: Sphinx extension to show tooltips with content embedded when hover a reference
+dev-python/sphinx-click 5.1.0 6.0.0: Sphinx plugin to automatically document click-based applications
+dev-python/sphinx-hoverxref 1.4.0: Sphinx extension to show tooltips with content embedded when hover a reference
 dev-python/uvicorn 0.25.0: Lightning-fast ASGI server implementation
 dev-python/w3lib 2.1.2: Library of web-related functions
 dev-python/whitenoise 6.6.0: Radically simplified static file serving for Python web apps
