@@ -10,6 +10,7 @@ inherit distutils-r1 pypi
 
 DESCRIPTION="Module that wraps pdftoppm and pdftocairo to convert PDF to a PIL Image object"
 HOMEPAGE="https://github.com/Belval/pdf2image"
+SRC_URI="https://github.com/Belval/pdf2image/archive/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -19,3 +20,10 @@ RDEPEND="
 	app-text/poppler
 	dev-python/pillow
 "
+#BDEPEND="
+#	test? (
+#		app-text/poppler[cairo]
+#	)
+#"
+
+#distutils_enable_tests unittest
