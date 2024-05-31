@@ -21,15 +21,21 @@ KEYWORDS="~amd64"
 PROPERTIES="test_network"
 
 RDEPEND="
-	dev-python/sphinx[${PYTHON_USEDEP}]
+	>=dev-python/sphinx-5.0[${PYTHON_USEDEP}]
 	dev-python/sphinxcontrib-jquery[${PYTHON_USEDEP}]
 "
 BDEPEND="
 	test? (
-		dev-python/sphinxcontrib-bibtex[${PYTHON_USEDEP}]
+		>=dev-python/sphinxcontrib-bibtex-2.6.0[${PYTHON_USEDEP}]
 	)
 "
 
 distutils_enable_tests pytest
 #distutils_enable_sphinx docs \
-#	dev-python/sphinx-rtd-theme
+#	dev-python/sphinx-autoapi \
+#	dev-python/sphinxcontrib-bibtex \
+#	dev-python/sphinx-notfound-page \
+#	dev-python/sphinx-prompt \
+#	dev-python/sphinx-rtd-theme \
+#	dev-python/sphinx-tabs \
+#	dev-python/sphinxemoji
