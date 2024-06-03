@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 pypi
 
@@ -31,7 +31,7 @@ DOCS=( README.rst )
 #		dev-python/pytz[${PYTHON_USEDEP}]
 #	)
 #"
-
+#
 #python_prepare_all() {
 #	# Prevent un-needed download during build
 #	sed -e "/^    include_intersphinx=/d" \
@@ -39,7 +39,7 @@ DOCS=( README.rst )
 #
 #	distutils-r1_python_prepare_all
 #}
-
+#
 #distutils_enable_tests pytest
 #distutils_enable_sphinx docs \
-#	dev-python/sphinx_celery
+#	dev-python/sphinx-celery
