@@ -1,19 +1,22 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 pypi
 
 DESCRIPTION="Losslessly convert raster images to PDF"
-HOMEPAGE="https://gitlab.mister-muffin.de/josch/img2pdf"
+HOMEPAGE="
+	https://gitlab.mister-muffin.de/josch/img2pdf/
+	https://pypi.org/project/img2pdf/
+"
 
 LICENSE="LGPL-3+"
 SLOT="0"
-KEYWORDS="amd64 ppc64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gui"
 
 BDEPEND="
@@ -40,16 +43,27 @@ RDEPEND="
 
 distutils_enable_tests pytest
 
-EPYTEST_DESELECT=(
-	# Failing cmyk8 tests
-	src/img2pdf_test.py::test_miff_cmyk8
-)
-
 src_prepare() {
 	distutils-r1_python_prepare_all
 
 	# Remove gui executable if there's no demand/support for it.
 	if ! use gui; then
-		sed -i '/gui_scripts/d' setup.py || die
+		sed -i -e '/gui_scripts/d' setup.py || die
 	fi
+}
+
+src_test() {
+	local EPYTEST_DESELECT=(
+		# https://gitlab.mister-muffin.de/josch/img2pdf/issues/187
+		src/img2pdf_test.py::test_miff_cmyk8
+	)
+
+	if has_version 'media-gfx/imagemagick[hdri]'; then
+		# https://gitlab.mister-muffin.de/josch/img2pdf/issues/178
+		EPYTEST_DESELECT+=(
+			src/img2pdf_test.py::test_miff_cmyk16
+		)
+	fi
+
+	distutils-r1_src_test
 }
