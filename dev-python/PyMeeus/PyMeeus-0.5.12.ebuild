@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..11} pypy3 )
+PYTHON_COMPAT=( python3_{10..12} pypy3 )
 DISTUTILS_USE_PEP517=setuptools
 PYPI_NO_NORMALIZE=1
 
@@ -18,6 +18,10 @@ HOMEPAGE="
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+
+PATCHES=(
+    "${FILESDIR}/pytest-7.2.patch"
+)
 
 DOCS=( README.rst )
 
