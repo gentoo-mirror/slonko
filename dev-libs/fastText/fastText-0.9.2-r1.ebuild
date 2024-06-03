@@ -4,8 +4,9 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
+DISTUTILS_EXT=1
 DISTUTILS_OPTIONAL=1
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit cmake distutils-r1
 
@@ -38,6 +39,8 @@ src_prepare() {
 		CMakeLists.txt || die "sed failed for CMakeLists.txt"
 	sed -i "/extra_compile_args=/,+1d" setup.py \
 		|| die "sed failed for setup.py"
+	sed -r -e 's|np.array\(([^,]*),\s*copy=False\)|np.asarray(\1)|g' -i python/fasttext_module/fasttext/FastText.py \
+		|| die "sed failed for FastText.py"
 }
 
 python_prepare_all() {
