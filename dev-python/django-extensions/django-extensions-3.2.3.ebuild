@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 PYPI_NO_NORMALIZE=1
 
 inherit distutils-r1 pypi
@@ -18,6 +18,8 @@ KEYWORDS="~amd64"
 
 DEPEND="
 	>=dev-python/django-3.2[${PYTHON_USEDEP}]
+	dev-python/pyasyncore[${PYTHON_USEDEP}]
+	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/shortuuid[${PYTHON_USEDEP}]
 "
 #BDEPEND="
@@ -27,10 +29,15 @@ DEPEND="
 #"
 DOCS=( README.rst CHANGELOG.md )
 
-# TODO: tests
+## TODO: tests
 #distutils_enable_tests pytest
 #
 #src_prepare() {
 #	sed -i -e 's/--nomigrations .*//' setup.cfg || die
+#	# Requires pip
+#	rm -f tests/management/commands/test_pipchecker.py
+#	# Requires factory
+#	rm -f tests/test_admin_filter.py
+#
 #	default
 #}
