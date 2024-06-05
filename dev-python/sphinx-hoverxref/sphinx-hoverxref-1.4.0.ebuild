@@ -39,3 +39,12 @@ distutils_enable_tests pytest
 #	dev-python/sphinx-rtd-theme \
 #	dev-python/sphinx-tabs \
 #	dev-python/sphinxemoji
+#
+#python_prepare_all() {
+#	# Fix the name
+#	sed -i \
+#		-e 's/sphinx-prompt/sphinx_prompt/g' \
+#		docs/conf.py || die
+#
+#	distutils-r1_python_prepare_all
+#}
