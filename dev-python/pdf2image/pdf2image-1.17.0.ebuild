@@ -17,13 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-	app-text/poppler
+	app-text/poppler[cairo,jpeg,jpeg2k,png,tiff,utils]
 	dev-python/pillow
 "
-#BDEPEND="
-#	test? (
-#		app-text/poppler[cairo]
-#	)
-#"
 
-#distutils_enable_tests unittest
+distutils_enable_tests unittest
+distutils_enable_sphinx docs \
+	dev-python/recommonmark \
+	dev-python/sphinx-rtd-theme
