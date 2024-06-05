@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 PYTHON_REQ_USE="sqlite,tk?,xml(+)"
 
 inherit distutils-r1
@@ -37,6 +37,8 @@ BDEPEND="
 		dev-python/matplotlib[${PYTHON_USEDEP}]
 	)"
 PDEPEND="dev-python/nltk-data"
+
+PATCHES=( "${FILESDIR}/python-3.12.patch" )
 
 distutils_enable_tests pytest
 
