@@ -38,6 +38,8 @@ BDEPEND="
 	)"
 PDEPEND="dev-python/nltk-data"
 
+PATCHES=( "${FILESDIR}/python-3.12.patch" )
+
 distutils_enable_tests pytest
 
 EPYTEST_DESELECT=(
