@@ -16,3 +16,6 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
+
+distutils_enable_sphinx doc \
+	dev-python/sphinx-rtd-theme
