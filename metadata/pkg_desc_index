@@ -58,7 +58,7 @@ dev-python/shortuuid 1.0.13: A generator library for concise, unambiguous and UR
 dev-python/sphinx-click 5.1.0 6.0.0: Sphinx plugin to automatically document click-based applications
 dev-python/sphinx-hoverxref 1.4.0: Sphinx extension to show tooltips with content embedded when hover a reference
 dev-python/uvicorn 0.25.0: Lightning-fast ASGI server implementation
-dev-python/w3lib 2.1.2: Library of web-related functions
+dev-python/w3lib 2.1.2 2.2.0: Library of web-related functions
 dev-python/whitenoise 6.6.0: Radically simplified static file serving for Python web apps
 dev-util/scanmem 9999: Locate and modify variables in executing processes
 dev-util/ugtrain 9999: Universal Game Trainer
