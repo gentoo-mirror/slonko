@@ -31,15 +31,11 @@ DOCS=( README.rst )
 #		dev-python/pytz[${PYTHON_USEDEP}]
 #	)
 #"
-#
-#python_prepare_all() {
-#	# Prevent un-needed download during build
-#	sed -e "/^    include_intersphinx=/d" \
-#		-i docs/conf.py || die
-#
-#	distutils-r1_python_prepare_all
-#}
-#
+
 #distutils_enable_tests pytest
-#distutils_enable_sphinx docs \
-#	dev-python/sphinx-celery
+distutils_enable_sphinx docs \
+	dev-python/sphinx-celery
+
+#python_test() {
+#	epytest -m "not network"
+#}
