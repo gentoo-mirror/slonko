@@ -29,15 +29,17 @@ DEPEND="
 #"
 DOCS=( README.rst CHANGELOG.md )
 
-## TODO: tests
 #distutils_enable_tests pytest
-#
+distutils_enable_sphinx docs --no-autodoc
+
 #src_prepare() {
 #	sed -i -e 's/--nomigrations .*//' setup.cfg || die
 #	# Requires pip
 #	rm -f tests/management/commands/test_pipchecker.py
 #	# Requires factory
 #	rm -f tests/test_admin_filter.py
+#	# Requires smtpd (dead battery)
+#	rm -f tests/management/commands/test_export_emails.py
 #
 #	default
 #}
