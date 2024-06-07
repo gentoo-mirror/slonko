@@ -4,13 +4,13 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="13"
+K_GENPATCHES_VER="4"
 
 inherit kernel-2
 detect_version
 detect_arch
 SUBREL="hardened1"
-HARDENED_URI="https://github.com/anthraxx/linux-hardened/releases/download/${PV}-${SUBREL}/linux-hardened-${PV}-${SUBREL}.patch"
+HARDENED_URI="https://github.com/anthraxx/linux-hardened/releases/download/v${PV}-${SUBREL}/linux-hardened-v${PV}-${SUBREL}.patch"
 
 DESCRIPTION="Minimal supplement to upstream Kernel Self Protection Project"
 HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches https://github.com/anthraxx/linux-hardened"
