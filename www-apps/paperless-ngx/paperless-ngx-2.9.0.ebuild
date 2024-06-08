@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit python-single-r1 systemd
 
@@ -41,18 +41,17 @@ DEPEND="
 		dev-python/asgiref[${PYTHON_USEDEP}]
 		dev-python/bleach[${PYTHON_USEDEP}]
 		dev-python/celery[${PYTHON_USEDEP}]
-		>=dev-python/channels-4.0[${PYTHON_USEDEP}]
-		<dev-python/channels-4.1[${PYTHON_USEDEP}]
+		>=dev-python/channels-4.1[${PYTHON_USEDEP}]
 		>=dev-python/channels-redis-4.0[${PYTHON_USEDEP}]
 		dev-python/concurrent-log-handler[${PYTHON_USEDEP}]
 		>=dev-python/dateparser-1.2[${PYTHON_USEDEP}]
-		>=dev-python/django-4.2.11[${PYTHON_USEDEP}]
+		>=dev-python/django-4.2.13[${PYTHON_USEDEP}]
 		<dev-python/django-5.0[${PYTHON_USEDEP}]
 		dev-python/django-allauth[${PYTHON_USEDEP}]
 		dev-python/django-celery-results[${PYTHON_USEDEP}]
 		dev-python/django-cors-headers[${PYTHON_USEDEP}]
 		dev-python/django-extensions[${PYTHON_USEDEP}]
-		>=dev-python/django-filter-24.1[${PYTHON_USEDEP}]
+		>=dev-python/django-filter-24.2[${PYTHON_USEDEP}]
 		dev-python/django-guardian[${PYTHON_USEDEP}]
 		dev-python/django-multiselectfield[${PYTHON_USEDEP}]
 		dev-python/django-redis[${PYTHON_USEDEP}]
@@ -76,7 +75,7 @@ DEPEND="
 		dev-python/pyzbar[${PYTHON_USEDEP}]
 		dev-python/rapidfuzz[${PYTHON_USEDEP}]
 		dev-python/redis[${PYTHON_USEDEP}]
-		>=dev-python/scikit-learn-1.4
+		>=dev-python/scikit-learn-1.5
 		dev-python/tqdm[${PYTHON_USEDEP}]
 		<dev-python/uvicorn-0.26.0[${PYTHON_USEDEP}]
 		>=dev-python/watchdog-4.0[${PYTHON_USEDEP}]
@@ -92,13 +91,18 @@ DEPEND="
 		dev-python/django-compression-middleware[${PYTHON_USEDEP}]') )
 	mysql? ( dev-python/mysqlclient )
 	ocr? ( >=app-text/OCRmyPDF-15.4 )
-	postgres? ( dev-python/psycopg:2 )
+	postgres? ( $(python_gen_cond_dep '
+		dev-python/psycopg[native-extensions,${PYTHON_USEDEP}]') )
 	!remote-redis? ( dev-db/redis )
 	zxing? ( media-libs/zxing-cpp[python,${PYTHON_SINGLE_USEDEP}] )
 "
 RDEPEND="${DEPEND}"
 # dev-python/tika
 # dev-python/gotenberg-client
+
+PATCHES=(
+    "${FILESDIR}/channels-4.1.patch"
+)
 
 DOCS=( docker/imagemagick-policy.xml )
 
