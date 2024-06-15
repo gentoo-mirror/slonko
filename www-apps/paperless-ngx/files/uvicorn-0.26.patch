@@ -1,0 +1,9 @@
+--- paperless-ngx/src/paperless/workers.py.orig	2024-06-15 23:18:23.082067983 +0200
++++ paperless-ngx/src/paperless/workers.py	2024-06-15 23:20:49.754097750 +0200
+@@ -8,5 +8,5 @@
+ 
+ class ConfigurableWorker(UvicornWorker):
+     CONFIG_KWARGS = {
+-        "root_path": settings.FORCE_SCRIPT_NAME or "",
++        "root_path": "",
+     }
