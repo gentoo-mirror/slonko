@@ -1,0 +1,11 @@
+--- paperless-ngx/src/paperless/urls.py.orig	2024-05-29 23:09:03.706400691 +0200
++++ paperless-ngx/src/paperless/urls.py	2024-05-29 23:09:21.336646279 +0200
+@@ -225,7 +225,7 @@
+ 
+ 
+ websocket_urlpatterns = [
+-    path(settings.BASE_URL.lstrip("/") + "ws/status/", StatusConsumer.as_asgi()),
++    path("ws/status/", StatusConsumer.as_asgi()),
+ ]
+ 
+ # Text in each page's <h1> (and above login form).
