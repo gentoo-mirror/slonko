@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 PATCHES=(
-    "${FILESDIR}/pytest-7.2.patch"
+	"${FILESDIR}/pytest-7.2.patch"
 )
 
 DOCS=( README.rst )
