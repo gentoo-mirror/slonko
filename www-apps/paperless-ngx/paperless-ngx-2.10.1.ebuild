@@ -45,7 +45,7 @@ DEPEND="
 		>=dev-python/channels-redis-4.0[${PYTHON_USEDEP}]
 		dev-python/concurrent-log-handler[${PYTHON_USEDEP}]
 		>=dev-python/dateparser-1.2[${PYTHON_USEDEP}]
-		>=dev-python/django-4.2.11[${PYTHON_USEDEP}]
+		>=dev-python/django-4.2.13[${PYTHON_USEDEP}]
 		<dev-python/django-5.0[${PYTHON_USEDEP}]
 		dev-python/django-allauth[${PYTHON_USEDEP}]
 		dev-python/django-celery-results[${PYTHON_USEDEP}]
@@ -76,9 +76,9 @@ DEPEND="
 		dev-python/pyzbar[${PYTHON_USEDEP}]
 		dev-python/rapidfuzz[${PYTHON_USEDEP}]
 		dev-python/redis[${PYTHON_USEDEP}]
-		>=dev-python/scikit-learn-1.4
+		>=dev-python/scikit-learn-1.5
 		dev-python/tqdm[${PYTHON_USEDEP}]
-		<dev-python/uvicorn-0.26.0[${PYTHON_USEDEP}]
+		>=dev-python/uvicorn-0.26.0[${PYTHON_USEDEP}]
 		>=dev-python/watchdog-4.0[${PYTHON_USEDEP}]
 		>=dev-python/whitenoise-6.6[${PYTHON_USEDEP}]
 		>=dev-python/whoosh-2.7[${PYTHON_USEDEP}]')
@@ -92,7 +92,8 @@ DEPEND="
 		dev-python/django-compression-middleware[${PYTHON_USEDEP}]') )
 	mysql? ( dev-python/mysqlclient )
 	ocr? ( >=app-text/OCRmyPDF-15.4 )
-	postgres? ( dev-python/psycopg:2 )
+	postgres? ( $(python_gen_cond_dep '
+		dev-python/psycopg[native-extensions,${PYTHON_USEDEP}]') )
 	!remote-redis? ( dev-db/redis )
 	zxing? ( media-libs/zxing-cpp[python,${PYTHON_SINGLE_USEDEP}] )
 "
