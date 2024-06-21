@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 optfeature shell-completion
 
@@ -19,7 +19,6 @@ IUSE="bash-completion fish-completion"
 
 RDEPEND="
 	>=app-text/ghostscript-gpl-9.54
-	<app-text/ghostscript-gpl-10.03.0
 	>=app-text/pdfminer-20220319[${PYTHON_USEDEP}]
 	>=app-text/tesseract-4.1.1[jpeg,tiff,png,webp]
 	>=dev-python/deprecation-2.1.0[${PYTHON_USEDEP}]
