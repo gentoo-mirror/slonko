@@ -35,7 +35,7 @@ BDEPEND="
 		>=app-text/unpaper-6.1
 		>=dev-python/hypothesis-6.36.0[${PYTHON_USEDEP}]
 		dev-python/pytest-helpers-namespace[${PYTHON_USEDEP}]
-		~dev-python/python-xmp-toolkit-2.0.1[${PYTHON_USEDEP}]
+		dev-python/python-xmp-toolkit[${PYTHON_USEDEP}]
 		>=dev-python/reportlab-3.6.8[${PYTHON_USEDEP}]
 		media-libs/exempi
 		>=media-libs/jbig2enc-0.29
