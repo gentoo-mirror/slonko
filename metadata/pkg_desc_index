@@ -6,8 +6,8 @@ acct-user/paperless 0: User for Paperless services
 acct-user/sympa 0: User for Sympa daemon
 acct-user/tibber-exporter 0: A user for app-metrics/tibber-exporter
 acct-user/vaultwarden 0: System user: vaultwarden
-app-admin/vaultwarden 1.29.2 1.30.5: Unofficial Bitwarden compatible server written in Rust
-app-admin/vaultwarden-web-vault 2024.5.0 2024.5.1: Unofficial patched bitwarden web-vault builds for vaultwarden
+app-admin/vaultwarden 1.30.5 1.31.0: Unofficial Bitwarden compatible server written in Rust
+app-admin/vaultwarden-web-vault 2024.5.1 2024.5.1b: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.6.1: GZIP files indexer, compressor and data retriever.
 app-metrics/tibber-exporter 3.7.1: Monitor your power usage and costs with Prometheus and Grafana
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
@@ -58,7 +58,6 @@ dev-python/python3-openid 3.2.0: OpenID support for modern servers and consumers
 dev-python/shortuuid 1.0.13: A generator library for concise, unambiguous and URL-safe UUIDs.
 dev-python/sphinx-click 5.1.0 6.0.0: Sphinx plugin to automatically document click-based applications
 dev-python/sphinx-hoverxref 1.4.0: Sphinx extension to show tooltips with content embedded when hover a reference
-dev-python/uvicorn 0.25.0: Lightning-fast ASGI server implementation
 dev-python/w3lib 2.1.2 2.2.0: Library of web-related functions
 dev-python/whitenoise 6.6.0: Radically simplified static file serving for Python web apps
 dev-util/scanmem 9999: Locate and modify variables in executing processes
