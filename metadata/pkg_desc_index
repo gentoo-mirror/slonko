@@ -39,7 +39,7 @@ dev-python/django-guardian 2.4.0: Implementation of per object permissions for D
 dev-python/django-multiselectfield 0.1.12: Django multiple select field
 dev-python/django-picklefield 3.2.0: Pickled object field for Django
 dev-python/django-soft-delete 1.0.13: Soft delete models, managers, queryset for Django
-dev-python/djangorestframework 3.14.0 3.15.2: Web APIs with django made easy
+dev-python/djangorestframework 3.14.0: Web APIs with django made easy
 dev-python/djangorestframework-guardian 0.3.0: django-guardian support for Django REST Framework
 dev-python/drf-writable-nested 0.7.0: Writable nested helpers for django-rest-framework's serializers
 dev-python/hijridate 2.4.1 2.5.0: Hijri-Gregorian date converter
