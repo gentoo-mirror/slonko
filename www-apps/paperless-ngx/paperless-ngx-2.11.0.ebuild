@@ -45,8 +45,7 @@ DEPEND="
 		>=dev-python/channels-redis-4.0[${PYTHON_USEDEP}]
 		dev-python/concurrent-log-handler[${PYTHON_USEDEP}]
 		>=dev-python/dateparser-1.2[${PYTHON_USEDEP}]
-		>=dev-python/django-4.2.13[${PYTHON_USEDEP}]
-		<dev-python/django-5.0[${PYTHON_USEDEP}]
+		>=dev-python/django-5.0[${PYTHON_USEDEP}]
 		dev-python/django-allauth[${PYTHON_USEDEP}]
 		dev-python/django-celery-results[${PYTHON_USEDEP}]
 		dev-python/django-cors-headers[${PYTHON_USEDEP}]
@@ -55,7 +54,8 @@ DEPEND="
 		dev-python/django-guardian[${PYTHON_USEDEP}]
 		dev-python/django-multiselectfield[${PYTHON_USEDEP}]
 		dev-python/django-redis[${PYTHON_USEDEP}]
-		~dev-python/djangorestframework-3.14.0[${PYTHON_USEDEP}]
+		dev-python/django-soft-delete[${PYTHON_USEDEP}]
+		>=dev-python/djangorestframework-3.15.2[${PYTHON_USEDEP}]
 		dev-python/djangorestframework-guardian[${PYTHON_USEDEP}]
 		dev-python/drf-writable-nested[${PYTHON_USEDEP}]
 		dev-python/filelock[${PYTHON_USEDEP}]
@@ -79,7 +79,7 @@ DEPEND="
 		dev-python/tqdm[${PYTHON_USEDEP}]
 		>=dev-python/uvicorn-0.26.0[${PYTHON_USEDEP}]
 		>=dev-python/watchdog-4.0[${PYTHON_USEDEP}]
-		>=dev-python/whitenoise-6.6[${PYTHON_USEDEP}]
+		>=dev-python/whitenoise-6.7[${PYTHON_USEDEP}]
 		>=dev-python/whoosh-2.7[${PYTHON_USEDEP}]')
 	media-gfx/imagemagick[xml]
 	media-gfx/optipng
@@ -101,6 +101,7 @@ RDEPEND="${DEPEND}"
 # dev-python/gotenberg-client
 
 PATCHES=(
+    "${FILESDIR}/uvicorn-0.26.patch"
     "${FILESDIR}/channels-4.1.patch"
 )
 
