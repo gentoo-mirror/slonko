@@ -1,0 +1,17 @@
+BDEPEND=test? ( app-arch/brotli[python,python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] ) test? ( >=dev-python/pytest-7.4.4[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] ) doc? ( || ( ( dev-lang/python:3.12 >=dev-python/sphinx-7.2.6[python_targets_python3_12(-)] dev-python/furo[python_targets_python3_12(-)] ) ( dev-lang/python:3.11 >=dev-python/sphinx-7.2.6[python_targets_python3_11(-)] dev-python/furo[python_targets_python3_11(-)] ) ( dev-lang/python:3.10 >=dev-python/sphinx-7.2.6[python_targets_python3_10(-)] dev-python/furo[python_targets_python3_10(-)] ) ) ) python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) python_targets_python3_12? ( dev-lang/python:3.12 ) >=dev-python/gpep517-15[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] >=dev-python/setuptools-69.0.3[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?]
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=dev-python/django[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?]
+DESCRIPTION=Radically simplified static file serving for Python web apps
+EAPI=8
+HOMEPAGE=https://github.com/evansd/whitenoise
+INHERIT=distutils-r1 optfeature
+IUSE=test doc python_targets_python3_10 python_targets_python3_11 python_targets_python3_12
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) python_targets_python3_12? ( dev-lang/python:3.12 )
+REQUIRED_USE=|| ( python_targets_python3_10 python_targets_python3_11 python_targets_python3_12 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/evansd/whitenoise/archive/6.7.0.tar.gz -> whitenoise-6.7.0.gh.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	d67e78a235f541871c7dfe4cf7931489	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	8b220bbce5c119fb1d4d5c2f5588f3ea	python-r1	428f5c53276c2adc06a89108fc2f9f46	distutils-r1	f11e1bc907da246e941fbae648327823	optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54
+_md5_=2b8f24510f8a31175726a879f7f05eac
