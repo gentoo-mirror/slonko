@@ -18,7 +18,6 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="MIT"
 # this should probably be pkgmoved to 2.0 for sake of consistency.
 SLOT="2"
-KEYWORDS="amd64 arm arm64 -hppa ~mips ppc -riscv -sparc x86 ~amd64-linux ~x86-linux"
 IUSE="lua52compat static-libs"
 
 _emake() {
