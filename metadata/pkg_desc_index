@@ -13,7 +13,7 @@ app-metrics/tibber-exporter 3.7.1: Monitor your power usage and costs with Prome
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 app-text/OCRmyPDF 16.3.1 16.4.1: OCRmyPDF adds an OCR text layer to scanned PDF files
-dev-lang/luajit 2.1.9999: Just-In-Time Compiler for the Lua programming language
+dev-lang/luajit 9999: Just-In-Time Compiler for the Lua programming language
 dev-libs/fastText 0.9.2-r1: Library for fast text representation and classification
 dev-lua/resty-core 0.1.23 0.1.27: New LuaJIT FFI based API for lua-nginx-module
 dev-lua/resty-http 0.17.1: Lua HTTP client cosocket driver for OpenResty / ngx_lua
