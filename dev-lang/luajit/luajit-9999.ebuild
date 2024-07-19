@@ -1,12 +1,11 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit pax-utils toolchain-funcs git-r3
+inherit toolchain-funcs git-r3
 
-MY_PV="$(ver_cut 1-5)"
-MY_PV="${MY_PV/_beta/-beta}"
+MY_PV="2.1"
 MY_P="LuaJIT-${MY_PV}"
 
 DESCRIPTION="Just-In-Time Compiler for the Lua programming language"
@@ -19,7 +18,7 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="MIT"
 # this should probably be pkgmoved to 2.0 for sake of consistency.
 SLOT="2"
-KEYWORDS="~arm64 -hppa -riscv -sparc"
+KEYWORDS="amd64 arm arm64 -hppa ~mips ppc -riscv -sparc x86 ~amd64-linux ~x86-linux"
 IUSE="lua52compat static-libs"
 
 _emake() {
@@ -42,8 +41,6 @@ _emake() {
 		BUILDMODE="$(usex static-libs mixed dynamic)" \
 		TARGET_STRIP="true" \
 		INSTALL_LIB="${ED}/usr/$(get_libdir)" \
-		RELVER=$(ver_cut 3) \
-		PREREL= \
 		"$@"
 }
 
@@ -54,8 +51,7 @@ src_compile() {
 
 src_install() {
 	_emake install
-
-	pax-mark m "${ED}/usr/bin/luajit-${MY_PV}"
+	dosym luajit-"${PV}" /usr/bin/luajit
 
 	HTML_DOCS="doc/." einstalldocs
 }
