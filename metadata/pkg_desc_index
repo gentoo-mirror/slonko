@@ -75,5 +75,5 @@ net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunn
 sys-kernel/hardened-sources 5.10.216 5.10.221 5.10.222 5.15.158 5.15.162 5.15.163 6.1.90 6.1.97 6.1.98 6.1.99 6.1.100 6.6.30 6.6.37 6.6.38 6.6.40 6.6.41 6.9.8 6.9.9 6.9.10: Minimal supplement to upstream Kernel Self Protection Project
 sys-kernel/it87 9999: IT8705F/IT871xF/IT872xF hardware monitoring driver
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
-www-apps/paperless-ngx 2.10.2 2.11.0: Community supported paperless: scan, index and archive your physical documents
+www-apps/paperless-ngx 2.10.2 2.11.1: Community supported paperless: scan, index and archive your physical documents
 x11-wm/compiz 9999: OpenGL window and compositing manager
