@@ -91,7 +91,7 @@ DEPEND="
 	compression? ( $(python_gen_cond_dep '
 		dev-python/django-compression-middleware[${PYTHON_USEDEP}]') )
 	mysql? ( dev-python/mysqlclient )
-	ocr? ( >=app-text/OCRmyPDF-15.4 )
+	ocr? ( >=app-text/OCRmyPDF-15.4 <app-text/OCRmyPDF-16.4 )
 	postgres? ( $(python_gen_cond_dep '
 		dev-python/psycopg[native-extensions,${PYTHON_USEDEP}]') )
 	!remote-redis? ( dev-db/redis )
