@@ -34,6 +34,12 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/0002-Fix-crash.patch"
+	"${FILESDIR}/0003-Use-XDG-open-to-open-the-directory.patch"
+	"${FILESDIR}/0004-Fix-a-crash-on-an-OOB-container-access.patch"
+)
+
 src_prepare() {
 	sed -i \
 		-e '/\(execute_process.*\)${EPSON_INSTALL_ROOT}/d' \
