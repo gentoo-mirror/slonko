@@ -12,7 +12,7 @@ app-arch/gztool 1.6.1: GZIP files indexer, compressor and data retriever.
 app-metrics/tibber-exporter 3.7.1: Monitor your power usage and costs with Prometheus and Grafana
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
-app-text/OCRmyPDF 16.3.1 16.4.3: OCRmyPDF adds an OCR text layer to scanned PDF files
+app-text/OCRmyPDF 16.3.1 16.5.0: OCRmyPDF adds an OCR text layer to scanned PDF files
 dev-lang/luajit 9999: Just-In-Time Compiler for the Lua programming language
 dev-libs/fastText 0.9.2-r1: Library for fast text representation and classification
 dev-lua/resty-core 0.1.23 0.1.27: New LuaJIT FFI based API for lua-nginx-module
