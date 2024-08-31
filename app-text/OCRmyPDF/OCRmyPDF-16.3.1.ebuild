@@ -10,7 +10,13 @@ inherit distutils-r1 optfeature shell-completion
 
 DESCRIPTION="OCRmyPDF adds an OCR text layer to scanned PDF files"
 HOMEPAGE="https://github.com/ocrmypdf/OCRmyPDF"
-SRC_URI="https://github.com/ocrmypdf/OCRmyPDF/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
+if [[ "${PV}" =~ 9999 ]]; then
+    inherit git-r3
+    EGIT_REPO_URI="https://github.com/ocrmypdf/OCRmyPDF"
+else
+	SRC_URI="https://github.com/ocrmypdf/OCRmyPDF/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+fi
 
 LICENSE="MPL-2.0"
 SLOT="0"
