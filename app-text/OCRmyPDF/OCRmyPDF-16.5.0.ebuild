@@ -12,8 +12,8 @@ DESCRIPTION="OCRmyPDF adds an OCR text layer to scanned PDF files"
 HOMEPAGE="https://github.com/ocrmypdf/OCRmyPDF"
 
 if [[ "${PV}" =~ 9999 ]]; then
-    inherit git-r3
-    EGIT_REPO_URI="https://github.com/ocrmypdf/OCRmyPDF"
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/ocrmypdf/OCRmyPDF"
 else
 	SRC_URI="https://github.com/ocrmypdf/OCRmyPDF/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
