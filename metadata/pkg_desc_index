@@ -21,7 +21,7 @@ dev-lua/resty-lrucache 0.13: A simple LRU cache for OpenResty and the ngx_lua mo
 dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
 dev-python/PyMeeus 0.5.12: Python implementation of Jean Meeus astronomical routines
 dev-python/billiard 3.6.4.0 4.2.0: Python multiprocessing fork
-dev-python/celery 5.3.6: Asynchronous task queue/job queue based on distributed message passing
+dev-python/celery 5.3.6 5.4.0: Asynchronous task queue/job queue based on distributed message passing
 dev-python/channels 3.0.5 4.0.0 4.1.0: Extends Django abilities beyond HTTP protocol
 dev-python/channels-redis 4.1.0: Provides Django Channels channel layers that use Redis as a backing store.
 dev-python/click-repl 0.2.0 0.3.0: Subcommand REPL for click apps
@@ -51,7 +51,7 @@ dev-python/nltk 3.7 3.8.1: Natural Language Toolkit
 dev-python/nltk-data 20230202: Data files for NLTK
 dev-python/parsel 1.9.1: Utility to extract data from XML/HTML documents using XPath or CSS selectors
 dev-python/pdf2image 1.16.3 1.17.0: Module that wraps pdftoppm and pdftocairo to convert PDF to a PIL Image object
-dev-python/pytest-celery 0.1.0: a shim pytest plugin to enable celery.contrib.pytest
+dev-python/pytest-celery 0.1.0 1.1.1: a shim pytest plugin to enable celery.contrib.pytest
 dev-python/pytest-click 1.1.0: Pytest plugin for Click
 dev-python/python-ipware 2.0.0 3.0.0: A Python package to retrieve user's IP address
 dev-python/python3-openid 3.2.0: OpenID support for modern servers and consumers
