@@ -20,7 +20,7 @@ dev-lua/resty-http 0.17.1: Lua HTTP client cosocket driver for OpenResty / ngx_l
 dev-lua/resty-lrucache 0.13: A simple LRU cache for OpenResty and the ngx_lua module (based on LuaJIT FFI)
 dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
 dev-python/PyMeeus 0.5.12: Python implementation of Jean Meeus astronomical routines
-dev-python/billiard 3.6.4.0 4.2.0: Python multiprocessing fork
+dev-python/billiard 3.6.4.0 4.2.1: Python multiprocessing fork
 dev-python/celery 5.3.6 5.4.0: Asynchronous task queue/job queue based on distributed message passing
 dev-python/channels 3.0.5 4.0.0 4.1.0: Extends Django abilities beyond HTTP protocol
 dev-python/channels-redis 4.1.0: Provides Django Channels channel layers that use Redis as a backing store.
