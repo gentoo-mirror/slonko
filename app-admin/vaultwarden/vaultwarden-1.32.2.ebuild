@@ -4,7 +4,7 @@
 EAPI=8
 
 CRATES="
-	addr2line@0.24.1
+	addr2line@0.24.2
 	adler2@2.0.0
 	ahash@0.8.11
 	aho-corasick@1.1.3
@@ -16,7 +16,7 @@ CRATES="
 	argon2@0.5.3
 	async-channel@1.9.0
 	async-channel@2.3.1
-	async-compression@0.4.12
+	async-compression@0.4.14
 	async-executor@1.13.1
 	async-global-executor@2.4.1
 	async-io@2.3.4
@@ -24,14 +24,14 @@ CRATES="
 	async-process@2.3.0
 	async-signal@0.2.10
 	async-std@1.13.0
-	async-stream@0.3.5
-	async-stream-impl@0.3.5
+	async-stream@0.3.6
+	async-stream-impl@0.3.6
 	async-task@4.7.1
-	async-trait@0.1.82
+	async-trait@0.1.83
 	atomic@0.5.3
 	atomic@0.6.0
 	atomic-waker@1.1.2
-	autocfg@1.3.0
+	autocfg@1.4.0
 	backtrace@0.3.74
 	base64@0.13.1
 	base64@0.21.7
@@ -44,7 +44,7 @@ CRATES="
 	blake2@0.10.6
 	block-buffer@0.10.4
 	blocking@1.6.1
-	brotli@6.0.0
+	brotli@7.0.0
 	brotli-decompressor@4.0.1
 	bumpalo@3.16.0
 	bytemuck@1.18.0
@@ -53,7 +53,7 @@ CRATES="
 	cached@0.53.1
 	cached_proc_macro@0.23.0
 	cached_proc_macro_types@0.1.1
-	cc@1.1.21
+	cc@1.1.29
 	cfg-if@1.0.0
 	chrono@0.4.38
 	chrono-tz@0.10.0
@@ -103,26 +103,26 @@ CRATES="
 	fastrand@2.1.1
 	fern@0.6.2
 	figment@0.10.19
-	flate2@1.0.33
+	flate2@1.0.34
 	fnv@1.0.7
 	foreign-types@0.3.2
 	foreign-types-shared@0.1.1
 	form_urlencoded@1.2.1
-	futures@0.3.30
-	futures-channel@0.3.30
-	futures-core@0.3.30
-	futures-executor@0.3.30
-	futures-io@0.3.30
+	futures@0.3.31
+	futures-channel@0.3.31
+	futures-core@0.3.31
+	futures-executor@0.3.31
+	futures-io@0.3.31
 	futures-lite@2.3.0
-	futures-macro@0.3.30
-	futures-sink@0.3.30
-	futures-task@0.3.30
+	futures-macro@0.3.31
+	futures-sink@0.3.31
+	futures-task@0.3.31
 	futures-timer@3.0.3
-	futures-util@0.3.30
+	futures-util@0.3.31
 	generator@0.7.5
 	generic-array@0.14.7
 	getrandom@0.2.15
-	gimli@0.31.0
+	gimli@0.31.1
 	glob@0.3.1
 	gloo-timers@0.3.0
 	governor@0.6.3
@@ -131,6 +131,7 @@ CRATES="
 	half@1.8.3
 	handlebars@6.1.0
 	hashbrown@0.14.5
+	hashbrown@0.15.0
 	heck@0.5.0
 	hermit-abi@0.3.9
 	hermit-abi@0.4.0
@@ -146,14 +147,14 @@ CRATES="
 	http-body@0.4.6
 	http-body@1.0.1
 	http-body-util@0.1.2
-	httparse@1.9.4
+	httparse@1.9.5
 	httpdate@1.0.3
 	hyper@0.14.30
 	hyper@1.4.1
 	hyper-rustls@0.27.3
 	hyper-tls@0.5.0
 	hyper-tls@0.6.0
-	hyper-util@0.1.8
+	hyper-util@0.1.9
 	iana-time-zone@0.1.61
 	iana-time-zone-haiku@0.1.2
 	icu_collections@1.5.0
@@ -171,20 +172,20 @@ CRATES="
 	idna@0.4.0
 	idna@0.5.0
 	idna@1.0.2
-	indexmap@2.5.0
+	indexmap@2.6.0
 	inlinable_string@0.1.15
 	ipconfig@0.3.2
-	ipnet@2.10.0
+	ipnet@2.10.1
 	is-terminal@0.4.13
 	itoa@1.0.11
 	jetscii@0.5.3
 	job_scheduler_ng@2.0.5
-	js-sys@0.3.70
+	js-sys@0.3.72
 	jsonwebtoken@9.3.0
 	kv-log-macro@1.0.7
 	lazy_static@1.5.0
 	lettre@0.11.9
-	libc@0.2.158
+	libc@0.2.159
 	libm@0.2.8
 	libmimalloc-sys@0.1.39
 	libsqlite3-sys@0.30.1
@@ -219,8 +220,8 @@ CRATES="
 	num-traits@0.2.19
 	num_cpus@1.16.0
 	num_threads@0.1.7
-	object@0.36.4
-	once_cell@1.19.0
+	object@0.36.5
+	once_cell@1.20.2
 	openssl@0.10.66
 	openssl-macros@0.1.1
 	openssl-probe@0.1.5
@@ -246,18 +247,16 @@ CRATES="
 	phf_generator@0.11.2
 	phf_shared@0.11.2
 	pico-args@0.5.0
-	pin-project@1.1.5
-	pin-project-internal@1.1.5
 	pin-project-lite@0.2.14
 	pin-utils@0.1.0
 	piper@0.2.4
 	pkg-config@0.3.31
 	polling@3.7.3
-	portable-atomic@1.8.0
+	portable-atomic@1.9.0
 	powerfmt@0.2.0
 	ppv-lite86@0.2.20
 	pq-sys@0.6.3
-	proc-macro2@1.0.86
+	proc-macro2@1.0.87
 	proc-macro2-diagnostics@0.10.1
 	psl-types@2.0.11
 	psm@0.1.23
@@ -270,18 +269,18 @@ CRATES="
 	rand@0.8.5
 	rand_chacha@0.3.1
 	rand_core@0.6.4
-	raw-cpuid@11.1.0
-	redox_syscall@0.5.4
+	raw-cpuid@11.2.0
+	redox_syscall@0.5.7
 	ref-cast@1.0.23
 	ref-cast-impl@1.0.23
-	regex@1.10.6
+	regex@1.11.0
 	regex-automata@0.1.10
-	regex-automata@0.4.7
+	regex-automata@0.4.8
 	regex-syntax@0.6.29
-	regex-syntax@0.8.4
+	regex-syntax@0.8.5
 	reopen@1.0.3
 	reqwest@0.11.27
-	reqwest@0.12.7
+	reqwest@0.12.8
 	resolv-conf@0.7.0
 	ring@0.17.8
 	rmp@0.8.14
@@ -295,16 +294,16 @@ CRATES="
 	rustc-demangle@0.1.24
 	rustix@0.38.37
 	rustls@0.21.12
-	rustls@0.23.13
+	rustls@0.23.14
 	rustls-pemfile@1.0.4
-	rustls-pemfile@2.1.3
-	rustls-pki-types@1.8.0
+	rustls-pemfile@2.2.0
+	rustls-pki-types@1.9.0
 	rustls-webpki@0.101.7
 	rustls-webpki@0.102.8
 	rustversion@1.0.17
 	ryu@1.0.18
 	same-file@1.0.6
-	schannel@0.1.24
+	schannel@0.1.26
 	scheduled-thread-pool@0.2.7
 	scoped-tls@1.0.1
 	scopeguard@1.2.0
@@ -316,7 +315,7 @@ CRATES="
 	serde_cbor@0.11.2
 	serde_derive@1.0.210
 	serde_json@1.0.128
-	serde_spanned@0.6.7
+	serde_spanned@0.6.8
 	serde_urlencoded@0.7.1
 	sha1@0.10.6
 	sha2@0.10.8
@@ -337,7 +336,7 @@ CRATES="
 	state@0.6.0
 	strsim@0.11.1
 	subtle@2.6.1
-	syn@2.0.77
+	syn@2.0.79
 	sync_wrapper@0.1.2
 	sync_wrapper@1.0.1
 	synstructure@0.13.1
@@ -346,7 +345,7 @@ CRATES="
 	system-configuration@0.6.1
 	system-configuration-sys@0.5.0
 	system-configuration-sys@0.6.0
-	tempfile@3.12.0
+	tempfile@3.13.0
 	thiserror@1.0.64
 	thiserror-impl@1.0.64
 	thread_local@1.1.8
@@ -368,10 +367,8 @@ CRATES="
 	tokio-util@0.7.12
 	toml@0.8.19
 	toml_datetime@0.6.8
-	toml_edit@0.22.21
+	toml_edit@0.22.22
 	totp-lite@2.0.1
-	tower@0.4.13
-	tower-layer@0.3.3
 	tower-service@0.3.3
 	tracing@0.1.40
 	tracing-attributes@0.1.27
@@ -382,9 +379,9 @@ CRATES="
 	tungstenite@0.21.0
 	typenum@1.17.0
 	ubyte@0.10.4
-	ucd-trie@0.1.6
+	ucd-trie@0.1.7
 	uncased@0.9.10
-	unicode-bidi@0.3.15
+	unicode-bidi@0.3.17
 	unicode-ident@1.0.13
 	unicode-normalization@0.1.24
 	unicode-xid@0.2.6
@@ -401,14 +398,14 @@ CRATES="
 	walkdir@2.5.0
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen@0.2.93
-	wasm-bindgen-backend@0.2.93
-	wasm-bindgen-futures@0.4.43
-	wasm-bindgen-macro@0.2.93
-	wasm-bindgen-macro-support@0.2.93
-	wasm-bindgen-shared@0.2.93
-	wasm-streams@0.4.0
-	web-sys@0.3.70
+	wasm-bindgen@0.2.95
+	wasm-bindgen-backend@0.2.95
+	wasm-bindgen-futures@0.4.45
+	wasm-bindgen-macro@0.2.95
+	wasm-bindgen-macro-support@0.2.95
+	wasm-bindgen-shared@0.2.95
+	wasm-streams@0.4.1
+	web-sys@0.3.72
 	web-time@1.1.0
 	webauthn-rs@0.3.2
 	which@6.0.3
@@ -443,7 +440,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
-	winnow@0.6.18
+	winnow@0.6.20
 	winreg@0.50.0
 	winsafe@0.0.19
 	write16@1.0.0
