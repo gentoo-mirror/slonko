@@ -4,9 +4,9 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="237"
+K_GENPATCHES_VER="14"
 
-inherit kernel-2
+inherit check-reqs kernel-2
 detect_version
 detect_arch
 SUBREL="hardened1"
@@ -15,10 +15,15 @@ HARDENED_URI="https://github.com/anthraxx/linux-hardened/releases/download/v${PV
 DESCRIPTION="Minimal supplement to upstream Kernel Self Protection Project"
 HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches https://github.com/anthraxx/linux-hardened"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${HARDENED_URI} ${ARCH_URI}"
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 IUSE="experimental"
-UNIPATCH_LIST="${FILESDIR}/9999_revert-conflicts-v1.patch ${DISTDIR}/linux-hardened-v${PV%.0}-${SUBREL}.patch ${FILESDIR}/linux-hardened-gentoo-v1.patch"
+UNIPATCH_LIST="${FILESDIR}/9999_revert-conflicts-v2.patch ${DISTDIR}/linux-hardened-v${PV%.0}-${SUBREL}.patch"
 UNIPATCH_EXCLUDE="1510_fs-enable-link-security-restrictions-by-default.patch"
+
+pkg_pretend() {
+	CHECKREQS_DISK_BUILD="4G"
+	check-reqs_pkg_pretend
+}
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
