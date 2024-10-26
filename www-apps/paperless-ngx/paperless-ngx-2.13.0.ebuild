@@ -105,7 +105,6 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/uvicorn-0.26.patch"
-	"${FILESDIR}/channels-4.1.patch"
 )
 
 DOCS=( docker/imagemagick-policy.xml )
