@@ -82,7 +82,7 @@ DEPEND="
 		dev-python/tqdm[${PYTHON_USEDEP}]
 		>=dev-python/uvicorn-0.26.0[${PYTHON_USEDEP}]
 		>=dev-python/watchdog-4.0[${PYTHON_USEDEP}]
-		>=dev-python/whitenoise-6.7[${PYTHON_USEDEP}]
+		>=dev-python/whitenoise-6.8[${PYTHON_USEDEP}]
 		>=dev-python/whoosh-2.7[${PYTHON_USEDEP}]')
 	media-gfx/imagemagick[xml]
 	media-gfx/optipng
