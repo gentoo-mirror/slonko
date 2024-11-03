@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DISTUTILS_USE_PEP517=setuptools
+DISTUTILS_USE_PEP517=hatchling
 PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 optfeature shell-completion
@@ -36,7 +36,7 @@ RDEPEND="
 	>=media-gfx/img2pdf-0.5[${PYTHON_USEDEP}]
 "
 BDEPEND="
-	>=dev-python/setuptools-scm-7.0.5[${PYTHON_USEDEP}]
+	dev-python/hatch-vcs[${PYTHON_USEDEP}]
 	test? (
 		>=app-text/unpaper-6.1
 		>=dev-python/hypothesis-6.36.0[${PYTHON_USEDEP}]
@@ -59,8 +59,6 @@ EPYTEST_DESELECT=(
 	# Causes pytest INTERNALERROR
 	'tests/test_metadata.py::test_malformed_docinfo'
 )
-
-export SETUPTOOLS_SCM_PRETEND_VERSION=${PV}
 
 src_prepare() {
 	distutils-r1_src_prepare
