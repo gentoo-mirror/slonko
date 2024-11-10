@@ -74,8 +74,8 @@ distutils_enable_tests pytest
 distutils_enable_sphinx docs --no-autodoc
 
 EPYTEST_DESELECT=(
-    # Failing tests
-    t/unit/utils/test_platforms.py::test_fd_by_path
+	# Failing tests
+	t/unit/utils/test_platforms.py::test_fd_by_path
 	t/unit/utils/test_platforms.py::test_DaemonContext::test_open
 )
 
