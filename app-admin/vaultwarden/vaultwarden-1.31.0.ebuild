@@ -3,6 +3,8 @@
 
 EAPI=8
 
+RUST_MIN_VER=1.78.0
+
 CRATES="
 	addr2line@0.22.0
 	adler@1.0.2
@@ -463,7 +465,6 @@ ACCT_DEPEND="
 DEPEND="
 	${ACCT_DEPEND}
 	dev-libs/openssl:0=
-	>=virtual/rust-1.78.0
 	sqlite? ( system-sqlite? ( >=dev-db/sqlite-3.45.0:3 ) )
 	web? ( >=app-admin/vaultwarden-web-vault-2024.5.1b )
 "
