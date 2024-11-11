@@ -63,7 +63,7 @@ DEPEND="
 		dev-python/httpx-oauth[${PYTHON_USEDEP}]
 		dev-python/imap-tools[${PYTHON_USEDEP}]
 		>=dev-python/inotifyrecursive-0.3[${PYTHON_USEDEP}]
-		>=dev-python/jinja-3.1[${PYTHON_USEDEP}]
+		>=dev-python/jinja2-3.1[${PYTHON_USEDEP}]
 		dev-python/langdetect[${PYTHON_USEDEP}]
 		dev-python/nltk[${PYTHON_USEDEP}]
 		dev-python/pathvalidate[${PYTHON_USEDEP}]
