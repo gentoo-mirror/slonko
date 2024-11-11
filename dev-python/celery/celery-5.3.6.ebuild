@@ -63,7 +63,7 @@ BDEPEND="
 		dev-python/docutils[${PYTHON_USEDEP}]
 		>=dev-python/sphinx-celery-2.0.0[${PYTHON_USEDEP}]
 		>=dev-python/sphinx-click-4.4.0[${PYTHON_USEDEP}]
-		dev-python/jinja[${PYTHON_USEDEP}]
+		dev-python/jinja2[${PYTHON_USEDEP}]
 		dev-python/sqlalchemy[${PYTHON_USEDEP}]
 	)
 "

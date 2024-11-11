@@ -57,7 +57,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
 	x11-base/xorg-proto
 	virtual/pkgconfig
-	dbus? ( dev-python/jinja )
+	dbus? ( dev-python/jinja2 )
 	doc? (
 		app-text/docbook-sgml-utils
 		app-text/xmlto )
