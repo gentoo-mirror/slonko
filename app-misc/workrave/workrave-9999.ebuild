@@ -32,7 +32,7 @@ RDEPEND="
 	>=dev-libs/boost-1.73.0
 	dbus? (
 		${PYTHON_DEPS}
-		dev-python/jinja
+		dev-python/jinja2
 	)
 	gstreamer? ( media-libs/gstreamer:1.0 )
 	gtk? (

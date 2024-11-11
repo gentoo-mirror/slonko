@@ -31,7 +31,7 @@ RDEPEND="
 pkg_postinst() {
 	optfeature "commandline interface" dev-python/fastapi-cli
 	optfeature "test client" dev-python/httpx
-	optfeature "templates" dev-python/jinja
+	optfeature "templates" dev-python/jinja2
 	optfeature "forms and file uploads" dev-python/python-multipart
 	optfeature "validate emails" dev-python/email-validator
 	optfeature "uvicorn with uvloop" dev-python/uvicorn
