@@ -22,4 +22,5 @@ www-apps/paperless-ngx:compression - Enable compression of the responses in appl
 www-apps/paperless-ngx:ocr - Enable support for Optical Character Recognition
 www-apps/paperless-ngx:remote-redis - Use remote Redis instance
 www-apps/paperless-ngx:zxing - Use zxing-cpp as an alternative barcodes scanning library
-x11-wm/compiz:gles - Enable support for GLES
+x11-wm/compiz:gles - Build against GLESv2 instead of GL
+x11-wm/compiz:protobuf - Use Google Protocol Buffers library for faster XML loading
