@@ -21,7 +21,7 @@ HOMEPAGE="https://launchpad.net/compiz"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 
-IUSE="+cairo debug dbus gles gnome gtk kde +svg test"
+IUSE="+cairo debug dbus gles gnome gtk kde +protobuf +svg test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RESTRICT="!test? ( test )"
 
@@ -36,7 +36,6 @@ COMMONDEPEND="
 		dev-python/cython[${PYTHON_USEDEP}]
 		dev-python/setuptools[${PYTHON_USEDEP}]
 	')
-	dev-libs/protobuf
 	media-libs/libpng
 	x11-base/xorg-server
 	x11-libs/libX11
@@ -53,6 +52,7 @@ COMMONDEPEND="
 	virtual/opengl
 	virtual/glu
 	cairo? ( x11-libs/cairo[X] )
+	dbus? ( sys-apps/dbus )
 	gtk? (
 		x11-libs/gtk+:3
 		x11-libs/libwnck:3
@@ -63,11 +63,12 @@ COMMONDEPEND="
 		)
 	)
 	kde? ( kde-plasma/kwin )
+	protobuf? ( dev-libs/protobuf )
 	svg? (
 		gnome-base/librsvg:2
 		x11-libs/cairo
 	)
-	dbus? ( sys-apps/dbus )"
+"
 
 DEPEND="${COMMONDEPEND}
 	app-admin/chrpath
@@ -110,8 +111,9 @@ src_configure() {
 	local mycmakeargs=(
 		-DUSE_GLES=$(usex gles)
 		-DUSE_GNOME=$(usex gnome)
-		-DUSE_METACITY=$(usex gnome)
 		-DUSE_GTK=$(usex gtk)
+		-DUSE_METACITY=$(usex gnome)
+		-DUSE_PROTOBUF=$(usex protobuf)
 		-DCMAKE_CXX_STANDARD=17
 		-DCMAKE_BUILD_TYPE=Release
 		-DCOMPIZ_BUILD_TESTING=$(usex test)

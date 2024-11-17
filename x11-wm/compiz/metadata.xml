@@ -6,7 +6,8 @@
 		<name>Marcin Deranek</name>
 	</maintainer>
 	<use>
-		<flag name="gles">Enable support for GLES</flag>
+		<flag name="gles">Build against GLESv2 instead of GL</flag>
+		<flag name="protobuf">Use Google Protocol Buffers library for faster XML loading</flag>
 	</use>
 	<upstream>
 		<remote-id type="launchpad">compiz</remote-id>
