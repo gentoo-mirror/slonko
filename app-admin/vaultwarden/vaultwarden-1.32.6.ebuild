@@ -493,6 +493,14 @@ RDEPEND="${DEPEND}"
 QA_FLAGS_IGNORED="usr/bin/${PN}"
 
 src_prepare() {
+	local crate_dir
+	for crate in "${!GIT_CRATES[@]}"; do
+		crate_dir=( "${WORKDIR}/${crate}"-* )
+		sed -i \
+			-e "/^${crate}/s|git.*|path = \"${crate_dir}/\" }|" \
+			"${S}/Cargo.toml" || die
+	done
+
 	if use system-sqlite; then
 		sed -i \
 			-e 's/^\(libsqlite3-sys =.*\)features\s*=\s*\["bundled"\],/\1/g' \
@@ -504,11 +512,12 @@ src_prepare() {
 }
 
 src_configure() {
-	myfeatures=(
+	local myfeatures=(
 		$(usev mysql)
 		$(usex postgres postgresql '')
 		$(usev sqlite)
 	)
+	cargo_src_configure
 }
 
 src_compile() {
