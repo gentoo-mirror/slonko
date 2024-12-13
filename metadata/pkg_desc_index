@@ -75,7 +75,7 @@ net-mail/sympa 6.2.72: A feature-rich open source mailing list software
 net-vpn/globalprotect-openconnect 1.4.9: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
 net-vpn/gp-saml-gui 9999: Interactively authenticate to GlobalProtect VPNs that require SAML
 net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunnel VPN setup
-sys-kernel/hardened-sources 5.10.230 5.15.167 5.15.172 5.15.173 6.1.111 6.1.118 6.1.119 6.6.52 6.6.62 6.6.63 6.6.64 6.10.9 6.10.13 6.10.14 6.11.9 6.11.10 6.11.11 6.12.0 6.12.1 6.12.2 6.12.3 6.12.4: Minimal supplement to upstream Kernel Self Protection Project
+sys-kernel/hardened-sources 5.10.230 5.15.172 5.15.173 6.1.118 6.1.119 6.6.62 6.6.63 6.6.64 6.6.65 6.10.9 6.10.13 6.10.14 6.11.11 6.12.2 6.12.3 6.12.4: Minimal supplement to upstream Kernel Self Protection Project
 sys-kernel/it87 9999: IT8705F/IT871xF/IT872xF hardware monitoring driver
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/paperless-ngx 2.13.5: Community supported paperless: scan, index and archive your physical documents
