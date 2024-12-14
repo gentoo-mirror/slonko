@@ -7,9 +7,9 @@ INHERIT=cmake python-single-r1 xdg-utils git-r3
 IUSE=dbus debug gstreamer +gtk indicator mate nls pulseaudio test wayland xfce python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12
 LICENSE=GPL-3+
 PROPERTIES=live
-RDEPEND=>=x11-themes/adwaita-icon-theme-43 >=dev-libs/spdlog-1.10.0 >=dev-util/pkgconf-1.8.0 >=dev-libs/boost-1.73.0 dbus? ( python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) dev-python/jinja2 ) gstreamer? ( media-libs/gstreamer:1.0 ) gtk? ( >=dev-libs/glib-2.56.0 >=x11-libs/gtk+-3.22.0 >=dev-cpp/gtkmm-3.22.0 ) indicator? ( >=dev-libs/libayatana-indicator-0.4:3 ) mate? ( >=mate-base/mate-panel-1.20.0 ) nls? ( >=sys-devel/gettext-0.21 ) pulseaudio? ( dev-libs/glib:2 media-libs/libpulse ) xfce? ( >=xfce-base/xfce4-panel-4.12 )
+RDEPEND=>=x11-themes/adwaita-icon-theme-43 >=dev-libs/spdlog-1.10.0 >=dev-util/pkgconf-1.8.0 >=dev-libs/boost-1.73.0 dbus? ( python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) dev-python/jinja2 ) gstreamer? ( media-libs/gstreamer:1.0 ) gtk? ( >=dev-libs/glib-2.56.0 >=x11-libs/gtk+-3.22.0:3 >=dev-cpp/gtkmm-3.22.0:3.0 ) indicator? ( >=dev-libs/libayatana-indicator-0.4:3 ) mate? ( >=mate-base/mate-panel-1.20.0 ) nls? ( >=sys-devel/gettext-0.21 ) pulseaudio? ( dev-libs/glib:2 media-libs/libpulse ) xfce? ( >=xfce-base/xfce4-panel-4.12 )
 REQUIRED_USE=^^ ( python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 )
 RESTRICT=!test? ( test )
 SLOT=0
 _eclasses_=toolchain-funcs	fa554cc3cff825d21dfe3f24841e29cf	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	10a50dfaf728b802fcfd37f8d0da9056	python-utils-r1	42c5abe4a656a4993a06a4fc61dbdd12	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57	git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=689f3ce4319d4dc539d36b9195656b0c
+_md5_=cdba8de2b6d172b692a92e2275d61fe2
