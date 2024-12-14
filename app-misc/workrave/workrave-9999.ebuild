@@ -37,8 +37,8 @@ RDEPEND="
 	gstreamer? ( media-libs/gstreamer:1.0 )
 	gtk? (
 		>=dev-libs/glib-2.56.0
-		>=x11-libs/gtk+-3.22.0
-		>=dev-cpp/gtkmm-3.22.0
+		>=x11-libs/gtk+-3.22.0:3
+		>=dev-cpp/gtkmm-3.22.0:3.0
 	)
 	indicator? (
 		>=dev-libs/libayatana-indicator-0.4:3
