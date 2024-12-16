@@ -72,6 +72,7 @@ src_compile() {
 src_install() {
 	dobin ${PN}
 	dodoc *.md
+	dodoc -r grafana
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 	systemd_dounit "${FILESDIR}/${PN}.service"
