@@ -7,7 +7,7 @@ MY_PROG="${P}-1"
 
 DESCRIPTION="Epson scanner management utility"
 HOMEPAGE="https://support.epson.net/linux/en/epsonscan2.php"
-SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/15/87/25/a00d9b45f416c29b5b5cf569e76448b918c0eabd/${MY_PROG}.src.tar.gz"
+SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/16/14/37/7577ee65efdad48ee2d2f38d9eda75418e490552/${MY_PROG}.src.tar.gz"
 S="${WORKDIR}/${MY_PROG}"
 
 inherit cmake desktop udev
