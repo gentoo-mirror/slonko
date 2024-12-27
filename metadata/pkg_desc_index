@@ -6,7 +6,7 @@ acct-user/paperless 0: User for Paperless services
 acct-user/sympa 0: User for Sympa daemon
 acct-user/tibber-exporter 0: A user for app-metrics/tibber-exporter
 acct-user/vaultwarden 0: System user: vaultwarden
-app-admin/vaultwarden 1.32.5 1.32.6: Unofficial Bitwarden compatible server written in Rust
+app-admin/vaultwarden 1.32.6 1.32.7: Unofficial Bitwarden compatible server written in Rust
 app-admin/vaultwarden-web-vault 2024.5.1 2024.6.2c: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
 app-metrics/tibber-exporter 3.9.0: Monitor your power usage and costs with Prometheus and Grafana
