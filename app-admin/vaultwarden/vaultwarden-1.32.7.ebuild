@@ -468,6 +468,8 @@ SRC_URI="
 	https://github.com/dani-garcia/vaultwarden/archive/${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}"
 
+PATCHES=( "${FILESDIR}/rust-1.84.patch" )
+
 LICENSE="AGPL-3"
 # Dependent crate licenses
 LICENSE+=" 0BSD Apache-2.0 BSD ISC MIT MPL-2.0 Unicode-3.0"
