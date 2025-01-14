@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{8..12} )
 
 inherit distutils-r1
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64"
 
 DEPEND="
 	>=dev-python/asgiref-3.5.0[${PYTHON_USEDEP}]
-	>=dev-python/django-3.2[${PYTHON_USEDEP}]
+	>=dev-python/django-4.2[${PYTHON_USEDEP}]
 "
 BDEPEND="
 	test? (
@@ -29,6 +29,6 @@ BDEPEND="
 	)
 "
 
-DOCS=( README.rst )
-
 distutils_enable_tests pytest
+distutils_enable_sphinx docs \
+	dev-python/sphinx-rtd-theme
