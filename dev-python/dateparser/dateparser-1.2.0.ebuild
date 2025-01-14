@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -23,7 +23,7 @@ RDEPEND="
 "
 BDEPEND="
 	test? (
-		dev-python/GitPython[${PYTHON_USEDEP}]
+		dev-python/gitpython[${PYTHON_USEDEP}]
 		dev-libs/fastText[python,${PYTHON_USEDEP}]
 		dev-python/convertdate[${PYTHON_USEDEP}]
 		dev-python/hijridate[${PYTHON_USEDEP}]
