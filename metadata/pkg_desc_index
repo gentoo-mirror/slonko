@@ -28,7 +28,7 @@ dev-python/concurrent-log-handler 0.9.24: Python logging handler allowing safe c
 dev-python/convertdate 2.4.0: Converts between Gregorian dates and other calendar systems.
 dev-python/daphne 3.0.2 4.1.2: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
 dev-python/dateparser 1.2.0: Date parsing library designed to parse dates from HTML pages
-dev-python/django-allauth 0.61.1 0.63.3: Django 3rd party (social) account authentication
+dev-python/django-allauth 64.2.1: Django 3rd party (social) account authentication
 dev-python/django-auditlog 2.3.0 3.0.0: Audit log app for Django
 dev-python/django-celery-results 2.5.1: Celery Result Backends using the Django ORM/Cache framework.
 dev-python/django-compression-middleware 0.5.0: Django middleware to compress responses using several algorithms.
@@ -78,5 +78,5 @@ net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunn
 sys-kernel/hardened-sources 5.10.230 5.10.231 5.10.232 5.10.233 5.15.173 5.15.174 5.15.175 5.15.176 6.1.118 6.1.120 6.1.121 6.1.122 6.1.123 6.1.124 6.6.62 6.6.65 6.6.66 6.6.67 6.6.68 6.6.69 6.6.70 6.6.71 6.10.9 6.10.13 6.10.14 6.12.4 6.12.5 6.12.6 6.12.7 6.12.8 6.12.9: Minimal supplement to upstream Kernel Self Protection Project
 sys-kernel/it87 9999: IT8705F/IT871xF/IT872xF hardware monitoring driver
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
-www-apps/paperless-ngx 2.13.5: Community supported paperless: scan, index and archive your physical documents
+www-apps/paperless-ngx 2.13.5 2.14.1: Community supported paperless: scan, index and archive your physical documents
 x11-wm/compiz 9999: OpenGL window and compositing manager
