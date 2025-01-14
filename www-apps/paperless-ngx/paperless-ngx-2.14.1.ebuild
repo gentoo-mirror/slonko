@@ -31,9 +31,16 @@ EXTRA_DEPEND="
 		dev-python/hiredis[${PYTHON_USEDEP}]
 		dev-python/websockets[${PYTHON_USEDEP}]')
 "
+ALLAUTH_MFA_DEPEND="
+	$(python_gen_cond_dep '
+		>=dev-python/fido2-1.1.2[${PYTHON_USEDEP}]
+		>=dev-python/qrcode-7.0.0[${PYTHON_USEDEP}]')
+"
+
 
 DEPEND="
 	${ACCT_DEPEND}
+	${ALLAUTH_MFA_DEPEND}
 	${EXTRA_DEPEND}
 	${PYTHON_DEPS}
 	app-text/poppler[utils]

@@ -23,11 +23,9 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	>=dev-python/fido2-1.1.2[${PYTHON_USEDEP}]
 	>=dev-python/django-3.2[${PYTHON_USEDEP}]
 	>=dev-python/python3-openid-3.0.8[${PYTHON_USEDEP}]
 	>=dev-python/pyjwt-1.7[${PYTHON_USEDEP}]
-	>=dev-python/qrcode-7.0.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-oauthlib-0.3.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.0.0[${PYTHON_USEDEP}]
 "
@@ -65,5 +63,5 @@ python_test() {
 
 pkg_postinst() {
 	optfeature "SAML authentication" dev-python/python3-saml
-	#optfeature "MFA (Multi-factor authentication)" dev-python/qrcode dev-python/fido2
+	optfeature "MFA (Multi-factor authentication)" dev-python/qrcode dev-python/fido2
 }
