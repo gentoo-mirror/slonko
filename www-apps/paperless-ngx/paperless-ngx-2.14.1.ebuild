@@ -47,7 +47,7 @@ DEPEND="
 		>=dev-python/dateparser-1.2[${PYTHON_USEDEP}]
 		>=dev-python/django-5.1.4[${PYTHON_USEDEP}]
 		<dev-python/django-5.2[${PYTHON_USEDEP}]
-		dev-python/django-allauth[${PYTHON_USEDEP}]
+		>=dev-python/django-allauth-64.0.0[${PYTHON_USEDEP}]
 		dev-python/django-celery-results[${PYTHON_USEDEP}]
 		dev-python/django-cors-headers[${PYTHON_USEDEP}]
 		dev-python/django-extensions[${PYTHON_USEDEP}]
