@@ -18,7 +18,7 @@ KEYWORDS="~amd64"
 DOCS=( README.md )
 
 RDEPEND="
-	>=dev-python/PyMeeus-0.3.13[${PYTHON_USEDEP}]
+	>=dev-python/pymeeus-0.3.13[${PYTHON_USEDEP}]
 "
 
 distutils_enable_tests pytest
