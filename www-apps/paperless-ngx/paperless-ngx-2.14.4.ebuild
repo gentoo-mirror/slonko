@@ -37,7 +37,6 @@ ALLAUTH_MFA_DEPEND="
 		>=dev-python/qrcode-7.0.0[${PYTHON_USEDEP}]')
 "
 
-
 DEPEND="
 	${ACCT_DEPEND}
 	${ALLAUTH_MFA_DEPEND}
