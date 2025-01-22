@@ -7,7 +7,7 @@ acct-user/sympa 0: User for Sympa daemon
 acct-user/tibber-exporter 0: A user for app-metrics/tibber-exporter
 acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.32.6 1.32.7: Unofficial Bitwarden compatible server written in Rust
-app-admin/vaultwarden-web-vault 2024.6.2c 2025.1.0: Unofficial patched bitwarden web-vault builds for vaultwarden
+app-admin/vaultwarden-web-vault 2025.1.0 2025.1.1: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
 app-metrics/tibber-exporter 3.9.0: Monitor your power usage and costs with Prometheus and Grafana
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
@@ -78,5 +78,5 @@ net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunn
 sys-kernel/hardened-sources 5.10.230 5.10.231 5.10.232 5.10.233 5.15.173 5.15.174 5.15.175 5.15.176 6.1.118 6.1.120 6.1.121 6.1.122 6.1.123 6.1.124 6.6.62 6.6.65 6.6.66 6.6.67 6.6.68 6.6.69 6.6.70 6.6.71 6.10.9 6.10.13 6.10.14 6.12.4 6.12.5 6.12.6 6.12.7 6.12.8 6.12.9: Minimal supplement to upstream Kernel Self Protection Project
 sys-kernel/it87 9999: IT8705F/IT871xF/IT872xF hardware monitoring driver
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
-www-apps/paperless-ngx 2.13.5 2.14.4: Community supported paperless: scan, index and archive your physical documents
+www-apps/paperless-ngx 2.13.5 2.14.5: Community supported paperless: scan, index and archive your physical documents
 x11-wm/compiz 9999: OpenGL window and compositing manager
