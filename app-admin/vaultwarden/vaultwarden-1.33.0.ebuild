@@ -3,7 +3,7 @@
 
 EAPI=8
 
-RUST_MIN_VER=1.80.0
+RUST_MIN_VER=1.83.0
 
 CRATES="
 	addr2line@0.24.2
@@ -29,7 +29,7 @@ CRATES="
 	async-stream-impl@0.3.6
 	async-stream@0.3.6
 	async-task@4.7.1
-	async-trait@0.1.83
+	async-trait@0.1.85
 	atomic-waker@1.1.2
 	atomic@0.5.3
 	atomic@0.6.0
@@ -41,23 +41,23 @@ CRATES="
 	base64ct@1.6.0
 	bigdecimal@0.4.7
 	binascii@0.1.4
-	bitflags@2.6.0
+	bitflags@2.8.0
 	blake2@0.10.6
 	block-buffer@0.10.4
 	blocking@1.6.1
-	brotli-decompressor@4.0.1
+	brotli-decompressor@4.0.2
 	brotli@7.0.0
 	bumpalo@3.16.0
-	bytemuck@1.20.0
+	bytemuck@1.21.0
 	byteorder@1.5.0
 	bytes@1.9.0
 	cached@0.54.0
 	cached_proc_macro@0.23.0
 	cached_proc_macro_types@0.1.1
-	cc@1.2.3
+	cc@1.2.10
 	cfg-if@1.0.0
 	chrono-tz-build@0.4.0
-	chrono-tz@0.10.0
+	chrono-tz@0.10.1
 	chrono@0.4.39
 	chumsky@0.9.3
 	codemap@0.1.3
@@ -69,18 +69,24 @@ CRATES="
 	cpufeatures@0.2.16
 	crc32fast@1.4.2
 	cron@0.12.1
-	crossbeam-utils@0.8.20
+	crossbeam-utils@0.8.21
 	crypto-common@0.1.6
 	darling@0.20.10
 	darling_core@0.20.10
 	darling_macro@0.20.10
 	dashmap@6.1.0
-	data-encoding@2.6.0
+	data-encoding@2.7.0
 	data-url@0.3.1
 	deranged@0.3.11
+	derive_builder@0.20.2
+	derive_builder_core@0.20.2
+	derive_builder_macro@0.20.2
+	derive_more-impl@1.0.0
+	derive_more@1.0.0
 	devise@0.4.2
 	devise_codegen@0.4.2
 	devise_core@0.4.2
+	diesel-derive-newtype@2.1.2
 	diesel@2.2.6
 	diesel_derives@2.2.3
 	diesel_logger@0.4.0
@@ -96,12 +102,14 @@ CRATES="
 	email_address@0.2.9
 	encoding_rs@0.8.35
 	enum-as-inner@0.6.1
+	env_home@0.1.0
 	equivalent@1.0.1
 	errno@0.3.10
 	event-listener-strategy@0.5.3
 	event-listener@2.5.3
-	event-listener@5.3.1
+	event-listener@5.4.0
 	fastrand@2.3.0
+	fern@0.7.1
 	figment@0.10.19
 	flate2@1.0.35
 	fnv@1.0.7
@@ -112,7 +120,7 @@ CRATES="
 	futures-core@0.3.31
 	futures-executor@0.3.31
 	futures-io@0.3.31
-	futures-lite@2.5.0
+	futures-lite@2.6.0
 	futures-macro@0.3.31
 	futures-sink@0.3.31
 	futures-task@0.3.31
@@ -123,13 +131,13 @@ CRATES="
 	generic-array@0.14.7
 	getrandom@0.2.15
 	gimli@0.31.1
-	glob@0.3.1
+	glob@0.3.2
 	gloo-timers@0.3.0
-	governor@0.7.0
+	governor@0.8.0
 	grass_compiler@0.13.4
 	h2@0.4.7
 	half@1.8.3
-	handlebars@6.2.0
+	handlebars@6.3.0
 	hashbrown@0.14.5
 	hashbrown@0.15.2
 	heck@0.5.0
@@ -138,7 +146,6 @@ CRATES="
 	hickory-proto@0.24.2
 	hickory-resolver@0.24.2
 	hmac@0.12.1
-	home@0.5.9
 	hostname@0.3.1
 	hostname@0.4.0
 	html5gum@0.7.0
@@ -149,11 +156,11 @@ CRATES="
 	http@1.2.0
 	httparse@1.9.5
 	httpdate@1.0.3
-	hyper-rustls@0.27.3
+	hyper-rustls@0.27.5
 	hyper-tls@0.6.0
 	hyper-util@0.1.10
-	hyper@0.14.31
-	hyper@1.5.1
+	hyper@0.14.32
+	hyper@1.5.2
 	iana-time-zone-haiku@0.1.2
 	iana-time-zone@0.1.61
 	icu_collections@1.5.0
@@ -169,30 +176,30 @@ CRATES="
 	ident_case@1.0.1
 	idna@1.0.3
 	idna_adapter@1.2.0
-	indexmap@2.7.0
+	indexmap@2.7.1
 	inlinable_string@0.1.15
 	ipconfig@0.3.2
-	ipnet@2.10.1
-	is-terminal@0.4.13
+	ipnet@2.11.0
+	is-terminal@0.4.15
 	itoa@1.0.14
 	jetscii@0.5.3
 	job_scheduler_ng@2.0.5
-	js-sys@0.3.76
+	js-sys@0.3.77
 	jsonwebtoken@9.3.0
 	kv-log-macro@1.0.7
 	lasso@0.7.3
 	lazy_static@1.5.0
 	lettre@0.11.11
-	libc@0.2.168
+	libc@0.2.169
 	libm@0.2.11
 	libmimalloc-sys@0.1.39
 	libsqlite3-sys@0.30.1
 	linked-hash-map@0.5.6
-	linux-raw-sys@0.4.14
+	linux-raw-sys@0.4.15
 	litemap@0.7.4
 	litrs@0.4.1
 	lock_api@0.4.12
-	log@0.4.22
+	log@0.4.25
 	loom@0.5.6
 	lru-cache@0.1.2
 	match_cfg@0.1.0
@@ -203,7 +210,7 @@ CRATES="
 	mimalloc@0.1.43
 	mime@0.3.17
 	minimal-lexical@0.2.1
-	miniz_oxide@0.8.0
+	miniz_oxide@0.8.3
 	mio@1.0.3
 	multer@3.1.0
 	mysqlclient-sys@0.4.2
@@ -221,10 +228,10 @@ CRATES="
 	num-traits@0.2.19
 	num_cpus@1.16.0
 	num_threads@0.1.7
-	object@0.36.5
+	object@0.36.7
 	once_cell@1.20.2
 	openssl-macros@0.1.1
-	openssl-probe@0.1.5
+	openssl-probe@0.1.6
 	openssl-src@300.4.1+3.4.0
 	openssl-sys@0.9.104
 	openssl@0.10.68
@@ -243,13 +250,13 @@ CRATES="
 	pest_derive@2.7.15
 	pest_generator@2.7.15
 	pest_meta@2.7.15
-	phf@0.11.2
-	phf_codegen@0.11.2
-	phf_generator@0.11.2
-	phf_macros@0.11.2
-	phf_shared@0.11.2
+	phf@0.11.3
+	phf_codegen@0.11.3
+	phf_generator@0.11.3
+	phf_macros@0.11.3
+	phf_shared@0.11.3
 	pico-args@0.5.0
-	pin-project-lite@0.2.15
+	pin-project-lite@0.2.16
 	pin-utils@0.1.0
 	piper@0.2.4
 	pkg-config@0.3.31
@@ -259,20 +266,20 @@ CRATES="
 	ppv-lite86@0.2.20
 	pq-sys@0.6.3
 	proc-macro2-diagnostics@0.10.1
-	proc-macro2@1.0.92
+	proc-macro2@1.0.93
 	psl-types@2.0.11
 	psm@0.1.24
 	publicsuffix@2.3.0
-	quanta@0.12.3
+	quanta@0.12.5
 	quick-error@1.2.3
-	quote@1.0.37
+	quote@1.0.38
 	quoted_printable@0.5.1
 	r2d2@0.8.10
 	rand@0.8.5
 	rand_chacha@0.3.1
 	rand_core@0.6.4
-	raw-cpuid@11.2.0
-	redox_syscall@0.5.7
+	raw-cpuid@11.3.0
+	redox_syscall@0.5.8
 	ref-cast-impl@1.0.23
 	ref-cast@1.0.23
 	regex-automata@0.1.10
@@ -281,7 +288,7 @@ CRATES="
 	regex-syntax@0.8.5
 	regex@1.11.1
 	reopen@1.0.3
-	reqwest@0.12.9
+	reqwest@0.12.12
 	resolv-conf@0.7.0
 	ring@0.17.8
 	rmp@0.8.14
@@ -293,15 +300,15 @@ CRATES="
 	rpassword@7.3.1
 	rtoolbox@0.0.2
 	rustc-demangle@0.1.24
-	rustix@0.38.42
+	rustix@0.38.44
 	rustls-pemfile@1.0.4
 	rustls-pemfile@2.2.0
-	rustls-pki-types@1.10.0
+	rustls-pki-types@1.10.1
 	rustls-webpki@0.101.7
 	rustls-webpki@0.102.8
 	rustls@0.21.12
-	rustls@0.23.19
-	rustversion@1.0.18
+	rustls@0.23.21
+	rustversion@1.0.19
 	ryu@1.0.18
 	same-file@1.0.6
 	schannel@0.1.27
@@ -309,13 +316,13 @@ CRATES="
 	scoped-tls@1.0.1
 	scopeguard@1.2.0
 	sct@0.7.1
-	security-framework-sys@2.12.1
+	security-framework-sys@2.14.0
 	security-framework@2.11.1
-	semver@1.0.23
-	serde@1.0.215
+	semver@1.0.25
+	serde@1.0.217
 	serde_cbor@0.11.2
-	serde_derive@1.0.215
-	serde_json@1.0.133
+	serde_derive@1.0.217
+	serde_json@1.0.137
 	serde_spanned@0.6.8
 	serde_urlencoded@0.7.1
 	sha1@0.10.6
@@ -324,8 +331,8 @@ CRATES="
 	shlex@1.3.0
 	signal-hook-registry@1.4.2
 	signal-hook@0.3.17
-	simple_asn1@0.6.2
-	siphasher@0.3.11
+	simple_asn1@0.6.3
+	siphasher@1.0.1
 	slab@0.4.9
 	smallvec@1.13.2
 	socket2@0.5.8
@@ -337,26 +344,26 @@ CRATES="
 	state@0.6.0
 	strsim@0.11.1
 	subtle@2.6.1
-	syn@2.0.90
+	syn@2.0.96
 	sync_wrapper@1.0.2
 	synstructure@0.13.1
 	syslog@7.0.0
 	system-configuration-sys@0.6.0
 	system-configuration@0.6.1
-	tempfile@3.14.0
+	tempfile@3.15.0
 	thiserror-impl@1.0.69
-	thiserror-impl@2.0.6
+	thiserror-impl@2.0.11
 	thiserror@1.0.69
-	thiserror@2.0.6
+	thiserror@2.0.11
 	thread_local@1.1.8
 	threadpool@1.8.1
 	time-core@0.1.2
 	time-macros@0.2.19
 	time@0.3.37
 	tinystr@0.7.6
-	tinyvec@1.8.0
+	tinyvec@1.8.1
 	tinyvec_macros@0.1.1
-	tokio-macros@2.4.0
+	tokio-macros@2.5.0
 	tokio-native-tls@0.3.1
 	tokio-rustls@0.24.1
 	tokio-rustls@0.26.1
@@ -364,12 +371,14 @@ CRATES="
 	tokio-stream@0.1.17
 	tokio-tungstenite@0.21.0
 	tokio-util@0.7.13
-	tokio@1.42.0
+	tokio@1.43.0
 	toml@0.8.19
 	toml_datetime@0.6.8
 	toml_edit@0.22.22
 	totp-lite@2.0.1
+	tower-layer@0.3.3
 	tower-service@0.3.3
+	tower@0.5.2
 	tracing-attributes@0.1.28
 	tracing-core@0.1.33
 	tracing-log@0.2.0
@@ -381,32 +390,32 @@ CRATES="
 	ubyte@0.10.4
 	ucd-trie@0.1.7
 	uncased@0.9.10
-	unicode-ident@1.0.14
+	unicode-ident@1.0.15
 	unicode-xid@0.2.6
 	untrusted@0.9.0
 	url@2.5.4
 	utf-8@0.7.6
 	utf16_iter@1.0.5
 	utf8_iter@1.0.4
-	uuid@1.11.0
-	valuable@0.1.0
+	uuid@1.12.1
+	valuable@0.1.1
 	value-bag@1.10.0
 	vcpkg@0.2.15
 	version_check@0.9.5
 	walkdir@2.5.0
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen-backend@0.2.99
-	wasm-bindgen-futures@0.4.49
-	wasm-bindgen-macro-support@0.2.99
-	wasm-bindgen-macro@0.2.99
-	wasm-bindgen-shared@0.2.99
-	wasm-bindgen@0.2.99
+	wasm-bindgen-backend@0.2.100
+	wasm-bindgen-futures@0.4.50
+	wasm-bindgen-macro-support@0.2.100
+	wasm-bindgen-macro@0.2.100
+	wasm-bindgen-shared@0.2.100
+	wasm-bindgen@0.2.100
 	wasm-streams@0.4.2
-	web-sys@0.3.76
+	web-sys@0.3.77
 	web-time@1.1.0
 	webauthn-rs@0.3.2
-	which@7.0.0
+	which@7.0.1
 	widestring@1.1.0
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.9
@@ -438,7 +447,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
-	winnow@0.6.20
+	winnow@0.6.24
 	winreg@0.50.0
 	winsafe@0.0.19
 	write16@1.0.0
@@ -456,7 +465,6 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
-	[fern]='https://github.com/daboross/fern;3e775ccfafe7d24baee39826d38011981b2e55b5;fern-%commit%'
 	[yubico]='https://github.com/BlackDex/yubico-rs;00df14811f58155c0f02e3ab10f1570ed3e115c6;yubico-rs-%commit%'
 )
 
@@ -467,8 +475,6 @@ HOMEPAGE="https://github.com/dani-garcia/vaultwarden"
 SRC_URI="
 	https://github.com/dani-garcia/vaultwarden/archive/${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}"
-
-PATCHES=( "${FILESDIR}/rust-1.84.patch" )
 
 LICENSE="AGPL-3"
 # Dependent crate licenses
@@ -487,7 +493,7 @@ DEPEND="
 	${ACCT_DEPEND}
 	dev-libs/openssl:0=
 	sqlite? ( system-sqlite? ( >=dev-db/sqlite-3.46.0:3 ) )
-	web? ( >=app-admin/vaultwarden-web-vault-2024.6.2c )
+	web? ( >=app-admin/vaultwarden-web-vault-2025.1.1 )
 "
 RDEPEND="${DEPEND}"
 
@@ -519,15 +525,15 @@ src_configure() {
 		$(usex postgres postgresql '')
 		$(usev sqlite)
 	)
-	cargo_src_configure
+	cargo_src_configure --no-default-features
 }
 
 src_compile() {
-	cargo_src_compile ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
+	cargo_src_compile
 }
 
 src_install() {
-	cargo_src_install ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
+	cargo_src_install
 
 	einstalldocs
 
@@ -553,5 +559,5 @@ src_install() {
 }
 
 src_test() {
-	cargo_src_test ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
+	cargo_src_test
 }
