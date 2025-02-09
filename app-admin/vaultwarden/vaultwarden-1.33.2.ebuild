@@ -29,7 +29,7 @@ CRATES="
 	async-stream-impl@0.3.6
 	async-stream@0.3.6
 	async-task@4.7.1
-	async-trait@0.1.85
+	async-trait@0.1.86
 	atomic-waker@1.1.2
 	atomic@0.5.3
 	atomic@0.6.0
@@ -47,14 +47,14 @@ CRATES="
 	blocking@1.6.1
 	brotli-decompressor@4.0.2
 	brotli@7.0.0
-	bumpalo@3.16.0
+	bumpalo@3.17.0
 	bytemuck@1.21.0
 	byteorder@1.5.0
-	bytes@1.9.0
+	bytes@1.10.0
 	cached@0.54.0
 	cached_proc_macro@0.23.0
 	cached_proc_macro_types@0.1.1
-	cc@1.2.10
+	cc@1.2.11
 	cfg-if@1.0.0
 	chrono-tz-build@0.4.0
 	chrono-tz@0.10.1
@@ -66,7 +66,7 @@ CRATES="
 	cookie_store@0.21.1
 	core-foundation-sys@0.8.7
 	core-foundation@0.9.4
-	cpufeatures@0.2.16
+	cpufeatures@0.2.17
 	crc32fast@1.4.2
 	cron@0.12.1
 	crossbeam-utils@0.8.21
@@ -81,13 +81,13 @@ CRATES="
 	derive_builder@0.20.2
 	derive_builder_core@0.20.2
 	derive_builder_macro@0.20.2
-	derive_more-impl@1.0.0
-	derive_more@1.0.0
+	derive_more-impl@2.0.0
+	derive_more@2.0.0
 	devise@0.4.2
 	devise_codegen@0.4.2
 	devise_core@0.4.2
 	diesel-derive-newtype@2.1.2
-	diesel@2.2.6
+	diesel@2.2.7
 	diesel_derives@2.2.3
 	diesel_logger@0.4.0
 	diesel_migrations@2.2.0
@@ -96,7 +96,7 @@ CRATES="
 	displaydoc@0.2.5
 	document-features@0.2.10
 	dotenvy@0.15.7
-	dsl_auto_type@0.1.2
+	dsl_auto_type@0.1.3
 	either@1.13.0
 	email-encoding@0.3.1
 	email_address@0.2.9
@@ -130,6 +130,7 @@ CRATES="
 	generator@0.7.5
 	generic-array@0.14.7
 	getrandom@0.2.15
+	getrandom@0.3.1
 	gimli@0.31.1
 	glob@0.3.2
 	gloo-timers@0.3.0
@@ -154,13 +155,13 @@ CRATES="
 	http-body@1.0.1
 	http@0.2.12
 	http@1.2.0
-	httparse@1.9.5
+	httparse@1.10.0
 	httpdate@1.0.3
 	hyper-rustls@0.27.5
 	hyper-tls@0.6.0
 	hyper-util@0.1.10
 	hyper@0.14.32
-	hyper@1.5.2
+	hyper@1.6.0
 	iana-time-zone-haiku@0.1.2
 	iana-time-zone@0.1.61
 	icu_collections@1.5.0
@@ -189,11 +190,11 @@ CRATES="
 	kv-log-macro@1.0.7
 	lasso@0.7.3
 	lazy_static@1.5.0
-	lettre@0.11.11
+	lettre@0.11.12
 	libc@0.2.169
 	libm@0.2.11
 	libmimalloc-sys@0.1.39
-	libsqlite3-sys@0.30.1
+	libsqlite3-sys@0.31.0
 	linked-hash-map@0.5.6
 	linux-raw-sys@0.4.15
 	litemap@0.7.4
@@ -214,7 +215,7 @@ CRATES="
 	mio@1.0.3
 	multer@3.1.0
 	mysqlclient-sys@0.4.2
-	native-tls@0.2.12
+	native-tls@0.2.13
 	no-std-compat@0.4.1
 	nom@7.1.3
 	nonzero_ext@0.3.0
@@ -233,8 +234,8 @@ CRATES="
 	openssl-macros@0.1.1
 	openssl-probe@0.1.6
 	openssl-src@300.4.1+3.4.0
-	openssl-sys@0.9.104
-	openssl@0.10.68
+	openssl-sys@0.9.105
+	openssl@0.10.70
 	overload@0.1.1
 	parking@2.2.1
 	parking_lot@0.12.3
@@ -264,7 +265,7 @@ CRATES="
 	portable-atomic@1.10.0
 	powerfmt@0.2.0
 	ppv-lite86@0.2.20
-	pq-sys@0.6.3
+	pq-sys@0.7.0
 	proc-macro2-diagnostics@0.10.1
 	proc-macro2@1.0.93
 	psl-types@2.0.11
@@ -276,8 +277,11 @@ CRATES="
 	quoted_printable@0.5.1
 	r2d2@0.8.10
 	rand@0.8.5
+	rand@0.9.0
 	rand_chacha@0.3.1
+	rand_chacha@0.9.0
 	rand_core@0.6.4
+	rand_core@0.9.0
 	raw-cpuid@11.3.0
 	redox_syscall@0.5.8
 	ref-cast-impl@1.0.23
@@ -303,13 +307,13 @@ CRATES="
 	rustix@0.38.44
 	rustls-pemfile@1.0.4
 	rustls-pemfile@2.2.0
-	rustls-pki-types@1.10.1
+	rustls-pki-types@1.11.0
 	rustls-webpki@0.101.7
 	rustls-webpki@0.102.8
 	rustls@0.21.12
-	rustls@0.23.21
+	rustls@0.23.22
 	rustversion@1.0.19
-	ryu@1.0.18
+	ryu@1.0.19
 	same-file@1.0.6
 	schannel@0.1.27
 	scheduled-thread-pool@0.2.7
@@ -322,7 +326,7 @@ CRATES="
 	serde@1.0.217
 	serde_cbor@0.11.2
 	serde_derive@1.0.217
-	serde_json@1.0.137
+	serde_json@1.0.138
 	serde_spanned@0.6.8
 	serde_urlencoded@0.7.1
 	sha1@0.10.6
@@ -344,13 +348,13 @@ CRATES="
 	state@0.6.0
 	strsim@0.11.1
 	subtle@2.6.1
-	syn@2.0.96
+	syn@2.0.98
 	sync_wrapper@1.0.2
 	synstructure@0.13.1
 	syslog@7.0.0
 	system-configuration-sys@0.6.0
 	system-configuration@0.6.1
-	tempfile@3.15.0
+	tempfile@3.16.0
 	thiserror-impl@1.0.69
 	thiserror-impl@2.0.11
 	thiserror@1.0.69
@@ -374,7 +378,7 @@ CRATES="
 	tokio@1.43.0
 	toml@0.8.19
 	toml_datetime@0.6.8
-	toml_edit@0.22.22
+	toml_edit@0.22.23
 	totp-lite@2.0.1
 	tower-layer@0.3.3
 	tower-service@0.3.3
@@ -390,7 +394,7 @@ CRATES="
 	ubyte@0.10.4
 	ucd-trie@0.1.7
 	uncased@0.9.10
-	unicode-ident@1.0.15
+	unicode-ident@1.0.16
 	unicode-xid@0.2.6
 	untrusted@0.9.0
 	url@2.5.4
@@ -405,6 +409,7 @@ CRATES="
 	walkdir@2.5.0
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
+	wasi@0.13.3+wasi-0.2.2
 	wasm-bindgen-backend@0.2.100
 	wasm-bindgen-futures@0.4.50
 	wasm-bindgen-macro-support@0.2.100
@@ -447,16 +452,19 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
-	winnow@0.6.24
+	winnow@0.7.1
 	winreg@0.50.0
 	winsafe@0.0.19
+	wit-bindgen-rt@0.33.0
 	write16@1.0.0
 	writeable@0.5.5
 	yansi@1.0.1
 	yoke-derive@0.7.5
 	yoke@0.7.5
 	zerocopy-derive@0.7.35
+	zerocopy-derive@0.8.14
 	zerocopy@0.7.35
+	zerocopy@0.8.14
 	zerofrom-derive@0.1.5
 	zerofrom@0.1.5
 	zeroize@1.8.1
@@ -492,7 +500,7 @@ ACCT_DEPEND="
 DEPEND="
 	${ACCT_DEPEND}
 	dev-libs/openssl:0=
-	sqlite? ( system-sqlite? ( >=dev-db/sqlite-3.46.0:3 ) )
+	sqlite? ( system-sqlite? ( >=dev-db/sqlite-3.48.0:3 ) )
 	web? ( >=app-admin/vaultwarden-web-vault-2025.1.1 )
 "
 RDEPEND="${DEPEND}"
