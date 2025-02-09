@@ -39,14 +39,6 @@ RDEPEND="
 	${ACCT_DEPEND}
 	>=dev-lang/perl-5.8
 	>=dev-perl/CGI-3.51
-	>=virtual/perl-Digest-MD5-2.00
-	virtual/perl-Encode
-	>=virtual/perl-File-Path-2.08
-	>=virtual/perl-MIME-Base64-3.03
-	>=virtual/perl-Scalar-List-Utils-1.20
-	>=virtual/perl-Sys-Syslog-0.03
-	>=virtual/perl-Time-HiRes-1.29
-	virtual/perl-libnet
 	>=dev-perl/Archive-Zip-1.05
 	>=dev-perl/Class-Singleton-1.03
 	>=dev-perl/Data-Password-1.07
@@ -61,7 +53,7 @@ RDEPEND="
 	dev-perl/IO-stringy
 	>=dev-perl/MailTools-1.70
 	>=dev-perl/MIME-Charset-1.011.3
-	>=dev-perl/MIME-EncWords-1.014
+	>=dev-perl/MIME-EncWords-1.015
 	>=dev-perl/MIME-Lite-HTML-1.230
 	>=dev-perl/MIME-tools-5.423
 	>=dev-perl/Net-CIDR-0.16
@@ -75,6 +67,16 @@ RDEPEND="
 	>=dev-perl/libintl-perl-1.20
 	dev-perl/libwww-perl
 	>=net-mail/mhonarc-2.6.24
+	virtual/mta
+	>=virtual/perl-Digest-MD5-2.00
+	virtual/perl-Encode
+	>=virtual/perl-File-Path-2.08
+	>=virtual/perl-MIME-Base64-3.03
+	>=virtual/perl-Scalar-List-Utils-1.20
+	>=virtual/perl-Sys-Syslog-0.03
+	>=virtual/perl-Time-HiRes-1.29
+	>=virtual/perl-Time-Local-1.23
+	virtual/perl-libnet
 	clamav? ( app-antivirus/clamav )
 	compat? ( >=dev-perl/Crypt-CipherSaber-0.50 )
 	dkim? ( >=dev-perl/Mail-DKIM-0.37 )
@@ -91,7 +93,6 @@ RDEPEND="
 		>=dev-perl/IO-Socket-SSL-0.90
 		dev-libs/openssl
 	)
-	virtual/mta
 	"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
