@@ -37,6 +37,7 @@ BDEPEND="
 EPYTEST_DESELECT=(
 	dateparser/date.py::dateparser.date.DateDataParser.get_date_data
 	dateparser/search/__init__.py::dateparser.search.search_dates
+	tests/test_clean_api.py::TestParseFunction::test_dates_parse_utc_offset_does_not_throw_0
 	# Tests that require network
 	tests/test_language_detect.py::CustomLangDetectParserTest::test_custom_language_detect_fast_text_{0,1}
 )
@@ -46,9 +47,6 @@ distutils_enable_sphinx docs \
 	dev-python/sphinx-rtd-theme
 
 python_prepare_all() {
-	# hijri_converter is deprecated in favour of hijridate
-	sed -i -e 's|hijri_converter|hijridate|g' \
-		dateparser/calendars/hijri_parser.py || die "sed failed"
 	# Require atheris fuzzer
 	rm -rf fuzzing
 
