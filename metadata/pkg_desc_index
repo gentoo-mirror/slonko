@@ -6,7 +6,7 @@ acct-user/paperless 0: User for Paperless services
 acct-user/sympa 0: User for Sympa daemon
 acct-user/tibber-exporter 0: A user for app-metrics/tibber-exporter
 acct-user/vaultwarden 0: System user: vaultwarden
-app-admin/vaultwarden 1.32.7 1.33.0 1.33.1: Unofficial Bitwarden compatible server written in Rust
+app-admin/vaultwarden 1.32.7 1.33.2: Unofficial Bitwarden compatible server written in Rust
 app-admin/vaultwarden-web-vault 2025.1.0 2025.1.1: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
 app-metrics/tibber-exporter 3.9.0: Monitor your power usage and costs with Prometheus and Grafana
@@ -71,7 +71,7 @@ media-gfx/epsonscan2-non-free-plugin 1.0.0.6: Plugins for Epson Scan 2
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 media-libs/zxing-cpp 2.2.1: C++ Multi-format 1D/2D barcode image processing library
 net-mail/mhonarc 2.6.24: Perl Mail-to-HTML Converter
-net-mail/sympa 6.2.72 6.2.74: A feature-rich open source mailing list software
+net-mail/sympa 6.2.74 6.2.76: A feature-rich open source mailing list software
 net-vpn/globalprotect-openconnect 1.4.9: GlobalProtect VPN GUI based on Openconnect with SAML auth mode support
 net-vpn/gp-saml-gui 9999: Interactively authenticate to GlobalProtect VPNs that require SAML
 net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunnel VPN setup
