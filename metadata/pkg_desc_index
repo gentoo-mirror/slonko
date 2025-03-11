@@ -9,7 +9,7 @@ acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.32.7 1.33.2: Unofficial Bitwarden compatible server written in Rust
 app-admin/vaultwarden-web-vault 2025.1.0 2025.1.1: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
-app-metrics/tibber-exporter 3.9.0: Monitor your power usage and costs with Prometheus and Grafana
+app-metrics/tibber-exporter 3.9.1: Monitor your power usage and costs with Prometheus and Grafana
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 app-text/OCRmyPDF 16.8.0 16.10.0: OCRmyPDF adds an OCR text layer to scanned PDF files
@@ -40,7 +40,7 @@ dev-python/django-picklefield 3.2.0: Pickled object field for Django
 dev-python/django-soft-delete 1.0.13: Soft delete models, managers, queryset for Django
 dev-python/djangorestframework 3.14.0: Web APIs with django made easy
 dev-python/djangorestframework-guardian 0.3.0: django-guardian support for Django REST Framework
-dev-python/drf-writable-nested 0.7.1: Writable nested helpers for django-rest-framework's serializers
+dev-python/drf-writable-nested 0.7.2: Writable nested helpers for django-rest-framework's serializers
 dev-python/fastapi 0.115.3: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/hijridate 2.4.1 2.5.0: Hijri-Gregorian date converter
 dev-python/httpx-oauth 0.15.1: Async OAuth client using HTTPX
