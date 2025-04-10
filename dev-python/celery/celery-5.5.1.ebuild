@@ -52,6 +52,7 @@ BDEPEND="
 		>=dev-python/msgpack-1.1.0[${PYTHON_USEDEP}]
 		>=dev-python/python-memcached-1.61[${PYTHON_USEDEP}]
 		>=dev-python/pymongo-4.0.2[${PYTHON_USEDEP}]
+		<dev-python/pymongo-4.12.0[${PYTHON_USEDEP}]
 		>=dev-python/pytest-celery-1.2.0[${PYTHON_USEDEP}]
 		<dev-python/pytest-celery-1.3.0[${PYTHON_USEDEP}]
 		dev-python/pytest-click[${PYTHON_USEDEP}]
