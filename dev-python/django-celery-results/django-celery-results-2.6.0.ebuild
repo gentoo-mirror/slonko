@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1 pypi
 
@@ -20,22 +20,29 @@ KEYWORDS="~amd64"
 DEPEND="
 	>=dev-python/celery-5.2.7[${PYTHON_USEDEP}]
 	<dev-python/celery-6.0[${PYTHON_USEDEP}]
-	>=dev-python/django-3.2.18[${PYTHON_USEDEP}]
+	>=dev-python/django-3.2.25[${PYTHON_USEDEP}]
 "
 
 DOCS=( README.rst )
 
-#BDEPEND="
-#	test? (
-#		>=dev-python/pytest-django-4.5.2[${PYTHON_USEDEP}]
-#		dev-python/pytz[${PYTHON_USEDEP}]
-#	)
-#"
+BDEPEND="
+	test? (
+		>=dev-python/pytest-django-4.5.2[${PYTHON_USEDEP}]
+		dev-python/pytz[${PYTHON_USEDEP}]
+	)
+"
 
-#distutils_enable_tests pytest
+EPYTEST_DESELECT=(
+	# Failing tests
+	t/integration/benchmark_models.py
+	t/unit/backends/test_database.py
+	t/unit/test_models.py
+)
+
+distutils_enable_tests pytest
 distutils_enable_sphinx docs \
 	dev-python/sphinx-celery
 
-#python_test() {
-#	epytest -m "not network"
-#}
+python_test() {
+	epytest -m "not network"
+}
