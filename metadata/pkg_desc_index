@@ -28,7 +28,7 @@ dev-python/concurrent-log-handler 0.9.25: Python logging handler allowing safe c
 dev-python/convertdate 2.4.0: Converts between Gregorian dates and other calendar systems.
 dev-python/daphne 3.0.2 4.1.2: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
 dev-python/dateparser 1.2.1: Date parsing library designed to parse dates from HTML pages
-dev-python/django-allauth 64.2.1: Django 3rd party (social) account authentication
+dev-python/django-allauth 65.7.0: Django 3rd party (social) account authentication
 dev-python/django-auditlog 2.3.0 3.0.0: Audit log app for Django
 dev-python/django-celery-results 2.6.0: Celery Result Backends using the Django ORM/Cache framework.
 dev-python/django-compression-middleware 0.5.0: Django middleware to compress responses using several algorithms.
