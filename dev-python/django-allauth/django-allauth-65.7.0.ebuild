@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{9..13} )
 
 inherit distutils-r1 optfeature
 
@@ -37,6 +37,7 @@ BDEPEND="
 	test? (
 		>=dev-python/fido2-1.1.2[${PYTHON_USEDEP}]
 		>=dev-python/pillow-9.0[${PYTHON_USEDEP}]
+		>=dev-python/pytest-asyncio-0.23.8[${PYTHON_USEDEP}]
 		>=dev-python/pytest-django-4.5.2[${PYTHON_USEDEP}]
 		>=dev-python/qrcode-7.0.0[${PYTHON_USEDEP}]
 		>=dev-python/python3-saml-1.15.0[${PYTHON_USEDEP}]
@@ -48,12 +49,6 @@ DOCS=( README.rst AUTHORS ChangeLog.rst )
 
 distutils_enable_sphinx docs \
 	dev-python/sphinx-rtd-theme
-
-src_test() {
-	# Require internet access
-	rm allauth/socialaccount/providers/openid/tests.py || die
-	distutils-r1_src_test
-}
 
 python_test() {
 	local -x DJANGO_SETTINGS_MODULE=tests.regular.settings
