@@ -42,6 +42,7 @@ dev-python/djangorestframework 3.14.0: Web APIs with django made easy
 dev-python/djangorestframework-guardian 0.3.0: django-guardian support for Django REST Framework
 dev-python/drf-writable-nested 0.7.2: Writable nested helpers for django-rest-framework's serializers
 dev-python/fastapi 0.115.3: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/granian 2.2.4: A Rust HTTP server for Python applications
 dev-python/hijridate 2.4.1 2.5.0: Hijri-Gregorian date converter
 dev-python/httpx-oauth 0.15.1: Async OAuth client using HTTPX
 dev-python/imap-tools 1.9.1 1.10.0: High level lib for work with email by IMAP
