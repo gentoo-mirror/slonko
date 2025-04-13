@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DISTUTILS_USE_PEP517=setuptools
+DISTUTILS_USE_PEP517=hatchling
 PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1
@@ -18,5 +18,10 @@ KEYWORDS="~amd64"
 
 RDEPEND=">=dev-python/portalocker-1.6.0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
+BDEPEND="
+	test? (
+		dev-python/pytest-sugar[${PYTHON_USEDEP}]
+	)
+"
 
 distutils_enable_tests pytest
