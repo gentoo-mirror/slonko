@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>marcin.deranek@slonko.net</email>
+		<name>Marcin Deranek</name>
+	</maintainer>
+	<upstream>
+		<bugs-to>https://github.com/Sygil-Dev/whoosh-reloaded/issues</bugs-to>
+		<remote-id type="github">Sygil-Dev/whoosh-reloaded</remote-id>
+		<remote-id type="pypi">whoosh-reloaded</remote-id>
+	</upstream>
+</pkgmetadata>
