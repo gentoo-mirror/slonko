@@ -40,6 +40,7 @@ dev-python/django-picklefield 3.2.0: Pickled object field for Django
 dev-python/django-soft-delete 1.0.18: Soft delete models, managers, queryset for Django
 dev-python/djangorestframework 3.14.0: Web APIs with django made easy
 dev-python/djangorestframework-guardian 0.3.0: django-guardian support for Django REST Framework
+dev-python/drf-spectacular-sidecar 2025.4.1: Serve self-contained distribution builds of Swagger UI and Redoc with Django.
 dev-python/drf-writable-nested 0.7.2: Writable nested helpers for django-rest-framework's serializers
 dev-python/fastapi 0.115.3: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/hijridate 2.4.1 2.5.0: Hijri-Gregorian date converter
