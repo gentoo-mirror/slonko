@@ -19,9 +19,8 @@ LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="
-	>=dev-python/cached-property-2.0.1[${PYTHON_USEDEP}]
-"
+DEPEND=">=dev-python/cached-property-2.0.1[${PYTHON_USEDEP}]"
+RDEPND="!dev-python/whoosh[${PYTHON_USEDEP}]"
 
 distutils_enable_tests pytest
 #distutils_enable_sphinx docs/source \
