@@ -24,7 +24,6 @@ RESTRICT="!test? ( test )"
 
 RDEPEND="
 	>=dev-python/django-3.2[${PYTHON_USEDEP}]
-	>=dev-python/python3-openid-3.0.8[${PYTHON_USEDEP}]
 	>=dev-python/pyjwt-1.7[${PYTHON_USEDEP}]
 	>=dev-python/requests-oauthlib-0.3.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.0.0[${PYTHON_USEDEP}]
@@ -41,6 +40,7 @@ BDEPEND="
 		dev-python/psycopg[${PYTHON_USEDEP}]
 		>=dev-python/pytest-asyncio-0.23.8[${PYTHON_USEDEP}]
 		>=dev-python/pytest-django-4.5.2[${PYTHON_USEDEP}]
+		>=dev-python/python3-openid-3.0.8[${PYTHON_USEDEP}]
 		>=dev-python/python3-saml-1.15.0[${PYTHON_USEDEP}]
 		<dev-python/python3-saml-2.0.0[${PYTHON_USEDEP}]
 		>=dev-python/pyyaml-6.0.2[${PYTHON_USEDEP}]
@@ -65,6 +65,7 @@ EPYTEST_DESELECT=(
 )
 
 pkg_postinst() {
-	optfeature "SAML authentication" dev-python/python3-saml
 	optfeature "MFA (Multi-factor authentication)" dev-python/qrcode dev-python/fido2
+	optfeature "OpenID or Steam" dev-python/python3-openid
+	optfeature "SAML authentication" dev-python/python3-saml
 }
