@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 PYTHON_REQ_USE="sqlite,tk?,xml(+)"
 
 inherit distutils-r1
@@ -36,27 +36,11 @@ BDEPEND="
 		dev-python/scipy[${PYTHON_USEDEP}]
 		dev-python/matplotlib[${PYTHON_USEDEP}]
 	)"
-PDEPEND="dev-python/nltk-data"
+PDEPEND=">=dev-python/nltk-data-20250310"
 
 distutils_enable_tests pytest
 
-EPYTEST_DESELECT=(
-	# Internet
-	unit/test_downloader.py::test_downloader_using_existing_parent_download_dir
-	unit/test_downloader.py::test_downloader_using_non_existing_parent_download_dir
+EPYTEST_IGNORE=(
+	# Network required
+	nltk/test/unit/test_downloader.py
 )
-
-src_prepare() {
-	# requires unpackaged pycrfsuite
-	sed -i -e '/>>>/s@$@ # doctest: +SKIP@' nltk/tag/crf.py || die
-	# replace fetching from network with duplicate file URL
-	sed -e 's@https://raw.githubusercontent.com/nltk/nltk/develop/nltk/test/toy.cfg@nltk:grammars/sample_grammars/toy.cfg@' \
-		-i nltk/test/data.doctest || die
-
-	distutils-r1_src_prepare
-}
-
-src_test() {
-	cd nltk/test || die
-	distutils-r1_src_test
-}
