@@ -27,6 +27,6 @@ BDEPEND="
 distutils_enable_tests pytest
 
 python_test() {
-	local -x DJANGO_SETTINGS_MODULE = test_project.settings
+	local -x DJANGO_SETTINGS_MODULE=test_project.settings
 	epytest --nomigrations
 }
