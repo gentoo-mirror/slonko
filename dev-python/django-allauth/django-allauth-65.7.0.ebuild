@@ -24,7 +24,6 @@ RESTRICT="!test? ( test )"
 
 RDEPEND="
 	>=dev-python/django-3.2[${PYTHON_USEDEP}]
-	>=dev-python/python3-openid-3.0.8[${PYTHON_USEDEP}]
 	>=dev-python/pyjwt-1.7[${PYTHON_USEDEP}]
 	>=dev-python/requests-oauthlib-0.3.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.0.0[${PYTHON_USEDEP}]
@@ -35,28 +34,38 @@ RDEPEND+="
 "
 BDEPEND="
 	test? (
+		>=dev-python/djangorestframework-3.15.2[${PYTHON_USEDEP}]
 		>=dev-python/fido2-1.1.2[${PYTHON_USEDEP}]
 		>=dev-python/pillow-9.0[${PYTHON_USEDEP}]
+		dev-python/psycopg[${PYTHON_USEDEP}]
 		>=dev-python/pytest-asyncio-0.23.8[${PYTHON_USEDEP}]
 		>=dev-python/pytest-django-4.5.2[${PYTHON_USEDEP}]
-		>=dev-python/qrcode-7.0.0[${PYTHON_USEDEP}]
+		>=dev-python/python3-openid-3.0.8[${PYTHON_USEDEP}]
 		>=dev-python/python3-saml-1.15.0[${PYTHON_USEDEP}]
 		<dev-python/python3-saml-2.0.0[${PYTHON_USEDEP}]
+		>=dev-python/pyyaml-6.0.2[${PYTHON_USEDEP}]
+		>=dev-python/qrcode-7.0.0[${PYTHON_USEDEP}]
 	)
 "
 
 DOCS=( README.rst AUTHORS ChangeLog.rst )
 
+distutils_enable_tests pytest
 distutils_enable_sphinx docs \
 	dev-python/sphinx-rtd-theme
 
-python_test() {
-	local -x DJANGO_SETTINGS_MODULE=tests.regular.settings
-	local -x PYTHONPATH=.
-	django-admin test -v 2 || die "Tests failed with ${EPYTHON}"
-}
+EPYTEST_IGNORE=(
+	# Requires django-ninja
+	allauth/headless/contrib/ninja/tests/test_security.py
+)
+EPYTEST_DESELECT=(
+	# Require network
+	allauth/socialaccount/providers/openid/tests.py::OpenIDTests::test_login
+	allauth/socialaccount/providers/openid/tests.py::OpenIDTests::test_login_with_extra_attributes
+)
 
 pkg_postinst() {
-	optfeature "SAML authentication" dev-python/python3-saml
 	optfeature "MFA (Multi-factor authentication)" dev-python/qrcode dev-python/fido2
+	optfeature "OpenID or Steam" dev-python/python3-openid
+	optfeature "SAML authentication" dev-python/python3-saml
 }
