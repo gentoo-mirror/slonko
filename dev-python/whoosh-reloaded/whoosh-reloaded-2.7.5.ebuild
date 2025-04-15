@@ -20,6 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
+	!dev-python/whoosh
 	>=dev-python/cached-property-2.0.1[${PYTHON_USEDEP}]
 "
 
