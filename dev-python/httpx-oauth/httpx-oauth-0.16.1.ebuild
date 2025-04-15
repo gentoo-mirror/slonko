@@ -25,7 +25,6 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	>=dev-python/httpx-0.18[${PYTHON_USEDEP}]
-	<dev-python/httpx-1.0.0[${PYTHON_USEDEP}]
 "
 BDEPEND="
 	test? (
