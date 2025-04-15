@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..12} )
+PYTHON_COMPAT=( python3_{9..13} )
 
 inherit distutils-r1 optfeature
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-	dev-python/django[${PYTHON_USEDEP}]
+	<dev-python/django-5.3[${PYTHON_USEDEP}]
 "
 BDEPEND="
 	test? (
