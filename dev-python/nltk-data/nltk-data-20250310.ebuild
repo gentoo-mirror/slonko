@@ -48,6 +48,7 @@ PACKAGES_ZIP=(
 PACKAGES_UNPACK=(
 	# wget -O - https://www.nltk.org/nltk_data/ | xml sel -t -m '//package[@unzip=1]' -v @subdir -o "/" -v @id -n - | sort
 	chunkers/maxent_ne_chunker
+	chunkers/maxent_ne_chunker_tab
 	corpora/abc
 	corpora/alpino
 	corpora/biocreative_ppi
@@ -64,6 +65,7 @@ PACKAGES_UNPACK=(
 	corpora/crubadan
 	corpora/dependency_treebank
 	corpora/dolch
+	corpora/english_wordnet
 	corpora/europarl_raw
 	corpora/floresta
 	corpora/framenet_v15
@@ -126,6 +128,7 @@ PACKAGES_UNPACK=(
 	grammars/sample_grammars
 	grammars/spanish_grammars
 	help/tagsets
+	help/tagsets_json
 	misc/mwa_ppdb
 	misc/perluniprops
 	models/bllip_wsj_no_aux
@@ -135,10 +138,14 @@ PACKAGES_UNPACK=(
 	stemmers/porter_test
 	stemmers/rslp
 	taggers/averaged_perceptron_tagger
+	taggers/averaged_perceptron_tagger_eng
 	taggers/averaged_perceptron_tagger_ru
+	taggers/averaged_perceptron_tagger_rus
 	taggers/maxent_treebank_pos_tagger
+	taggers/maxent_treebank_pos_tagger_tab
 	taggers/universal_tagset
 	tokenizers/punkt
+	tokenizers/punkt_tab
 )
 
 add_data() {
