@@ -3,9 +3,9 @@
 
 EAPI=8
 
-DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
-COMMIT="ca432d699bfa770fbb31e9d0780da0626dbbe7d3"
+DISTUTILS_USE_PEP517=hatchling
+PYTHON_COMPAT=( python3_{10..13} )
+COMMIT="8163419b91d6b8c6ecb0c4edd30a0338f43db442"
 
 inherit distutils-r1
 
@@ -24,5 +24,9 @@ BDEPEND="
 		>=dev-python/pytest-django-4.5.2[${PYTHON_USEDEP}]
 	)
 "
-
 distutils_enable_tests pytest
+
+python_test() {
+	local -x DJANGO_SETTINGS_MODULE = test_project.settings
+	epytest --nomigrations
+}
