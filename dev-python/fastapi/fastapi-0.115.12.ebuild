@@ -24,7 +24,7 @@ RESTRICT="test"
 RDEPEND="
 	>=dev-python/pydantic-1.7.4[${PYTHON_USEDEP}]
 	>=dev-python/starlette-0.40.0[${PYTHON_USEDEP}]
-	<dev-python/starlette-0.42.0[${PYTHON_USEDEP}]
+	<dev-python/starlette-0.47.0[${PYTHON_USEDEP}]
 	>=dev-python/typing-extensions-4.8.0[${PYTHON_USEDEP}]
 "
 
