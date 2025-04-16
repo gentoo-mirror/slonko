@@ -1,5 +1,5 @@
 [Unit]
-Description=Paperless webserver service
+Description=Paperless webserver
 Requires=redis.service
 Requires=paperless-webserver.socket
 After=network.target
