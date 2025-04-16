@@ -44,6 +44,7 @@ dev-python/drf-spectacular 0.28.0: Sane and flexible OpenAPI schema generation f
 dev-python/drf-spectacular-sidecar 2025.4.1: Serve self-contained distribution builds of Swagger UI and Redoc with Django.
 dev-python/drf-writable-nested 0.7.2: Writable nested helpers for django-rest-framework's serializers
 dev-python/fastapi 0.115.12: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/gotenberg-client 0.9.0: A Python client for interfacing with the Gotenberg API
 dev-python/hijridate 2.4.1 2.5.0: Hijri-Gregorian date converter
 dev-python/httpx-oauth 0.16.1: Async OAuth client using HTTPX
 dev-python/imap-tools 1.9.1 1.10.0: High level lib for work with email by IMAP
