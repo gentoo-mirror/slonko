@@ -10,8 +10,8 @@ inherit distutils-r1 pypi
 
 DESCRIPTION="A Python client for interfacing with the Gotenberg API"
 HOMEPAGE="
-	https://github.com/stumpylog/gotenberg-client
-	https://pypi.org/project/gotenberg-client/
+	https://github.com/stumpylog/tika-client
+	https://pypi.org/project/tika-client/
 "
 
 LICENSE="MPL-2.0"
@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
+	>=dev-python/anyio-4.8[${PYTHON_USEDEP}]
 	>=dev-python/httpx-0.27[${PYTHON_USEDEP}]
-	dev-python/h2[${PYTHON_USEDEP}]
 	dev-python/typing-extensions[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}"
