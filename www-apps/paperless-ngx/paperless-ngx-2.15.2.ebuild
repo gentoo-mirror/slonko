@@ -36,8 +36,6 @@ ALLAUTH_MFA_DEPEND="
 		>=dev-python/fido2-1.1.2[${PYTHON_USEDEP}]
 		>=dev-python/qrcode-7.0.0[${PYTHON_USEDEP}]')
 "
-# missing
-# allauth-social flag; flower; gotenberg-client; tika-client
 DEPEND="
 	${ACCT_DEPEND}
 	${ALLAUTH_MFA_DEPEND}
