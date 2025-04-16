@@ -1,9 +1,7 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-
-#DOCS_BUILDER="mkdocs"
 
 DISTUTILS_USE_PEP517=hatchling
 PYTHON_COMPAT=( python3_{10..13} )
@@ -26,17 +24,5 @@ RDEPEND="
 	dev-python/typing-extensions[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}"
-#BDEPEND="
-#	doc? (
-#		dev-python/mkdocs-material[social,${PYTHON_USEDEP}]
-#		dev-python/mkdocs-minify-plugin[${PYTHON_USEDEP}]
-#	)
-#	test? (
-#		>=dev-python/pytest-httpx-0.35[${PYTHON_USEDEP}]
-#		dev-python/pikepdf[${PYTHON_USEDEP}]
-#	)
-#"
-
-#distutils_enable_tests pytest
 
 DOCS=( README.md )
