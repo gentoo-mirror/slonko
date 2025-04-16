@@ -1,7 +1,6 @@
 [Unit]
 Description=Paperless Celery Workers
 Requires=redis.service
-After=network.target
 PartOf=paperless.target
 
 [Service]

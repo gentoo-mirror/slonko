@@ -36,8 +36,6 @@ ALLAUTH_MFA_DEPEND="
 		>=dev-python/fido2-1.1.2[${PYTHON_USEDEP}]
 		>=dev-python/qrcode-7.0.0[${PYTHON_USEDEP}]')
 "
-# missing
-# allauth-social flag; flower; gotenberg-client; tika-client
 DEPEND="
 	${ACCT_DEPEND}
 	${ALLAUTH_MFA_DEPEND}
@@ -68,8 +66,9 @@ DEPEND="
 		>=dev-python/drf-spectacular-sidecar-2025.3.1[${PYTHON_USEDEP}]
 		>=dev-python/drf-writable-nested-0.7.1[${PYTHON_USEDEP}]
 		>=dev-python/filelock-3.17.0[${PYTHON_USEDEP}]
-		>=www-servers/granian-2.2.0[${PYTHON_USEDEP}]
+		>=dev-python/gotenberg-client-0.9.0[${PYTHON_USEDEP}]
 		>=dev-python/httpx-oauth-0.16[${PYTHON_USEDEP}]
+		dev-python/humanize[${PYTHON_USEDEP}]
 		>=dev-python/imap-tools-1.10.0[${PYTHON_USEDEP}]
 		>=dev-python/inotifyrecursive-0.3[${PYTHON_USEDEP}]
 		>=dev-python/jinja2-3.1.5[${PYTHON_USEDEP}]
@@ -89,11 +88,13 @@ DEPEND="
 		>=dev-python/redis-5.2.1[${PYTHON_USEDEP}]
 		>=dev-python/scikit-learn-1.6.1[${PYTHON_USEDEP}]
 		>=dev-python/setproctitle-1.3.4[${PYTHON_USEDEP}]
+		>=dev-python/tika-client-0.9.0[${PYTHON_USEDEP}]
 		>=dev-python/tqdm-4.67.1[${PYTHON_USEDEP}]
 		dev-python/uvloop[${PYTHON_USEDEP}]
 		>=dev-python/watchdog-6.0[${PYTHON_USEDEP}]
 		>=dev-python/whitenoise-6.9[${PYTHON_USEDEP}]
-		>=dev-python/whoosh-reloaded-2.7.5[${PYTHON_USEDEP}]')
+		>=dev-python/whoosh-reloaded-2.7.5[${PYTHON_USEDEP}]
+		>=www-servers/granian-2.2.0[${PYTHON_USEDEP}]')
 	media-gfx/imagemagick[xml]
 	media-gfx/optipng
 	media-libs/jbig2enc
@@ -110,7 +111,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-DOCS=( docker/imagemagick-policy.xml )
+DOCS=( docker/rootfs/etc/ImageMagick-6/paperless-policy.xml )
 
 src_prepare() {
 	default
@@ -126,17 +127,12 @@ src_prepare() {
 	cat >> "paperless.conf" <<- EOF
 
 	# Custom
-	PAPERLESS_BIND_ADDR=127.0.0.1
-	PAPERLESS_PORT=8000
+	GRANIAN_HOST=127.0.0.1
+	GRANIAN_PORT=8000
+	GRANIAN_WORKERS=1
 
 	PAPERLESS_ENABLE_COMPRESSION=$(use compression && echo true || echo false)
 	PAPERLESS_AUDIT_LOG_ENABLED=$(use audit && echo true || echo false)
-
-	# Granian
-	GRANIAN_HOST=\$PAPERLESS_BIND_ADDR
-	GRANIAN_PORT=\$PAPERLESS_PORT
-	GRANIAN_WORKERS=\$PAPERLESS_WEBSERVER_WORKERS
-	GRANIAN_URL_PATH_PREFIX=\$PAPERLESS_FORCE_SCRIPT_NAME
 	EOF
 }
 
@@ -155,7 +151,7 @@ src_install() {
 
 	# Install paperless files
 	insinto /usr/share/paperless
-	doins -r docs src static gunicorn.conf.py requirements.txt
+	doins -r docs src static
 
 	insinto /etc
 	doins paperless.conf

@@ -1,7 +1,6 @@
 [Unit]
-Description=Paperless scheduler service
+Description=Paperless Celery Beat
 Requires=redis.service
-After=network.target
 PartOf=paperless.target
 
 [Service]
