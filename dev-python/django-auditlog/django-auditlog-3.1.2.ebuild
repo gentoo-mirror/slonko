@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..12} )
+PYTHON_COMPAT=( python3_{9..13} )
 
 inherit distutils-r1
 
@@ -24,7 +24,7 @@ BDEPEND="
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/setuptools-scm[${PYTHON_USEDEP}]
 	doc? (
-		dev-python/psycopg:2[${PYTHON_USEDEP}]
+		dev-python/psycopg[${PYTHON_USEDEP}]
 	)
 	test? (
 		dev-db/postgresql[server]
@@ -47,7 +47,8 @@ python_test() {
 		-c "ALTER ROLE postgres WITH PASSWORD '';" || die
 	createdb -h "${T}" -U postgres auditlog || die
 
-	"${EPYTHON}" -m django test -v2 --settings=auditlog_tests.test_settings || die "Tests fail with ${EPYTHON}"
+	cd "${S}/auditlog_tests"
+	"${EPYTHON}" -m django test -v2 --settings=test_settings || die "Tests fail with ${EPYTHON}"
 
 	pg_ctl -w -D "${db}" stop || die
 }
