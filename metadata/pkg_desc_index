@@ -7,7 +7,7 @@ acct-user/sympa 0: User for Sympa daemon
 acct-user/tibber-exporter 0: A user for app-metrics/tibber-exporter
 acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.32.7 1.33.2: Unofficial Bitwarden compatible server written in Rust
-app-admin/vaultwarden-web-vault 2025.3.1 2025.4.0: Unofficial patched bitwarden web-vault builds for vaultwarden
+app-admin/vaultwarden-web-vault 2025.4.0 2025.4.1: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
 app-metrics/tibber-exporter 3.10.0: Monitor your power usage and costs with Prometheus and Grafana
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
