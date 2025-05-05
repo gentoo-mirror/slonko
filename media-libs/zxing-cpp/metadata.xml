@@ -5,6 +5,9 @@
 		<email>marcin.deranek@slonko.net</email>
 		<name>Marcin Deranek</name>
 	</maintainer>
+	<use>
+		<flag name="experimental">Enable experimental features via <pkg>media-libs/zint</pkg></flag>
+	</use>
 	<upstream>
 		<bugs-to>https://github.com/zxing-cpp/zxing-cpp/issues</bugs-to>
 		<remote-id type="github">zxing-cpp/zxing-cpp</remote-id>
