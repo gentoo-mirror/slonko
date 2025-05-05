@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..12} )
+PYTHON_COMPAT=( python3_{8..13} )
 
 inherit distutils-r1
 
@@ -32,6 +32,11 @@ BDEPEND="
 
 DOCS=( README.rst )
 
+EPYTEST_DESELECT=(
+	# https://github.com/django/daphne/issues/535
+	tests/test_http_request.py::TestHTTPRequest::test_bad_requests
+	tests/test_http_request.py::TestHTTPRequest::test_invalid_header_name
+)
 distutils_enable_tests pytest
 
 src_test() {
