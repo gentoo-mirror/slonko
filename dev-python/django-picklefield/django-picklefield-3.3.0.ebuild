@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..12} )
+PYTHON_COMPAT=( python3_{9..13} )
 inherit distutils-r1
 
 DESCRIPTION="Pickled object field for Django"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-	>=dev-python/django-3.2[${PYTHON_USEDEP}]
+	>=dev-python/django-4.2[${PYTHON_USEDEP}]
 "
 
 DOCS=( README.rst )
