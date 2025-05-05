@@ -1,0 +1,29 @@
+--- compiz-9999/gtk/window-decorator/gtk-window-decorator.h.orig	2025-05-05 17:46:42.192970433 +0200
++++ compiz-9999/gtk/window-decorator/gtk-window-decorator.h	2025-05-05 17:55:18.928685006 +0200
+@@ -505,7 +505,7 @@
+ create_switcher_frame (const gchar *);
+ 
+ void
+-destroy_switcher_frame ();
++destroy_switcher_frame (decor_frame_t *frame);
+ 
+ gboolean
+ update_switcher_window (Window     popup,
+--- compiz-9999/gtk/window-decorator/gtk-window-decorator.h.orig	2025-05-05 18:07:30.461130424 +0200
++++ compiz-9999/gtk/window-decorator/gtk-window-decorator.h	2025-05-05 18:08:40.386014694 +0200
+@@ -340,13 +340,13 @@
+ create_normal_frame (const gchar *type);
+ 
+ void
+-destroy_normal_frame ();
++destroy_normal_frame (decor_frame_t *frame);
+ 
+ decor_frame_t *
+ create_bare_frame (const gchar *type);
+ 
+ void
+-destroy_bare_frame ();
++destroy_bare_frame (decor_frame_t *frame);
+ 
+ /* Don't use directly */
+ gboolean

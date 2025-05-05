@@ -84,6 +84,7 @@ RDEPEND="${COMMONDEPEND}
 PATCHES=(
 	"${FILESDIR}/access_violation.patch"
 	"${FILESDIR}/gtk-extents.patch"
+	"${FILESDIR}/gcc-15.patch"
 )
 
 pkg_pretend() {
