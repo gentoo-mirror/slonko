@@ -37,7 +37,7 @@ dev-python/django-environ 0.11.2 0.12.0: An environment variables to configure D
 dev-python/django-extensions 3.2.3 4.1: A collection of custom extensions for the Django Framework
 dev-python/django-guardian 2.4.0: Implementation of per object permissions for Django
 dev-python/django-multiselectfield 0.1.12: Django multiple select field
-dev-python/django-picklefield 3.2.0: Pickled object field for Django
+dev-python/django-picklefield 3.3.0: Pickled object field for Django
 dev-python/django-soft-delete 1.0.18: Soft delete models, managers, queryset for Django
 dev-python/djangorestframework-guardian 0.3.0: django-guardian support for Django REST Framework
 dev-python/drf-spectacular 0.28.0: Sane and flexible OpenAPI schema generation for Django REST framework.
