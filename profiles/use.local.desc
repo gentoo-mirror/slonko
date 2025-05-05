@@ -12,6 +12,7 @@ dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5
 dev-util/scanmem:gui - Enable the GameConqueror GUI
 dev-util/ugtrain:glib - Build hooking libs with e.g. g_malloc() support
 media-gfx/epsonscan2:bundled-libs - Use bundled libs
+media-libs/zxing-cpp:experimental - Enable experimental features via media-libs/zint
 net-mail/sympa:compat - Enable migration compatibility flag
 net-mail/sympa:dkim - Add DomainKeys Identified Mail support
 sys-kernel/hardened-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
