@@ -22,7 +22,7 @@ dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for cas
 dev-python/billiard 3.6.4.0 4.2.1: Python multiprocessing fork
 dev-python/cached-property 2.0.1: A cached-property for decorating methods in classes
 dev-python/celery 5.4.0 5.5.2: Asynchronous task queue/job queue based on distributed message passing
-dev-python/channels 3.0.5 4.2.0: Extends Django abilities beyond HTTP protocol
+dev-python/channels 3.0.5 4.2.2: Extends Django abilities beyond HTTP protocol
 dev-python/channels-redis 4.1.0 4.2.1: Provides Django Channels channel layers that use Redis as a backing store.
 dev-python/click-repl 0.2.0 0.3.0: Subcommand REPL for click apps
 dev-python/concurrent-log-handler 0.9.25: Python logging handler allowing safe concurrent write to the same log file
