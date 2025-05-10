@@ -25,7 +25,7 @@ dev-python/celery 5.4.0 5.5.2: Asynchronous task queue/job queue based on distri
 dev-python/channels 3.0.5 4.2.2: Extends Django abilities beyond HTTP protocol
 dev-python/channels-redis 4.1.0 4.2.1: Provides Django Channels channel layers that use Redis as a backing store.
 dev-python/click-repl 0.2.0 0.3.0: Subcommand REPL for click apps
-dev-python/concurrent-log-handler 0.9.25: Python logging handler allowing safe concurrent write to the same log file
+dev-python/concurrent-log-handler 0.9.26: Python logging handler allowing safe concurrent write to the same log file
 dev-python/convertdate 2.4.0: Converts between Gregorian dates and other calendar systems.
 dev-python/daphne 3.0.2 4.1.2: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
 dev-python/dateparser 1.2.1: Date parsing library designed to parse dates from HTML pages
