@@ -12,11 +12,11 @@ CRATES="
 	addr2line@0.24.2
 	adler2@2.0.0
 	aes@0.8.4
-	anyhow@1.0.97
+	anyhow@1.0.98
 	arc-swap@1.7.1
 	atomic-waker@1.1.2
 	autocfg@1.4.0
-	backtrace@0.3.74
+	backtrace@0.3.75
 	base64@0.22.1
 	base64ct@1.7.3
 	bitflags@2.9.0
@@ -25,7 +25,7 @@ CRATES="
 	bus@2.4.1
 	bytes@1.10.1
 	cbc@0.1.2
-	cc@1.2.19
+	cc@1.2.21
 	cfg-if@1.0.0
 	cipher@0.4.4
 	const-oid@0.9.6
@@ -34,7 +34,7 @@ CRATES="
 	crossbeam-utils@0.8.21
 	crypto-common@0.1.6
 	data-encoding@2.8.0
-	der@0.7.9
+	der@0.7.10
 	digest@0.10.7
 	either@1.15.0
 	equivalent@1.0.2
@@ -49,12 +49,11 @@ CRATES="
 	futures-util@0.3.31
 	futures@0.3.31
 	generic-array@0.14.7
-	getrandom@0.2.15
+	getrandom@0.2.16
 	getrandom@0.3.2
 	gimli@0.31.1
-	h2@0.4.8
-	hashbrown@0.14.5
-	hashbrown@0.15.2
+	h2@0.4.10
+	hashbrown@0.15.3
 	heck@0.5.0
 	hermit-abi@0.3.9
 	hmac@0.12.1
@@ -70,7 +69,7 @@ CRATES="
 	inout@0.1.4
 	itertools@0.14.0
 	itoa@1.0.15
-	libc@0.2.171
+	libc@0.2.172
 	libmimalloc-sys@0.1.42
 	lock_api@0.4.12
 	log@0.4.27
@@ -93,42 +92,42 @@ CRATES="
 	pkcs8@0.10.2
 	portable-atomic@1.11.0
 	ppv-lite86@0.2.21
-	proc-macro2@1.0.94
-	pyo3-build-config@0.24.1
-	pyo3-ffi@0.24.1
+	proc-macro2@1.0.95
+	pyo3-build-config@0.24.2
+	pyo3-ffi@0.24.2
 	pyo3-log@0.12.3
-	pyo3-macros-backend@0.24.1
-	pyo3-macros@0.24.1
-	pyo3@0.24.1
+	pyo3-macros-backend@0.24.2
+	pyo3-macros@0.24.2
+	pyo3@0.24.2
 	python3-dll-a@0.2.13
 	quote@1.0.40
 	r-efi@5.2.0
-	rand@0.9.0
+	rand@0.9.1
 	rand_chacha@0.9.0
 	rand_core@0.6.4
 	rand_core@0.9.3
-	redox_syscall@0.5.11
+	redox_syscall@0.5.12
 	ring@0.17.14
 	rustc-demangle@0.1.24
 	rustls-pemfile@2.2.0
-	rustls-pki-types@1.11.0
-	rustls-webpki@0.103.1
-	rustls@0.23.26
+	rustls-pki-types@1.12.0
+	rustls-webpki@0.103.2
+	rustls@0.23.27
 	salsa20@0.10.2
 	scopeguard@1.2.0
 	scrypt@0.11.0
 	serde@1.0.219
 	serde_derive@1.0.219
 	sha1@0.10.6
-	sha2@0.10.8
+	sha2@0.10.9
 	shlex@1.3.0
-	signal-hook-registry@1.4.2
+	signal-hook-registry@1.4.5
 	slab@0.4.9
 	smallvec@1.15.0
 	socket2@0.5.8
 	spki@0.7.3
 	subtle@2.6.1
-	syn@2.0.100
+	syn@2.0.101
 	target-lexicon@0.13.2
 	thiserror-impl@2.0.12
 	thiserror@2.0.12
@@ -139,7 +138,7 @@ CRATES="
 	tokio-rustls@0.26.2
 	tokio-stream@0.1.17
 	tokio-tungstenite@0.26.2
-	tokio-util@0.7.14
+	tokio-util@0.7.15
 	tokio@1.44.2
 	tracing-core@0.1.33
 	tracing@0.1.41
@@ -163,8 +162,8 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.52.6
 	wit-bindgen-rt@0.39.0
-	zerocopy-derive@0.8.24
-	zerocopy@0.8.24
+	zerocopy-derive@0.8.25
+	zerocopy@0.8.25
 	zeroize@1.8.1
 "
 
