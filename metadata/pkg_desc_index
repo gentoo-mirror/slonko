@@ -84,5 +84,5 @@ sys-kernel/hardened-sources 5.10.233 5.10.235 5.10.236 5.10.237 5.15.177 5.15.17
 sys-kernel/it87 9999: IT8705F/IT871xF/IT872xF hardware monitoring driver
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/paperless-ngx 2.15.3 2.16.1: Community supported paperless: scan, index and archive your physical documents
-www-servers/granian 2.2.6 2.3.0: A Rust HTTP server for Python applications
+www-servers/granian 2.2.6 2.3.1: A Rust HTTP server for Python applications
 x11-wm/compiz 9999: OpenGL window and compositing manager
