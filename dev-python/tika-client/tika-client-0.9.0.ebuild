@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1 pypi
 
-DESCRIPTION="A Python client for interfacing with the Gotenberg API"
+DESCRIPTION="A modern REST client for Apache Tika server"
 HOMEPAGE="
 	https://github.com/stumpylog/tika-client
 	https://pypi.org/project/tika-client/
