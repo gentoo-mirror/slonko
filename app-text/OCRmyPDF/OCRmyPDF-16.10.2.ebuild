@@ -29,6 +29,7 @@ RDEPEND="
 	>=app-text/tesseract-4.1.1[jpeg,tiff,png,webp]
 	>=dev-python/deprecation-2.1.0[${PYTHON_USEDEP}]
 	>=dev-python/packaging-20[${PYTHON_USEDEP}]
+	<dev-python/pikepdf-9.8.0[${PYTHON_USEDEP}]
 	>=dev-python/pikepdf-8.10.1[${PYTHON_USEDEP}]
 	>=dev-python/pillow-10.0.1[jpeg,jpeg2k,lcms,tiff,webp,zlib,${PYTHON_USEDEP}]
 	>=dev-python/pluggy-1[${PYTHON_USEDEP}]
