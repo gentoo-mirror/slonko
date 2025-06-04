@@ -25,7 +25,7 @@ CRATES="
 	bus@2.4.1
 	bytes@1.10.1
 	cbc@0.1.2
-	cc@1.2.23
+	cc@1.2.25
 	cfg-if@1.0.0
 	cipher@0.4.4
 	const-oid@0.9.6
@@ -55,14 +55,14 @@ CRATES="
 	h2@0.4.10
 	hashbrown@0.15.3
 	heck@0.5.0
-	hermit-abi@0.3.9
+	hermit-abi@0.5.1
 	hmac@0.12.1
 	http-body-util@0.1.3
 	http-body@1.0.1
 	http@1.3.1
 	httparse@1.10.1
 	httpdate@1.0.3
-	hyper-util@0.1.11
+	hyper-util@0.1.13
 	hyper@1.6.0
 	indexmap@2.9.0
 	indoc@2.0.6
@@ -71,7 +71,7 @@ CRATES="
 	itoa@1.0.15
 	libc@0.2.172
 	libmimalloc-sys@0.1.42
-	lock_api@0.4.12
+	lock_api@0.4.13
 	log@0.4.27
 	memchr@2.7.4
 	memoffset@0.9.1
@@ -79,12 +79,12 @@ CRATES="
 	mime@0.3.17
 	mime_guess@2.0.5
 	miniz_oxide@0.8.8
-	mio@1.0.3
-	num_cpus@1.16.0
+	mio@1.0.4
+	num_cpus@1.17.0
 	object@0.36.7
 	once_cell@1.21.3
-	parking_lot@0.12.3
-	parking_lot_core@0.9.10
+	parking_lot@0.12.4
+	parking_lot_core@0.9.11
 	pbkdf2@0.12.2
 	pem@3.0.5
 	percent-encoding@2.3.1
@@ -126,7 +126,7 @@ CRATES="
 	signal-hook-registry@1.4.5
 	slab@0.4.9
 	smallvec@1.15.0
-	socket2@0.5.8
+	socket2@0.5.10
 	spki@0.7.3
 	subtle@2.6.1
 	syn@2.0.101
@@ -141,7 +141,7 @@ CRATES="
 	tokio-stream@0.1.17
 	tokio-tungstenite@0.26.2
 	tokio-util@0.7.15
-	tokio@1.45.0
+	tokio@1.45.1
 	tracing-core@0.1.33
 	tracing@0.1.41
 	tungstenite@0.26.2
@@ -155,6 +155,7 @@ CRATES="
 	wasi@0.11.0+wasi-snapshot-preview1
 	wasi@0.14.2+wasi-0.2.4
 	windows-sys@0.52.0
+	windows-sys@0.59.0
 	windows-targets@0.52.6
 	windows_aarch64_gnullvm@0.52.6
 	windows_aarch64_msvc@0.52.6
