@@ -94,7 +94,7 @@ DEPEND="
 		>=dev-python/watchdog-6.0[${PYTHON_USEDEP}]
 		>=dev-python/whitenoise-6.9[${PYTHON_USEDEP}]
 		>=dev-python/whoosh-reloaded-2.7.5[${PYTHON_USEDEP}]
-		>=www-servers/granian-2.2.0[${PYTHON_USEDEP}]')
+		>=www-servers/granian-2.3.2[${PYTHON_USEDEP}]')
 	media-gfx/imagemagick[xml]
 	media-gfx/optipng
 	media-libs/jbig2enc
