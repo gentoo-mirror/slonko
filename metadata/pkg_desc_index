@@ -83,6 +83,6 @@ net-vpn/vpn-slice 0.16.1: vpnc-script replacement for easy and secure split-tunn
 sys-kernel/hardened-sources 5.10.233 5.10.236 5.10.237 5.15.177 5.15.183 5.15.184 6.1.132 6.1.139 6.1.140 6.6.85 6.6.91 6.6.92 6.12.21 6.12.29 6.12.30 6.12.31 6.14.6 6.14.8 6.14.9: Minimal supplement to upstream Kernel Self Protection Project
 sys-kernel/it87 9999: IT8705F/IT871xF/IT872xF hardware monitoring driver
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
-www-apps/paperless-ngx 2.15.3 2.16.2: Community supported paperless: scan, index and archive your physical documents
+www-apps/paperless-ngx 2.15.3 2.16.3: Community supported paperless: scan, index and archive your physical documents
 www-servers/granian 2.2.6 2.3.2: A Rust HTTP server for Python applications
 x11-wm/compiz 9999: OpenGL window and compositing manager
