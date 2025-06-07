@@ -76,7 +76,7 @@ DEPEND="
 		>=dev-python/nltk-3.9.1[${PYTHON_USEDEP}]
 		>=dev-python/pathvalidate-3.2.3[${PYTHON_USEDEP}]
 		>=dev-python/pdf2image-1.17.0[${PYTHON_USEDEP}]
-		dev-python/pikepdf[${PYTHON_USEDEP}]
+		>=dev-python/pikepdf-8.10.1[${PYTHON_USEDEP}]
 		dev-python/pillow[${PYTHON_USEDEP}]
 		>=dev-python/python-dateutil-2.9.0[${PYTHON_USEDEP}]
 		>=dev-python/python-dotenv-1.1.0[${PYTHON_USEDEP}]
