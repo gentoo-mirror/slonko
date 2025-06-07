@@ -15,7 +15,7 @@ S="${WORKDIR}/${PN}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="audit compression mysql +ocr postgres remote-redis +sqlite zxing"
+IUSE="audit compression mysql postgres remote-redis +sqlite zxing"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	|| ( mysql postgres sqlite )
@@ -41,7 +41,6 @@ DEPEND="
 	${ALLAUTH_MFA_DEPEND}
 	${EXTRA_DEPEND}
 	${PYTHON_DEPS}
-	app-text/poppler[utils]
 	$(python_gen_cond_dep '
 		>=dev-python/bleach-6.2.0[${PYTHON_USEDEP}]
 		>=dev-python/celery-5.5.1[${PYTHON_USEDEP}]
@@ -76,8 +75,6 @@ DEPEND="
 		>=dev-python/nltk-3.9.1[${PYTHON_USEDEP}]
 		>=dev-python/pathvalidate-3.2.3[${PYTHON_USEDEP}]
 		>=dev-python/pdf2image-1.17.0[${PYTHON_USEDEP}]
-		>=dev-python/pikepdf-8.10.1[${PYTHON_USEDEP}]
-		dev-python/pillow[${PYTHON_USEDEP}]
 		>=dev-python/python-dateutil-2.9.0[${PYTHON_USEDEP}]
 		>=dev-python/python-dotenv-1.1.0[${PYTHON_USEDEP}]
 		>=dev-python/python-gnupg-0.5.4[${PYTHON_USEDEP}]
@@ -95,6 +92,8 @@ DEPEND="
 		>=dev-python/whitenoise-6.9[${PYTHON_USEDEP}]
 		>=dev-python/whoosh-reloaded-2.7.5[${PYTHON_USEDEP}]
 		>=www-servers/granian-2.3.2[${PYTHON_USEDEP}]')
+	>=app-text/OCRmyPDF-16.10
+	app-text/poppler[utils]
 	media-gfx/imagemagick[xml]
 	media-gfx/optipng
 	media-libs/jbig2enc
@@ -103,7 +102,6 @@ DEPEND="
 	compression? ( $(python_gen_cond_dep '
 		>=dev-python/django-compression-middleware-0.5.0[${PYTHON_USEDEP}]') )
 	mysql? ( >=dev-python/mysqlclient-2.2.7 )
-	ocr? ( >=app-text/OCRmyPDF-16.10 )
 	postgres? ( $(python_gen_cond_dep '
 		>=dev-python/psycopg-3.2.5[native-extensions,${PYTHON_USEDEP}]') )
 	!remote-redis? ( dev-db/redis )
