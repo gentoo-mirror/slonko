@@ -25,7 +25,7 @@ dev-python/celery 5.4.0 5.5.3: Asynchronous task queue/job queue based on distri
 dev-python/channels 3.0.5 4.2.2: Extends Django abilities beyond HTTP protocol
 dev-python/channels-redis 4.1.0 4.2.1: Provides Django Channels channel layers that use Redis as a backing store.
 dev-python/click-repl 0.2.0 0.3.0: Subcommand REPL for click apps
-dev-python/concurrent-log-handler 0.9.26: Python logging handler allowing safe concurrent write to the same log file
+dev-python/concurrent-log-handler 0.9.26 0.9.27: Python logging handler allowing safe concurrent write to the same log file
 dev-python/convertdate 2.4.0: Converts between Gregorian dates and other calendar systems.
 dev-python/daphne 3.0.2 4.1.2: HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP
 dev-python/dateparser 1.2.1: Date parsing library designed to parse dates from HTML pages
@@ -84,5 +84,5 @@ sys-kernel/hardened-sources 5.10.233 5.10.236 5.10.237 5.15.177 5.15.183 5.15.18
 sys-kernel/it87 9999: IT8705F/IT871xF/IT872xF hardware monitoring driver
 www-apps/gallery 2.3.2.9999: Web based (PHP Script) photo album viewer/creator
 www-apps/paperless-ngx 2.15.3 2.16.3: Community supported paperless: scan, index and archive your physical documents
-www-servers/granian 2.2.6 2.3.2: A Rust HTTP server for Python applications
+www-servers/granian 2.2.6 2.3.3: A Rust HTTP server for Python applications
 x11-wm/compiz 9999: OpenGL window and compositing manager
