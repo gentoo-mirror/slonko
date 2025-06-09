@@ -15,12 +15,14 @@ SRC_URI="https://github.com/goinnn/${PN}/archive/v${PV}.tar.gz -> ${P}.gh.tar.gz
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="dev-python/django[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 DOCS=( README.rst )
 
-#python_test() {
-#	"${EPYTHON}" example/run_tests.py || die "Tests fail with ${EPYTHON}"
-#}
+python_test() {
+	"${EPYTHON}" example/run_tests.py || die "Tests fail with ${EPYTHON}"
+}
