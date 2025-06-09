@@ -18,14 +18,14 @@ CRATES="
 	autocfg@1.4.0
 	backtrace@0.3.75
 	base64@0.22.1
-	base64ct@1.7.3
+	base64ct@1.8.0
 	bitflags@2.9.1
 	block-buffer@0.10.4
 	block-padding@0.3.3
 	bus@2.4.1
 	bytes@1.10.1
 	cbc@0.1.2
-	cc@1.2.25
+	cc@1.2.26
 	cfg-if@1.0.0
 	cipher@0.4.4
 	const-oid@0.9.6
@@ -53,7 +53,7 @@ CRATES="
 	getrandom@0.3.3
 	gimli@0.31.1
 	h2@0.4.10
-	hashbrown@0.15.3
+	hashbrown@0.15.4
 	heck@0.5.0
 	hermit-abi@0.5.1
 	hmac@0.12.1
@@ -62,7 +62,7 @@ CRATES="
 	http@1.3.1
 	httparse@1.10.1
 	httpdate@1.0.3
-	hyper-util@0.1.13
+	hyper-util@0.1.14
 	hyper@1.6.0
 	indexmap@2.9.0
 	indoc@2.0.6
@@ -92,7 +92,7 @@ CRATES="
 	pin-utils@0.1.0
 	pkcs5@0.7.1
 	pkcs8@0.10.2
-	portable-atomic@1.11.0
+	portable-atomic@1.11.1
 	ppv-lite86@0.2.21
 	proc-macro2@1.0.95
 	pyo3-build-config@0.25.0
@@ -125,7 +125,7 @@ CRATES="
 	shlex@1.3.0
 	signal-hook-registry@1.4.5
 	slab@0.4.9
-	smallvec@1.15.0
+	smallvec@1.15.1
 	socket2@0.5.10
 	spki@0.7.3
 	subtle@2.6.1
@@ -142,7 +142,7 @@ CRATES="
 	tokio-tungstenite@0.26.2
 	tokio-util@0.7.15
 	tokio@1.45.1
-	tracing-core@0.1.33
+	tracing-core@0.1.34
 	tracing@0.1.41
 	tungstenite@0.26.2
 	typenum@1.18.0
