@@ -20,6 +20,7 @@ RDEPEND=">=dev-python/portalocker-1.6.0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 BDEPEND="
 	test? (
+		dev-python/pytest-mock[${PYTHON_USEDEP}]
 		dev-python/pytest-sugar[${PYTHON_USEDEP}]
 	)
 "
