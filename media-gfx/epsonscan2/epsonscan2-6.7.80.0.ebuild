@@ -59,7 +59,8 @@ src_prepare() {
 
 	# Boost 1.87 compatibility (BOOST_NO_CXX11_RVALUE_REFERENCES should be set by Boost)
 	find . -name CMakeLists.txt -exec sed -e '/add_definitions.*DBOOST_NO_CXX11_RVALUE_REFERENCES/d' -i {} \;
-	find . \( -name "*.h" -o -name "*.hpp" -o -name "*.cpp" \) -exec sed -e '/#define.*BOOST_NO_CXX11_RVALUE_REFERENCES/d' -i {} \;
+	find . \( -name "*.h" -o -name "*.hpp" -o -name "*.cpp" \) \
+		-exec sed -e '/#define.*BOOST_NO_CXX11_RVALUE_REFERENCES/d' -i {} \;
 
 	# Fix compilation failure with GCC 15
 	append-cxxflags $(test-flags-CXX -Wno-template-body)

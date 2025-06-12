@@ -56,7 +56,8 @@ src_prepare() {
 	fi
 	# Boost 1.87 compatibility (BOOST_NO_CXX11_RVALUE_REFERENCES should be set by Boost)
 	find . -name CMakeLists.txt -exec sed -e '/add_definitions.*DBOOST_NO_CXX11_RVALUE_REFERENCES/d' -i {} \;
-	find . \( -name "*.h" -o -name "*.hpp" -o -name "*.cpp" \) -exec sed -e '/#define.*BOOST_NO_CXX11_RVALUE_REFERENCES/d' -i {} \;
+	find . \( -name "*.h" -o -name "*.hpp" -o -name "*.cpp" \) \
+		-exec sed -e '/#define.*BOOST_NO_CXX11_RVALUE_REFERENCES/d' -i {} \;
 	# Remove improperly packaged CMake cache file
 	rm -f CMakeCache.txt
 
