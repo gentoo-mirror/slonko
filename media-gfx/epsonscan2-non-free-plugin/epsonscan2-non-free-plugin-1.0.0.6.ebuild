@@ -11,10 +11,10 @@ HOMEPAGE="https://support.epson.net/linux/en/epsonscan2.php"
 # This is distributed as part of the "bundle driver"; since we already have the
 # opensource part separately we just install the nonfree part here.
 
-EPSONSCAN2_VERSION="6.7.63.0"
+EPSONSCAN2_VERSION="6.7.80.0"
 REL="1"
 
-SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/15/17/66/aef42e9eaebe3f7365ef597c7dbd8578e252beff/epsonscan2-bundle-${EPSONSCAN2_VERSION}.x86_64.rpm.tar.gz"
+SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/17/08/14/9948b3e633af0e12031e46c3408f9730f4734da0/epsonscan2-bundle-${EPSONSCAN2_VERSION}.x86_64.rpm.tar.gz"
 S=${WORKDIR}
 
 LICENSE="EPSON"
