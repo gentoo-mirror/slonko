@@ -71,7 +71,7 @@ dev-python/whoosh-reloaded 2.7.5: Fast, pure-Python full text indexing, search, 
 dev-util/scanmem 9999: Locate and modify variables in executing processes
 dev-util/ugtrain 9999: Universal Game Trainer
 games-fps/armyops 250: Military simulations by the U.S. Army to provide insights on soldiering
-media-gfx/epsonscan2 6.7.70.0: Epson scanner management utility
+media-gfx/epsonscan2 6.7.70.0 6.7.80.0: Epson scanner management utility
 media-gfx/epsonscan2-non-free-plugin 1.0.0.6: Plugins for Epson Scan 2
 media-gfx/scangearmp2 9999: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 media-libs/zxing-cpp 2.3.0: C++ Multi-format 1D/2D barcode image processing library

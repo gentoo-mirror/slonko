@@ -1,0 +1,15 @@
+BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.20.5 virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst postrm prepare test
+DEPEND=dev-libs/boost dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 media-gfx/sane-backends media-libs/libjpeg-turbo:= media-libs/libpng media-libs/tiff virtual/libusb:1 !bundled-libs? ( media-libs/libharu sys-libs/zlib )
+DESCRIPTION=Epson scanner management utility
+EAPI=8
+HOMEPAGE=https://support.epson.net/linux/en/epsonscan2.php
+INHERIT=cmake desktop flag-o-matic udev
+IUSE=bundled-libs
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=dev-libs/boost dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 media-gfx/sane-backends media-libs/libjpeg-turbo:= media-libs/libpng media-libs/tiff virtual/libusb:1 !bundled-libs? ( media-libs/libharu sys-libs/zlib )
+SLOT=0
+SRC_URI=https://download3.ebz.epson.net/dsc/f/03/00/17/08/06/1babf9876ebb16956420a601b92ee28b57cd7db7/epsonscan2-6.7.80.0-1.src.tar.gz
+_eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	flag-o-matic	b892042b2667b8ac69ec8a2571dc290a	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	90d8ee8393c5c815637fd3cb87828c9b	desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	udev	f3d9a4376ebd22131726a68e1a0a058f
+_md5_=d7e5ce3ffcd2e7e1c9400377bb2d84ca
