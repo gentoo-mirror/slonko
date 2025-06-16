@@ -10,7 +10,7 @@ inherit distutils-r1 optfeature
 
 DESCRIPTION="Django 3rd party (social) account authentication"
 HOMEPAGE="
-	https://www.intenct.nl/projects/django-allauth/
+	https://allauth.org/
 	https://github.com/pennersr/django-allauth/
 	https://pypi.org/project/django-allauth/
 "
@@ -47,6 +47,8 @@ BDEPEND="
 		>=dev-python/qrcode-7.0.0[${PYTHON_USEDEP}]
 	)
 "
+
+PATCHES=( "${FILESDIR}/fido2.patch" )
 
 DOCS=( README.rst AUTHORS ChangeLog.rst )
 
