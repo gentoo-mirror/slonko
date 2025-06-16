@@ -2,7 +2,7 @@ BDEPEND=test? ( >=dev-python/djangorestframework-3.15.2[python_targets_python3_1
 DEFINED_PHASES=compile configure install postinst prepare test
 DESCRIPTION=Django 3rd party (social) account authentication
 EAPI=8
-HOMEPAGE=https://www.intenct.nl/projects/django-allauth/ https://github.com/pennersr/django-allauth/ https://pypi.org/project/django-allauth/
+HOMEPAGE=https://allauth.org/ https://github.com/pennersr/django-allauth/ https://pypi.org/project/django-allauth/
 INHERIT=distutils-r1 optfeature
 IUSE=test test doc python_targets_python3_11 python_targets_python3_12 python_targets_python3_13
 KEYWORDS=~amd64
@@ -13,4 +13,4 @@ RESTRICT=!test? ( test ) !test? ( test )
 SLOT=0
 SRC_URI=https://github.com/pennersr/django-allauth/archive/65.7.0.tar.gz -> django-allauth-65.7.0.gh.tar.gz
 _eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	flag-o-matic	b892042b2667b8ac69ec8a2571dc290a	out-of-source-utils	dbf9e34ee8964084651e25907fa8f52c	multibuild	4650a65187015567b4e041bb9bfdb364	multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	b043191f3a82642545249acea7318e03	python-r1	0e15b2ab9cfc87d7474678201d6bca38	distutils-r1	d75163bd34f1e2f95ecea7530b0a25bf	optfeature	538bce96e5589935b57e178e8635f301
-_md5_=a6f87603dcec48888807b04e52528c3b
+_md5_=575b8435516bde545327730f8b4e2adc
