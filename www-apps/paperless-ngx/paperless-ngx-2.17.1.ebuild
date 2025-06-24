@@ -110,6 +110,10 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/channels-4.2.patch"
+)
+
 DOCS=( docker/rootfs/etc/ImageMagick-6/paperless-policy.xml )
 
 src_prepare() {
