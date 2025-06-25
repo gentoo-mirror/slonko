@@ -9,7 +9,7 @@ acct-user/vaultwarden 0: System user: vaultwarden
 app-admin/vaultwarden 1.33.2 1.34.1: Unofficial Bitwarden compatible server written in Rust
 app-admin/vaultwarden-web-vault 2025.5.0 2025.6.0: Unofficial patched bitwarden web-vault builds for vaultwarden
 app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
-app-metrics/tibber-exporter 3.10.0: Monitor your power usage and costs with Prometheus and Grafana
+app-metrics/tibber-exporter 3.10.1: Monitor your power usage and costs with Prometheus and Grafana
 app-misc/workrave 1.10.52 9999: Helpful utility to attack Repetitive Strain Injury (RSI)
 app-portage/epm 1.40: rpm workalike for Gentoo Linux
 app-text/OCRmyPDF 16.8.0 16.10.2: OCRmyPDF adds an OCR text layer to scanned PDF files
@@ -35,7 +35,7 @@ dev-python/django-celery-results 2.6.0: Celery Result Backends using the Django 
 dev-python/django-compression-middleware 0.5.0: Django middleware to compress responses using several algorithms.
 dev-python/django-environ 0.11.2 0.12.0: An environment variables to configure Django
 dev-python/django-extensions 3.2.3 4.1: A collection of custom extensions for the Django Framework
-dev-python/django-guardian 2.4.0 3.0.1: Implementation of per object permissions for Django
+dev-python/django-guardian 2.4.0 3.0.3: Implementation of per object permissions for Django
 dev-python/django-multiselectfield 0.1.13: Django multiple select field
 dev-python/django-picklefield 3.3.0: Pickled object field for Django
 dev-python/django-soft-delete 1.0.18: Soft delete models, managers, queryset for Django
