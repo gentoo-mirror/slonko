@@ -23,8 +23,8 @@ RDEPEND="
 "
 BDEPEND="
 	test? (
-		dev-python/gitpython[${PYTHON_USEDEP}]
 		dev-libs/fastText[python,${PYTHON_USEDEP}]
+		dev-python/gitpython[${PYTHON_USEDEP}]
 		dev-python/convertdate[${PYTHON_USEDEP}]
 		dev-python/hijridate[${PYTHON_USEDEP}]
 		dev-python/langdetect[${PYTHON_USEDEP}]
@@ -37,7 +37,6 @@ BDEPEND="
 EPYTEST_DESELECT=(
 	dateparser/date.py::dateparser.date.DateDataParser.get_date_data
 	dateparser/search/__init__.py::dateparser.search.search_dates
-	tests/test_clean_api.py::TestParseFunction::test_dates_parse_utc_offset_does_not_throw_0
 	# Tests that require network
 	tests/test_language_detect.py::CustomLangDetectParserTest::test_custom_language_detect_fast_text_{0,1}
 )
