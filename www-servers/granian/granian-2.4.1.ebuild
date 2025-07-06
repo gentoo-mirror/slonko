@@ -52,7 +52,7 @@ CRATES="
 	getrandom@0.2.16
 	getrandom@0.3.3
 	gimli@0.31.1
-	h2@0.4.10
+	h2@0.4.11
 	hashbrown@0.15.4
 	heck@0.5.0
 	hermit-abi@0.5.2
@@ -139,12 +139,12 @@ CRATES="
 	tokio-macros@2.5.0
 	tokio-rustls@0.26.2
 	tokio-stream@0.1.17
-	tokio-tungstenite@0.26.2
+	tokio-tungstenite@0.27.0
 	tokio-util@0.7.15
 	tokio@1.45.1
 	tracing-core@0.1.34
 	tracing@0.1.41
-	tungstenite@0.26.2
+	tungstenite@0.27.0
 	typenum@1.18.0
 	unicase@2.8.1
 	unicode-ident@1.0.18
