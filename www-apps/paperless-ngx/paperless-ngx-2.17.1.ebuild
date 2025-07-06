@@ -70,6 +70,7 @@ DEPEND="
 		>=dev-python/httpx-oauth-0.16[${PYTHON_USEDEP}]
 		dev-python/humanize[${PYTHON_USEDEP}]
 		>=dev-python/imap-tools-1.10.0[${PYTHON_USEDEP}]
+		<dev-python/imap-tools-1.11.0[${PYTHON_USEDEP}]
 		>=dev-python/inotifyrecursive-0.3[${PYTHON_USEDEP}]
 		>=dev-python/jinja2-3.1.5[${PYTHON_USEDEP}]
 		>=dev-python/langdetect-1.0.9[${PYTHON_USEDEP}]
