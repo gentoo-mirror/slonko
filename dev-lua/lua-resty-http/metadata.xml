@@ -6,7 +6,7 @@
 		<name>Marcin Deranek</name>
 	</maintainer>
 	<upstream>
-		<bugs-to>https://github.com/openresty/lua-resty-lrucache/issues</bugs-to>
-		<remote-id type="github">openresty/lua-resty-lrucache</remote-id>
+		<bugs-to>https://github.com/ledgetech/lua-resty-http/issues</bugs-to>
+		<remote-id type="github">ledgetech/lua-resty-http</remote-id>
 	</upstream>
 </pkgmetadata>
