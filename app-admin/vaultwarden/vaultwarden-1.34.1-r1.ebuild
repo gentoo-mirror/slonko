@@ -520,7 +520,7 @@ DEPEND="
 	${ACCT_DEPEND}
 	dev-libs/openssl:0=
 	sqlite? ( system-sqlite? ( >=dev-db/sqlite-3.49.1:3 ) )
-	web? ( >=app-admin/vaultwarden-web-vault-2025.5.0 )
+	web? ( >=www-apps/vaultwarden-web-2025.5.0 )
 "
 RDEPEND="${DEPEND}"
 
@@ -543,7 +543,10 @@ src_prepare() {
 	fi
 
 	default
-	sed -i -r "s|^#?\s*(WEB_VAULT_ENABLED)\s*=.*|\1=$(use web && echo true || echo false)|" .env.template || die
+	sed -i -r \
+		-e "s|^#?\s*(WEB_VAULT_ENABLED)\s*=.*|\1=$(use web && echo true || echo false)|" \
+		-e "s|^#?\s*(WEB_VAULT_FOLDER)\s*=.*|\1=/usr/share/webapps/vaultwarden-web|" \
+		.env.template || die
 }
 
 src_configure() {
@@ -574,10 +577,6 @@ src_install() {
 	newins .env.template vaultwarden.env
 	fowners root:vaultwarden /etc/vaultwarden.env
 	fperms 640 /etc/vaultwarden.env
-
-	# Install launch wrapper
-	exeinto /var/lib/vaultwarden
-	doexe "${FILESDIR}"/vaultwarden
 
 	# Keep data dir
 	keepdir /var/lib/vaultwarden/data
