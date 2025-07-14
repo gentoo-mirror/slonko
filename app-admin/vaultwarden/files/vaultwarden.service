@@ -4,6 +4,7 @@ Documentation=https://github.com/dani-garcia/vaultwarden
 After=network.target mariadb.service mysqld.service postgresql.service
 
 [Service]
+Environment=ENV_FILE=/etc/vaultwarden.env
 ExecStart=/usr/bin/vaultwarden
 WorkingDirectory=/var/lib/vaultwarden
 User=vaultwarden
@@ -42,9 +43,6 @@ RemoveIPC=yes
 SystemCallFilter=@system-service
 SystemCallFilter=~@privileged @resources
 SystemCallArchitectures=native
-
-Environment="WEB_VAULT_FOLDER=/usr/share/vaultwarden-web-vault/htdocs"
-EnvironmentFile=/etc/vaultwarden.env
 
 [Install]
 WantedBy=multi-user.target
