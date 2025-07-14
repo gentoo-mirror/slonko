@@ -560,8 +560,8 @@ src_install() {
 	einstalldocs
 
 	# Install init.d and conf.d scripts
-	newinitd "${FILESDIR}"/init vaultwarden
-	newconfd "${FILESDIR}"/conf vaultwarden
+	newinitd "${FILESDIR}"/vaultwarden.init vaultwarden
+	newconfd "${FILESDIR}"/vaultwarden.conf vaultwarden
 	systemd_newunit "${FILESDIR}"/vaultwarden.service vaultwarden.service
 
 	# Install /etc/vaultwarden.env
