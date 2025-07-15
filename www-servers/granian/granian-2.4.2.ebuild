@@ -25,7 +25,7 @@ CRATES="
 	bus@2.4.1
 	bytes@1.10.1
 	cbc@0.1.2
-	cc@1.2.27
+	cc@1.2.29
 	cfg-if@1.0.1
 	cipher@0.4.4
 	const-oid@0.9.6
@@ -62,11 +62,12 @@ CRATES="
 	http@1.3.1
 	httparse@1.10.1
 	httpdate@1.0.3
-	hyper-util@0.1.14
+	hyper-util@0.1.15
 	hyper@1.6.0
 	indexmap@2.10.0
 	indoc@2.0.6
 	inout@0.1.4
+	io-uring@0.7.8
 	itertools@0.14.0
 	itoa@1.0.15
 	libc@0.2.174
@@ -113,8 +114,8 @@ CRATES="
 	rustc-demangle@0.1.25
 	rustls-pemfile@2.2.0
 	rustls-pki-types@1.12.0
-	rustls-webpki@0.103.3
-	rustls@0.23.28
+	rustls-webpki@0.103.4
+	rustls@0.23.29
 	salsa20@0.10.2
 	scopeguard@1.2.0
 	scrypt@0.11.0
@@ -141,7 +142,7 @@ CRATES="
 	tokio-stream@0.1.17
 	tokio-tungstenite@0.27.0
 	tokio-util@0.7.15
-	tokio@1.45.1
+	tokio@1.46.1
 	tracing-core@0.1.34
 	tracing@0.1.41
 	tungstenite@0.27.0
