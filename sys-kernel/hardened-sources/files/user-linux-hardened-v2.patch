@@ -1,0 +1,22 @@
+--- a/arch/x86/mm/init_32.c	2025-07-28 19:25:30.985333763 +0200
++++ b/arch/x86/mm/init_32.c	2025-07-28 19:25:37.038038185 +0200
+@@ -755,8 +755,6 @@
+ 	pr_info("Write protecting kernel text and read-only data: %luk\n",
+ 		size >> 10);
+ 
+-	execmem_cache_make_ro();
+-
+ 	kernel_set_to_readonly = 1;
+ 
+ #ifdef CONFIG_CPA_DEBUG
+--- a/arch/x86/mm/init_64.c	2025-07-28 19:25:53.015071898 +0200
++++ b/arch/x86/mm/init_64.c	2025-07-28 19:25:57.694461905 +0200
+@@ -1391,8 +1391,6 @@
+ 	       (end - start) >> 10);
+ 	set_memory_ro(start, (end - start) >> PAGE_SHIFT);
+ 
+-	execmem_cache_make_ro();
+-
+ 	kernel_set_to_readonly = 1;
+ 
+ 	/*
