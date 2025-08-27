@@ -12,21 +12,21 @@ CRATES="
 	addr2line@0.24.2
 	adler2@2.0.1
 	aes@0.8.4
-	anyhow@1.0.98
+	anyhow@1.0.99
 	arc-swap@1.7.1
 	atomic-waker@1.1.2
 	autocfg@1.5.0
 	backtrace@0.3.75
 	base64@0.22.1
 	base64ct@1.8.0
-	bitflags@2.9.1
+	bitflags@2.9.3
 	block-buffer@0.10.4
 	block-padding@0.3.3
 	bus@2.4.1
 	bytes@1.10.1
 	cbc@0.1.2
-	cc@1.2.30
-	cfg-if@1.0.1
+	cc@1.2.34
+	cfg-if@1.0.3
 	cipher@0.4.4
 	const-oid@0.9.6
 	cpufeatures@0.2.17
@@ -52,8 +52,8 @@ CRATES="
 	getrandom@0.2.16
 	getrandom@0.3.3
 	gimli@0.31.1
-	h2@0.4.11
-	hashbrown@0.15.4
+	h2@0.4.12
+	hashbrown@0.15.5
 	heck@0.5.0
 	hermit-abi@0.5.2
 	hmac@0.12.1
@@ -63,14 +63,14 @@ CRATES="
 	httparse@1.10.1
 	httpdate@1.0.3
 	hyper-util@0.1.16
-	hyper@1.6.0
-	indexmap@2.10.0
+	hyper@1.7.0
+	indexmap@2.11.0
 	indoc@2.0.6
 	inout@0.1.4
-	io-uring@0.7.9
+	io-uring@0.7.10
 	itertools@0.14.0
 	itoa@1.0.15
-	libc@0.2.174
+	libc@0.2.175
 	libmimalloc-sys@0.1.43
 	lock_api@0.4.13
 	log@0.4.27
@@ -91,14 +91,14 @@ CRATES="
 	parking_lot_core@0.9.11
 	pbkdf2@0.12.2
 	pem@3.0.5
-	percent-encoding@2.3.1
+	percent-encoding@2.3.2
 	pin-project-lite@0.2.16
 	pin-utils@0.1.0
 	pkcs5@0.7.1
 	pkcs8@0.10.2
 	portable-atomic@1.11.1
 	ppv-lite86@0.2.21
-	proc-macro2@1.0.95
+	proc-macro2@1.0.101
 	pyo3-build-config@0.25.1
 	pyo3-ffi@0.25.1
 	pyo3-log@0.12.4
@@ -127,17 +127,17 @@ CRATES="
 	sha1@0.10.6
 	sha2@0.10.9
 	shlex@1.3.0
-	signal-hook-registry@1.4.5
-	slab@0.4.10
+	signal-hook-registry@1.4.6
+	slab@0.4.11
 	smallvec@1.15.1
 	socket2@0.6.0
 	spki@0.7.3
 	subtle@2.6.1
-	syn@2.0.104
+	syn@2.0.106
 	sysinfo@0.36.1
 	target-lexicon@0.13.2
-	thiserror-impl@2.0.12
-	thiserror@2.0.12
+	thiserror-impl@2.0.16
+	thiserror@2.0.16
 	tikv-jemalloc-sys@0.6.0+5.3.0-1-ge13ca993e8ccb9ba9847cc330696e02839f328f7
 	tikv-jemallocator@0.6.0
 	tls-listener@0.11.0
@@ -145,8 +145,8 @@ CRATES="
 	tokio-rustls@0.26.2
 	tokio-stream@0.1.17
 	tokio-tungstenite@0.27.0
-	tokio-util@0.7.15
-	tokio@1.47.0
+	tokio-util@0.7.16
+	tokio@1.47.1
 	tracing-core@0.1.34
 	tracing@0.1.41
 	tungstenite@0.27.0
