@@ -35,7 +35,7 @@ dev-python/django-picklefield 3.3.0: Pickled object field for Django
 dev-python/django-soft-delete 1.0.18: Soft delete models, managers, queryset for Django
 dev-python/djangorestframework-guardian 0.3.0 0.4.0: django-guardian support for Django REST Framework
 dev-python/drf-spectacular 0.28.0: Sane and flexible OpenAPI schema generation for Django REST framework.
-dev-python/drf-spectacular-sidecar 2025.4.1: Serve self-contained distribution builds of Swagger UI and Redoc with Django.
+dev-python/drf-spectacular-sidecar 2025.4.1 2025.8.1: Serve self-contained distribution builds of Swagger UI and Redoc with Django.
 dev-python/drf-writable-nested 0.7.2: Writable nested helpers for django-rest-framework's serializers
 dev-python/fastapi 0.115.12: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gotenberg-client 0.9.0 0.10.0: A Python client for interfacing with the Gotenberg API
@@ -58,7 +58,7 @@ dev-python/python3-openid 3.2.0: OpenID support for modern servers and consumers
 dev-python/shortuuid 1.0.13: A generator library for concise, unambiguous and URL-safe UUIDs.
 dev-python/sphinx-click 5.1.0 6.0.0: Sphinx plugin to automatically document click-based applications
 dev-python/sphinx-hoverxref 1.5.0: Sphinx extension to show tooltips with content embedded when hover a reference
-dev-python/tika-client 0.9.0: A modern REST client for Apache Tika server
+dev-python/tika-client 0.10.0: A modern REST client for Apache Tika server
 dev-python/w3lib 2.2.0 2.3.1: Library of web-related functions
 dev-python/whitenoise 6.8.2 6.9.0: Radically simplified static file serving for Python web apps
 dev-python/whoosh-reloaded 2.7.5: Fast, pure-Python full text indexing, search, and spell checking library.
