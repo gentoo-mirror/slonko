@@ -48,7 +48,6 @@ DEPEND="
 		>=dev-python/channels-4.2[${PYTHON_USEDEP}]
 		>=dev-python/channels-redis-4.2[${PYTHON_USEDEP}]
 		>=dev-python/concurrent-log-handler-0.9.25[${PYTHON_USEDEP}]
-		<dev-python/concurrent-log-handler-0.9.28[${PYTHON_USEDEP}]
 		>=dev-python/dateparser-1.2[${PYTHON_USEDEP}]
 		>=dev-python/django-5.2.5[${PYTHON_USEDEP}]
 		<dev-python/django-5.3[${PYTHON_USEDEP}]
