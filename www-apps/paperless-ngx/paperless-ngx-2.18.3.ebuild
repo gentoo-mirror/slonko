@@ -66,8 +66,8 @@ DEPEND="
 		>=dev-python/drf-spectacular-0.28[${PYTHON_USEDEP}]
 		>=dev-python/drf-spectacular-sidecar-2025.8.1[${PYTHON_USEDEP}]
 		>=dev-python/drf-writable-nested-0.7.1[${PYTHON_USEDEP}]
-		>=dev-python/filelock-3.18.0[${PYTHON_USEDEP}]
-		>=dev-python/gotenberg-client-0.10.0[${PYTHON_USEDEP}]
+		>=dev-python/filelock-3.19.1[${PYTHON_USEDEP}]
+		>=dev-python/gotenberg-client-0.11.0[${PYTHON_USEDEP}]
 		>=dev-python/httpx-oauth-0.16[${PYTHON_USEDEP}]
 		dev-python/humanize[${PYTHON_USEDEP}]
 		>=dev-python/imap-tools-1.11.0[${PYTHON_USEDEP}]
@@ -83,7 +83,7 @@ DEPEND="
 		>=dev-python/python-ipware-3.0.0[${PYTHON_USEDEP}]
 		>=dev-python/python-magic-0.4.27[${PYTHON_USEDEP}]
 		>=dev-python/pyzbar-0.1.9[${PYTHON_USEDEP}]
-		>=dev-python/rapidfuzz-3.13.0[${PYTHON_USEDEP}]
+		>=dev-python/rapidfuzz-3.14.0[${PYTHON_USEDEP}]
 		>=dev-python/redis-5.2.1[${PYTHON_USEDEP}]
 		>=dev-python/scikit-learn-1.7.0[${PYTHON_USEDEP}]
 		>=dev-python/setproctitle-1.3.4[${PYTHON_USEDEP}]
@@ -93,7 +93,7 @@ DEPEND="
 		>=dev-python/watchdog-6.0[${PYTHON_USEDEP}]
 		>=dev-python/whitenoise-6.9[${PYTHON_USEDEP}]
 		>=dev-python/whoosh-reloaded-2.7.5[${PYTHON_USEDEP}]
-		>=www-servers/granian-2.4.1[${PYTHON_USEDEP}]')
+		>=www-servers/granian-2.5.1[${PYTHON_USEDEP}]')
 	>=app-text/OCRmyPDF-16.10
 	app-text/poppler[utils]
 	media-gfx/imagemagick[xml]
