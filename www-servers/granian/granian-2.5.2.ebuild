@@ -25,7 +25,7 @@ CRATES="
 	bus@2.4.1
 	bytes@1.10.1
 	cbc@0.1.2
-	cc@1.2.34
+	cc@1.2.35
 	cfg-if@1.0.3
 	cipher@0.4.4
 	const-oid@0.9.6
@@ -38,6 +38,7 @@ CRATES="
 	digest@0.10.7
 	either@1.15.0
 	equivalent@1.0.2
+	find-msvc-tools@0.1.0
 	fnv@1.0.7
 	futures-channel@0.3.31
 	futures-core@0.3.31
@@ -71,12 +72,12 @@ CRATES="
 	itertools@0.14.0
 	itoa@1.0.15
 	libc@0.2.175
-	libmimalloc-sys@0.1.43
+	libmimalloc-sys@0.1.44
 	lock_api@0.4.13
 	log@0.4.27
 	memchr@2.7.5
 	memoffset@0.9.1
-	mimalloc@0.1.47
+	mimalloc@0.1.48
 	mime@0.3.17
 	mime_guess@2.0.5
 	miniz_oxide@0.8.9
@@ -158,7 +159,7 @@ CRATES="
 	utf-8@0.7.6
 	version_check@0.9.5
 	wasi@0.11.1+wasi-snapshot-preview1
-	wasi@0.14.2+wasi-0.2.4
+	wasi@0.14.3+wasi-0.2.4
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	winapi@0.3.9
@@ -184,7 +185,7 @@ CRATES="
 	windows_x86_64_gnu@0.52.6
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.52.6
-	wit-bindgen-rt@0.39.0
+	wit-bindgen@0.45.0
 	zerocopy-derive@0.8.26
 	zerocopy@0.8.26
 	zeroize@1.8.1
