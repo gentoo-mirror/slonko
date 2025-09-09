@@ -24,7 +24,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="dev-python/django[${PYTHON_USEDEP}]"
+RDEPEND="
+	dev-python/django[${PYTHON_USEDEP}]
+	dev-python/typing-extensions[${PYTHON_USEDEP}]
+"
 DEPEND="${RDEPEND}"
 BDEPEND="
 	test? (
