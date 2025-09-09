@@ -30,7 +30,7 @@ dev-python/django-celery-results 2.6.0: Celery Result Backends using the Django 
 dev-python/django-compression-middleware 0.5.0: Django middleware to compress responses using several algorithms.
 dev-python/django-environ 0.11.2 0.12.0: An environment variables to configure Django
 dev-python/django-extensions 3.2.3 4.1: A collection of custom extensions for the Django Framework
-dev-python/django-guardian 3.0.7 3.1.0: Implementation of per object permissions for Django
+dev-python/django-guardian 3.0.7 3.1.2: Implementation of per object permissions for Django
 dev-python/django-multiselectfield 0.1.13 1.0.1: Django multiple select field
 dev-python/django-picklefield 3.3.0: Pickled object field for Django
 dev-python/django-soft-delete 1.0.18: Soft delete models, managers, queryset for Django
