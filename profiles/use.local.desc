@@ -18,7 +18,6 @@ www-apps/gallery:netpbm - Use Netpbm toolkit for manipulating of graphic images
 www-apps/gallery:unzip - Add unzip support for archive upload module
 www-apps/paperless-ngx:audit - Enables an audit trail for documents, document types, correspondents and tags
 www-apps/paperless-ngx:compression - Enable compression of the responses in application
-www-apps/paperless-ngx:ocr - Enable support for Optical Character Recognition
 www-apps/paperless-ngx:remote-redis - Use remote Redis instance
 www-apps/paperless-ngx:zxing - Use zxing-cpp as an alternative barcodes scanning library
 x11-wm/compiz:gles - Build against GLESv2 instead of GL
