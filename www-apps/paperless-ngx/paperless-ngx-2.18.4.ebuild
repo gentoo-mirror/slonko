@@ -5,7 +5,7 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{10..13} )
 
-inherit python-single-r1 systemd
+inherit python-single-r1 systemd tmpfiles
 
 DESCRIPTION="A community-supported supercharged document management system"
 HOMEPAGE="https://github.com/paperless-ngx/paperless-ngx"
@@ -133,6 +133,7 @@ src_prepare() {
 	# Custom
 	GRANIAN_HOST=127.0.0.1
 	GRANIAN_PORT=8000
+
 	GRANIAN_WORKERS=1
 
 	PAPERLESS_ENABLE_COMPRESSION=$(use compression && echo true || echo false)
@@ -144,7 +145,7 @@ src_install() {
 	einstalldocs
 
 	# Install service files
-	systemd_newunit "${FILESDIR}"/paperless-webserver-granian.service paperless-webserver.service
+	systemd_newunit "${FILESDIR}"/paperless-webserver.service paperless-webserver.service
 	systemd_newunit "${FILESDIR}"/paperless-scheduler.service paperless-scheduler.service
 	systemd_newunit "${FILESDIR}"/paperless-consumer.service paperless-consumer.service
 	systemd_newunit "${FILESDIR}"/paperless-task-queue.service paperless-task-queue.service
@@ -162,9 +163,7 @@ src_install() {
 	fowners root:paperless /etc/paperless.conf
 	fperms 640 /etc/paperless.conf
 
-	insinto /usr/lib/tmpfiles.d
-	doins "${FILESDIR}"/paperless.tmpfiles
-	fperms 644 /usr/lib/tmpfiles.d/paperless.tmpfiles
+	newtmpfiles "${FILESDIR}"/paperless.tmpfiles paperless.conf
 
 	# Set directories
 	for dir in consume data media tmp; do
@@ -182,6 +181,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	tmpfiles_process paperless.conf
 	elog "To complete the installation of paperless, edit /etc/paperless.conf file and"
 	elog "* Create the database with"
 	elog ""

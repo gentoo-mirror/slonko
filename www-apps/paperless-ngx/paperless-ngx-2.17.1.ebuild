@@ -144,7 +144,7 @@ src_install() {
 	einstalldocs
 
 	# Install service files
-	systemd_newunit "${FILESDIR}"/paperless-webserver-granian.service paperless-webserver.service
+	systemd_newunit "${FILESDIR}"/paperless-webserver.service paperless-webserver.service
 	systemd_newunit "${FILESDIR}"/paperless-scheduler.service paperless-scheduler.service
 	systemd_newunit "${FILESDIR}"/paperless-consumer.service paperless-consumer.service
 	systemd_newunit "${FILESDIR}"/paperless-task-queue.service paperless-task-queue.service
