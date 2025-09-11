@@ -8,7 +8,6 @@
 	<use>
 		<flag name="audit">Enables an audit trail for documents, document types, correspondents and tags</flag>
 		<flag name="compression">Enable compression of the responses in application</flag>
-		<flag name="ocr">Enable support for Optical Character Recognition</flag>
 		<flag name="remote-redis">Use remote Redis instance</flag>
 		<flag name="zxing">Use zxing-cpp as an alternative barcodes scanning library</flag>
 	</use>

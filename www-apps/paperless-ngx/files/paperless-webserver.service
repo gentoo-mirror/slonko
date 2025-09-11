@@ -1,7 +1,6 @@
 [Unit]
 Description=Paperless webserver
 Requires=redis.service
-Requires=paperless-webserver.socket
 After=network.target
 Wants=network.target
 PartOf=paperless.target
@@ -12,9 +11,8 @@ Group=paperless
 Environment=PYTHONUNBUFFERED=1
 EnvironmentFile=/etc/paperless.conf
 WorkingDirectory=/usr/share/paperless/src
-ExecStart=/usr/bin/gunicorn -c /usr/share/paperless/gunicorn.conf.py paperless.asgi:application
+ExecStart=granian --interface asginl --ws paperless.asgi:application
 Restart=on-abort
 
 [Install]
-Also=paperless-webserver.socket
 WantedBy=paperless.target
