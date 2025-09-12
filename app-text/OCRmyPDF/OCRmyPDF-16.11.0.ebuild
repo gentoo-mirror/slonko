@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=hatchling
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1 optfeature shell-completion
 
@@ -38,9 +38,11 @@ RDEPEND="
 BDEPEND="
 	dev-python/hatch-vcs[${PYTHON_USEDEP}]
 	test? (
+		app-text/poppler
 		>=app-text/unpaper-6.1
 		>=dev-python/hypothesis-6.36.0[${PYTHON_USEDEP}]
 		dev-python/pytest-helpers-namespace[${PYTHON_USEDEP}]
+		dev-python/pytest-xdist[${PYTHON_USEDEP}]
 		dev-python/python-xmp-toolkit[${PYTHON_USEDEP}]
 		>=dev-python/reportlab-3.6.8[${PYTHON_USEDEP}]
 		media-libs/exempi
@@ -50,15 +52,16 @@ BDEPEND="
 	)
 "
 
+EPYTEST_XDIST=1
 distutils_enable_tests pytest
 distutils_enable_sphinx docs \
+	dev-python/myst-parser \
 	dev-python/sphinx-issues \
 	dev-python/sphinx-rtd-theme
 
-EPYTEST_DESELECT=(
-	# Causes pytest INTERNALERROR
-	'tests/test_metadata.py::test_malformed_docinfo'
-)
+python_test() {
+	epytest --runslow
+}
 
 src_prepare() {
 	distutils-r1_src_prepare
