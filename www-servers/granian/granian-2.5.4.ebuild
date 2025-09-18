@@ -36,6 +36,7 @@ CRATES="
 	der@0.7.10
 	digest@0.10.7
 	either@1.15.0
+	encoding_rs@0.8.35
 	equivalent@1.0.2
 	find-msvc-tools@0.1.0
 	fnv@1.0.7
