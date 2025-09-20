@@ -13,7 +13,7 @@ dev-lang/luajit 9999: Just-In-Time Compiler for the Lua programming language
 dev-libs/fastText 0.9.2-r1: Library for fast text representation and classification
 dev-lua/lua-resty-http 0.17.2: Lua HTTP client cosocket driver for OpenResty / ngx_lua
 dev-perl/Unicode-CaseFold 1.01: Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
-dev-python/billiard 3.6.4.0 4.2.1: Python multiprocessing fork
+dev-python/billiard 3.6.4.0 4.2.2: Python multiprocessing fork
 dev-python/cached-property 2.0.1: A cached-property for decorating methods in classes
 dev-python/celery 5.4.0 5.5.3: Asynchronous task queue/job queue based on distributed message passing
 dev-python/channels 3.0.5 4.2.2: Extends Django abilities beyond HTTP protocol
