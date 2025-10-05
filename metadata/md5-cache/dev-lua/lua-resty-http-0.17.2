@@ -8,10 +8,10 @@ INHERIT=lua-single
 IUSE=+lua_single_target_luajit
 KEYWORDS=~amd64 ~arm64 ~x86
 LICENSE=BSD-2
-RDEPEND=lua_single_target_luajit? ( dev-lang/luajit:= )
+RDEPEND=lua_single_target_luajit? ( dev-lang/luajit:= ) dev-lua/lua-resty-string[lua_single_target_luajit(-)?] lua_single_target_luajit? ( dev-lua/lua-resty-openssl[lua_targets_luajit(-)] )
 REQUIRED_USE=^^ ( lua_single_target_luajit )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/ledgetech/lua-resty-http/archive/refs/tags/v0.17.2.tar.gz -> lua-resty-http-0.17.2.tar.gz
 _eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	lua-utils	7c89927eda6f21c4c48136247077ab37	lua-single	75fe955a36b18e199213c8739eaebdbb
-_md5_=70d48b99bf2bc3e2ec9fd8f84bd03e4c
+_md5_=3bbce9daa05c744f910fbd6d2c53913a

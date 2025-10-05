@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install
+DEPEND=lua_targets_luajit? ( dev-lang/luajit:= ) dev-libs/openssl:0 dev-lua/basexx[lua_targets_luajit(-)?] dev-lua/lua-cjson[lua_targets_luajit(-)?] www-nginx/ngx-lua-module[lua_single_target_luajit] >=www-servers/nginx-1.28.0-r2[nginx_modules_http_ssl]
+DESCRIPTION=FFI-based OpenSSL binding for OpenResty
+EAPI=8
+HOMEPAGE=https://github.com/fffonion/lua-resty-openssl
+INHERIT=lua
+IUSE=+lua_targets_luajit lua_targets_luajit
+KEYWORDS=~amd64 ~arm ~arm64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=lua_targets_luajit? ( dev-lang/luajit:= ) dev-libs/openssl:0 dev-lua/basexx[lua_targets_luajit(-)?] dev-lua/lua-cjson[lua_targets_luajit(-)?] www-nginx/ngx-lua-module[lua_single_target_luajit] >=www-servers/nginx-1.28.0-r2[nginx_modules_http_ssl]
+REQUIRED_USE=|| ( lua_targets_luajit )
+SLOT=0
+SRC_URI=https://github.com/fffonion/lua-resty-openssl/archive/refs/tags/1.6.4.tar.gz -> lua-resty-openssl-1.6.4.tar.gz
+_eclasses_=out-of-source-utils	dbf9e34ee8964084651e25907fa8f52c	multibuild	4650a65187015567b4e041bb9bfdb364	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	lua-utils	7c89927eda6f21c4c48136247077ab37	lua	3414f66fe14a8c3ffdb5a894097068c6
+_md5_=7b0bae78d81f32da8e34ec80255c8cb5
