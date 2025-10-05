@@ -27,7 +27,11 @@ REQUIRED_USE="${LUA_REQUIRED_USE}"
 
 BDEPEND="virtual/pkgconfig"
 DEPEND="${LUA_DEPS}"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	dev-lua/lua-resty-string[${LUA_SINGLE_USEDEP}]
+	$(lua_gen_cond_dep 'dev-lua/lua-resty-openssl[${LUA_USEDEP}]')
+"
 
 src_configure() {
 	# The directory where to Lua files are to be installed, used by the build
