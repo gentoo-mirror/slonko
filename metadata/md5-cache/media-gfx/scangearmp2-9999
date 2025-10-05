@@ -1,4 +1,4 @@
-BDEPEND=dev-build/make >=dev-build/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl] virtual/pkgconfig
+BDEPEND=dev-build/make >=dev-build/cmake-3.28.5 >=dev-vcs/git-1.8.2.1[curl] virtual/pkgconfig
 DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
 DEPEND=dev-util/intltool media-gfx/sane-backends media-libs/libjpeg-turbo:= sys-devel/gettext virtual/libusb:1 x11-libs/gtk+:3
 DESCRIPTION=Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RESTRICT=mirror
 SLOT=2
-_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	460729dc36f68cf03b044bc1d367e34a	desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	git-r3	875eb471682d3e1f18da124be97dcc81	udev	f3d9a4376ebd22131726a68e1a0a058f
+_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	cf95ad72ab207889c1668fc0d1bee181	desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	git-r3	875eb471682d3e1f18da124be97dcc81	udev	f3d9a4376ebd22131726a68e1a0a058f
 _md5_=62c74979e795e18b708c01e4355a339b
