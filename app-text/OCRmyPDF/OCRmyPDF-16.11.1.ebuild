@@ -43,8 +43,11 @@ BDEPEND="
 		>=dev-python/hypothesis-6.36.0[${PYTHON_USEDEP}]
 		dev-python/pytest-helpers-namespace[${PYTHON_USEDEP}]
 		dev-python/pytest-xdist[${PYTHON_USEDEP}]
+		dev-python/python-dotenv[${PYTHON_USEDEP}]
 		dev-python/python-xmp-toolkit[${PYTHON_USEDEP}]
 		>=dev-python/reportlab-3.6.8[${PYTHON_USEDEP}]
+		dev-python/typer[${PYTHON_USEDEP}]
+		dev-python/watchdog[${PYTHON_USEDEP}]
 		media-libs/exempi
 		>=media-libs/jbig2enc-0.29
 		media-libs/libxmp
